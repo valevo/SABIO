@@ -28,6 +28,8 @@
 
 - [CulturalAI's Site on ICAI](https://icai.ai/cultural-ai-lab/)
 
+- the [CaptureBias project](https://capturebias.wordpress.com/)
+
 
 # Possible Connections
 
