@@ -13,7 +13,26 @@
   and compare the learned representations by the proposed methods. Further, the corpus-specific representations can be compared to representations obtained 
   
   Important assumptions:
-    - the bias exhibited by the trained model is (completely) the bias 
+  
+    - the bias exhibited by the trained model is (completely) the bias in the data, and not introduced by the model
+    
+    
+  
+  
+  ## Predictive Model for Gender Bias
+  
+  Making use of the fact that Dutch marks gender in its vocabulary (via fusional morphology): 
+  
+  
+  
+  
+  ## Test Data
+  
+  
+  Is there a way to obtain test data, to be able to make the successfulness/appropriateness of whatever approaches we choose/develop measurable?
+  This could be data created and/or annotated by others, or our own data measured along some proxy (or both).
+  
+  Assuming that there is no data annotated for bias itself, a possible sketch could be:  
     
   
   
