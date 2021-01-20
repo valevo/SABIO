@@ -28,7 +28,7 @@
 
 - [CulturalAI's Site on ICAI](https://icai.ai/cultural-ai-lab/)
 
-- the [CaptureBias project](https://capturebias.wordpress.com/)
+- the [CaptureBias project](https://capturebias.wordpress.com/) by VU, UU, UL, TU Delft
 
 
 # Possible Connections
