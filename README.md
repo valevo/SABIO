@@ -57,7 +57,7 @@
  - [Article by ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) on racial bias in criminal prediction software 
 used in the US
 
- - [FAccT Conference](https://facctconference.org/) ACM Conference on Fairness, Accountability, and Transparency (
+ - [FAccT Conference](https://facctconference.org/) ACM Conference on Fairness, Accountability, and Transparency -> Corey mentioned this a potential place for networking
 
-
+ - [DCode Network](https://www.dcode-network.eu/), project for 'design as a way to open pathways toward inclusive and sustainable futures' -> perhaps interesting in combination with SUDOX
 
