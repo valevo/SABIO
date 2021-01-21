@@ -3,10 +3,6 @@
 
 - [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
 
-- Andrei's resources on [GDrive](https://drive.google.com/drive/u/0/folders/1ncPfsOL_WmAUnGbEbqMMFAw1sF32gTLw)
-
-- Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
-
 - [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
 
 - [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
