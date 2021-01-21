@@ -1,3 +1,9 @@
+
+Andrei's resources on [GDrive](https://drive.google.com/drive/u/0/folders/1ncPfsOL_WmAUnGbEbqMMFAw1sF32gTLw)
+
+Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
+
+
 ## A Statistical Test for Probabilistic Fairness
 
 Theoretical paper which derives statistical tests for classifier functions. Could be useful for inspiration and for theoretical motivation; published at FAccT 2021. 

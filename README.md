@@ -3,10 +3,6 @@
 
 - [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
 
-- Andrei's resources on [GDrive](https://drive.google.com/drive/u/0/folders/1ncPfsOL_WmAUnGbEbqMMFAw1sF32gTLw)
-
-- Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
-
 - [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
 
 - [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
@@ -32,11 +28,16 @@
 
 - the [CaptureBias project](https://capturebias.wordpress.com/) by VU, UU, UL, TU Delft, Beeld en Geluid
 
+- [Humane AI](https://humane-ai.nl/) is a meta-project between UvA's Humanities and Science faculties
+
 
 # Possible Connections
 
 
-- Mrinalini (and her group) and their endeavour.
+- Mrinalini:
+  - part of [CREATE](https://www.create.humanities.uva.nl/)
+  - TAing a course of [prof Jeurgens](https://www.uva.nl/profiel/j/e/k.j.p.f.m.jeurgens/k.j.p.f.m.jeurgens.html)
+  - supervised by [prof Noordegraaf](https://ahm.uva.nl/profile/n/o/j.j.noordegraaf/j.j.noordegraaf.html)
 
 - [Mahendra Mahey](https://www.bl.uk/people/experts/mahendra-mahey), manager of the British Library Labs
 
