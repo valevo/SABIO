@@ -9,6 +9,8 @@
 
 - [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
 
+- [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
+
 
 # Data
 
@@ -33,12 +35,29 @@
 
 # Possible Connections
 
-- [Lukas Koster](https://www.uva.nl/profiel/k/o/l.koster/l.koster.html): Group leader of library & information systems at UvA. Mentioned by Corey.
-
 - [Conference on AI in Libraries, Archives and Museums](https://library.stanford.edu/projects/fantastic-futures), organised by Stanford Libraries. Mentioned by Corey.
 
 - Mrinalini (and her group) and their endeavour.
 
 - [Mahendra Mahey](https://www.bl.uk/people/experts/mahendra-mahey), manager of the British Library Labs
+
+
+
+## Chat with Corey
+
+
+ - [Lukas Koster](https://www.uva.nl/profiel/k/o/l.koster/l.koster.html): Group leader of library & information systems at UvA -> Corey can establish a connection
+ 
+ - AI4LAM (e.g. [their GitHub](https://github.com/AI4LAM)), a group on AI for Libraries, Archives and Museums -> Corey is a member and will keep his eyes open for us, relatedly, Marieke mentioned [LODLAM](https://lod-lam.net/) a group on Linked Open Data for LAM
+ 
+ - there was a workshop at NeurIPS 2020 named [Navigating the Broader Impacts of AI Research](https://nbiair.com/) -> found after searching for the ethics debate at NeurIPS 2020 (see e.g. [this Nature article](https://www.nature.com/articles/d41586-020-00160-y))
+ 
+ - the [Algorhtmic Justice League](https://www.ajl.org/), garnered a lot of attention following their exposal of racial bias in facial recognition systems
+
+ - [Article by ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) on racial bias in criminal prediction software 
+used in the US
+
+ - [FAccT Conference](https://facctconference.org/) ACM Conference on Fairness, Accountability, and Transparency (
+
 
 
