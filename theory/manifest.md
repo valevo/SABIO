@@ -1,4 +1,4 @@
-# Things to Consider
+# Manifest
 
 Detecting bias in texts of cultural signifcance, in particular with the aim to increase inclusivity in society, 
 requires special care when designing detection algorithms. Therefore, below an incomplete and unordered list of things to be kept in mind.
