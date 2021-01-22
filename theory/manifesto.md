@@ -8,7 +8,7 @@ It could be read as a kind of manifest.
 
 ## Transparency
 
-Requirement 1: Users must be able to understand *why* a certain decision was made, i.e. given which prior information or according to which metric bias was detected/
+<u>Requirement 1</u>: Users must be able to understand *why* a certain decision was made, i.e. given which prior information or according to which metric bias was detected/
 not detected.
 
 Requirement 2: User must be able to understand *where* a certain decision was made, i.e. which parts of the input lead the algorithm to detect/not detect bias.
