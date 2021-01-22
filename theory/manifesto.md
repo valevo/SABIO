@@ -21,5 +21,4 @@ specific populations within society, and will have to ingore others.
 
 Requirement 1: The algorithms will have be readily adapted to biases that were not addressed in this project.
 
-Requirement 2: The algorithms must clearly define their own borders in scope, i.e. if a certain type/aspect of bias was not explicitly addressed, then the algorithms
-should stay clear of it and not detect it.
+Requirement 2: The algorithms must clearly define their own borders in scope, i.e. if a certain type/aspect of bias was not explicitly addressed, then the algorithms should stay clear of it and not detect it.
