@@ -47,7 +47,7 @@ precisely because bias affects everyone, r
 
   1. design decision should, where possible, be informed by larger concensus, may thatfor instance be directly democratic process or (academic) concensus
   
-  2. in the interest of the protection of minorities, public inputs should not be integrate into our software directly but via a curative process (to avoid e.g. the nature of publicly voiced opinion on internet forums); eventually, harm is to be avoided and this requirement extends to user inputs
+  2. in the interest of the protection of minorities, public inputs should not be directly integrated into our software but via a curative process (to avoid e.g. the nature of publicly voiced opinion on internet forums); eventually, harm is to be avoided and this requirement extends to user inputs
   
   
  
