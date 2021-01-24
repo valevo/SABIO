@@ -40,9 +40,10 @@ through education about bias, for increasing visibility or for addressing injust
   2. The amount of technical knowledge, skill and effort for users to input their own data must be kept minimal so that a maximal number of users can 
   make use of the software.
   
+  
 ## Democratisation
 
-precisely because bias affects everyone, r
+precisely because bias affects everyone: & because of what is mentioned in Section **Transparency**, we need society to define what a bias detection tool does and should do 
 
 
   1. design decision should, where possible, be informed by larger concensus, may thatfor instance be directly democratic process or (academic) concensus
@@ -50,6 +51,7 @@ precisely because bias affects everyone, r
   2. in the interest of the protection of minorities, public inputs should not be directly integrated into our software but via a curative process (to avoid e.g. the nature of publicly voiced opinion on internet forums); eventually, harm is to be avoided and this requirement extends to user inputs
   
   
+
  
  
  
