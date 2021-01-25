@@ -7,6 +7,9 @@
 
 - [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
 
+- the [CRAPL License](http://matt.might.net/articles/crapl/) for software & related resources written in academic contexts
+
+
 
 
 # People, Organisations, Institutions
