@@ -71,9 +71,9 @@ precisely because bias affects everyone: & because of what is mentioned in Secti
 
 ## Potential Resources
 
-### AI about Bias in AI
- [[1]](#1)
+ - [[Shah et al. 2019]](#1) surveys, maps and formalises the potential sources and guises of bias in NLP models
  
+ - the FAIR principles
  
 
 
@@ -81,11 +81,11 @@ precisely because bias affects everyone: & because of what is mentioned in Secti
  
  
  
-# Potential Resources
 
-### AI about Bias in AI
 
-  - <a id="1">[1]</a> Shah, D., Schwartz, H. A., & Hovy, D. (2019). Predictive biases in natural language processing models: A conceptual framework and overview. arXiv preprint arXiv:1912.11078.
+## Referencs
+  <a id="Shah et al. 2019">Shah et al. 2019</a> 
+  Shah, D., Schwartz, H. A., & Hovy, D. (2019). Predictive biases in natural language processing models: A conceptual framework and overview. arXiv preprint arXiv:1912.11078.
   
 
 
