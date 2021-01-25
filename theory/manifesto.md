@@ -66,12 +66,18 @@ precisely because bias affects everyone: & because of what is mentioned in Secti
  - find sources from philosophy that have something to say about this (FAIR principles?, ethics of AI?) <br>
  -> the manifesto then becomes the interface between philosophy and our "AI"
  -> talk to Mrinalini and Julia
+ -> perhaps [[1]](#1)
  
  
 
 
 
-
+ 
+ 
+ 
+# References
+<a id="1">[1]</a>
+Shah, D., Schwartz, H. A., & Hovy, D. (2019). Predictive biases in natural language processing models: A conceptual framework and overview. arXiv preprint arXiv:1912.11078.
 
 
 
