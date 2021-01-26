@@ -37,3 +37,28 @@ Review (plus opinions) of the history of formalising *fairness*, especially in c
 Critical paper on the rise of massive LMs that sheds light on problems that arise from the practice of estimating billions and trillions of parameters from hundreds of gigabytes of data. Among these problems the social biases that are perpetuated by such models. Received additional attention as Google lead employees, two of the authors, were put under pressure for writing this paper.
 
 [Link to PDF](http://faculty.washington.edu/ebender/papers/Stochastic_Parrots.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:-frkS3CfwgUJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21ekfuwg:AAGBfm0AAAAAYBAaowiWuqHRHWqYNL02PhQLYkw96dcI&scisig=AAGBfm0AAAAAYBAao6YQ_jKYoMyy-rDBoKFm0FQ8kNLm&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
+
+## Mitigating Unwanted Biases with Adversarial Learning
+
+Should be self-explanatory; potentially interesting for: 
+  - addressing bias in the sense of mitigating it and formalisation thereof
+  - adversarial framework
+  - the resources mentioned in this paper
+
+
+[Link to PDF](http://www.m-mitchell.com/papers/Adversarial_Bias_Mitigation.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:v4k0PGBZBJgJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21ek1gew:AAGBfm0AAAAAYBAwmew8tGaw4KUMcESXaKWxQcf0-w7N&scisig=AAGBfm0AAAAAYBAwmSGoxx5v9NxxLiuMThvaImaiyd22&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
+## Language (Technology) is Power: A Critical Survey of “Bias” in NLP
+
+Extensive survey of papers about adressing bias in NLP (models) that finds vagueness and inconsistency across this landscape of papers.
+
+
+[Link to PDF](https://arxiv.org/pdf/2005.14050.pdf) | [BibTeX](https://scholar.googleusercontent.com/scholar.bib?q=info:crDf6GtBo8oJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21elPPTk:AAGBfm0AAAAAYBBKJTlOhrbRn-kBQ-XL3jDSk4kL4jvq&scisig=AAGBfm0AAAAAYBBKJfanTEUyzCXUETRoRYMxqn4ae9vH&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
