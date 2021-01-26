@@ -23,6 +23,8 @@
 
 - [Humane AI](https://humane-ai.nl/) is a meta-project between UvA's Humanities and Science faculties
 
+- [Society for Social Studies of Science's Conference](https://www.4sonline.org/meeting/call-for-submissions) called "Good Relations: Practices and Methods in Unequal and Uncertain Worlds" (Deadline 8th March)
+
 
 # Possible Connections
 
