@@ -2,7 +2,10 @@
 
 ### Guide to Repo
 
- - [data](/data)
+ -[ ] [data](/data): 
+ -[x] [theory](/theory)
+ -[ ] [papers](/papers.md)
+ -[x] [plan](/plan.md)
 
 
 
