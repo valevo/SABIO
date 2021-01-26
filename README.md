@@ -1,5 +1,15 @@
 # SABIO (Valentin's Notes & Materials)
 
+### Guide to Repo
+
+ - [data](/data)
+
+
+
+
+
+
+Random list of links put here for further classification and later use.
 
 - [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
 
@@ -12,7 +22,7 @@
 
 
 
-# People, Organisations, Institutions
+## People, Organisations, Institutions
 
 
 - [SUDOX](https://www.sudox.nl/)
@@ -26,7 +36,7 @@
 - [Society for Social Studies of Science's Conference](https://www.4sonline.org/meeting/call-for-submissions) called "Good Relations: Practices and Methods in Unequal and Uncertain Worlds" (Deadline 8th March)
 
 
-# Possible Connections
+## Possible Connections
 
 
 - Mrinalini:
@@ -38,7 +48,7 @@
 
 
 
-## Chat with Corey
+### Chat with Corey
 
  - [Lukas Koster](https://www.uva.nl/profiel/k/o/l.koster/l.koster.html): Group leader of library & information systems at UvA -> Corey can establish a connection
  
