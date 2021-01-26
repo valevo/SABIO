@@ -30,3 +30,10 @@ Theoretical paper which derives statistical tests for classifier functions. Coul
 Review (plus opinions) of the history of formalising *fairness*, especially in contexts of statistics and computational analysis. Includes a formal comparsion framework.
 
 [Link to PDF](http://www.m-mitchell.com/papers/History_of_Fairness-arxiv.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:Oa1R0kHeAREJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21ekT888:AAGBfm0AAAAAYBAW68-vQKNCvDHwHqVKNk45S_opyVJS&scisig=AAGBfm0AAAAAYBAW64oA4STFAnmZX8C37dJWj2zlp7--&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+## On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?
+
+Critical paper on the rise of massive LMs that sheds light on problems that arise from the practice of estimating billions and trillions of parameters from hundreds of gigabytes of data. Among these problems the social biases that are perpetuated by such models. Received additional attention as Google lead employees, two of the authors, were put under pressure for writing this paper.
+
+[Link to PDF](http://faculty.washington.edu/ebender/papers/Stochastic_Parrots.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:-frkS3CfwgUJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21ekfuwg:AAGBfm0AAAAAYBAaowiWuqHRHWqYNL02PhQLYkw96dcI&scisig=AAGBfm0AAAAAYBAao6YQ_jKYoMyy-rDBoKFm0FQ8kNLm&scisf=4&ct=citation&cd=-1&hl=en)
