@@ -14,12 +14,22 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
   
   - one more linguistically inclined line seems to be diachronic investigation of bias, i.e. to track how bias evolves through time; this is of course a subdiscipline of computational studies of the evolution of meaning
   
+  
+  
+# Fairness
 
 ## A Statistical Test for Probabilistic Fairness
 
 Theoretical paper which derives statistical tests for classifier functions. Could be useful for inspiration and for theoretical motivation; published at FAccT 2021. 
 
+
+
 [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:tkrrAOA23qwJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21fB7y4A:AAGBfm0AAAAAYAl-04D1aEEMTGr9aOP2qbQNlfhBi2iG&scisig=AAGBfm0AAAAAYAl-06ChVPXETeDZLX5BNYwB5BBv4qhd&scisf=4&ct=citation&cd=-1&hl=en)
 
 
-#
+## 50 Years of Test (Un)fairness: Lessons for Machine Learning
+
+Review (plus opinions) of the history of formalising *fairness*, especially in contexts of statistics and computational analysis. Includes a formal comparsion framework.
+
+
+
