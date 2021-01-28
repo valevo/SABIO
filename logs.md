@@ -8,7 +8,21 @@ Notes from meetings and to self. Gems found along the way waiting to be further 
 
 Chat with Corey:
 
+ - [Lukas Koster](https://www.uva.nl/profiel/k/o/l.koster/l.koster.html): Group leader of library & information systems at UvA -> Corey can establish a connection
+ 
+ - AI4LAM (e.g. [their GitHub](https://github.com/AI4LAM) or [Google Sites](https://sites.google.com/view/ai4lam/working-groups?authuser=0)), a group on AI for Libraries, Archives and Museums -> Corey is a member and will keep his eyes open for us, relatedly, Marieke mentioned [LODLAM](https://lod-lam.net/) a group on Linked Open Data for LAM
+ <br> [Conference organised by AI4LAM](https://library.stanford.edu/projects/fantastic-futures)
+ 
+ - there was a workshop at NeurIPS 2020 named [Navigating the Broader Impacts of AI Research](https://nbiair.com/) -> found after searching for the ethics debate at NeurIPS 2020 (see e.g. [this Nature article](https://www.nature.com/articles/d41586-020-00160-y))
+ 
+ - the [Algorhtmic Justice League](https://www.ajl.org/), garnered a lot of attention following their exposal of racial bias in facial recognition systems
 
+ - [Article by ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) on racial bias in criminal prediction software 
+used in the US
+
+ - [FAccT Conference](https://facctconference.org/) ACM Conference on Fairness, Accountability, and Transparency -> Corey mentioned this a potential place for networking
+
+ - [DCode Network](https://www.dcode-network.eu/), project for 'design as a way to open pathways toward inclusive and sustainable futures' -> probably interesting for the user-interface side of SABIO 
 
 
 ### Jan 27
