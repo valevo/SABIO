@@ -4,8 +4,8 @@
 
  - [ ] [data](/data): 
  - [ ] [theory](/theory):
- - [ ] [papers](/papers.md)
- - [ ] [plan](/plan.md)
+ - [ ] [papers](/papers.md) - list of papers
+ - [ ] [plan](/plan.md) - a(n evolving) plan for the SABIO project
  - [ ] [logs](/logs.md)
 
 
@@ -13,10 +13,6 @@
 
 ## People, Organisations, Institutions
 
-
-- [SUDOX](https://www.sudox.nl/)
-
-- [CulturalAI's Site on ICAI](https://icai.ai/cultural-ai-lab/)
 
 - the [CaptureBias project](https://capturebias.wordpress.com/) by VU, UU, UL, TU Delft, Beeld en Geluid
 
