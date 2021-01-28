@@ -25,6 +25,7 @@ used in the US
  - [DCode Network](https://www.dcode-network.eu/), project for 'design as a way to open pathways toward inclusive and sustainable futures' -> probably interesting for the user-interface side of SABIO 
 
 
+
 ### Jan 27
 
 Meeting with Richard van Alphen from Tropenmuseum:
@@ -37,7 +38,7 @@ Meeting with Richard van Alphen from Tropenmuseum:
 
 SABIO/AI:CULT Kick-off meeting:
 
-	- 
+  - Europeana Challenge:
 
 
 
