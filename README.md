@@ -3,9 +3,10 @@
 ### Guide to Repo
 
  - [ ] [data](/data): 
- - [ ] [theory](/theory)
+ - [ ] [theory](/theory):
  - [ ] [papers](/papers.md)
  - [ ] [plan](/plan.md)
+ - [ ] [logs](/logs.md)
 
 
 
