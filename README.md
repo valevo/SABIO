@@ -11,21 +11,6 @@
 
 
 
-
-
-Random list of links put here for further classification and later use.
-
-- [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
-
-- [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
-
-- [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
-
-- the [CRAPL License](http://matt.might.net/articles/crapl/) for software & related resources written in academic contexts
-
-
-
-
 ## People, Organisations, Institutions
 
 
