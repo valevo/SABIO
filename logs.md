@@ -4,6 +4,24 @@ Notes from meetings and to self. Gems found along the way waiting to be further 
 
 ---
 
+## Jan 15
+
+Call with the SABIO stakeholders:
+
+- [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
+
+- [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
+
+
+Forwarded by Marieke:
+
+- [Google Article](https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html) on addressing gender bias in Google Translate
+
+- the [CRAPL License](http://matt.might.net/articles/crapl/) for software & related resources written in academic contexts
+
+
+
+
 ### Jan 20
 
 Chat with Corey:
