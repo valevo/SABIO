@@ -10,8 +10,9 @@ Gems found along the way waiting to be further sorted or put to use.
 Call with the SABIO stakeholders:
 
 - [Example tool by Sudox](https://share.sudox.nl/words-matter/), apparently marks potentially problematic words and computes an overall sentence score based on the ratio of such words.  
-
 - [Words Matter](https://www.materialculture.nl/en/publications/words-matter)
+- [Mahendra Mahey](https://www.bl.uk/people/experts/mahendra-mahey), manager of the British Library Labs
+
 
 
 Forwarded by Marieke:
@@ -24,6 +25,10 @@ Forwarded by Marieke:
 Mrinalini has mentioned:
 
   - [Humane AI](https://humane-ai.nl/) is a meta-project between UvA's Humanities and Science faculties
+  - she's a part of [CREATE](https://www.create.humanities.uva.nl/), supervised by [prof Noordegraaf](https://ahm.uva.nl/profile/n/o/j.j.noordegraaf/j.j.noordegraaf.html)
+  - she TAed a course of [prof Jeurgens](https://www.uva.nl/profiel/j/e/k.j.p.f.m.jeurgens/k.j.p.f.m.jeurgens.html)
+  
+
 
 Julia has mentioned: 
 
