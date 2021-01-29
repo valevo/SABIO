@@ -1,6 +1,6 @@
 # Logs
 
-Notes from meetings and to self. Gems found along the way waiting to be further sorted or put to use.
+Notes from conversations and meetings and to self. Gems found along the way waiting to be further sorted or put to use.
 
 ---
 
