@@ -1,6 +1,6 @@
 # Logs
 
-Notes from conversations and meetings and to self. 
+Notes from conversations and meetings and to self. <br>
 Gems found along the way waiting to be further sorted or put to use.
 
 ---
@@ -72,7 +72,7 @@ SABIO/AI:CULT Kick-off meeting:
 
 Mattia's (cultural analyst) intuition, depending on definitions of course, is that bias is opposed polyvocality: bias is nurtured by the lack of voices and conversely put, a diversity of voices makes bias unlikely to prevail <br>
 => Marieke agrees with the gist of this position
-https://narrativeinitiative.org/blog/polyvocal-narrative-strategy-turning-many-voices-into-durable-change/
+[this article from an initiative](https://narrativeinitiative.org/blog/polyvocal-narrative-strategy-turning-many-voices-into-durable-change/) could be interesting
 
 
 [The Portrait of a Lady: Close and distant reading of media gender bias](https://ir.cwi.nl/pub/29761): abstract for a paper by Laura Hollink on quantifying (binary) gender bias in Dutch newspaper; the approach takes advantage of the lexicalised marking of gender in Dutch (hij/zij) and measures bias as the degree to which an algorithm can predict gender; predicition is *not* done on the pure text but on features extracted based on previous conceptual work 
