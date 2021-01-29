@@ -5,7 +5,7 @@ Gems found along the way waiting to be further sorted or put to use.
 
 ---
 
-## Jan 15
+### Jan 15
 
 Call with the SABIO stakeholders:
 
