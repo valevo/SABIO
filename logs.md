@@ -21,6 +21,17 @@ Forwarded by Marieke:
 - the [CRAPL License](http://matt.might.net/articles/crapl/) for software & related resources written in academic contexts
 
 
+Mrinalini has mentioned:
+
+  - [Humane AI](https://humane-ai.nl/) is a meta-project between UvA's Humanities and Science faculties
+
+Julia has mentioned: 
+
+- [Society for Social Studies of Science's Conference](https://www.4sonline.org/meeting/call-for-submissions) called "Good Relations: Practices and Methods in Unequal and Uncertain Worlds" (Deadline 8th March)
+
+
+
+
 
 
 ### Jan 20
@@ -57,7 +68,7 @@ Meeting with Richard van Alphen from Tropenmuseum:
 
 SABIO/AI:CULT Kick-off meeting ([meeting notes](https://docs.google.com/document/d/1sq64bE2Sz3DAoXpM4eVUso1BA7Vvvs3lGlbZlQxdk3g/edit#)):
 
-  - Jesse de Vos from B&G has been part of a project on bias; he had the following notes:
+  - Jesse de Vos and Johan from B&G are part of [a project on bias](https://capturebias.wordpress.com/); he had the following notes:
     - what about the bias that manifests in the gaps of the museums' collections? bias as gaps?
     - they found it useful to speak of *framing* rather than of *bias* and to distinguish *thematic* and *episodic* framing
   - [Markus Bakenhol](https://www.meertens.knaw.nl/cms/en/medewerkers/142839-markusb), postdoc in ethnology at Meertens, is a domain expert
