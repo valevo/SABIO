@@ -11,3 +11,6 @@ Links, notes and resources of, for and around the datasets relevant to the SABIO
 - [National Library Linked Data](http://data.bibliotheken.nl/)
 
 - Brinkman ([entry in NL Linked Data](http://data.bibliotheken.nl/doc/dataset/brinkman), [entry in BARTOC](https://bartoc.org/en/node/18686)), a Dutch keyword thesaurus
+
+
+- RDF dumps download page: https://collectie.wereldculturen.nl/thesaurus/#/query/461bb885-56de-4ab0-b28f-1c00e8e3b4e6
