@@ -56,10 +56,32 @@ Meeting with Richard van Alphen from Tropenmuseum:
 
 SABIO/AI:CULT Kick-off meeting:
 
-  - Europeana Challenge:
+  - Jesse de Vos from B&G has been part of a project on bias; he had the following notes:
+    - what about the bias that manifests in the gaps of the museums' collections? bias as gaps?
+    - they found it useful to speak of *framing* rather than of *bias* and to distinguish *thematic* and *episodic* framing
+  - [Markus Bakenhol](https://www.meertens.knaw.nl/cms/en/medewerkers/142839-markusb), postdoc in ethnology at Meertens, is a domain expert
+  - Johan mentioned the [Inward Outward symposium](https://www.beeldengeluid.nl/en/inwardoutward) as an outlet and place to get in touch with others 
+  - Johan asked if we could find any published benchmarks or competitions (perhaps at Kaggle?), or even publish one ourselves? => benchmarking is a good point!
+  - the [Europeana Challenge](https://pro.europeana.eu/post/announcing-the-europeanatech-challenge-for-europeana-artificial-intelligence-and-machine-learning-datasets) which we'll potentially go for ([shared document?](https://docs.google.com/document/d/1TbHuN3Fcdgmh5n_9MGolh89N7uQ4fGDoI9mIHvIszWM/edit))
+  - abstract to be submitted at the [LIBER Conference](https://liberconference.eu/liber-2021-online-call-for-papers/); this [shared doc](https://docs.google.com/document/d/1TQlUB5bDVZwTBGTgculT5Lk13l1ZSf7qvoN60IariFI/edit) contains the abstract
 
 
 
 ### Jan 28
+
+Mattia's (cultural analyst) intuition, depending on definitions of course, is that bias is opposed polyvocality: bias is nurtured by the lack of voices and conversely put, a diversity of voices makes bias unlikely to prevail <br>
+=> Marieke agrees with the gist of this position
+https://narrativeinitiative.org/blog/polyvocal-narrative-strategy-turning-many-voices-into-durable-change/
+
+
+[The Portrait of a Lady: Close and distant reading of media gender bias](https://ir.cwi.nl/pub/29761): abstract for a paper by Laura Hollink on quantifying (binary) gender bias in Dutch newspaper; the approach takes advantage of the lexicalised marking of gender in Dutch (hij/zij) and measures bias as the degree to which an algorithm can predict gender; predicition is *not* done on the pure text but on features extracted based on previous conceptual work 
+
+
+### Jan 29
+
+Marieke mentioned [ARIAS](https://arias.amsterdam/), a 'Platform for Research through the Arts and Sciences', that has grants for work sitting at the interesection of art and science
+
+
+there is the [Stanford Encyclopedia of Philosophy](plato.stanford.edu), it has entries e.g. on [Feminist Epistemology](https://plato.stanford.edu/entries/feminism-epistemology/), [race](https://plato.stanford.edu/entries/race/), [implicit bias](https://plato.stanford.edu/entries/implicit-bias/) => really good reference, commonly used by philosophers and very accessible
 
 
