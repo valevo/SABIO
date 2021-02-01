@@ -7,3 +7,4 @@
  - [ ] [papers](/papers.md) - list of papers
  - [ ] [plan](/plan.md) - a(n evolving) plan for the SABIO project
  - [ ] [logs](/logs.md)
+ - [ ] [plan](/plan.md)
