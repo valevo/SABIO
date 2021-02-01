@@ -101,3 +101,9 @@ Marieke mentioned [ARIAS](https://arias.amsterdam/), a 'Platform for Research th
 there is the [Stanford Encyclopedia of Philosophy](plato.stanford.edu), it has entries e.g. on [Feminist Epistemology](https://plato.stanford.edu/entries/feminism-epistemology/), [race](https://plato.stanford.edu/entries/race/), [implicit bias](https://plato.stanford.edu/entries/implicit-bias/) => really good reference, commonly used by philosophers and very accessible
 
 
+## Feb 01
+
+Found the term ["Marrons"](https://nl.wikipedia.org/wiki/Marrons) in the collection RDF (URI https://hdl.handle.net/20.500.11840/206868) -> interesting first task: track the term and its usage across the graph, find adjacent terms, etc
+
+
+
