@@ -70,4 +70,21 @@ Critical review by Timnit Gebru on the role of science, specifically AI, in soci
 
 
 
+## Understanding the Origins of Bias in Word Embeddings
+
+Paper on bias in word embeddings which presents a way to identify (and remove) documents whose removal most reduces bias. 
+
+[Link to PDF](https://arxiv.org/pdf/1810.03611.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:bRx57gSkp_oJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eBrHS8:AAGBfm0AAAAAYBluBS-S2lZJ_wcjIKg2xa7DB5Qi6b2b&scisig=AAGBfm0AAAAAYBluBaS2tgi3or0zb2-05Ofv8VrPeRBG&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+## Measuring Gender Bias in Word Embeddings across Domains and Discovering New Gender Bias Word Categories
+
+
+
+
+
+
+
+
+
 
