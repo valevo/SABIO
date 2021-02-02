@@ -1,4 +1,4 @@
-# Random Ideas 
+# Random Thoughts 
   
 For now, this README is just a place to drop random ideas for the project. Later, it will be turned into a proper guide to the theoretical parts of SABIO.
  
