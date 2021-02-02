@@ -106,4 +106,9 @@ there is the [Stanford Encyclopedia of Philosophy](plato.stanford.edu), it has e
 Found the term ["Marrons"](https://nl.wikipedia.org/wiki/Marrons) in the collection RDF (URI https://hdl.handle.net/20.500.11840/206868) -> interesting first task: track the term and its usage across the graph, find adjacent terms, etc
 
 
+## Feb 02
+
+Andrei has mentioned [From Cartography To Cookbooks](https://www.fromcartographytocookbooks.com/), "a web of Dutch colonialism" and online exhibition which shines a light on issues such as race and gender in the context of colonialism with maps and cookbooks as media ([Allard Pierson page for the exhibition](https://allardpierson.nl/en/visit/from-cartography-to-cookbooks-a-web-of-dutch-colonialism/))
+
+
 
