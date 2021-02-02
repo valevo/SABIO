@@ -69,7 +69,6 @@ Critical review by Timnit Gebru on the role of science, specifically AI, in soci
 [Link to PDF](https://arxiv.org/ftp/arxiv/papers/1908/1908.06165.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:8XiuL9kXndgJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eBnF24:AAGBfm0AAAAAYBliD263ZD8jvgxzmFueC9n3q46yjXSa&scisig=AAGBfm0AAAAAYBliD6ssQ0q2W81X9UTY_wGjfqNES_Mq&scisf=4&ct=citation&cd=-1&hl=en)
 
 
-
 ## Understanding the Origins of Bias in Word Embeddings
 
 Paper on bias in word embeddings which presents a way to identify (and remove) documents whose removal most reduces bias. 
@@ -79,8 +78,24 @@ Paper on bias in word embeddings which presents a way to identify (and remove) d
 
 ## Measuring Gender Bias in Word Embeddings across Domains and Discovering New Gender Bias Word Categories
 
+A paper which proposes an algorithm to discover new word categories within the WEAT framework. [GitHub repo](https://github.com/alfredomg/GeBNLP2019)
+
+[Link to PDF](https://www.aclweb.org/anthology/W19-3804.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:S5stJ0wV2RQJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eB-0ZE:AAGBfm0AAAAAYBl7yZHFsSr5FQGepah683GVj7uQNXLL&scisig=AAGBfm0AAAAAYBl7yW2AeVjAgp_sUktuV2uYs03r5EEi&scisf=4&ct=citation&cd=-1&hl=en)
 
 
+## Semantics derived automatically from language corpora contain human-like biases
+
+This is the original paper to introduce the **Word Embedding Association Test (WEAT)**.
+
+[Link to PDF](https://researchportal.bath.ac.uk/en/publications/semantics-derived-automatically-from-language-corpora-necessarily) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:Is459GpUm20J:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eBxgiA:AAGBfm0AAAAAYBl0miDk7C_jkbmunCFeFAt4y31PvtBz&scisig=AAGBfm0AAAAAYBl0muqLuVrhmKoLPIvFKeXxWFLMqwoM&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
+
+
+## Google Blog Entries
+
+ - [Text Embedding Models Contain Bias. Here's Why That Matters.](https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html), a Google team's own investigation into the WEAT and surrounding issues
 
 
 
