@@ -2,9 +2,8 @@
 
 ### Guide to Repo
 
- - [ ] [data](/data): 
- - [ ] [theory](/theory):
- - [ ] [papers](/papers.md) - list of papers
- - [ ] [plan](/plan.md) - a(n evolving) plan for the SABIO project
- - [ ] [logs](/logs.md)
- - [ ] [plan](/plan.md)
+ - [ ] [data](/data): everything related to the data itself, i.e. links to data sets, (pre-)proccessing functions, descriptive analyses and perhaps some actual data at a later point
+ - [ ] [theory](/theory): manifesto, ideas for algorithms, conceptual research & constraints from philosophy - information s.t. SABIO fulfills its promise to be a schema for future work 
+ - [ ] [papers](/papers.md) - list of (potentially) relevant papers
+ - [ ] [plan](/plan.md) - an evolving plan for the SABIO project that sketches tasks and timelines and will eventually also document what really happened
+ - [ ] [logs](/logs.md) - my day-by-day list of notes, pointers and random findings
