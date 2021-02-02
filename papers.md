@@ -62,3 +62,12 @@ Extensive survey of papers about adressing bias in NLP (models) that finds vague
 
 
 
+## Race and Gender
+
+Critical review by Timnit Gebru on the role of science, specifically AI, in social issue, specifically race and gender. Chapter of the [Oxford Handbook of Ethics of AI](https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780190067397.001.0001/oxfordhb-9780190067397).
+
+[Link to PDF](https://arxiv.org/ftp/arxiv/papers/1908/1908.06165.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:8XiuL9kXndgJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eBnF24:AAGBfm0AAAAAYBliD263ZD8jvgxzmFueC9n3q46yjXSa&scisig=AAGBfm0AAAAAYBliD6ssQ0q2W81X9UTY_wGjfqNES_Mq&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
+
