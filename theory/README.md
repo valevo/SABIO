@@ -1,15 +1,16 @@
 # Random Thoughts 
   
-For now, this README is just a place to drop random ideas for the project. Later, it will be turned into a proper guide to the theoretical parts of SABIO.
+For now, this README is just a place for random ideas towards the project. Later, it will be turned into a proper guide to the theoretical parts of SABIO.
  
  
 ## Social Bias versus Statistical Bias
 
 It is not really a coincidence that both statisticians and social scientists speak of bias. 
-In statistics, bias is a type of systematic difference of an estimator from the true value; formally, the expected value of a statistic *T* can be expressed as *E[T] = \theta + bias(\theta)*  and *T* is unbiased iff *bias(\theta) = 0*. 
-In social science, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
+In statistics, bias is a type of systematic difference of an estimator from the true value; formally, the expected value of a statistic *T* can be expressed as *E[T] = \theta + bias(T, \theta)*  and *T* is unbiased wrt. the theoretical value *\theta* iff *bias(T, \theta) = 0*.
+In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 
--> Perhaps 
+-> Perhaps we leverage this coincidence of terms and underlying concepts? Social bias is (probably) very difficult to operationalise directly, but could we perhaps use statistical bias, which is straighforwardly measurable, as a proxy for social bias? That is, we would construct a random variable whose theoretical value is known and a statistic such that the statistical bias of the statistic is equivalent to a social bias. <br>
+*Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)*T(C) = v + bias(v)*
 
 
 
@@ -28,10 +29,11 @@ In social science, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 
 Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf's) in language: Because they are intrinsic properties of language, it is impossible to imagine languages where bias or laws (such as Zipf's) don't exist. The very practical problem arises then that a measured value of quantification becomes somewhat meaningless because it has no "null" point that it can be studied in comparison of. (I.e. what does a biasedness value of 10 mean if I don't know what the sample would need to look like to obtain a value of 0.)
 
+=> This [paper](https://github.com/valevo/SABIO/blob/main/papers.md#understanding-the-origins-of-bias-in-word-embeddings) on removing parts of a corpus whose removal would most reduce bias could offer help here. Namely that by removing and re-measuring bias, we can obtain estimates of the derivative of the measuring function at the point defined by the particular corpus. Thereby, we get at least an idea of how our measurement from the original corpus relates to (hypothetical) measurements from other corpora, we contextualise our measurement. (This is also related to statistical techniques such as bootstrapping.)
 
-[this paper](/paper
+=> The concept of Typicality (of Typical Set) from Infromation Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
 
-Understanding the Origins of Bias in Word Embeddings
+
 
 
 
