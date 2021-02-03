@@ -91,6 +91,24 @@ This is the original paper to introduce the **Word Embedding Association Test (W
 
 
 
+## Studying Political Bias via Word Embeddings
+
+[Link to PDF](https://people.clarkson.edu/~jmatthew/publications/PoliticalBias_FATES2020.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:hCjFOKweqQoJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eB4N9Q:AAGBfm0AAAAAYBl9L9RcGPoEb9KnrvFMNx93BO-wRDeV&scisig=AAGBfm0AAAAAYBl9L3mNqtGCZEWXN2w911ATeYbwCfRv&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+## Disembodied Machine Learning: On the Illusion of Objectivity in NLP
+
+https://openreview.net/pdf?id=fkAxTMzy3fs
+
+## Stance Detection with Bidirectional Conditional Encoding
+
+by Augenstein and Rocktaeschel et al
+
+[Link to PDF](https://arxiv.org/pdf/1606.05464.pdf) | [BibTeX Entry](https://scholar.googleusercontent.com/scholar.bib?q=info:WjTPTWBJOTMJ:scholar.google.com/&output=citation&scisdr=CgXMhBClEPb21eB7fBE:AAGBfm0AAAAAYBl-ZBHYOTZITGZrggoPKA7zdQFyk_QM&scisig=AAGBfm0AAAAAYBl-ZALutT4xHXQmJJZ41z4LWHEhctr8&scisf=4&ct=citation&cd=-1&hl=en)
+
+
+
+
 
 
 ## Google Blog Entries
