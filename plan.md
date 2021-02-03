@@ -1,6 +1,6 @@
 # SABIO Project Plan
 
-
+# Iteration 1
 
 ## Practical Work a.k.a. Programming
  - process the meta-data network, automate common patterns
@@ -25,5 +25,8 @@
    
  - formalise the world of biases (types, aspects, levels) to be detected in the first iteration 
    
-&#9;&#9;&#9;&#9;&#9;&#9;&#9;=> goal for February: be ready to implement a battery of detection algorithms for experimentation and feedback from the stakeholders 
+#### => goal for February: be ready to implement a battery of detection algorithms for experimentation and feedback from the stakeholders 
  
+# Iteration 2
+
+
