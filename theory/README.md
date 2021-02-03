@@ -24,3 +24,10 @@ In social science, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
     
   
   
+## Language without Bias?
+
+Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf's) in language: Because they are intrinsic properties of language, it is impossible to imagine languages where bias or laws (such as Zipf's) don't exist. The very practical problem arises then that a measured value of quantification becomes somewhat meaningless because it has no "null" point that it can be studied in comparison of. (I.e. what does a biasedness value of 10 mean if I don't know what the sample would need to look like to obtain a value of 0.)
+
+
+
+  
