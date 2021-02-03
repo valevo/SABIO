@@ -111,9 +111,11 @@ by Augenstein and Rocktaeschel et al
 
 
 
-## Google Blog Entries
+## Blogs, Posts et al
 
  - [Text Embedding Models Contain Bias. Here's Why That Matters.](https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html), a Google team's own investigation into the WEAT and surrounding issues
+
+ 
 
 
 
