@@ -29,8 +29,8 @@ Thus, the heuristics/strategies/algorithms sketched below are chiefly aimed at i
   and compare the learned representations by the proposed methods. Further, the corpus-specific representations can be compared to representations obtained 
   
   Important assumptions:
-  
-    - the bias exhibited by the trained model is (completely) the bias in the data, and not introduced by the model
+   
+   - the bias exhibited by the trained model is (completely) the bias in the data, and not introduced by the model
     
     
   
