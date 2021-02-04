@@ -51,6 +51,10 @@ precisely because bias affects everyone: & because of what is mentioned in Secti
   2. in the interest of the protection of minorities, public inputs should not be directly integrated into our software but via a curative process (to avoid e.g. the nature of publicly voiced opinion on internet forums); eventually, harm is to be avoided and this requirement extends to user inputs
   
   
+## Durability 
+
+algorithm should be future proof, 
+
 
  
  
