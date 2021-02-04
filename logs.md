@@ -119,5 +119,8 @@ Victor has mentioned this [blog post by MIT](https://www.technologyreview.com/20
 
 ## Feb 04 
 
-Cindy mentioned that 'Bosneger' is in the Words Matter publication 
+Cindy mentioned:
+  - 'Bosneger' is in the Words Matter publication 
+  - AAT Arts and Achritecture Thesau by Getty -> what about bias in the thesauruses -> can be downloaded
+  - relogious bias as interesting case?
 
