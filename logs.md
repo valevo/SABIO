@@ -117,3 +117,7 @@ Victor has mentioned this [blog post by MIT](https://www.technologyreview.com/20
 
 
 
+## Feb 04 
+
+Cindy mentioned that 'Bosneger' is in the Words Matter publication 
+
