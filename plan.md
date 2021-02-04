@@ -4,9 +4,11 @@
 
 ## Practical Work a.k.a. Programming
  - process the meta-data network, automate common patterns
- - gather basic characterstics of the dataset -> will point towards types of methods, might reveal problems that need to be be addressed
+ - gather characterstics of the dataset -> will point towards types of methods, might reveal problems that need to be be addressed
  - do some basic experiments such as term tracking, dependency parsing, etc -> will restrict and/or guide the choice of algorithms
- - pre-process the linguistic data, the objects' descriptions, including vectorisation
+   - automate term tracking -> probably useful in any case
+   - gather tasks from basic experiments in suite of tools (& set up properly)
+ - pre-process the linguistic data, the objects' descriptions, including vectorisation and (basic) feature extraction
 
 
 ## Theoretical Work a.k.a. Conceptual Analysis and Formalisation
@@ -25,8 +27,10 @@
    
  - formalise the world of biases (types, aspects, levels) to be detected in the first iteration 
    
-#### => goal for February: be ready to implement a battery of detection algorithms for experimentation and feedback from the stakeholders 
+##### => goal for February: be ready to implement a battery of detection algorithms for experimentation and feedback from the stakeholders 
  
+ 
+
 # Iteration 2
 
 
