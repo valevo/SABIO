@@ -120,7 +120,12 @@ Victor has mentioned this [blog post by MIT](https://www.technologyreview.com/20
 ## Feb 04 
 
 Cindy mentioned:
-  - 'Bosneger' is in the Words Matter publication 
-  - AAT Arts and Achritecture Thesaurus by Getty -> what about bias in the thesauruses -> can be downloaded
+  - 'facets' (of which there are 5) categorise terms in the thesaurus into semantic function -> could be seen as 'prescribed' associations
+  - the term 'Bosneger' (an old, derogatory label for 'Marron') is in the Words Matter publication -> compare associations from there with those from DB 
+  - the [AAT](https://www.getty.edu/research/tools/vocabularies/lod/) (*Arts and Achritecture Thesaurus*) by Getty
+    - thesauruses made made entirely from Western museum perspectives -> bias is deep
+    - could be a valuable source of shared knowledge (Wereldculturen thesaurus is rather specific)
+  - histories of museums' objects *after* acquisition could provide an useful 'grounding facts' (represent some of the materialised, as opposed to linguistic aspects of bias) -> e.g. royal objects end up in Rijksmuseum, others in the heritage museums
   - relogious bias as interesting case?
-  - Rembrandt labelled as painting, buddhist work labelled as decorative art
+  - Rembrandt labelled as painting, buddhist work labelled as decorative art -> clustering based on properties (i.e. 'semantics') should reveal
+  - 'Rapanui' (a natively used term) not in DB, Rapa Nui and Paaseiland are -> labels are difficult even if not obviously discriminatory
