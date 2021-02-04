@@ -1,6 +1,6 @@
 # SABIO Project Plan
 
-# Iteration 1
+# Iteration 0
 
 ## Practical Work a.k.a. Programming
  - process the meta-data network, automate common patterns
