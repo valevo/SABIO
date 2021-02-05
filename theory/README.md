@@ -35,7 +35,11 @@ Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf'
 => The concept of Typicality (of Typical Set) from Infromation Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
 
 
+## Bias as the Adversary
 
+Could bias detection be phrased as an adversarial learning problem? What would the adversary's loss be?
+Perhaps considering a scenario where language is always bias-free but then an adversary adds bias before it is uttered? -> trick the adversary 
+Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
 
 
   
