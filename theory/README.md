@@ -11,7 +11,7 @@ In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 
 -> Perhaps we leverage this coincidence of terms and underlying concepts? Social bias is (probably) very difficult to operationalise directly, but could we perhaps use statistical bias, which is straighforwardly measurable, as a proxy for social bias? That is, we would construct a random variable whose theoretical value is known and a statistic such that the statistical bias of the statistic is equivalent to a social bias. <br>
 
-*Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)*T(C) = v + bias(v)*
+*Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)xT(C) = v + bias(v)*
 
 
 
