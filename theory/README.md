@@ -44,7 +44,10 @@ Or perhaps an adversary could be used just to improve the performance of detecti
 
 
 
-# Typicality
+## Typicality
 
 keep word in sentence fixed, look at set of sentences with the word in it -> what the typical set?
+
+S_w = the set of sentences in which a certain word occurs
+
   
