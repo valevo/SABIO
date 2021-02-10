@@ -42,4 +42,9 @@ Perhaps considering a scenario where language is always bias-free but then an ad
 Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
 
 
+
+
+# Typicality
+
+keep word in sentence fixed, look at set of sentences with the word in it -> what the typical set?
   
