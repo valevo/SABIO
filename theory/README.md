@@ -11,7 +11,7 @@ In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 
 -> Perhaps we leverage this coincidence of terms and underlying concepts? Social bias is (probably) very difficult to operationalise directly, but could we perhaps use statistical bias, which is straighforwardly measurable, as a proxy for social bias? That is, we would construct a random variable whose theoretical value is known and a statistic such that the statistical bias of the statistic is equivalent to a social bias. <br>
 
-*Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)xT(C) = v + bias(v)*
+*Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)*T(C) = v + bias(v)*
 
 
 
@@ -42,12 +42,13 @@ Perhaps considering a scenario where language is always bias-free but then an ad
 Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
 
 
-
-
-## Typicality
-
-keep word in sentence fixed, look at set of sentences with the word in it -> what the typical set?
-
-S_w = the set of sentences in which a certain word occurs
-
   
+## Bayesianism
+
+Bias could potentially be neatly operationalised as an (over-/-under)  
+
+
+
+## Randomness
+
+
