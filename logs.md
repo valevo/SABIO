@@ -129,3 +129,13 @@ Cindy mentioned:
   - relogious bias as interesting case?
   - Rembrandt labelled as painting, buddhist work labelled as decorative art -> clustering based on properties (i.e. 'semantics') should reveal
   - 'Rapanui' (a natively used term) not in DB, Rapa Nui and Paaseiland are -> labels are difficult even if not obviously discriminatory
+
+
+## Feb 11
+
+ - Europeana has a [Python API](https://pypi.org/project/europeana-search/) for its database
+ 
+ Mattia has mentioned [*Johannes Fabian*](https://en.wikipedia.org/wiki/Johannes_Fabian) (UvA Emeritus), specifically his *'Time and the Other'* <br>
+ -> to quote Mattia: 'Different situated notions of time could constitute another vector of bias'
+
+
