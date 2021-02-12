@@ -150,3 +150,14 @@ Cindy mentioned:
  - [Research Center for Material Culture](https://www.materialculture.nl/en), part of Museum van Wereldculturen
 
 
+ - the KB:
+   - [Example data sets](https://lab.kb.nl/dataset/example-set) for download
+   - [Delpher](delpher.nl): search interface to the KB's collection (books, newspapers, magazines)
+   - [Demo on Delpher](http://delpher_demo.kbresearch.nl/): interactive word analysis and visualisation tools <br>
+   -> the KB's collections are massive and entirely text <br>
+   -> can provide useful background knwowledge/context for MvW's collection items (perhaps matche by time and/or topic) <br>
+   -> could be leveraged as training/test data <br>
+   -> Delpher itself or the Delpher demo could: give hints for how to query databases and/or be an object of study in the sense that they might reveal bias -> in any case, looking at methodologies/implementations there could be useful
+   
+   
+
