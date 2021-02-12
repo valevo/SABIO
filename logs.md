@@ -145,5 +145,8 @@ Cindy mentioned:
  - [CollectionsAsData](https://collectionsasdata.github.io/team/), lead by Thomas Padilla, a project on computational methods in libraries <br>
  -> could contain useful resources or links, e.g. [Statement on treating collections as data](https://collectionsasdata.github.io/statement/) which we're actually doing as well <br>
  -> could be an interesting group to get in touch with
+ 
+ 
+ - [Research Center for Material Culture](https://www.materialculture.nl/en), part of Museum van Wereldculturen
 
 
