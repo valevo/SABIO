@@ -139,3 +139,11 @@ Cindy mentioned:
  -> to quote Mattia: 'Different situated notions of time could constitute another vector of bias'
 
 
+
+## Feb 12
+
+ - [CollectionsAsData](https://collectionsasdata.github.io/team/), lead by Thomas Padilla, a project on computational methods in libraries <br>
+ -> could contain useful resources or links, e.g. [Statement on treating collections as data](https://collectionsasdata.github.io/statement/) which we're actually doing as well
+ -> could be an interesting group to get in touch with
+
+
