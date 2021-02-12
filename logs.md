@@ -160,4 +160,6 @@ Cindy mentioned:
    -> Delpher itself or the Delpher demo could: give hints for how to query databases and/or be an object of study in the sense that they might reveal bias -> in any case, looking at methodologies/implementations there could be useful
    
    
+ - [The Real Face of White Australia](https://www.realfaceofwhiteaustralia.net/), a data story that uses historical government records about non-European Australians; this page/project is the outcome of [this chapter](https://zenodo.org/record/3579530) in the book [*Seeing the Past with Computers: Experiments with Augmented Reality and Computer Vision for History*](https://library.oapen.org/handle/20.500.12657/23993)
+   
 
