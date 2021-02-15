@@ -163,3 +163,10 @@ Cindy mentioned:
  - [The Real Face of White Australia](https://www.realfaceofwhiteaustralia.net/), a data story that uses historical government records about non-European Australians; this page/project is the outcome of [this chapter](https://zenodo.org/record/3579530) in the book [*Seeing the Past with Computers: Experiments with Augmented Reality and Computer Vision for History*](https://library.oapen.org/handle/20.500.12657/23993)
    
 
+
+
+## Feb 15
+
+- [SemEval2020 Task 12](https://arxiv.org/pdf/2006.07235.pdf) on the identification of offensive language coul be an interesting test case
+
+
