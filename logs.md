@@ -101,23 +101,23 @@ Marieke mentioned [ARIAS](https://arias.amsterdam/), a 'Platform for Research th
 there is the [Stanford Encyclopedia of Philosophy](plato.stanford.edu), it has entries e.g. on [Feminist Epistemology](https://plato.stanford.edu/entries/feminism-epistemology/), [race](https://plato.stanford.edu/entries/race/), [implicit bias](https://plato.stanford.edu/entries/implicit-bias/) => really good reference, commonly used by philosophers and very accessible
 
 
-## Feb 01
+### Feb 01
 
 Found the term ["Marrons"](https://nl.wikipedia.org/wiki/Marrons) in the collection RDF (URI https://hdl.handle.net/20.500.11840/206868) -> interesting first task: track the term and its usage across the graph, find adjacent terms, etc
 
 
-## Feb 02
+### Feb 02
 
 Andrei has mentioned [From Cartography To Cookbooks](https://www.fromcartographytocookbooks.com/), "a web of Dutch colonialism" and online exhibition which shines a light on issues such as race and gender in the context of colonialism with maps and cookbooks as media ([Allard Pierson page for the exhibition](https://allardpierson.nl/en/visit/from-cartography-to-cookbooks-a-web-of-dutch-colonialism/))
 
 
-## Feb 03
+### Feb 03
 
 Victor has mentioned this [blog post by MIT](https://www.technologyreview.com/2021/01/29/1017065/ai-image-generation-is-racist-sexist/) - yet another example of racist and sexist image processing AI
 
 
 
-## Feb 04 
+### Feb 04 
 
 Cindy mentioned:
   - 'facets' (of which there are 5) categorise terms in the thesaurus into semantic function -> could be seen as 'prescribed' associations
@@ -131,7 +131,7 @@ Cindy mentioned:
   - 'Rapanui' (a natively used term) not in DB, Rapa Nui and Paaseiland are -> labels are difficult even if not obviously discriminatory
 
 
-## Feb 11
+### Feb 11
 
  - Europeana has a [Python API](https://pypi.org/project/europeana-search/) for its database
  
@@ -140,7 +140,7 @@ Cindy mentioned:
 
 
 
-## Feb 12
+### Feb 12
 
  - [CollectionsAsData](https://collectionsasdata.github.io/team/), lead by Thomas Padilla, a project on computational methods in libraries <br>
  -> could contain useful resources or links, e.g. [Statement on treating collections as data](https://collectionsasdata.github.io/statement/) which we're actually doing as well <br>
@@ -165,7 +165,7 @@ Cindy mentioned:
 
 
 
-## Feb 15
+### Feb 15
 
 - [SemEval2020 Task 12](https://arxiv.org/pdf/2006.07235.pdf) on the identification of offensive language coul be an interesting test case
 
