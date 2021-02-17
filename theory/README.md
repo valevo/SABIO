@@ -52,3 +52,15 @@ Bias could potentially be neatly operationalised as an (over-/-under)
 ## Randomness
 
 
+
+
+
+
+## Bias in Network via Queries
+
+ - randomly sample (construct) queries into the network, compute statistics on results -> expected outcome: some items (or properties of items) will be over-represented and some under-represented, so what do these says about (types of) biases?
+ - this is reminiscient of an MCMC method -> thus the question: what distribution are we sampling by this procedure?
+ - Marieke mentioned similar research 
+ - nice thing: depending on the sampling procedure, this method is fairly objective and unbiased in itself
+
+
