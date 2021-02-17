@@ -47,7 +47,7 @@ Or perhaps an adversary could be used just to improve the performance of detecti
 
 Bias could potentially be neatly operationalised as an (over-/-under)  
 
-
+https://ieeexplore.ieee.org/abstract/document/7559558
 
 ## Randomness
 
@@ -60,7 +60,7 @@ Bias could potentially be neatly operationalised as an (over-/-under)
 
  - randomly sample (construct) queries into the network, compute statistics on results -> expected outcome: some items (or properties of items) will be over-represented and some under-represented, so what do these says about (types of) biases?
  - this is reminiscient of an MCMC method -> thus the question: what distribution are we sampling by this procedure?
- - Marieke mentioned similar research, paper by Jacco
+ - Marieke mentioned similar research, namely [this paper by Jacco](https://ieeexplore.ieee.org/abstract/document/7559558)
  - nice thing: depending on the sampling procedure, this method is fairly objective and unbiased in itself
 
 
