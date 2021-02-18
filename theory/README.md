@@ -45,9 +45,8 @@ Or perhaps an adversary could be used just to improve the performance of detecti
   
 ## Bayesianism
 
-Bias could potentially be neatly operationalised as an (over-/-under)  
-
-https://ieeexplore.ieee.org/abstract/document/7559558
+Bias could potentially be neatly operationalised as (too much/to little) probability mass; by explicitly distinguishing prior and likelihood (via Bayes), we could access to overall bias (reflected in the prior) and contextual bias (reflected in the likelihood). <br>
+To give an simple (and stupid) example: We compare *P(man|doctor)* and *P(woman|doctor)* which are, respectively, prop. to *P(man)*P(doctor|man)* and *P(woman)*P(doctor|woman)*. *P(man)* vs *P(woman)* is global bias, i.e. *P(man) > P(woman)* corresponds to overrepresentation of men (and underrepresentation of women). Similary, *P(doctor|man)* and *P(doctor|woman)* is contextual bias, i.e. if *P(doctor|man) > P(doctor|woman)* then 
 
 ## Randomness
 
