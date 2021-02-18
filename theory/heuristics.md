@@ -37,6 +37,6 @@ Thus, the heuristics/strategies/algorithms sketched below are chiefly aimed at i
   
 ## Predictive Model for Gender Bias
   
-  Making use of the fact that Dutch marks gender in its vocabulary (via fusional morphology): 
+  Making use of the fact that Dutch marks gender in its vocabulary (via fusional morphology). See this [abstract by Laura](https://ir.cwi.nl/pub/29761) in which they propose basically exactly this idea. Unfortunately never actually got carry out the experiments described there.
   
   
