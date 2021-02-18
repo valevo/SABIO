@@ -170,3 +170,9 @@ Cindy mentioned:
 - [SemEval2020 Task 12](https://arxiv.org/pdf/2006.07235.pdf) on the identification of offensive language coul be an interesting test case
 
 
+
+## Feb 18
+
+Andrei mentioned:
+  - [Zotero](https://www.zotero.org/), a library management tool; we could all share our libraries through that
+
