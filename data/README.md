@@ -15,7 +15,7 @@ Links, notes and resources of, for and around the datasets relevant to the SABIO
 
 ### Other
 
-- [The TermenNetwerk](https://termennetwerk.netwerkdigitaalerfgoed.nl/) is the combined thesaurus of the members of the Netwerk Digitaal Erfgoed.
+- [The TermenNetwerk](https://termennetwerk.netwerkdigitaalerfgoed.nl/) is the combined thesaurus of the members of the Netwerk Digitaal Erfgoed, so the Thesaurus of the Museum van Wereldculturen is a subset. The technical report of TermenNetwerk can be found [here](https://www.netwerkdigitaalerfgoed.nl/wp-content/uploads/2018/02/NDE_Rapport_knowledgegraph-EN-v2.pdf).
 
 - [National Library Linked Data](http://data.bibliotheken.nl/)
 
