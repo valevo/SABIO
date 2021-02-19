@@ -50,7 +50,7 @@ To give an simple (and stupid) example: We compare *P(man|doctor)* and *P(woman|
 
 ## Randomness
 
-
+Bias likely manifests itself as a lack of randomness with respect to some distributions. Although this is rather vague, randomness testing could be a useful family of techniques. As advantages, these are typically easy to apply and offer large degrees of objectivity and some degrees of transparency. Moreover, they are related to the Bayesian approach and thus can be easily done dually.  
 
 
 
