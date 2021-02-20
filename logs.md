@@ -171,8 +171,15 @@ Cindy mentioned:
 
 
 
-## Feb 18
+### Feb 18
 
 Andrei mentioned:
   - [Zotero](https://www.zotero.org/), a library management tool; we could all share our libraries through that
+
+
+### Feb 20
+
+randonmly found this [blog post](https://christovis.github.io//essay/2021-01-20-blog-durham-research-methods) about decolonising AI <br>
+-> cound contain useful pointers
+
 
