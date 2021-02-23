@@ -195,6 +195,7 @@ chat with Jesse:
 books on how current AI reinforces biases and inequalities and how to do it differntly:
   - [Data Feminism](https://datafeminism.io/) -> could have an interesting (inherent) connection to Feminist Theory
   - [Race After Technology: Abolitionist Tools for the New Jim Code](https://www.ruhabenjamin.com/race-after-technology) -> author has many publications about racial issues in the world of modern technology
+  - [Algorithms of Oppression](https://safiyaunoble.com/research-writing/) 
 
 
 
