@@ -179,7 +179,22 @@ Andrei mentioned:
 
 ### Feb 20
 
-randonmly found this [blog post](https://christovis.github.io//essay/2021-01-20-blog-durham-research-methods) about decolonising AI <br>
+through an INDELAB connection found this [blog post](https://christovis.github.io//essay/2021-01-20-blog-durham-research-methods) about decolonising AI <br>
 -> cound contain useful pointers
+
+
+
+### Feb 22
+
+chat with Jesse:
+ - get Werner (SUDOX) involved soon
+
+
+### Feb 23
+
+books on how current AI reinforces biases and inequalities and how to do it differntly:
+  - [Data Feminism](https://datafeminism.io/) -> could have an interesting (inherent) connection to Feminist Theory
+  - [Race After Technology: Abolitionist Tools for the New Jim Code](https://www.ruhabenjamin.com/race-after-technology) -> author has many publications about racial issues in the world of modern technology
+
 
 
