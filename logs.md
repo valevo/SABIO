@@ -199,3 +199,7 @@ books on how current AI reinforces biases and inequalities and how to do it diff
 
 
 
+### Feb 24 
+
+Johan put us in touch with [someone](https://vendelagrundell.com/) who's working on a [similar project](https://politicsofmetadata.blogs.dsv.su.se/) which deals with biases in meta-data of heritage collections
+
