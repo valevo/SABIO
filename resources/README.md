@@ -33,11 +33,10 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
  - Thomas Padilla
 
 
-### Social Sciences
+### Philosophy & Social Sciences
 
- - Markus Balkenhol
-
-
+ - [Markus Balkenhol](https://www.meertens.knaw.nl/cms/en/medewerkers/142839-markusb), Ethnologist at Meertens
+ - [David Ludwig](http://david-ludwig.com/) from Wageningen University
 
 
 
@@ -48,9 +47,10 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
 
  - [Text Embedding Models Contain Bias. Here's Why That Matters.](https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html), a Google team's own investigation into the WEAT and surrounding issues
 
- 
-
-
+ - [The Sample Generator - Part 1: Origins](
+https://britishlibrary.typepad.co.uk/digital-scholarship/2013/11/the-sample-generator-part-1-origins.html?_ga=2.145789555.679492557.1611752125-107459358.1611318803), a post by the British Library on a tool to generate samples from collections for exemplar-based research <br>
+-> interesting in terms of bias, does the sampling algorithm contain, exacerbate <br>
+-> possible connection to the [idea]([https://github.com/valevo/SABIO/tree/main/theory#bias-in-network-via-queries]) that bias could be revealed via queries 
 
 
 
