@@ -49,7 +49,7 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
 
  - [The Sample Generator - Part 1: Origins](https://britishlibrary.typepad.co.uk/digital-scholarship/2013/11/the-sample-generator-part-1-origins.html?_ga=2.145789555.679492557.1611752125-107459358.1611318803), a post by the British Library on a tool to generate samples from collections for exemplar-based research <br>
   -> interesting in terms of bias, does the sampling algorithm contain, exacerbate <br>
-  -> possible connection to the [idea](https://github.com/valevo/SABIO/tree/main/theory#bias-in-network-via-queries) that bias could be revealed via queries 
+  -> possible connection to the [idea that bias could be revealed via queries ](https://github.com/valevo/SABIO/tree/main/theory#bias-in-network-via-queries)
 
 
 
