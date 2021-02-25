@@ -43,7 +43,7 @@ TBD
 
 
 
-# Minimal Viable Products
+# Minimal Viable Product (MVP)
 
 ## SABIO: make social biases in heritage collections *more* accessible
 
@@ -54,7 +54,7 @@ Four terms to be clarified:
      on the other hand, accessibility is about understanding, i.e. providing *context*, *explanation*, *alternatives* to bias
   - *more*: realising that bias is ubiquitous and in the limit impossible to detect, we only require that SABIO *increases* visibility of social bias
 
-
+This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions.
 
 
 ## Uses Cases
@@ -71,6 +71,9 @@ Broadly distinguish professionals (collection managers, curators, social & histo
 
  - back end: data ingestion: unified data structures, linking of entities (i.e. NER), extraction and normalisation of text
  - algorithms: 
+   - textual:
+   - graph-based:
+   - other:
  - front end: visualisation, search interface, illustration of statistics
 
 
