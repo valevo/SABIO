@@ -57,7 +57,10 @@ Four terms to be clarified:
 This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions.
 
 
-## Uses Cases
+Note: The focus on museums' data actually makes the task *easier* -> data is curated, linked, properly archived
+
+
+### Uses Cases
 
 Broadly distinguish professionals (collection managers, curators, social & historical researchers) and end user (general public, museum or website visitors).
 
