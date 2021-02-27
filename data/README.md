@@ -3,7 +3,7 @@
 Links, notes and resources of, for and around the datasets relevant to the SABIO projects.
 
 
-### Museum van Wereldculturen
+## Museum van Wereldculturen
 
 - [Online Representation of Collection](https://collectie.wereldculturen.nl)
 
@@ -13,9 +13,14 @@ Links, notes and resources of, for and around the datasets relevant to the SABIO
 -> could actaully be used as a data set (test set?) -> is it possible to get the texts in plain-text format (i.e. not PDF)?
 
 
-### Other
+## Other
 
-- [The TermenNetwerk](https://termennetwerk.netwerkdigitaalerfgoed.nl/) is the combined thesaurus of the members of the Netwerk Digitaal Erfgoed, so the Thesaurus of the Museum van Wereldculturen is a subset. The technical report of TermenNetwerk can be found [here](https://www.netwerkdigitaalerfgoed.nl/wp-content/uploads/2018/02/NDE_Rapport_knowledgegraph-EN-v2.pdf).
+### [The TermenNetwerk](https://termennetwerk.netwerkdigitaalerfgoed.nl/) 
+
+is the combined thesaurus of the members of the Netwerk Digitaal Erfgoed, so the Thesaurus of the Museum van Wereldculturen is a subset. The technical report of TermenNetwerk can be found [here](https://web.archive.org/web/20190530092107/https://www.netwerkdigitaalerfgoed.nl/wp-content/uploads/2018/02/20170707_NDE_High_level_functional_design-1.pdf). GitHub pages of the [API](https://github.com/netwerk-digitaal-erfgoed/network-of-terms-api) and [Catalog of Datasets](https://github.com/netwerk-digitaal-erfgoed/network-of-terms-catalog/tree/master/catalog).
+
+
+
 
 - [National Library Linked Data](http://data.bibliotheken.nl/)
 
