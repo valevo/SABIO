@@ -203,3 +203,13 @@ books on how current AI reinforces biases and inequalities and how to do it diff
 
 Johan put us in touch with [someone](https://vendelagrundell.com/) who's working on a [similar project](https://politicsofmetadata.blogs.dsv.su.se/) which deals with biases in meta-data of heritage collections
 
+
+### Feb 27
+
+Niels ten Oever (could be an interesting contact) mentioned a book on categories -> ask for the title
+
+[scholar search on social identity & categorisation](https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=3&q=social+identity+categorization&qst=ib) returned interesting-looking results
+
+
+
+
