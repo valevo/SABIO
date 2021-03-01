@@ -206,7 +206,12 @@ Johan put us in touch with [someone](https://vendelagrundell.com/) who's working
 
 ### Feb 27
 
-Niels ten Oever (could be an interesting contact) mentioned a book on categories -> ask for the title
+[Niels ten Oever](https://nielstenoever.net/) mentioned:
+  - [Sorting Things Out](https://mitpress.mit.edu/books/sorting-things-out), a book about classification as a social practice
+  - [Internet Daemons](https://www.internetdaemons.com/), book about social practices and phenomena around internet technologies
+  - [The Digital Sublime](https://mitpress.mit.edu/books/digital-sublime), book on the myths revolving around the digital world and how power structures are reinforced through (rather than fulfulling their promise to break them); [Wikipedia article](https://en.wikipedia.org/wiki/Digital_sublime) about the phenomenon
+  - [Fully AUtomated Luxury Communism](https://en.wikipedia.org/wiki/Fully_Automated_Luxury_Communism), a manifesto for how digital technologies could lead society into a better world
+  - [Frictie - Ethiek in Tijden van Dataisme](http://www.miriamrasch.nl/boeken/frictie-ethiek-in-tijden-van-dataisme/), book about ethics in the time of big data -> insteresting because the author is Dutch -> could invite her at some point
 
 [scholar search on social identity & categorisation](https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=3&q=social+identity+categorization&qst=ib) returned interesting-looking results
 
