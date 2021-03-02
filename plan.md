@@ -48,13 +48,15 @@ TBD
 ## SABIO: make social biases in heritage collections *more* accessible
 
 Four terms to be clarified:
-  - social biases: manfiest in essentially all of social and linguistic behaviours, require careful definition and especially strict delimitation
+  - social biases: manfiest in essentially all and any social and linguistic behaviours, require careful definition and especially strict delimitation
   - heritage collections: our scope is focused on museums' collections, specifically those of heritage museums, and the aspects and types of bias that mainly arise there
   - accessible: on one hand equivalent to *visible*, i.e. making bias (as a whole or in its instances) *searchable*, *quantifiable*, etc <br>
      on the other hand, accessibility is about understanding, i.e. providing *context*, *explanation*, *alternatives* to bias
   - *more*: realising that bias is ubiquitous and in the limit impossible to detect, we only require that SABIO *increases* visibility of social bias
 
-This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions.
+This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ only in extent 
+
+Defining an MVP is therefore
 
 
 Note: The focus on museums' data actually makes the task *easier* -> data is curated, linked, properly archived
@@ -62,11 +64,12 @@ Note: The focus on museums' data actually makes the task *easier* -> data is cur
 
 ### Uses Cases
 
-Broadly distinguish professionals (collection managers, curators, social & historical researchers) and end user (general public, museum or website visitors).
+We broadly distinguish *professionals* (collection managers, curators, social & historical researchers) and *end user* (general public, museum or website visitors).
 
  - professional is gathering examples of specific biases 
  - professional seeks quantified characteristic
- - end user is 
+ - end user is unsure about a certain case of language use
+ - end user requires context to a specific statement
 
 
 
@@ -76,7 +79,7 @@ Broadly distinguish professionals (collection managers, curators, social & histo
  - algorithms: 
    - textual:
    - graph-based:
-   - other:
+   - other: are there any other sources of data that are interesting/relevant/useful/important?
  - front end: visualisation, search interface, illustration of statistics
 
 
