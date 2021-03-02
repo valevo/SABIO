@@ -217,4 +217,11 @@ Johan put us in touch with [someone](https://vendelagrundell.com/) who's working
 
 
 
+### March 02
+
+[CulturalAI Meeting](https://docs.google.com/document/d/17sLLtZiswMD7iUSoiUTAYGTAtgIk9DYmtFzvA7MHJi4/edit#):
+  - Wereldculturen data:
+    - Jacco mentioned that Wereldculturen should eventually have their own data exposure process for researchers (& others) -> make sure that Cindy is aware that SABIO is building essentially that, so that they could perhaps use some of it (+ the process we went through to get the data)
+
+
 
