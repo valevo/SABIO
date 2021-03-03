@@ -54,7 +54,7 @@ Four terms to be clarified:
      on the other hand, accessibility is about understanding, i.e. providing *context*, *explanation*, *alternatives* to bias
   - *more*: realising that bias is ubiquitous and in the limit impossible to detect, we only require that SABIO *increases* visibility of social bias
 
-This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ only in extent 
+This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in extent 
 
 Defining an MVP is therefore
 
@@ -70,6 +70,19 @@ We broadly distinguish *professionals* (collection managers, curators, social & 
  - professional seeks quantified characteristic
  - end user is unsure about a certain case of language use
  - end user requires context to a specific statement
+
+
+
+### Dimensions of Bias
+
+For now, while we're in the development phase and because of the ubiquitous nature of bias, we can't really talk about concrete programs (and it wouldn't make much sense IMO). Since the discussion has to stay rather abstract, it is useful to identify some dimensions of such programs (dimensions 'they live in'):
+
+Note: At least for the MVP, we consider as 'data' the collection of the museum, including its specialised thesaurus. As a linked data set of descriptions, it consists of graph-like structures that describe objects' properties as text. That is, in brief, we are working on linked data on the one hand and linguistic data (i.e. text) on the other, and potentially on their interaction.
+
+ 1. 'level of bias': the level of the data that the focus is on; that is: type and representation of the input to the algorithms; words, word pairs, sentences, sets of sentences, word embeddings, graph nodes, graph relations, sets of graph relations, subsets of graphs, ...
+ 2. algorithms: the actual specific choice of the algorithm; how powerful it is, 
+ 3. the 'social' dimension: the aspects of bias that captured; gender, race, offensive, positive, etc
+
 
 
 
