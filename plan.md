@@ -48,28 +48,44 @@ TBD
 ## SABIO: make social biases in heritage collections *more* accessible
 
 Four terms to be clarified:
-  - social biases: manfiest in essentially all and any social and linguistic behaviours, require careful definition and especially strict delimitation
+  - social biases: manfiest in essentially all and any social and linguistic behaviours (require careful definition and especially strict delimitation)
   - heritage collections: our scope is focused on museums' collections, specifically those of heritage museums, and the aspects and types of bias that mainly arise there
   - accessible: on one hand equivalent to *visible*, i.e. making bias (as a whole or in its instances) *searchable*, *quantifiable*, etc <br>
      on the other hand, accessibility is about understanding, i.e. providing *context*, *explanation*, *alternatives* to bias
   - *more*: realising that bias is ubiquitous and in the limit impossible to detect, we only require that SABIO *increases* visibility of social bias
 
-This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in extent 
+This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in the extent to which they can provide access to biases.
 
-Defining an MVP is therefore
-
-
-Note: The focus on museums' data actually makes the task *easier* -> data is curated, linked, properly archived
+To be scaled up: The focus on heritage museums' collections actually make our task *easier*, since the data is highly curated and consists of linked data with persistent identifiers and thesauri. 
 
 
-### Uses Cases
+### Use Cases
 
 We broadly distinguish *professionals* (collection managers, curators, social & historical researchers) and *end user* (general public, museum or website visitors).
 
- - professional is gathering examples of specific biases 
- - professional seeks quantified characteristic
- - end user is unsure about a certain case of language use
- - end user requires context to a specific statement
+SABIO 
+
+*Active* use cases, i.e. those which assume that an example is already given or that a concept is known to contain bias:
+
+ - professional is gathering examples of specific biases, e.g. usage examples within the collection of a term known to be contentious
+ - professional seeks quantified characteristic, e.g. amount of bias associated with a concept, comparison of the biasedness in subsets of the collection
+ - end user is unsure about a certain case of language use, e.g. whether used term should be considered contentious or not
+ - end user requires context to a specific statement, e.g. 
+
+
+Use cases that could be considered *passive*, in the sense that a professional/end user is trying to discover unconscious biases:
+
+ - professional is trying to empirically define bias (in the heritage/historical contexts) 
+ - professional searches for concepts or categories that fulfil a certain definition of bias or behave similarly to concepts that are known to contain biases
+ - end user seeks to get an intuitive, empirical idea of bias means and how it might manifest 
+
+
+Moreover, we can categorise use cases into two aspects 
+ 
+ - *quantitative*: indicating a degree to which a terms carries bias, the biasedness of a statement or a subset of the collection
+ - *search*: finding terms which have larger-than-typical associations, contexts of terms or facts, subsets of the collection with similar properties
+
+
 
 
 
