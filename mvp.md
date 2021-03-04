@@ -11,7 +11,7 @@ Four terms to be clarified:
 
 This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in the extent of their ability to provide access into bias. Since we choose a modular approach (both because for transparency and due to the nature of bias), developing subsequent versions out of the MVP will therefore consist mainly of adding new algorithms to increase visibility and context of bias. 
 
-To be scaled up: The focus on heritage museums' collections actually make our task *easier*, since the data is highly curated and consists of linked data with persistent identifiers and thesauri. 
+To be scaled up: The focus on heritage museums' collections actually make our task *easier*, since the data is highly curated and consists of linked data with persistent identifiers and thesauri. Beyond the MVP, this focus is to be eliminated and our bias detection software to be amended to work on other types of cultural data. 
 
 
 ## Use Cases
