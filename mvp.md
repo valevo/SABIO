@@ -14,7 +14,7 @@ This is the central goal of SABIO, so we require this goal fulfilled by the MVP 
 To be scaled up: The focus on heritage museums' collections actually make our task *easier*, since the data is highly curated and consists of linked data with persistent identifiers and thesauri. 
 
 
-### Use Cases
+## Use Cases
 
 We broadly distinguish *professionals* (collection managers, curators, social & historical researchers) and *end user* (general public, museum or website visitors).
 
@@ -41,7 +41,7 @@ Moreover, we can categorise use cases into two aspects
 
 
 
-### Dimensions of Bias
+## Dimensions of Bias
 
 For now, while we are in the development phase and because of the ubiquitous nature of bias, we cannot really talk about concrete programs (and it wouldn't make much sense). Since the discussion has to stay rather abstract, it is useful to identify some dimensions of such programs (the dimensions they 'live in'):
 
@@ -56,7 +56,7 @@ Distinguishing these dimensions is important for defining an MVP (and thegeneral
 For the MVP, we try to stay as neutral as as possible to the third dimension. That is, rather than focussing on specific social categories, we seek to devise algorithms that are agnostic (to some extent) to these and detect biases regardless of social group, identity or quality of the bias. In doing so, we deviate from the body of previous work. Even though this is an ambitious objective, there is substantial leverage in the first two dimensions, for instance by omitting levels in data or by choosing less powerful algorithms. 
 
 
-### Components
+## Components
 
 Strictly necessary components are:
   
