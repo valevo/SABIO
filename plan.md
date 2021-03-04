@@ -48,13 +48,13 @@ TBD
 ## SABIO: make social biases in heritage collections *more* accessible
 
 Four terms to be clarified:
-  - social biases: manfiest in essentially all and any social and linguistic behaviours (require careful definition and especially strict delimitation)
+  - social biases: manifest in essentially all and any social and linguistic behaviours (require careful definition and especially strict delimitation)
   - heritage collections: our scope is focused on museums' collections, specifically those of heritage museums, and the aspects and types of bias that mainly arise there
   - accessible: on one hand equivalent to *visible*, i.e. making bias (as a whole or in its instances) *searchable*, *quantifiable*, etc <br>
      on the other hand, accessibility is about understanding, i.e. providing *context*, *explanation*, *alternatives* to bias
   - *more*: realising that bias is ubiquitous and in the limit impossible to detect, we only require that SABIO *increases* visibility of social bias
 
-This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in the extent to which they can provide access to biases.
+This is the central goal of SABIO, so we require this goal fulfilled by the MVP and all subsequent versions. The MVP and subsequent versions will differ mainly in the extent of their ability to provide access into bias. Since we choose a modular approach (both because for transparency and due to the nature of bias), developing subsequent versions out of the MVP will therefore consist mainly of adding new algorithms to increase visibility and context of bias. 
 
 To be scaled up: The focus on heritage museums' collections actually make our task *easier*, since the data is highly curated and consists of linked data with persistent identifiers and thesauri. 
 
@@ -62,8 +62,6 @@ To be scaled up: The focus on heritage museums' collections actually make our ta
 ### Use Cases
 
 We broadly distinguish *professionals* (collection managers, curators, social & historical researchers) and *end user* (general public, museum or website visitors).
-
-SABIO 
 
 *Active* use cases, i.e. those which assume that an example is already given or that a concept is known to contain bias:
 
@@ -77,7 +75,8 @@ Use cases that could be considered *passive*, in the sense that a professional/e
 
  - professional is trying to empirically define bias (in the heritage/historical contexts) 
  - professional searches for concepts or categories that fulfil a certain definition of bias or behave similarly to concepts that are known to contain biases
- - end user seeks to get an intuitive, empirical idea of bias means and how it might manifest 
+ - end user seeks to get an intuitive, empirical idea of bias means and how it might manifest
+ - end user is interested which aspects of society are the most prominent in carrying bias
 
 
 Moreover, we can categorise use cases into two aspects 
@@ -87,29 +86,47 @@ Moreover, we can categorise use cases into two aspects
 
 
 
-
-
 ### Dimensions of Bias
 
-For now, while we're in the development phase and because of the ubiquitous nature of bias, we can't really talk about concrete programs (and it wouldn't make much sense IMO). Since the discussion has to stay rather abstract, it is useful to identify some dimensions of such programs (dimensions 'they live in'):
+For now, while we are in the development phase and because of the ubiquitous nature of bias, we cannot really talk about concrete programs (and it wouldn't make much sense). Since the discussion has to stay rather abstract, it is useful to identify some dimensions of such programs (the dimensions they 'live in'):
 
 Note: At least for the MVP, we consider as 'data' the collection of the museum, including its specialised thesaurus. As a linked data set of descriptions, it consists of graph-like structures that describe objects' properties as text. That is, in brief, we are working on linked data on the one hand and linguistic data (i.e. text) on the other, and potentially on their interaction.
 
  1. 'level of bias': the level of the data that the focus is on; that is: type and representation of the input to the algorithms; words, word pairs, sentences, sets of sentences, word embeddings, graph nodes, graph relations, sets of graph relations, subsets of graphs, ...
- 2. algorithms: the actual specific choice of the algorithm; how powerful it is, 
- 3. the 'social' dimension: the aspects of bias that captured; gender, race, offensive, positive, etc
+ 2. algorithms: the actual specific choice of an algorithm; the aspects of bias it is able to detect, how powerful it is in terms of accuracy and 
+ 3. the 'social' dimension: the categories of bias that are captured; gender, race, etc; whether the bias is offensive, positive, etc to those affected
 
+Distinguishing these dimensions is important for defining an MVP (and thegeneral task), especially for transparency and explainability of the outputs of the MVP and subsequent versions. We require the MVP's output to clearly communicate these dimensions and how it works on each of them to the users which is naturally mainly a matter of the MVP's interface. It does, however, also imply that the back end and the algorithms used ensure to not entangle these dimensions (as much possible).
 
+At least for the MVP, we try to stay clear as much as possible of 
 
 
 ### Components
 
- - back end: data ingestion: unified data structures, linking of entities (i.e. NER), extraction and normalisation of text
- - algorithms: 
-   - textual:
-   - graph-based:
-   - other: are there any other sources of data that are interesting/relevant/useful/important?
- - front end: visualisation, search interface, illustration of statistics
+Strictly necessary components are:
+  
+  - back end, i.e. data ingestion and pre-processing
+    - unified data structures
+    - extraction and normalisation of text
+    - linking of textual entities (NER), part-of-speech (POS) tagging, etc
+    - ML-apt representations, such as embeddings
+  - front end
+    - search interface
+    - visualisation of results and quantified characteristics
+    - rich representations
+    - illustration of algorithms
+
+In between the back and the front end, at the core, lie the actual bias detection algorithms. Because of the modular approach, no/few will be actually strictly required and so below are only a few examples:
+
+  - textual: 
+    - implicit semantic associations: embedding-based, co-occurrence-based
+    - paraphrase detection
+    - sentiment analysis
+  - graph-based:
+    - expanding queries
+    - shortest path and the like
+  - other: what other sources of data could be interesting/relevant/useful/important and algorithms working on them?
+
 
 
 
