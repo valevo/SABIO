@@ -1,6 +1,10 @@
-# Random Thoughts 
+# The Theory of SociAl BIas Observation 
 
 This is a work-in-progress guide to the theoretical aspects of SABIO. Here, we describe conceptual and theoretical work and ideas. 
+
+## [Manifesto](manifesto.md)
+
+As SABIO, and Cultural AI in general, are located deeply in the domain of responsible AI, it is an important value that our process is transparent and fair. To even add an activist stance on top, we are creating a manifesto for how cultural AI should be done and what it should and should not be.
 
 
 ## [Defining Bias](defining_bias.md)
