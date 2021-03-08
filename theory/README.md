@@ -1,8 +1,23 @@
 # Random Thoughts 
-  
-For now, this README is just a place for random ideas towards the project. Later, it will be turned into a proper guide to the theoretical parts of SABIO.
+
+This is a work-in-progress guide to the theoretical aspects of SABIO. Here, we describe conceptual and theoretical work and ideas. 
+
+
+## [Defining Bias](defining_bias.md)
+
+In order to detect it, we need to first find a definition of bias. This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
+
+
+## [Heuristics](heuristics.md)
+
+Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable for or useful towards bias detection; arguably almost all of machine learning in fact. Furthermore, with the intention of transparency and explainability, we opt for a very modular approach to bias detection. And so for these reasons, many heuristics are interesting for SABIO.
+
  
+
+## Random Ideas  
  
+Put here for now, to be sorted later.  
+   
 ## Social Bias versus Statistical Bias
 
 It is not really a coincidence that both statisticians and social scientists speak of bias. 
@@ -32,7 +47,7 @@ Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf'
 
 => This [paper](https://github.com/valevo/SABIO/blob/main/papers.md#understanding-the-origins-of-bias-in-word-embeddings) on removing parts of a corpus whose removal would most reduce bias could offer help here. Namely that by removing and re-measuring bias, we can obtain estimates of the derivative of the measuring function at the point defined by the particular corpus. Thereby, we get at least an idea of how our measurement from the original corpus relates to (hypothetical) measurements from other corpora, we contextualise our measurement. (This is also related to statistical techniques such as bootstrapping.)
 
-=> The concept of Typicality (of Typical Set) from Infromation Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
+=> The concept of Typicality (of Typical Set) from Information Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
 
 
 ## Bias as the Adversary
