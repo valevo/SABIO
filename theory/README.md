@@ -42,24 +42,3 @@ Perhaps considering a scenario where language is always bias-free but then an ad
 Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
 
 
-  
-## Bayesianism
-
-Bias could potentially be neatly operationalised as (too much/to little) probability mass; by explicitly distinguishing prior and likelihood (via Bayes), we could access to overall bias (reflected in the prior) and contextual bias (reflected in the likelihood). <br>
-To give an simple (and stupid) example: We compare *P(man|doctor)* and *P(woman|doctor)* which are, respectively, prop. to *P(man)*P(doctor|man)* and *P(woman)*P(doctor|woman)*. *P(man)* vs *P(woman)* is global bias, i.e. *P(man) > P(woman)* corresponds to overrepresentation of men (and underrepresentation of women). Similary, *P(doctor|man)* and *P(doctor|woman)* is contextual bias, i.e. if *P(doctor|man) > P(doctor|woman)* then 
-
-## Randomness
-
-Bias likely manifests itself as a lack of randomness with respect to some distributions. Although this is rather vague, randomness testing could be a useful family of techniques. As advantages, these are typically easy to apply and offer large degrees of objectivity and some degrees of transparency. Moreover, they are related to the Bayesian approach and thus can be easily done dually.  
-
-
-
-
-## Bias in Network via Queries
-
- - randomly sample (construct) queries into the network, compute statistics on results -> expected outcome: some items (or properties of items) will be over-represented and some under-represented, so what do these says about (types of) biases?
- - this is reminiscient of an MCMC method -> thus the question: what distribution are we sampling by this procedure?
- - Marieke mentioned similar research, namely [this paper by Jacco](https://ieeexplore.ieee.org/abstract/document/7559558)
- - nice thing: depending on the sampling procedure, this method is fairly objective and unbiased in itself
-
-
