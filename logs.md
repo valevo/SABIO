@@ -183,13 +183,6 @@ through an INDELAB connection found this [blog post](https://christovis.github.i
 -> cound contain useful pointers
 
 
-
-### Feb 22
-
-chat with Jesse:
- - [x] get Werner (SUDOX) involved soon
-
-
 ### Feb 23
 
 books on how current AI reinforces biases and inequalities and how to do it differently:
@@ -230,6 +223,9 @@ Johan put us in touch with [someone](https://vendelagrundell.com/) who's working
 SABIO meeting:
 
   - Cindy mentioned (and is working on) the [Pressing Matter](https://www.uu.nl/en/news/pressing-matter-ownership-value-and-the-question-of-colonial-heritage-in-museums#:~:text='Pressing%20Matter'%20investigates%20the%20potentialities,for%20these%20objects%20within%20museums.) project
+  - MVP: limit use cases to profressionals 
+  - Marieke mentioned a nice idea: heat maps on the collection/subgraphs/etc to direct users' attention in a non-binary way, to visualise/uncover patterns -> talk to Werner about this
+  - Cindy use the metaphor of a ***funnel***
 
 
 
@@ -240,6 +236,9 @@ SABIO meeting:
 
 ### March 08
 
- - someone mentioned [Philo van Kemenade](https://phivk.com/), who works for Beeld & Geluid (and who is in an [AI4GLAM task force](https://pro.europeana.eu/project/ai-in-relation-to-glams) at Europeana)
+ - Jesse mentioned [Philo van Kemenade](https://phivk.com/), who works for Beeld & Geluid (and who is in an [AI4GLAM task force](https://pro.europeana.eu/project/ai-in-relation-to-glams) at Europeana)
+ - Jesse mentioned [Tobias Blanke](https://www.uva.nl/en/research/research-environment/professors/university-professors/university-professors-list/tobias-blanke.html) recent professor at UvA and ILLC, who works epistemological implications of AI (and generally the interface of philosophy and computer science)
+
+
 
 
