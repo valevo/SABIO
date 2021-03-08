@@ -222,10 +222,14 @@ Johan put us in touch with [someone](https://vendelagrundell.com/) who's working
 
 SABIO meeting:
 
-  - Cindy mentioned (and is working on) the [Pressing Matter](https://www.uu.nl/en/news/pressing-matter-ownership-value-and-the-question-of-colonial-heritage-in-museums#:~:text='Pressing%20Matter'%20investigates%20the%20potentialities,for%20these%20objects%20within%20museums.) project
+  - Cindy mentioned:
+    - she's working on the [Pressing Matter](https://www.uu.nl/en/news/pressing-matter-ownership-value-and-the-question-of-colonial-heritage-in-museums#:~:text='Pressing%20Matter'%20investigates%20the%20potentialities,for%20these%20objects%20within%20museums.) project
+    - metaphor of a ***funnel*** for the program -> related to my own thoughts on bias detection as search, but a nicer metaphor
+    - bias as absence: the systematic absence of people in the data or the absence of fine-grained attributes for people is an instance of bias -> choice of words can indicate that, too (e.g. the choice of identifier for a person, cf. 'a man has a name') => this is closely related to, if not the same as, silencing
   - MVP: limit use cases to profressionals 
   - Marieke mentioned a nice idea: heat maps on the collection/subgraphs/etc to direct users' attention in a non-binary way, to visualise/uncover patterns -> talk to Werner about this
-  - Cindy use the metaphor of a ***funnel***
+  - user should be able to input cues -> not only: *detect bias in a given text/object/collection*, but also: *find everything in a given collection that is similar to a given cue*
+
 
 
 
@@ -238,7 +242,7 @@ SABIO meeting:
 
  - Jesse mentioned [Philo van Kemenade](https://phivk.com/), who works for Beeld & Geluid (and who is in an [AI4GLAM task force](https://pro.europeana.eu/project/ai-in-relation-to-glams) at Europeana)
  - Jesse mentioned [Tobias Blanke](https://www.uva.nl/en/research/research-environment/professors/university-professors/university-professors-list/tobias-blanke.html) recent professor at UvA and ILLC, who works epistemological implications of AI (and generally the interface of philosophy and computer science)
-
+ - Mrinalini mentioned [Michel-Rolph Trouillot](https://en.wikipedia.org/wiki/Michel-Rolph_Trouillot) who conceived the term 'silencing' (most notably in his book *Silencing the Past: Power and the Production of History (1995)*)
 
 
 
