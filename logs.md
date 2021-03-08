@@ -187,12 +187,12 @@ through an INDELAB connection found this [blog post](https://christovis.github.i
 ### Feb 22
 
 chat with Jesse:
- - get Werner (SUDOX) involved soon
+ - [x] get Werner (SUDOX) involved soon
 
 
 ### Feb 23
 
-books on how current AI reinforces biases and inequalities and how to do it differntly:
+books on how current AI reinforces biases and inequalities and how to do it differently:
   - [Data Feminism](https://datafeminism.io/) -> could have an interesting (inherent) connection to Feminist Theory
   - [Race After Technology: Abolitionist Tools for the New Jim Code](https://www.ruhabenjamin.com/race-after-technology) -> author has many publications about racial issues in the world of modern technology
   - [Algorithms of Oppression](https://safiyaunoble.com/research-writing/) 
@@ -236,5 +236,10 @@ SABIO meeting:
 ### March 05
 
  - [a stamp to brand slaves with](https://hdl.handle.net/20.500.11840/201347) - interesting because the description "neutral"
+
+
+### March 08
+
+ - someone mentioned [Philo van Kemenade](https://phivk.com/), who works for Beeld & Geluid (and who is in an [AI4GLAM task force](https://pro.europeana.eu/project/ai-in-relation-to-glams) at Europeana)
 
 
