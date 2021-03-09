@@ -1,8 +1,27 @@
-# Random Thoughts 
-  
-For now, this README is just a place for random ideas towards the project. Later, it will be turned into a proper guide to the theoretical parts of SABIO.
+# The Theory of SociAl BIas Observation 
+
+This is a work-in-progress guide to the theoretical aspects of SABIO. Here, we describe conceptual and theoretical work and ideas. 
+
+## [Manifesto](manifesto.md)
+
+As SABIO, and Cultural AI in general, are located deeply in the domain of responsible AI, it is an important value that our process is transparent and fair. To even add an activist stance on top, we are creating a manifesto for how cultural AI should be done and what it should and should not be.
+
+
+## [Defining Bias](defining_bias.md)
+
+In order to detect it, we need to first find a definition of bias. This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
+
+
+## [Heuristics](heuristics.md)
+
+Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable for or useful towards bias detection; arguably almost all of machine learning in fact. Furthermore, with the intention of transparency and explainability, we opt for a very modular approach to bias detection. And so for these reasons, many heuristics are interesting for SABIO.
+
  
+
+## Random Ideas  
  
+Put here for now, to be sorted later.  
+   
 ## Social Bias versus Statistical Bias
 
 It is not really a coincidence that both statisticians and social scientists speak of bias. 
@@ -32,7 +51,7 @@ Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf'
 
 => This [paper](https://github.com/valevo/SABIO/blob/main/papers.md#understanding-the-origins-of-bias-in-word-embeddings) on removing parts of a corpus whose removal would most reduce bias could offer help here. Namely that by removing and re-measuring bias, we can obtain estimates of the derivative of the measuring function at the point defined by the particular corpus. Thereby, we get at least an idea of how our measurement from the original corpus relates to (hypothetical) measurements from other corpora, we contextualise our measurement. (This is also related to statistical techniques such as bootstrapping.)
 
-=> The concept of Typicality (of Typical Set) from Infromation Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
+=> The concept of Typicality (of Typical Set) from Information Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
 
 
 ## Bias as the Adversary
@@ -40,26 +59,5 @@ Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf'
 Could bias detection be phrased as an adversarial learning problem? What would the adversary's loss be?
 Perhaps considering a scenario where language is always bias-free but then an adversary adds bias before it is uttered? -> trick the adversary 
 Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
-
-
-  
-## Bayesianism
-
-Bias could potentially be neatly operationalised as (too much/to little) probability mass; by explicitly distinguishing prior and likelihood (via Bayes), we could access to overall bias (reflected in the prior) and contextual bias (reflected in the likelihood). <br>
-To give an simple (and stupid) example: We compare *P(man|doctor)* and *P(woman|doctor)* which are, respectively, prop. to *P(man)*P(doctor|man)* and *P(woman)*P(doctor|woman)*. *P(man)* vs *P(woman)* is global bias, i.e. *P(man) > P(woman)* corresponds to overrepresentation of men (and underrepresentation of women). Similary, *P(doctor|man)* and *P(doctor|woman)* is contextual bias, i.e. if *P(doctor|man) > P(doctor|woman)* then 
-
-## Randomness
-
-Bias likely manifests itself as a lack of randomness with respect to some distributions. Although this is rather vague, randomness testing could be a useful family of techniques. As advantages, these are typically easy to apply and offer large degrees of objectivity and some degrees of transparency. Moreover, they are related to the Bayesian approach and thus can be easily done dually.  
-
-
-
-
-## Bias in Network via Queries
-
- - randomly sample (construct) queries into the network, compute statistics on results -> expected outcome: some items (or properties of items) will be over-represented and some under-represented, so what do these says about (types of) biases?
- - this is reminiscient of an MCMC method -> thus the question: what distribution are we sampling by this procedure?
- - Marieke mentioned similar research, namely [this paper by Jacco](https://ieeexplore.ieee.org/abstract/document/7559558)
- - nice thing: depending on the sampling procedure, this method is fairly objective and unbiased in itself
 
 
