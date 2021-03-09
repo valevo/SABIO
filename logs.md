@@ -250,4 +250,5 @@ SABIO meeting:
 
 - Jelle mentioned that he is part of a project that has something to do with bias detection?
 
+- Marieke mentioned [this tweet](https://twitter.com/sclaeyssens/status/1362062797404798982?s=20) for the website (where the Q&A is on) 
 
