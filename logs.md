@@ -246,3 +246,8 @@ SABIO meeting:
 
 
 
+### March 09
+
+- Jelle mentioned that he is part of a project that has something to do with bias detection?
+
+
