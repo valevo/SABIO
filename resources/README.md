@@ -51,7 +51,7 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
   -> interesting in terms of bias, does the sampling algorithm contain, exacerbate <br>
   -> possible connection to the [idea that bias could be revealed via queries ](https://github.com/valevo/SABIO/tree/main/theory#bias-in-network-via-queries)
 
-
+ - [Uncovering Unknown Unknowns in Machine Learning](https://ai.googleblog.com/2021/02/uncovering-unknown-unknowns-in-machine.html), a Google blog (by Lora Aroyo and others), a preliminary study into the *unknown unknowns* i.e. those weak spots we do not know about
 
 
 
