@@ -252,3 +252,12 @@ SABIO meeting:
 
 - Marieke mentioned [this tweet](https://twitter.com/sclaeyssens/status/1362062797404798982?s=20) for the website (where the Q&A is on) 
 - Jacco mentioned the [FAccT Conference](https://facctconference.org/2021/acceptedpapers.html) which has interesting papers
+
+
+### March 10
+
+meeting with Richard:
+ - [CollectionConnection](https://www.go2cit.nl/en/products-and-services/collectionconnection/) is the tool, the NMVW used to convert their databases to RDF <br>
+   -> Richard will share the schema they used for the conversion -> can we maybe use the schema to do the conversion ourselves?
+ - the `Objects` table has a field title, but the table `ObjectTitles` was created since objects can have multiple titles (either replacing each other or living side-by-side) -> the table `TitleType` contains information that can/could allow to reconstruct a version order of the titles
+ - Richard thinks that the procedures from the database to ML-ready input could be interesting for future and general use -> potentially make processing scripts and procedures reusable for publication
