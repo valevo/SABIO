@@ -272,4 +272,5 @@ meeting with the Goethe Inistute (of Finnland and of NL):
  - [Workshop for translation practitioners](https://www.goethe.de/prj/one/en/aco/ver.html) on 23 & 24 April
  - Hackathon planned to develop tools to reduce/detect biases in MT at some point in autumn
 
-- Marieke mentioned [Nexus Linguarum](https://nexuslinguarum.eu/), a platform to promote synergies between European linguistic data science practitioners
+
+Marieke mentioned [Nexus Linguarum](https://nexuslinguarum.eu/), a platform to promote synergies between European linguistic data science practitioners
