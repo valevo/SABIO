@@ -274,3 +274,8 @@ meeting with the Goethe Inistute (of Finnland and of NL):
 
 
 Marieke mentioned [Nexus Linguarum](https://nexuslinguarum.eu/), a platform to promote synergies between European linguistic data science practitioners
+
+meeting with Vendela ([university homepage](https://www.su.se/english/profiles/vegr2497-1.190180) & [personal website](https://vendelagrundell.com/)):
+ - is part of the project [The Politics of Metadata](https://politicsofmetadata.blogs.dsv.su.se/)
+ - shared her slides on her investigation into the representation of Sámi heritage in a (which?) Swedish museum (attached in an email)
+ - the *Politics of Metadata* project is a part of the [Metadata Culture](http://metadataculture.se/) research group
