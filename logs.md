@@ -261,3 +261,15 @@ meeting with Richard:
    -> Richard will share the schema they used for the conversion -> can we maybe use the schema to do the conversion ourselves?
  - the `Objects` table has a field title, but the table `ObjectTitles` was created since objects can have multiple titles (either replacing each other or living side-by-side) -> the table `TitleType` contains information that can/could allow to reconstruct a version order of the titles
  - Richard thinks that the procedures from the database to ML-ready input could be interesting for future and general use -> potentially make processing scripts and procedures reusable for publication
+
+
+
+### March 11
+
+meeting with the Goethe Inistute (of Finnland and of NL):
+ - website of [Artificially Correct](https://www.goethe.de/prj/one/en/aco.html), where they address bias in (machine) translation
+ - [poco.lit](https://pocolit.com/en/about-poco-lit/) a Berlin-based platform for postcolonial literature -> collaborators, have written articles for them
+ - [Workshop for translation practitioners](https://www.goethe.de/prj/one/en/aco/ver.html) on 23 & 24 April
+ - Hackathon planned to develop tools to reduce/detect biases in MT at some point in autumn
+
+- Marieke mentioned [Nexus Linguarum](https://nexuslinguarum.eu/), a platform to promote synergies between European linguistic data science practitioners
