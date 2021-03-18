@@ -279,3 +279,10 @@ meeting with Vendela ([university homepage](https://www.su.se/english/profiles/v
  - is part of the project [The Politics of Metadata](https://politicsofmetadata.blogs.dsv.su.se/)
  - shared her slides on her investigation into the representation of Sámi heritage in a (which?) Swedish museum (attached in an email)
  - the *Politics of Metadata* project is a part of the [Metadata Culture](http://metadataculture.se/) research group
+
+
+### March 18
+
+
+ - Cindy mentioned: [Decolonize the Museum Conference](https://framerframed.nl/en/blog/conferentie-decolonize-the-museum-conference/) by FramerFramed (there's also a document on [Decolonizing Museums](https://framerframed.nl/wp-content/uploads/2015/11/Decolonising-Museums.pdf) which could be a valuable resource)
+ - Jelle Zuidema is part of the [Bias Barometer](https://bias-barometer.github.io/), to quote: "We explore the relationship between what we read on (social) media and the effects on our (stereotypical) beliefs and actions."
