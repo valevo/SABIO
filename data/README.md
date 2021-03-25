@@ -25,3 +25,14 @@ is the combined thesaurus of the members of the Netwerk Digitaal Erfgoed, so the
 - [National Library Linked Data](http://data.bibliotheken.nl/)
 
 - Brinkman ([entry in NL Linked Data](http://data.bibliotheken.nl/doc/dataset/brinkman), [entry in BARTOC](https://bartoc.org/en/node/18686)), a Dutch keyword thesaurus
+
+
+
+## (Pre-)processing 
+
+### Text
+
+ - TODO: proper segmentation, tokenisation?
+ - TODO: lemmatisation (stemming), especially for task/measures on the lexical level (such as lexical semantic association)
+
+
