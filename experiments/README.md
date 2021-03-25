@@ -8,6 +8,7 @@ First, generate the full `n x n` matrix of PMI values, then eliminate according 
 
 Could be interesting: PMI is symmetric in its arguments (since mutual information is) -> are there asymmetric versions? Would be useful since lexical semantic bias probably is. Possible candidate: [Delta P](https://www.degruyter.com/document/doi/10.1515/cllt-2017-0036/html).
 
+### Idea
 In combination with PMI: cluster unigrams into `k` clusters, then compute top `m` pairs (`w1, w2`) with highest PMI s.t. that `w1` and `w2` are *not* in the same cluster  
 -> have count vectors anyway  
 -> use tf-idf or maybe even topic modelling for the vector projections (and even the clustering)
