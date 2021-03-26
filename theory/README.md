@@ -23,7 +23,7 @@ In order to detect it, we need to first find a definition of bias. This will be 
 Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable for or useful towards bias detection; arguably almost all of machine learning in fact. Furthermore, with the intention of transparency and explainability, we opt for a very modular approach to bias detection. And so for these reasons, many heuristics are interesting for SABIO.
 
 
-## [API Specification](api.md)
+## [API Specification](API.md)
 
 
  
