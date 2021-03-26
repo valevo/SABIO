@@ -286,3 +286,9 @@ meeting with Vendela ([university homepage](https://www.su.se/english/profiles/v
 
  - Cindy mentioned: [Decolonize the Museum Conference](https://framerframed.nl/en/blog/conferentie-decolonize-the-museum-conference/) by FramerFramed (there's also a document on [Decolonizing Museums](https://framerframed.nl/wp-content/uploads/2015/11/Decolonising-Museums.pdf) which could be a valuable resource)
  - Jelle Zuidema is part of the [Bias Barometer](https://bias-barometer.github.io/), to quote: *"We explore the relationship between what we read on (social) media and the effects on our (stereotypical) beliefs and actions."*
+
+
+### March 26
+
+ - Julia mentioned a [talk on *The Logic of Decoloniality*](https://www.youtube.com/watch?v=vZUY1hITnxY) by [Jonathan Chimakonam](https://www.uj.ac.za/contact/Pages/jonathan-okere-chimakonam.aspx), who does philosphical research on decolonising research (see links for papers); the point of such research is that in the tripartition of content, method and foundation, the foundation needs to be decolonised alongside content and method (which is what is usually focussed on)  
+=> this line provides a good guideline for how the field (cultural AI) as a whole should evolve towards
