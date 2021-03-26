@@ -4,7 +4,7 @@ This is a work-in-progress guide to the theoretical aspects of SABIO. Here, we d
 
 ## [Manifesto](manifesto.md)
 
-As SABIO, and Cultural AI in general, are located deeply in the domain of responsible AI, it is an important value that our process is transparent and fair. To even add an activist stance on top, we are creating a manifesto for how cultural AI should be done and what it should and should not be.
+As SABIO, and Cultural AI in general, are located deeply in the domain of responsible AI, it is an important value that our process is transparent and fair. To add an activist stance on top, we are creating a manifesto for how cultural AI should be done and what it should and should not be.
 
 
 ## [Defining Bias](defining_bias.md)
@@ -12,7 +12,7 @@ As SABIO, and Cultural AI in general, are located deeply in the domain of respon
 In order to detect it, we need to first find a definition of bias. This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
 
 
-## [Questionnaire](questionnaire.md)
+## [Domain Experts](experts.md)
 
 
 
