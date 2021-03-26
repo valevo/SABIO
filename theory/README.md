@@ -12,9 +12,19 @@ As SABIO, and Cultural AI in general, are located deeply in the domain of respon
 In order to detect it, we need to first find a definition of bias. This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
 
 
+## [Questionnaire](questionnaire.md)
+
+
+
+
+
 ## [Heuristics](heuristics.md)
 
 Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable for or useful towards bias detection; arguably almost all of machine learning in fact. Furthermore, with the intention of transparency and explainability, we opt for a very modular approach to bias detection. And so for these reasons, many heuristics are interesting for SABIO.
+
+
+## [API Specification](api.md)
+
 
  
 
