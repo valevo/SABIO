@@ -22,7 +22,7 @@ Owing to both its pervasive and evasive nature, an immense plethora of algorithm
  
 Put here for now, to be sorted later.  
    
-## Social Bias versus Statistical Bias
+### Social Bias versus Statistical Bias
 
 It is not really a coincidence that both statisticians and social scientists speak of bias. 
 In statistics, bias is a type of systematic difference of an estimator from the true value; formally, the expected value of a statistic *T* can be expressed as *E[T] = \theta + bias(T, \theta)*  and *T* is unbiased wrt. the theoretical value *\theta* iff *bias(T, \theta) = 0*.
@@ -35,7 +35,7 @@ In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 
 
  
-## Test Data
+### Test Data
   
   
   Is there a way to obtain test data, to be able to make the successfulness/appropriateness of whatever approaches we choose/develop measurable?
@@ -45,7 +45,7 @@ In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
     
   
   
-## Language without Bias?
+### Language without Bias?
 
 Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf's) in language: Because they are intrinsic properties of language, it is impossible to imagine languages where bias or laws (such as Zipf's) don't exist. The very practical problem arises then that a measured value of quantification becomes somewhat meaningless because it has no "null" point that it can be studied in comparison of. (I.e. what does a biasedness value of 10 mean if I don't know what the sample would need to look like to obtain a value of 0.)
 
@@ -54,7 +54,7 @@ Quantifying bias has a similar problem as the quantification of laws (e.g. Zipf'
 => The concept of Typicality (of Typical Set) from Information Theory can also be useful to address the same issue. If we could figure out the probability of a (sub-)corpus as a function of the bias it contains, we directly use Typicality to quantify bias and to samples with less (/more) bias.
 
 
-## Bias as the Adversary
+### Bias as the Adversary
 
 Could bias detection be phrased as an adversarial learning problem? What would the adversary's loss be?
 Perhaps considering a scenario where language is always bias-free but then an adversary adds bias before it is uttered? -> trick the adversary 
