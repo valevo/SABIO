@@ -292,3 +292,15 @@ meeting with Vendela ([university homepage](https://www.su.se/english/profiles/v
 
  - Julia mentioned a [talk on *The Logic of Decoloniality*](https://www.youtube.com/watch?v=vZUY1hITnxY) by [Jonathan Chimakonam](https://www.uj.ac.za/contact/Pages/jonathan-okere-chimakonam.aspx), who does philosphical research on decolonising research (see links for papers); the point of such research is that in the tripartition of content, method and foundation, the foundation needs to be decolonised alongside content and method (which is what is usually focussed on)  
 => this line provides a good guideline for how the field (cultural AI) as a whole should evolve towards
+
+
+
+
+### March 29
+
+  Meeting with Andrei & Ryan:
+
+ - idea: correlate sentiment of words with their contentiousness (as labelled in ConConCOr) -> can answer the question: 'is sentiment a good predictor of whether a word is contentious?' -> perhaps use BERTje's word embeddings for sentiment (or sentiment analysis)
+ - idea: do the analyses of semantic change from [Jurafsky's paper on semantic change](https://web.stanford.edu/~jurafsky/pubs/paper-hist_vec.pdf) in the context of the ConConCor -> does contentiousness correlate with factors of semantic change? can we predict contentiousness from semantic change?
+ - idea: phrase annotation task for ConConCor in terms of the participants themselves: "how comfortable would you feel saying this word/sentence in public/private/in your head?" / "would you feel hurt if someone said this word/sentence to you?" -> contentiousness is an emotional matter -> getting people's embodied perspective is necessary
+ - 
