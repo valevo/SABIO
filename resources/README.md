@@ -52,6 +52,8 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
   -> possible connection to the [idea that bias could be revealed via queries ](https://github.com/valevo/SABIO/tree/main/theory#bias-in-network-via-queries)
 
  - [Uncovering Unknown Unknowns in Machine Learning](https://ai.googleblog.com/2021/02/uncovering-unknown-unknowns-in-machine.html), a Google blog (by Lora Aroyo and others), a preliminary study into the *unknown unknowns* i.e. those weak spots we do not know about
+ 
+ - [AI can be sexist and racist — it’s time to make it fair](https://www.nature.com/articles/d41586-018-05707-8) a comment on bias in AI, that is fairly unexciting (simply repeats many of the well-known phenomena and arguments); might even be a good example of how most of the efforts to tackle bias in AI are somewhat misguided
 
 
 
