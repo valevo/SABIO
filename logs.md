@@ -298,9 +298,10 @@ meeting with Vendela ([university homepage](https://www.su.se/english/profiles/v
 
 ### March 29
 
-  Meeting with Andrei & Ryan:
+Meeting with Andrei & Ryan:
 
  - idea: correlate sentiment of words with their contentiousness (as labelled in ConConCOr) -> can answer the question: 'is sentiment a good predictor of whether a word is contentious?' -> perhaps use BERTje's word embeddings for sentiment (or sentiment analysis)
  - idea: do the analyses of semantic change from [Jurafsky's paper on semantic change](https://web.stanford.edu/~jurafsky/pubs/paper-hist_vec.pdf) in the context of the ConConCor -> does contentiousness correlate with factors of semantic change? can we predict contentiousness from semantic change?
  - idea: phrase annotation task for ConConCor in terms of the participants themselves: "how comfortable would you feel saying this word/sentence in public/private/in your head?" / "would you feel hurt if someone said this word/sentence to you?" -> contentiousness is an emotional matter -> getting people's embodied perspective is necessary
- - 
+
+- [this video](https://www.youtube.com/watch?v=lG4VkPoG3ko) talks about re-designing Bayes' theorem into: O(D|+) = O(D) * P(+|D)/P(+| not D), where D is the RV of whether or not a disease is present and + is the RV of whether a given test was positive => 
