@@ -305,3 +305,9 @@ Meeting with Andrei & Ryan:
  - idea: phrase annotation task for ConConCor in terms of the participants themselves: "how comfortable would you feel saying this word/sentence in public/private/in your head?" / "would you feel hurt if someone said this word/sentence to you?" -> contentiousness is an emotional matter -> getting people's embodied perspective is necessary
 
 - [this video](https://www.youtube.com/watch?v=lG4VkPoG3ko) talks about re-designing Bayes' theorem into: O(D|+) = O(D) * P(+|D)/P(+| not D), where D is the RV of whether or not a disease is present and + is the RV of whether a given test was positive => 
+
+
+### April 01
+
+Meeting with Marieke:
+ - her PhD student (Philipp) tried stereotype detection on KGs
