@@ -173,8 +173,8 @@ Cindy mentioned:
 
 ### Feb 18
 
-Andrei mentioned:
-  - [Zotero](https://www.zotero.org/), a library management tool; we could all share our libraries through that
+~~Andrei mentioned:
+  - [Zotero](https://www.zotero.org/), a library management tool; we could all share our libraries through that~~
 
 
 ### Feb 20
