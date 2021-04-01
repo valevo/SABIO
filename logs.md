@@ -311,3 +311,6 @@ Meeting with Andrei & Ryan:
 
 Meeting with Marieke:
  - her PhD student (Philipp) tried stereotype detection on KGs
+ - possible publication at [the CLARIN Conference](https://www.clarin.eu/content/call-abstracts-clarin-annual-conference-2021): 
+   - the infrastructure/procedure from the Wereldculturen database to data set for cultural AI/AI4GLAM (use-case: bias detection system in colonial contexts) 
+   - procedure and analysis of questionnaires for heritage professionals: defining the tasks and approach of the professionals in order to automate and enhance with ML
