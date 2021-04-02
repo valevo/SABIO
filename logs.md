@@ -314,3 +314,11 @@ Meeting with Marieke:
  - possible publication at [the CLARIN Conference](https://www.clarin.eu/content/call-abstracts-clarin-annual-conference-2021): 
    - the infrastructure/procedure from the Wereldculturen database to data set for cultural AI/AI4GLAM (use-case: bias detection system in colonial contexts) 
    - procedure and analysis of questionnaires for heritage professionals: defining the tasks and approach of the professionals in order to automate and enhance with ML
+
+
+### April 02
+
+Meeting with the bias B.Sc. project:
+ - idea: identify extra-linguistic variables about object (region/culture/etc), then correlate them with for instance sentiment analysis of the description  
+   e.g.: group objects by culture, then do sentiment analysis on their titles/descriptions and correlate; typicality could help as a concept, examples could be extracted
+ - BERTje ([[paper](https://arxiv.org/pdf/1912.09582), [code](https://github.com/wietsedv/bertje)) & RobBERT ([paper](https://arxiv.org/pdf/2001.06286), [code](https://github.com/iPieter/RobBERT)) are Dutch transformer LMs, also available on Huggingface
