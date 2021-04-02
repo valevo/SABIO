@@ -311,9 +311,11 @@ Meeting with Andrei & Ryan:
 
 Meeting with Marieke:
  - her PhD student (Philipp) tried stereotype detection on KGs
- - possible publication at [the CLARIN Conference](https://www.clarin.eu/content/call-abstracts-clarin-annual-conference-2021): 
+ - possible publication at [the CLARIN Conference](https://www.clarin.eu/content/call-abstracts-clarin-annual-conference-2021) (3-4 page abstract due on April 14): 
    - the infrastructure/procedure from the Wereldculturen database to data set for cultural AI/AI4GLAM (use-case: bias detection system in colonial contexts) 
    - procedure and analysis of questionnaires for heritage professionals: defining the tasks and approach of the professionals in order to automate and enhance with ML
+ - idea: concordance: get concordances of words (word pairs): for a given word (based on PMO, or other measures), find and expose the other contexts it occurs in; there is also [statistical measure](https://en.wikipedia.org/wiki/Concordance_correlation_coefficient) which measures concordance
+ - paper by Jacco and others: model transparency through interface and presentation and empirical study of its impact when historians work with ML
 
 
 ### April 02
