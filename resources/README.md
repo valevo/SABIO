@@ -55,7 +55,7 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
  
  - [AI can be sexist and racist — it’s time to make it fair](https://www.nature.com/articles/d41586-018-05707-8) a comment on bias in AI, that is fairly unexciting (simply repeats many of the well-known phenomena and arguments); might even be a good example of how most of the efforts to tackle bias in AI are somewhat misguided
 
- - [Blog post on showing bias in sentiment analysis](https://twitter.com/kareem_carr/status/1378881494370897921): good example for how sentiment analysis can be used to make bias visible
+ - [Twitter post on showing bias in sentiment analysis](https://twitter.com/kareem_carr/status/1378881494370897921): good example for how sentiment analysis can be used to make bias visible; [reply by this Twitter post](https://twitter.com/DataSciBae/status/1379186952746889216) which explains why the original post contains misconceptions (and many agreeing)
 
 
 
