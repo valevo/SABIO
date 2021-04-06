@@ -1,8 +1,16 @@
 # Resources
 
+[My public Zotero library](https://www.zotero.org/valevo/library).
+
+[Cultural AI's publica library](https://www.zotero.org/groups/2782799/cultural_ai).  
+
+
 Andrei's resources on [GDrive](https://drive.google.com/drive/u/0/folders/1ncPfsOL_WmAUnGbEbqMMFAw1sF32gTLw)
 
 Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
+
+
+
 
 
 ## General Notes
