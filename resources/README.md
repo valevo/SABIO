@@ -19,6 +19,8 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
 
 ## People, Organisations et al
 
+ - [Wayne Modest](https://www.materialculture.nl/en/about/wayne-modest) at _Material Culture_, editor of _Words Matter_
+
 
 ### Critical Stances in ML
 
@@ -37,8 +39,6 @@ Ryan's resources on [GitHub](https://github.com/ryanbrate/phd_reading_list)
 
  - [Markus Balkenhol](https://www.meertens.knaw.nl/cms/en/medewerkers/142839-markusb), Ethnologist at Meertens
  - [David Ludwig](http://david-ludwig.com/) from Wageningen University
-
-
 
 
 
