@@ -1,32 +1,35 @@
 # The Theory of SociAl BIas Observation 
 
-This is a work-in-progress guide to the theoretical aspects of SABIO. Here, we describe conceptual and theoretical work and ideas. 
+This is a work-in-progress guide to the theoretical aspects of SABIO. In this folder, we describe conceptual and theoretical work and ideas, organised as follows:
 
 ## [Manifesto](manifesto.md)
 
 As SABIO, and Cultural AI in general, are located deeply in the domain of responsible AI, it is an important value that our process is transparent and fair. To add an activist stance on top, we are creating a manifesto for how cultural AI should be done and what it should and should not be.
 
 
-## [Defining Bias](defining_bias.md)
-
-In order to detect it, we need to first find a definition of bias. This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
-
-
 ## [Domain Experts](experts.md)
 
+Clearly, we are not the domain experts and clearly, we need their input for SABIO to be successful (although this seems decidely not clear to the majority of ML research on bias). Specficially, we need them to help us defining bias (see the section below) and how it manifests, help us construct algorithms that are accessible to non-experts and that are useful for their work. 
 
 
+## [Defining Bias](defining_bias.md)
+
+In order to detect it, we need to first find a definition of bias. Or rather a number of definitions for the various types, dimensions, etc. of the variety of biases.  
+This will be a *working* definition, i.e. while it may not withstand strict philosophical criticism, its purpose is to serve as an interface between the rigid world of algorithms and our layered, complex and continuous (social) world.
 
 
 ## [Heuristics](heuristics.md)
 
-Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable for or useful towards bias detection; arguably almost all of machine learning in fact. Furthermore, with the intention of transparency and explainability, we opt for a very modular approach to bias detection. And so for these reasons, many heuristics are interesting for SABIO.
+Owing to both its pervasive and evasive nature, an immense plethora of algorithms are potentially viable or useful for bias detection; arguably a vas of machine learning. Furthermore, with the requirement for transparency and explainability, we opt for a very modular approach. For these reasons, many heuristics are interesting for SABIO.
 
 
 ## [API Specification](API.md)
 
-
+Plain and simple: drafts for API specifications. Both important because of the modular structure, for developing user interfaces and because it's good practice.
  
+
+
+---
 
 ## Random Ideas  
  
@@ -43,8 +46,6 @@ In social science or philosophy, bias (**WHAT IS SOCIAL BIAS EXACTLY?**).
 *Example*: Our random variable is the difference is co-occurrence probability of a word *W* with the words *man* and *woman*, *v = |P(W|man) - P(W|woman)|*, of which we would expect that its value is 0 (*P(v=0)=1*) if language is unbiased. Given a corpus *C*, we can construct the statistic *T(C) = |#(W|man, C) - #(W|woman, C)|* of which the expected value over all corpora is *E[T] = \sum_C P(C)*T(C) = v + bias(v)*
 
 
-
- 
 ### Test Data
   
   
