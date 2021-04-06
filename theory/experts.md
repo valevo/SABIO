@@ -14,6 +14,11 @@ I.e. anyone who works with heritage collections as a 'user', has bias as a subje
 _[Google Form](https://docs.google.com/forms/d/1gmu8GyosOLTYaZYino83dh1-rQVNP1p2Bo6Thr1Dq2U)_
 
 
+_Aims:_ 
+  1. get a better understanding for the way of working and needs of experts
+  2. get empirical ideas for the types and dimensions of biases that are encountered in heritage collections
+  3. gather specific approaches to investigating bias in collections in order to mimic them
+
 _Preface:_ (explanation to the questionnaire)
 
  - context of SABIO & the questionnaire: funded by NDE, in co-operation/coordination with NMvW, SABIO developed and to be used (in the first stage) on the digital collection of the NMvW
@@ -22,11 +27,6 @@ _Preface:_ (explanation to the questionnaire)
  - privacy statement & agreement to use of data
  - number of questions, estimated time to complete, statement that not all questions are optional
  - indicate whether (1) you'd like to be informed about progress, (2) you'd be open to be potentially contacted or (3) you'd like to join a workshop about this
-
-_Aims:_ 
-  1. get a better understanding for the way of working and needs of experts
-  2. get empirical ideas for the types and dimensions of biases that are encountered in heritage collections
-  3. gather specific approaches to investigating bias in collections in order to mimic them
 
 
 
@@ -53,9 +53,8 @@ _Aims:_
 
  - focused investigations? or noticed in the course of an inquiry with a different objective?
  - how do you obtain examples of bias you expect in the collection?
- - which methods did you use that lead you to encouter bias?
+ - which specific methods did you use that lead you to encouter bias?
  - do you perform quantification of bias? what's your interest in quantifications?
- - which 
 
 
 ### Wishes (What would you like SABIO to do?)
