@@ -1,12 +1,35 @@
 # Experiments
 
 
+
 ## [ex1](ex1/)
 
-Initial experiment into using [PMI](https://en.wikipedia.org/wiki/Pointwise_mutual_information), which measures collocation of word pairs, to detect lexical semantic bias.
-First, generate the full `n x n` matrix of PMI values, then eliminate according to PMI value itself, word classes, etc.
+Experiments into using [PMI](https://en.wikipedia.org/wiki/Pointwise_mutual_information), which measures collocation of word pairs, to detect lexical semantic bias. Bias is thus operationalised as the amount and directionality of co-occurrence-based association between pairs of words.
 
-Could be interesting: PMI is symmetric in its arguments (since mutual information is) -> are there asymmetric versions? Would be useful since lexical semantic bias probably is. Possible candidate: [Delta P](https://www.degruyter.com/document/doi/10.1515/cllt-2017-0036/html).
+PMI ranges from negative to positive infinity, with PMI = 0 if and only if two words are independent from each other. Negative PMI implies that two words 'repeal' each other, i.e. their chance of occurring together is lower than would have been expected.  
+
+PMI can useful to find the associations of a given word, or to explore which pairs of high association exist in the corpus. In both cases, we first construct the full table of all associations between all pairs and then eliminate entries based on relevance, such as word classes, semantic features, etc. 
+
+
+### Algorithm
+
+ 1. compute P(w) & P(w|w') for all observed words w and observed word pairs w and w'
+ 2. compute PMI(w, w') = log P(w|w') - log P(w) for all pairs w and w'
+ 3. sort all pairs according to PMI
+ 4. 
+
+
+
+
+
+#### TODOs
+
+ - could be interesting: PMI is symmetric in its arguments (since mutual information is)  
+   -> are there asymmetric versions? Would be useful since lexical semantic bias probably is. Possible candidate: [Delta P](https://www.degruyter.com/document/doi/10.1515/cllt-2017-0036/html).
+
+ - given an n-gram, get iterator over documents in which n-gram occurs (sorted by some criterion)
+ - given an n-gram, get iterator over high-ranking n-grams which occur in the same document
+
 
 ### Idea
 In combination with PMI: cluster unigrams into `k` clusters, then compute top `m` pairs (`w1, w2`) with highest PMI s.t. that `w1` and `w2` are *not* in the same cluster  
@@ -14,12 +37,6 @@ In combination with PMI: cluster unigrams into `k` clusters, then compute top `m
 -> use tf-idf or maybe even topic modelling for the vector projections (and even the clustering)
 => this is our operationalisation of (lexical semantic) bias: PMI measure strength of bias, the clusters define semantic classes and bias is equivalent to associations between (exemplars of) different classes
 => can make this more general by not using clusters but distance instead (i.e. top pairs (`w1`, `w2`) s.t. `PMI(w1, w2)` is maximised and `d(w1, w2)` and is above some threshold
-
-
-### TODO
-
- - given an n-gram, get iterator over documents in which n-gram occurs (sorted by some criterion)
- - given an n-gram, get iterator over high-ranking n-grams which occur in the same document
 
 
 
