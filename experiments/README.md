@@ -16,6 +16,12 @@ In combination with PMI: cluster unigrams into `k` clusters, then compute top `m
 => can make this more general by not using clusters but distance instead (i.e. top pairs (`w1`, `w2`) s.t. `PMI(w1, w2)` is maximised and `d(w1, w2)` and is above some threshold
 
 
+### TODO
+
+ - given an n-gram, get iterator over documents in which n-gram occurs (sorted by some criterion)
+ - given an n-gram, get iterator over high-ranking n-grams which occur in the same document
+
+
 
 ## ex2
 
