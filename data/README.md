@@ -7,7 +7,7 @@ Links, notes and resources of, for and around the datasets relevant to the SABIO
 
 - [Online Representation of Collection](https://collectie.wereldculturen.nl)
 
-- [RDF dumps download page](https://collectie.wereldculturen.nl/thesaurus)
+- [RDF dumps download page](https://collectie.wereldculturen.nl/thesaurus), can also be obtained from [the NDE](https://data.netwerkdigitaalerfgoed.nl/NMVW)
 
 - [Words Matter](https://www.tropenmuseum.nl/nl/over-het-tropenmuseum/words-matter-publicatie) ([English version](https://www.materialculture.nl/en/publications/words-matter)), a work-in-progress by the museum itself and a colelction of essays on words and inclusivity <br>
 -> could actaully be used as a data set (test set?) -> is it possible to get the texts in plain-text format (i.e. not PDF)?
