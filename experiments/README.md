@@ -24,11 +24,16 @@ PMI can useful to find the associations of a given word, or to explore which pai
 
 #### TODOs
 
- - could be interesting: PMI is symmetric in its arguments (since mutual information is)  
-   -> are there asymmetric versions? Would be useful since lexical semantic bias probably is. Possible candidate: [Delta P](https://www.degruyter.com/document/doi/10.1515/cllt-2017-0036/html).
+ - do proper linguistic analysis: stemming or even lemmatisation, more sophistcated semgentation (-> split compounds)
+ - more sophisticated pairing, e.g. based on dependency parse
 
- - given an n-gram, get iterator over documents in which n-gram occurs (sorted by some criterion)
- - given an n-gram, get iterator over high-ranking n-grams which occur in the same document
+ - find concordances: given an n-gram, get set of:
+   - documents in which n-gram occurs (sorted by some criterion)
+   - high-ranking n-grams which occur in the same document
+
+ - could be interesting: PMI is symmetric in its arguments (since mutual information is)  
+   -> are there asymmetric versions? Would be useful since lexical semantic bias probably is; possible candidate: [Delta P](https://www.degruyter.com/document/doi/10.1515/cllt-2017-0036/html)
+   
 
 
 ### Idea
