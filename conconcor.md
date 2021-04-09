@@ -37,24 +37,35 @@ where `p` is any non-contiguous
 
 ## Choice of Annotation Platform
 
+The choice of annotation tool will certainly influence the annotation scheme (at least in terms of input/output formats).
+
+
  - BRAT? needs to be self-hosted, someone at UvA set that up which actually a fork from someone at KNAW
 
 
 
 ## Pilot Experiments: Evaluating Algorithms & Bootstrapping Models
 
+The point of the pilot experiments is to exemplify uses and the importance of data sets such as ConConCor. They also serve to investigate the usefulness of ConConCor, i.e. whether or not they can be meaningfully applied to bias detection and Culturally Aware AI. They're pilot experiments in the sense that they will check for basic properties and types of algorithms. 
+
+A major use, based on the representativeness of ConConCor, is the evaluation of the mehtods ad algorithms developed in the context of SABIO and Culturally Aware AI: Whether these methods can reproduce the terms annotated 
+
+CAUTION: ConConCor is about contentiousness which is partly a subset of bias and partly a different concept, namely when bias stops being bias and turns into violence (consider offensive terms). In other words, the concept of contentiousness can be seen as capturing certain aspects of bias but also extending beyond it.
+
 
 #### Ideas
 
  1. Bootstrap CTR (contentious term recognition) model:  
-   - binary decision function 
-   - may be a transformer head (e.g. a binary output head on BERTje)  
-     -> consider one annotated span (i.e. a binary vector of size sentence length) as an example, enrich with negative sampling
-   - use CTR model as point of comparison for a evaluation of deterministic/parameter-free/non/black-box algorithm  
-     (to answer the question _how good can any model be on this task?_)
+     - binary decision function 
+     - may be a transformer head (e.g. a binary output head on BERTje)  
+       -> consider one annotated span (i.e. a binary vector of size sentence length) as an example, enrich with negative sampling
+     - use CTR model as point of comparison for a evaluation of deterministic/parameter-free/non/black-box algorithm  
+       (to answer the question _how good can any model be on this task?_)
  
  2. Evaluate Algorithms
    - point is: algorithms that deal with bias should mainly be unsupervised learners or perform no 'learning' in the ML sense at all (mainly for transparency and lack of training data) 
+
+ 3. there should be something
 
 
 #### Potential Difficulties
