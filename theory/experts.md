@@ -19,6 +19,8 @@ _Aims:_
   2. get empirical ideas for the types and dimensions of biases that are encountered in heritage collections
   3. gather specific approaches to investigating bias in collections in order to mimic them
 
+
+
 _Preface:_ (explanation to the questionnaire)
 
  - context of SABIO & the questionnaire: funded by NDE, in co-operation/coordination with NMvW, SABIO developed and to be used (in the first stage) on the digital collection of the NMvW
@@ -62,5 +64,8 @@ _Preface:_ (explanation to the questionnaire)
 
 
 ---
+
+By whichever process you have encountered, searched for or analysed bias, the goal of our project is to automate these processes to help increase the visibility of bias in heritage collections.
+
 
 
