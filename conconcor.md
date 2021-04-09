@@ -37,7 +37,7 @@ where `p` is any non-contiguous
 
 ## Choice of Annotation Platform
 
-
+ - BRAT? needs to be self-hosted, someone at UvA set that up which actually a fork from someone at KNAW
 
 
 
