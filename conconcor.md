@@ -63,9 +63,10 @@ CAUTION: ConConCor is about contentiousness which is partly a subset of bias and
        (to answer the question _how good can any model be on this task?_)
  
  2. Evaluate Algorithms
-   - point is: algorithms that deal with bias should mainly be unsupervised learners or perform no 'learning' in the ML sense at all (mainly for transparency and lack of training data) 
+     - point is: algorithms that deal with bias should mainly be unsupervised learners or perform no 'learning' in the ML sense at all (mainly for transparency and lack of training data) 
 
- 3. there should be something
+ 3. some experiment should make use of the contentiousness scores... perhaps correlate contentiousness with sentiment (the output of a sentiment anaylser)?
+ 4. some experiment should make use of the preferred alternatives... perhaps: exchange contentious terms by their preferred alternatives, then measure biasedness of the oontext (or sentiment)?
 
 
 #### Potential Difficulties
