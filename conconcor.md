@@ -41,7 +41,7 @@ where `p` is any non-contiguous
 
 
 
-## Pilot Experiments: Evaluating ALgorithms & Bootstrapping Models
+## Pilot Experiments: Evaluating Algorithms & Bootstrapping Models
 
 
 #### Ideas
@@ -51,10 +51,10 @@ where `p` is any non-contiguous
    - may be a transformer head (e.g. a binary output head on BERTje)  
      -> consider one annotated span (i.e. a binary vector of size sentence length) as an example, enrich with negative sampling
    - use CTR model as point of comparison for a evaluation of deterministic/parameter-free/non/black-box algorithm  
-     (to answer the question _how good can be on this task?_)
+     (to answer the question _how good can any model be on this task?_)
  
- 2. Evaluate 
-
+ 2. Evaluate Algorithms
+   - point is: algorithms that deal with bias should mainly be unsupervised learners or perform no 'learning' in the ML sense at all (mainly for transparency and lack of training data) 
 
 
 #### Potential Difficulties
