@@ -7,6 +7,8 @@
    -> could remedy the problem that it may be too unclear to the paricipants what 'contentiousness' implies for the task 
    -> potential problem: most spans will not be contentious, i.e. waste of time & may influence the 'contentiousness baseline'
 
+ - require diversity in the group of annotators -> contentiousness as the sum of what the society considers as such
+
 
 
 ## Annotation Scheme
@@ -80,7 +82,6 @@ CAUTION: ConConCor is about contentiousness which is partly a subset of bias and
 
  - span selected by annotator (star chars-end chars) may not match tokeniser's decisions
  - non-contiguous spans 
-
 
 
 
