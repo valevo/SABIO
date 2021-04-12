@@ -13,7 +13,7 @@
 
 #### References
 
- - (GRaSP: A Multilayered Annotation Scheme for Perspectives)[http://www.lrec-conf.org/proceedings/lrec2016/pdf/469_Paper.pdf]  
+ - [GRaSP: A Multilayered Annotation Scheme for Perspectives](http://www.lrec-conf.org/proceedings/lrec2016/pdf/469_Paper.pdf)  
    -> paper from the VU (Aroyo and others)  
    -> *Section 3.1: 'Our perspective annotations are aimed at capturing the attitude of a source towards some target.'*
 
