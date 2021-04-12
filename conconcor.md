@@ -1,5 +1,12 @@
 # CONtentious Words in CONtext CORpus (ConConCor)
 
+## Notes & Questions
+
+ - what about the following procedure: sample a random fragment `s` (=the context), then sample a (non-contiguous) span `p` from `s`; the task for the participant is then to rate contentiousness  
+   => as opposed to the participant identifying spans by themselves  
+   -> could remedy the problem that it may be too unclear to the paricipants what 'contentiousness' implies for the task 
+   -> potential problem: most spans will not be contentious, i.e. waste of time & may influence the 'contentiousness baseline'
+
 
 
 ## Annotation Scheme
@@ -21,7 +28,7 @@ for each phrase `p` in each sentence `s`:
   - if so, optional: preferred alternative
   - if so, optional: explanation
 
-where `p` is any non-contiguous
+where `p` is any (possibly non-contiguous) span of characters in `s`
 
 
 
