@@ -324,3 +324,10 @@ Meeting with the bias B.Sc. project:
  - idea: identify extra-linguistic variables about object (region/culture/etc), then correlate them with for instance sentiment analysis of the description  
    e.g.: group objects by culture, then do sentiment analysis on their titles/descriptions and correlate; typicality could help as a concept, examples could be extracted
  - BERTje ([[paper](https://arxiv.org/pdf/1912.09582), [code](https://github.com/wietsedv/bertje)) & RobBERT ([paper](https://arxiv.org/pdf/2001.06286), [code](https://github.com/iPieter/RobBERT)) are Dutch transformer LMs, also available on Huggingface
+
+
+### April 13
+
+Seminar by [TU Wien Digital Humanities](https://dighum.ec.tuwien.ac.at/dighum-lectures/), [recording](https://www.youtube.com/watch?v=LCkFOUrh6yM):
+ - [Sally Wyatt](https://www.knaw.nl/nl/leden/experten/8028), at KNAW on feminist history & stances
+ - [prof Hinda Haned](https://www.uva.nl/en/profile/h/a/h.haned/h.haned.html) professor on data science, on defining bias
