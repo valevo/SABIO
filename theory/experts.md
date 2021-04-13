@@ -1,12 +1,24 @@
 # Domain Experts
 
 *Who are domain experts?*  
-Given the initial focus and scope of, this is everyone in the **union** of
+Given the (initial) focus and scope of SABIO, this is everyone in the **union** of
 
  - people generally working with the museums' collections: curators, managers, researchers (sociology, history, anthropologists, ethnographers, etc)
- - researchers, activists & others who deal with bias by tracking, investigating, interpreting it in and across cultural collections
+ - researchers, activists & others who deal with bias by tracking, investigating, interpreting it (in and across cultural collections)
 
-I.e. anyone who works with heritage collections as a 'user', has bias as a subject in their work or both. 
+*What do we specifically need from experts?*
+
+ - resources & guidance for a working definition of bias
+ - which aspects and dimensions of bias to focus on (e.g. word associations vs lexical choice vs sentiment vs ...)  
+   => because of prevalence, usefulness, convenience, etc
+ - 
+
+
+ - examples of promising and/or sound methodologies to find, track or quantify bias  
+   => to automate/mimick them, for our guidance and so that our algorithms are maximally useful
+
+
+ - feedback on our approaches
 
 ---
 ## Questionnnaire
