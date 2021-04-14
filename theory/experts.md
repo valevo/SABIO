@@ -33,7 +33,7 @@ _Aims:_
 
 
 
-_Preface:_ (explanation to the questionnaire)
+### _Preface:_
 
  - context of SABIO & the questionnaire: funded by NDE, in co-operation/coordination with NMvW, SABIO developed and to be used (in the first stage) on the digital collection of the NMvW
  - explanation & values of SABIO
