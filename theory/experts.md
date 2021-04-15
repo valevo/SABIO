@@ -92,3 +92,27 @@ By whichever process you have encountered, searched for or analysed bias, the go
 
 
 
+
+
+
+## TODO 
+
+
+ - add more examples of collections/sources of data to "Which collections or sources of data do you usually work with?"
+ - add more examples levels of bias to "In which levels of data do you encounter bias?"
+ - more examples of types of bias? for "Which types of bias do you encounter most often?"
+ - add a question about levels of data that users would like? e.g. textual, visual, etc
+ - Desired features
+   [ ] Search
+   [ ] Explore
+   [ ] Store results
+   [ ] Annotations
+   [ ] Share results
+   [ ] Understand bias
+   [ ] Indicate/mark biased content
+   [ ] Custom vocabulary
+   [ ] ??
+   [ ] Other... 
+
+
+
