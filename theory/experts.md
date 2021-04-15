@@ -77,6 +77,17 @@ _Aims:_
 
 ---
 
+### Text Snippets
+
+_Preface_
+
+Thank you for taking the time to help us in our work!
+
+We are conducting this questionnaire for our project, the **S**oci**a**l **BI**as **O**bservatory
+
+
+
+
 By whichever process you have encountered, searched for or analysed bias, the goal of our project is to automate these processes to help increase the visibility of bias in heritage collections.
 
 
