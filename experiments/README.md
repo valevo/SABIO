@@ -8,7 +8,7 @@ Experiments into using [PMI](https://en.wikipedia.org/wiki/Pointwise_mutual_info
 
 PMI ranges from negative to positive infinity, with PMI = 0 if and only if two words are independent from each other. Negative PMI implies that two words 'repeal' each other, i.e. their chance of occurring together is lower than would have been expected.  
 
-PMI can useful to find the associations of a given word, or to explore which pairs of high association exist in the corpus. In both cases, we first construct the full table of all associations between all pairs and then eliminate entries based on relevance, such as word classes, semantic features, etc. 
+PMI can be useful to find the associations of a given word, or to explore which pairs of high association exist in the corpus. In both cases, we first construct the full table of all associations between all pairs and then eliminate entries based on relevance, such as word classes, semantic features, etc. 
 
 
 ### Algorithm
@@ -16,9 +16,6 @@ PMI can useful to find the associations of a given word, or to explore which pai
  1. compute P(w) & P(w|w') for all observed words w and observed word pairs w and w'
  2. compute PMI(w, w') = log P(w|w') - log P(w) for all pairs w and w'
  3. sort all pairs according to PMI
- 4. 
-
-
 
 
 
@@ -36,7 +33,16 @@ PMI can useful to find the associations of a given word, or to explore which pai
    
 
 
-### Idea
+## ex2 
+
+Vector space as the place where words/phrases "live":
+
+ - measures on vector space can be correlated/paralleled with other measures, e.g. cosine similarity and PMI
+ - interface between visual and textual worlds
+ - words/phrases are co-indentified by a vector and a record: 
+
+
+
 In combination with PMI: cluster unigrams into `k` clusters, then compute top `m` pairs (`w1, w2`) with highest PMI s.t. that `w1` and `w2` are *not* in the same cluster  
 -> have count vectors anyway  
 -> use tf-idf or maybe even topic modelling for the vector projections (and even the clustering)
@@ -45,7 +51,7 @@ In combination with PMI: cluster unigrams into `k` clusters, then compute top `m
 
 
 
-## ex2
+## ex3
 
 Initial experiment into linked data search and querying: Using the terms from the *Words Matter* publication, track them across the collection. That is for each term, find terms that tend to correlate or that are otherwise related and in this way build up a small network for the term.
 
