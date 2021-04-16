@@ -12,6 +12,23 @@
    -> what information do we want to ask from participants?
 
 
+## Data Selection
+
+ - [interesting example about the use of the word "Bosneger" provided by Andrei](https://www.delpher.nl/nl/kranten/view?query=bosneger&coll=ddd&identifier=ddd:110587315:mpeg21:a0154&resultsidentifier=ddd:110587315:mpeg21:a0154&rowid=8)
+ 
+
+### TODO
+
+ - implement typicality as a sampling strategy to be used in combination with Ryan's stratified sampling schemes  
+   -> either use to completely disregard certain parts of the data, or as sampling weight  
+   -> can also help analyse data set for their "normality"
+ 
+ - the data set contains a substantial amount of serious OCR errors  
+   -> use dictionary method to filter sentences which contain words that are not in the dictionary  
+   -> use subword encoders to judge the probabilty of individual character sequences
+   
+
+
 
 ## Annotation Scheme
 
@@ -79,6 +96,9 @@ CAUTION: ConConCor is about contentiousness which is partly a subset of bias and
  3. some experiment should make use of the contentiousness scores... perhaps correlate contentiousness with sentiment (the output of a sentiment anaylser)?
  4. some experiment should make use of the preferred alternatives... perhaps: exchange contentious terms by their preferred alternatives, then measure biasedness of the oontext (or sentiment)?
 
+
+ - the original BERTje paper did sentiment analysis, cites a Dutch corpus of sentiments and reports scores -> is the trained analyser available somewhere?  
+   -> ULMFiT does even better than BERTje, maybe that has pretrained sentiment analysis available for Dutch?
 
 #### Potential Difficulties
 
