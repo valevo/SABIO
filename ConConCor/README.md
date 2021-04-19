@@ -1,17 +1,5 @@
 # CONtentious Words in CONtext CORpus (ConConCor)
 
-## Notes & Questions
-
- - what about the following procedure: sample a random fragment `s` (=the context), then sample a (non-contiguous) span `p` from `s`; the task for the participant is then to rate contentiousness  
-   => as opposed to the participant identifying spans by themselves  
-   -> could remedy the problem that it may be too unclear to the paricipants what 'contentiousness' implies for the task 
-   -> potential problem: most spans will not be contentious, i.e. waste of time & may influence the 'contentiousness baseline'
-
- - require diversity in the group of annotators  
-   -> contentiousness as the sum of what the society considers as such  
-   -> what information do we want to ask from participants?
-
-
 ## Data Selection
 
  - [interesting example about the use of the word "Bosneger" provided by Andrei](https://www.delpher.nl/nl/kranten/view?query=bosneger&coll=ddd&identifier=ddd:110587315:mpeg21:a0154&resultsidentifier=ddd:110587315:mpeg21:a0154&rowid=8)
@@ -49,16 +37,15 @@ for each phrase `p` in each sentence `s`:
   - if so, optional: preferred alternative
   - if so, optional: explanation
 
-where `p` is any (possibly non-contiguous) span of characters in `s`
+where `p` is any (possibly non-contiguous) span of characters in `s`, i.e. for any (ordered) set of indices `{i_1, ..., i_k} \subset |s|`, `p = (w_i_1, ..., w_i_k)` is a candidate phrase. 
 
 
 
 #### Potential Difficulties
 
- - phrases with complex spans (includes uncertainty about predcise span)
+ - phrases with complex spans (including uncertainty about predcise span)
  - perspective/voice (e.g. indirect speech)
  - conentiousness is implicit in the sentence (e.g. "all X are Y")
- -  
 
 
 
