@@ -331,3 +331,12 @@ Meeting with the bias B.Sc. project:
 Seminar by [TU Wien Digital Humanities](https://dighum.ec.tuwien.ac.at/dighum-lectures/), [recording](https://www.youtube.com/watch?v=LCkFOUrh6yM):
  - [Sally Wyatt](https://www.knaw.nl/nl/leden/experten/8028), at KNAW on feminist history & stances
  - [prof Hinda Haned](https://www.uva.nl/en/profile/h/a/h.haned/h.haned.html) professor on data science, on defining bias
+
+
+
+### April 20
+
+Johan is organising a EuropeanaTech X CulturalAI lab event; [the agenda](https://docs.google.com/document/d/1GI-qkl6WtDkVVG_8ps0EdzVUN-OfsMKJvQNXzi8UbzY/edit) contains many interesting resources on decolonial approaches, practices and problems in the museum, e.g.:
+
+ - [a list of decolonial resources](https://www.museumsassociation.org/campaigns/decolonising-museums/resources/) by by the Museums Association
+ - [this talk](https://www.eventbrite.co.uk/e/seminar-colonial-metadata-making-the-past-present-future-tickets-135474460759#) about colonial meta-data, which linked to [this group's homepage](https://cataloguelegacies.github.io/) (where the talk's speaker is the leader)
