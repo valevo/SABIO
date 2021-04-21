@@ -340,3 +340,14 @@ Johan is organising a EuropeanaTech X CulturalAI lab event; [the agenda](https:/
 
  - [a list of decolonial resources](https://www.museumsassociation.org/campaigns/decolonising-museums/resources/) by by the Museums Association
  - [this talk](https://www.eventbrite.co.uk/e/seminar-colonial-metadata-making-the-past-present-future-tickets-135474460759#) about colonial meta-data, which linked to [this group's homepage](https://cataloguelegacies.github.io/) (where the talk's speaker is the leader)
+
+
+
+### April 21
+
+Chat with Senka:
+
+ - this person ([instagram](https://www.instagram.com/thorn.vineyard/)) in the non-binary community has a strong social media presence
+ - same for this person ([instagram](https://www.instagram.com/samu.el/))
+ - Senka also has friend ([instagram](https://www.instagram.com/shinkusara/)) who does workshops and art around language and gender might be interested to collaborate
+
