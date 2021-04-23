@@ -74,21 +74,24 @@ algorithm should be future proof,
 
 
 ## Potential Resources
-
- - [[Shah et al. 2019]](#1) surveys, maps and formalises the potential sources and guises of bias in NLP models
  
- - the [[FAIR principles]](#2) for scientific data management
+ 
+### Other manifestos, principles, guidelines
+ 
+ - the [[FAIR principles]](#1) for scientific data management
+ - the [[Vienna Manifesto]](#2) on Digital Humanism (and [[a background paper on redefining humanism]](#3) (in German))
+ 
+ 
  
 
 
-## Referencs
+## Referencs  
   <a id="1">1. </a>
-  Shah, D., Schwartz, H. A., & Hovy, D. (2019). Predictive biases in natural language processing models: A conceptual framework and overview. arXiv preprint arXiv:1912.11078.
-  
-  <a id="2">2. </a>
   https://www.go-fair.org/fair-principles/
   
+  <a id="2">2. </a>
+  https://dighum.ec.tuwien.ac.at/dighum-manifesto/
 
-
-
+  <a id="3">3. </a>
+  https://www.medienpaed.com/article/view/1144/955
   
