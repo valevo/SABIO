@@ -79,7 +79,7 @@ algorithm should be future proof,
 ### Other manifestos, principles, guidelines
  
  - the [[FAIR principles]](#1) for scientific data management
- - the [[Vienna Manifesto]](#2) on Digital Humanism
+ - the [[Vienna Manifesto]](#2) on Digital Humanism (and [[a background paper on redefining humanism]](#3) (in German))
  
  
  
@@ -92,6 +92,6 @@ algorithm should be future proof,
   <a id="2">2. </a>
   https://dighum.ec.tuwien.ac.at/dighum-manifesto/
 
-
-
+  <a id="3">3. </a>
+  https://www.medienpaed.com/article/view/1144/955
   
