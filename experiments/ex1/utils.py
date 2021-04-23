@@ -83,11 +83,22 @@ class Ngram:
         else:
             self.term_freqs = None
         
+#         self.Ns = self.get_Ns()
         self.N = self.term_doc_matrix.sum()
         print(f"{self}: Init done") 
         
         
         
+        
+#     def get_Ns(ngram_range):
+#         l, h = self.ngram_range
+#         Ns = []
+#         for n in range(l, h+1):
+#             inds = list(self.vocab(n, with_inds=True).values())
+#             Ns.append(self.term_doc_matrix[:, inds].sum())
+#         return Ns
+                
+    
     def freq(self, *w):
         joined = " ".join(w)
         
