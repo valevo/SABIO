@@ -60,7 +60,7 @@ all corresponding to ceratin input/parameter values
  - list of word pairs
  - list of textual entities
  - list of objects
- -
+ - distributions over word pairs, objects, ...
  
  
  
