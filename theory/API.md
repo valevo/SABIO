@@ -9,6 +9,29 @@
 Because of (1), algorithms will operate on diverse types on input representations and similarly differ vastly in their output types; because of (2), i.e. the project's modular structure, algorithms will be added and replaced as an integral part of the development procedure. These reasons make it both important and useful to have clearly defined API, (1) for guiding the implementation of new algorithms, (2) to make SABIO transferrable to other sources of data and (3) to facilitate versatile and powerful user interfaces and visualisations.
 
 
+### Types and Levels of Bias Navigation
+
+types:
+ 
+  - search
+  - explore
+  - discover
+  - quantify
+  - compare/contrast
+
+the difference between *explore* and *discover* is: *discover* is like *search*, except that the inputs are not know; *explore* is completely free-form, i.e. not even the search heuristic or objective is known 
+
+levels (non-exhaustive list):
+
+  - text: lexical, semantic, pragmatic
+  - meta-data properties
+  - individual samples
+  - pairs of samples
+  - (sub-) sets in the collection
+  - connections in the collection
+  - networks/graphs of objects/entities/concepts and their relations
+
+
 
 
 ## Definitions
