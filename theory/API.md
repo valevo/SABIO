@@ -30,6 +30,7 @@ levels (non-exhaustive list):
   - (sub-) sets in the collection
   - connections in the collection
   - networks/graphs of objects/entities/concepts and their relations
+  - distributions in the collection
 
 
 
