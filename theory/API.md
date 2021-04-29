@@ -41,16 +41,16 @@ Because of (1), algorithms will operate on diverse types on input representation
 
 #### `inputs`/`parameters`
 
-
+numeric:
  - PMI threshold
  - frequency threshold
-
+lists:
  - list of focus words
-
-
  - list of objects
- - subcollection, i.e. set of objects
  - list of meta-data properties
+complex types:
+ - subcollection, i.e. set of objects
+
 
  
 #### `outputs`
@@ -61,6 +61,21 @@ all corresponding to ceratin input/parameter values
  - list of textual entities
  - list of objects
  - distributions over word pairs, objects, ...
+
+
+#### `algorithms`
+
+ - given a `threshold` -> `list of word pairs` which satisfy that threshold  
+   -> goal: explore space of highly/lowly associated words
+ - given a `list of words` -> `list of word pairs` that contain those words  
+   -> goal: 
+ - given a `list of textual entities`/`list of objects` -> `list of word pairs` in them which high PMI
+
+ - given a `threshold` -> `list of textual entities`/`list of objects` which contain pairs which satisfy that threshold
+ - given 
+
+
+
  
  
  
