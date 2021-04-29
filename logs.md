@@ -351,3 +351,11 @@ Chat with Senka:
  - same for this person ([instagram](https://www.instagram.com/samu.el/))
  - Senka also has friend ([instagram](https://www.instagram.com/shinkusara/)) who does workshops and art around language and gender might be interested to collaborate
 
+
+### April 29
+
+SABIO meeting:
+
+ - Werner shared [a project of his](https://govdna.sudox.nl/#layout/data/country/WRL/x/9/y/5/z/8/a/0)
+
+
