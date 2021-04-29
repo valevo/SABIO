@@ -43,11 +43,13 @@ Because of (1), algorithms will operate on diverse types on input representation
 
 numeric:
  - PMI threshold
- - frequency threshold
+ - frequency threshold  
+
 lists:
  - list of focus words
  - list of objects
  - list of meta-data properties
+ 
 complex types:
  - subcollection, i.e. set of objects
 
