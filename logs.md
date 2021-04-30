@@ -359,3 +359,8 @@ SABIO meeting:
  - Werner shared [a project of his](https://govdna.sudox.nl/#layout/data/country/WRL/x/9/y/5/z/8/a/0)
 
 
+### April 30
+
+Andrei shared [this Medium post](https://towardsdatascience.com/using-momas-collection-dataset-to-visualize-whose-stories-are-missing-76a8960a33c2) about 'visualising whose stories are missing' 
+
+
