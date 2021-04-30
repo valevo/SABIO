@@ -75,6 +75,8 @@ Or perhaps an adversary could be used just to improve the performance of detecti
 
 Designed for cases of (binary) supervised learning where labels are only available for one of the classes but not for the other. As the name implies, the labelled data is contrasted with noise obtained from (something similar to) randomly labelling unlabelled examples.
 
+Could be interesting for the case of bias, since we can only ever have access to positive samples, i.e. examples which are confirmed to contain bias. Negative samples, examples that are confirmed to *not* contain bias are impossible to obtain. 
+
 [This paper](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf) introduces the technique.
 
 
