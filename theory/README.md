@@ -71,4 +71,12 @@ Could bias detection be phrased as an adversarial learning problem? What would t
 Perhaps considering a scenario where language is always bias-free but then an adversary adds bias before it is uttered? -> trick the adversary 
 Or perhaps an adversary could be used just to improve the performance of detection algorithms? I.e. as an additional loss 
 
+### Noise-Contrastive Estimation
+
+Designed for cases of (binary) supervised learning where labels are only available for one of the classes but not for the other. As the name implies, the labelled data is contrasted with noise obtained from (something similar to) randomly labelling unlabelled examples.
+
+[This paper](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf) introduces the technique.
+
+
+
 
