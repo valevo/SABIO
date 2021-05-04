@@ -2,7 +2,7 @@
 
 
 
-## [ex1](ex1/)
+## [ex1](ex1/): PMI
 
 Experiments into using [PMI](https://en.wikipedia.org/wiki/Pointwise_mutual_information), which measures collocation of word pairs, to detect lexical semantic bias. Bias is thus operationalised as the amount and directionality of co-occurrence-based association between pairs of words.
 
@@ -33,7 +33,7 @@ PMI can be useful to find the associations of a given word, or to explore which 
    
 
 
-## [ex2](ex2/) 
+## [ex2](ex2/): Semantic Spaces 
 
 Vector space as the place where words/phrases "live":
 
@@ -51,13 +51,13 @@ In combination with PMI: cluster unigrams into `k` clusters, then compute top `m
 
 
 
-## ex3
+## ex3: Linked Data & Querying
 
 Initial experiment into linked data search and querying: Using the terms from the *Words Matter* publication, track them across the collection. That is for each term, find terms that tend to correlate or that are otherwise related and in this way build up a small network for the term.
 
 This experiment is also meant as an exercise to see what potentials *Words Matter* has for designing algorithms. And to judge the possibilty of adding new terms to *Words Matter* based on such algorithms.
 
 
-## [ex4](ex4/)
+## [ex4](ex4/): Typicality
 
 Using typicality.
