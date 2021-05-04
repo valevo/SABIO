@@ -95,6 +95,6 @@ algorithm should be future proof,
   <a id="3">3. </a>
   https://www.medienpaed.com/article/view/1144/955
   
-  <a id="3">3. </a>
+  <a id="4">4. </a>
   https://icai.ai/amsterdam/icai-amsterdam-core-values/
   
