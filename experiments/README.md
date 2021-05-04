@@ -61,3 +61,8 @@ This experiment is also meant as an exercise to see what potentials *Words Matte
 ## [ex4](ex4/): Typicality
 
 Using typicality.
+
+## ex5: Graph Algorithms
+
+potentially inspired by [this paper on bias in KGs](https://arxiv.org/pdf/2105.00674.pdf)?
+
