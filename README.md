@@ -8,3 +8,4 @@
  - [ ] [theory](/theory): manifesto, ideas for algorithms, conceptual research & constraints from philosophy - information s.t. SABIO fulfills its promise to be a schema for future work 
  - [ ] [plan](/plan.md): an evolving plan for the SABIO project that sketches tasks and timelines and will eventually also document what really happened
  - [ ] [logs](/logs.md): my day-by-day list of notes, pointers and random findings
+ - [ ] [mvp](/mvp.md): defining requirements and goals for the Minimal Viable Product, due by July
