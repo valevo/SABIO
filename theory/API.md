@@ -3,27 +3,27 @@
 
 ## Introduction
 
-(1) bias is a ubiqitous and conplex phenomenon, it can pervade given (heterogeneous) data set at all levels, scales and dimensions  
+(1) bias is a ubiqitous and complex phenomenon, it can pervade given (heterogeneous) data set at all levels, scales and dimensions  
 (2) primarity because of (1), SABIO implements bias detection not as a monolithic algorithms but as collections of (preferrably, for introspection) simple algorithms  
 
 Because of (1), algorithms will operate on diverse types on input representations and similarly differ vastly in their output types; because of (2), i.e. the project's modular structure, algorithms will be added and replaced as an integral part of the development procedure. These reasons make it both important and useful to have clearly defined API, (1) for guiding the implementation of new algorithms, (2) to make SABIO transferrable to other sources of data and (3) to facilitate versatile and powerful user interfaces and visualisations.
 
 
-### Types and Levels of Bias Navigation
+## Types and Levels of Bias Navigation
 
-types:
+#### types:
  
-  - search
-  - explore
-  - discover
-  - quantify
-  - compare/contrast
+  - search: user wants to find examples of specific biases, find entities and concepts related to a specific bias (the user knows what they are looking for)
+  - dicover: like search, except that the user does not yet know what the relevant inputs and parameter values are
+  - explore: free-form, i.e. neither the search target nor the relevant heuristic or strategy is known by the user
+  - quantify: obtain 
+  - compare/contrast: e.g. get two subsets of the collection and 
 
-the difference between *explore* and *discover* is: *discover* is like *search*, except that the inputs are not know; *explore* is completely free-form, i.e. not even the search heuristic or objective is known 
 
-levels (non-exhaustive list):
+#### levels:
+(non-exhaustive list)
 
-  - text: lexical, semantic, pragmatic
+  - text: lexical (e.g. word choices), semantic (word meanings), pragmatic (e.g. sentiments of sentences)
   - meta-data properties
   - individual samples
   - pairs of samples
@@ -33,11 +33,8 @@ levels (non-exhaustive list):
   - distributions in the collection
 
 
-
-
-## Definitions
-
-#### Data Types in the Collection
+#### data types 
+(in the collection)
 
  - object: an entity in the [collection](https://collectie.wereldculturen.nl), a set of meta data properties: `{title, description, culture, origin, dimensions, inventory number, material, subcollection and keywords, ...}`
  - collection link: shared properties between objects (such as `material`, `keywords`), hierarchies according to `culture`, `origin`, `subcollection` 
@@ -49,24 +46,32 @@ levels (non-exhaustive list):
 
 
 
-## Modules
+## Modules/Engines
 
 
 ### Pointwise Mutual Information (PMI)
 
  - works on: pairs of words in textual entities, concepts
 
-#### `preparation`
+#### `compilation`
 
- for all textual entities:
+ procedure:  
+ for each textual entity in the collection:
    - tokenise into a sequence of words -> build vocabulary
    - build word pairs
    - compute probabilities of: individual words & word pairs 
 
-#### `inputs`/`parameters`
+ parameters:
+   - linguistic preprocessor functions (stemming, lemmatisation, normalisers)
+   - tokeniser
+   - list of words to exclude or equivalent function; maximum vocabulary size
+   - maximum number of pairs
+
+
+#### `inputs`/`parameters` for fine tuning
 
 numeric:
- - PMI threshold
+ - PMI threshold 
  - frequency threshold  
 
 lists:
@@ -81,15 +86,16 @@ complex types:
  
 #### `outputs`
 
-all corresponding to ceratin input/parameter values
+(all corresponding to ceratin input/parameter values)
 
  - list of word pairs
  - list of textual entities
  - list of objects
  - distributions over word pairs, objects, ...
+ - heatmap (e.g. indicating how many strong association pairs object an contains) over objects
 
 
-#### `algorithms`
+#### specific `algorithms`
 
  - given a `threshold` -> `list of word pairs` which satisfy that threshold  
    -> goal: explore space of highly/lowly associated words
