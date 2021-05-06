@@ -4,7 +4,7 @@
 ## Introduction
 
 (1) bias is a ubiqitous and complex phenomenon, it can pervade given (heterogeneous) data set at all levels, scales and dimensions  
-(2) primarity because of (1), SABIO implements bias detection not as a monolithic algorithms but as collections of (preferrably, for introspection) simple algorithms  
+(2) primarity because of (1), SABIO implements bias detection not as a monolithic algorithms but as collections of (preferrably) simple algorithms  
 
 Because of (1), algorithms will operate on diverse types on input representations and similarly differ vastly in their output types; because of (2), i.e. the project's modular structure, algorithms will be added and replaced as an integral part of the development procedure. These reasons make it both important and useful to have clearly defined API, (1) for guiding the implementation of new algorithms, (2) to make SABIO transferrable to other sources of data and (3) to facilitate versatile and powerful user interfaces and visualisations.
 
@@ -16,8 +16,8 @@ Because of (1), algorithms will operate on diverse types on input representation
   - search: user wants to find examples of specific biases, find entities and concepts related to a specific bias (the user knows what they are looking for)
   - dicover: like search, except that the user does not yet know what the relevant inputs and parameter values are
   - explore: free-form, i.e. neither the search target nor the relevant heuristic or strategy is known by the user
-  - quantify: obtain 
-  - compare/contrast: e.g. get two subsets of the collection and 
+  - quantify: obtain distributions, numeric measurements, etc that can e.g. be compared within the collection or across collections
+  - compare/contrast: e.g. identify two subsets of the collection (e.g. based on meta-data properties) and compare them in terms of word association pairs
 
 
 #### levels:
@@ -25,7 +25,7 @@ Because of (1), algorithms will operate on diverse types on input representation
 
   - text: lexical (e.g. word choices), semantic (word meanings), pragmatic (e.g. sentiments of sentences)
   - meta-data properties
-  - individual samples
+  - individual samples (words, texts, objects, ...)
   - pairs of samples
   - (sub-) sets in the collection
   - connections in the collection
@@ -41,9 +41,6 @@ Because of (1), algorithms will operate on diverse types on input representation
  - textual entity: either a `title` or a `description`
  - concept: an entry in the [thesaurus](https://collectie.wereldculturen.nl/thesaurus), a set of concept properties: `{skos:prefLabel, skos:altLabel, skos:broader, skos:narrower, skos:scopeNote, skos:note, skos:notation, skos:inScheme, path, path - separate terms}
  - concept link: shared properties between concepts, hierarchies according to `broader` and `narrower`
-
-
-
 
 
 ## Modules/Engines
@@ -67,12 +64,13 @@ Because of (1), algorithms will operate on diverse types on input representation
    - list of words to exclude or equivalent function; maximum vocabulary size
    - maximum number of pairs
 
-
+---
 #### `inputs`/`parameters` for fine tuning
 
 numeric:
  - PMI threshold 
- - frequency threshold  
+ - frequency threshold
+ - 
 
 lists:
  - list of focus words
@@ -81,9 +79,10 @@ lists:
  
 complex types:
  - subcollection, i.e. set of objects
+ - 
 
 
- 
+--- 
 #### `outputs`
 
 (all corresponding to ceratin input/parameter values)
@@ -94,7 +93,7 @@ complex types:
  - distributions over word pairs, objects, ...
  - heatmap (e.g. indicating how many strong association pairs object an contains) over objects
 
-
+---
 #### specific `algorithms`
 
  - given a `threshold` -> `list of word pairs` which satisfy that threshold  
