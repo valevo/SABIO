@@ -364,3 +364,10 @@ SABIO meeting:
 Andrei shared [this Medium post](https://towardsdatascience.com/using-momas-collection-dataset-to-visualize-whose-stories-are-missing-76a8960a33c2) about 'visualising whose stories are missing' 
 
 
+### Mai 06
+
+Jesse pointed to:
+
+[a tool for inspecting word pairs](https://www.wordij.net/faq.html), very basic
+
+
