@@ -370,4 +370,5 @@ Jesse pointed to:
 
 [a tool for inspecting word pairs](https://www.wordij.net/faq.html), very basic
 
+someone who participated in the questionnaire is part of the [LGBTI Heritage Ogranisation (IHLIA)](https://ihlia.nl/en/)
 
