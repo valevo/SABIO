@@ -66,3 +66,9 @@ Using typicality.
 
 potentially inspired by [this paper on bias in KGs](https://arxiv.org/pdf/2105.00674.pdf)?
 
+
+## ex6: Bias Navigator as Recommender System
+
+Recommender systems are essentially algorithms that reorder infinite lists. 
+see [this paper](https://arxiv.org/pdf/2012.10185.pdf) for connecting political theory and recommender system measures
+
