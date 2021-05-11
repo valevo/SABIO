@@ -407,3 +407,5 @@ meeting with Marieke:
 
 Oskar mentioned:
  - this [work-in-progress book](https://fairmlbook.org/index.html)
+
+Julia Noordegraaf sent an email about a conference with a speaker from MIT's [Data + Feminism Lab](https://dataplusfeminism.mit.edu/)
