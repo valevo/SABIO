@@ -375,7 +375,7 @@ SABIO meeting:
 Andrei shared [this Medium post](https://towardsdatascience.com/using-momas-collection-dataset-to-visualize-whose-stories-are-missing-76a8960a33c2) about 'visualising whose stories are missing' 
 
 
-### Mai 06
+### May 06
 
 Jesse pointed to:
 
@@ -384,8 +384,14 @@ Jesse pointed to:
 someone who participated in the questionnaire is part of the [LGBTI Heritage Ogranisation (IHLIA)](https://ihlia.nl/en/)
 
 
+### May 09
 
-### Mai 11
+Julia keeps mentioning:
+
+ - [standpoint theory](https://en.wikipedia.org/wiki/Standpoint_theory) (proposed a.o. by Sandra Harding (who has been affiliated with the UvA), as a formal philosophical basis for definitions of bias   
+
+
+### May 11
 
 Marieke forwarded (Jelle retweeted):
  - [this tweet about Information Gain](https://twitter.com/todd_gureckis/status/1390653021143580674) and [this primer on information theory](http://todd.gureckislab.org/2021/05/05/negative-information); [this paper](https://onlinelibrary.wiley.com/doi/full/10.1111/cogs.12613) was also mentioned in the thread -> these concepts could be useful for dealing with bias as absence
