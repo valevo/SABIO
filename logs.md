@@ -389,10 +389,10 @@ someone who participated in the questionnaire is part of the [LGBTI Heritage Ogr
 
 meeting with Marieke:
 
- - Black Archives
+ - [Black Archives](https://www.theblackarchives.nl/)
  - Nijmegen Afrika Museum?
  - [Imagine IC](https://imagineic.nl/)
- - IHLIA
+ - [IHLIA](https://ihlia.nl/?lang=en)
  - perhaps a focussed workshop for non-ninary people/on hetero-normative biases in collections around gay pride in Aug? 
 
 Oskar mentioned:
