@@ -395,6 +395,7 @@ Julia keeps mentioning:
 
 Marieke forwarded (Jelle retweeted):
  - [this tweet about Information Gain](https://twitter.com/todd_gureckis/status/1390653021143580674) and [this primer on information theory](http://todd.gureckislab.org/2021/05/05/negative-information); [this paper](https://onlinelibrary.wiley.com/doi/full/10.1111/cogs.12613) was also mentioned in the thread -> these concepts could be useful for dealing with bias as absence
+ - a [blog post](https://www.sciencemag.org/news/2018/05/ai-researchers-allege-machine-learning-alchemy) about AI experts comparing current ML to alchemy
 
 meeting with Marieke:
 
