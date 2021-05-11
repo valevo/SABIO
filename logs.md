@@ -329,6 +329,17 @@ Meeting with the bias B.Sc. project:
 ### April 13
 
 Seminar by [TU Wien Digital Humanities](https://dighum.ec.tuwien.ac.at/dighum-lectures/), [recording](https://www.youtube.com/watch?v=LCkFOUrh6yM):
+Hi Ryan, Valentin and Andrea,
+
+The Meertens Institute will have a staff meeting next Monday between 10 am and 11 am. This is a quarterly (casual) meeting in which we catch up with each other. We always introduce new employees in this meeting, and Antal and I would very much like to invite you to come this Monday. It would be great if you could introduce yourself briefly during this gathering and tell something about your work in the HuC. Would you be willing to do this?
+
+
+Best wishes,
+
+Simone
+
+
+
  - [Sally Wyatt](https://www.knaw.nl/nl/leden/experten/8028), at KNAW on feminist history & stances
  - [prof Hinda Haned](https://www.uva.nl/en/profile/h/a/h.haned/h.haned.html) professor on data science, on defining bias
 
@@ -371,4 +382,14 @@ Jesse pointed to:
 [a tool for inspecting word pairs](https://www.wordij.net/faq.html), very basic
 
 someone who participated in the questionnaire is part of the [LGBTI Heritage Ogranisation (IHLIA)](https://ihlia.nl/en/)
+
+
+
+### Mai 11
+
+meeting with Marieke:
+
+ - Black Archives
+ - IHLIA
+ - perhaps a focussed workshop for non-ninary people/on hetero-normative biases in collections around gay pride in Aug? 
 
