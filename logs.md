@@ -395,3 +395,5 @@ meeting with Marieke:
  - IHLIA
  - perhaps a focussed workshop for non-ninary people/on hetero-normative biases in collections around gay pride in Aug? 
 
+Oskar mentioned:
+ - this [work-in-progress book](https://fairmlbook.org/index.html)
