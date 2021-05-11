@@ -387,6 +387,14 @@ someone who participated in the questionnaire is part of the [LGBTI Heritage Ogr
 
 ### Mai 11
 
+Marieke forwarded (Jelle retweeted):
+ - [this tweet about Information Gain](https://twitter.com/todd_gureckis/status/1390653021143580674) and [this primer on information theory](http://todd.gureckislab.org/2021/05/05/negative-information), [this paper](https://onlinelibrary.wiley.com/doi/full/10.1111/cogs.12613)Introducing a Unified Framework to Model Uncertainty and Information Search
+Vincenzo Crupi  Jonathan D. Nelson  Björn Meder  Gustavo Cevolani  Katya Tentori
+First published: 17 June 2018 https://doi.org/10.1111/cogs.12613Citations: 16
+SECTIONS￼PDFTOOLS SHARE
+Abstract
+Searching for information is critical in many situations. In medicine, for instance, careful choice of a diagnostic test can help narrow down the range of plausible diseases that the patient might have. In a probabilistic framework, test selection is often modeled by assuming that people's goal is to reduce uncertainty about possible states of the world. In cognitive science, psychology, and medical decision making, Shannon entropy is the most prominent and most widely was also mentioned in the thread -> these concepts could be useful for dealing with bias as absence
+
 meeting with Marieke:
 
  - [Black Archives](https://www.theblackarchives.nl/)
