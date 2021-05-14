@@ -409,3 +409,10 @@ Oskar mentioned:
  - this [work-in-progress book](https://fairmlbook.org/index.html)
 
 Julia Noordegraaf sent an email about a conference with a speaker from MIT's [Data + Feminism Lab](https://dataplusfeminism.mit.edu/)
+
+
+### May 14
+
+Martijn mentioned:
+
+the National Arcvhies have historical language in their collections and are aware that that might contain undesirable language ([explanation page](https://www.nationaalarchief.nl/taalgebruik-in-onze-archieven))
