@@ -416,3 +416,10 @@ Julia Noordegraaf sent an email about a conference with a speaker from MIT's [Da
 Martijn mentioned:
 
 the National Arcvhies have historical language in their collections and are aware that that might contain undesirable language ([explanation page](https://www.nationaalarchief.nl/taalgebruik-in-onze-archieven))
+
+### May 15
+
+Marieke mentioned:
+
+[The Cultural Life of Machine Learning, An Incursion into Critical AI Studies](https://www.palgrave.com/gp/book/9783030562854)
+
