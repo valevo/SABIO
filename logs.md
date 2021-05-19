@@ -423,3 +423,10 @@ Marieke mentioned:
 
 [The Cultural Life of Machine Learning, An Incursion into Critical AI Studies](https://www.palgrave.com/gp/book/9783030562854)
 
+
+### May 19
+
+Marieke mentioned:
+
+Valika Smeulders at the Rijksmuseum
+
