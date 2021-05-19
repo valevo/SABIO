@@ -432,4 +432,6 @@ Valika Smeulders at the Rijksmuseum
 
 WORKSHOP:
 
- - Wayne: why 'bias' instead of e.g. 'racism'?
+ - Wayne: 
+   - why 'bias' instead of e.g. 'racism'?
+   - even the word 'human' is biased (indicated anthropocentric bias) -> probably means: bias is everywhere
