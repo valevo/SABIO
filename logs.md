@@ -428,10 +428,19 @@ Marieke mentioned:
 
 Marieke mentioned:
 
-Valika Smeulders at the Rijksmuseum
+
+Saskia pointed to Rijksmuseum's [new exhibition on slavery](https://www.rijksmuseum.nl/nl/zien-en-doen/tentoonstellingen/slavernij), co-curated by Valika Smeulders
+
 
 WORKSHOP:
 
  - Wayne: 
    - why 'bias' instead of e.g. 'racism'?
    - even the word 'human' is biased (indicated anthropocentric bias) -> probably means: bias is everywhere
+
+ - Hodan: 
+   - bias navigation should be disruptive: disrupt the ways we search and find information in collections
+
+
+
+
