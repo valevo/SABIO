@@ -430,3 +430,6 @@ Marieke mentioned:
 
 Valika Smeulders at the Rijksmuseum
 
+WORKSHOP:
+
+ - Wayne: why 'bias' instead of e.g. 'racism'?
