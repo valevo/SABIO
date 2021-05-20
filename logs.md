@@ -442,5 +442,10 @@ WORKSHOP:
    - bias navigation should be disruptive: disrupt the ways we search and find information in collections
 
 
+### May 20
+
+
+Cindy forwarded [Fantastic Futures 21 Call for Abstracts](https://easychair.org/cfp/FantasticFutures21), due June 15th
+
 
 
