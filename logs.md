@@ -426,8 +426,6 @@ Marieke mentioned:
 
 ### May 19
 
-Marieke mentioned:
-
 
 Saskia pointed to Rijksmuseum's [new exhibition on slavery](https://www.rijksmuseum.nl/nl/zien-en-doen/tentoonstellingen/slavernij), co-curated by Valika Smeulders
 
@@ -448,4 +446,7 @@ WORKSHOP:
 Cindy forwarded [Fantastic Futures 21 Call for Abstracts](https://easychair.org/cfp/FantasticFutures21), due June 15th
 
 
+RCMC's webinar's speaker Wendy Hui Kyong Chun has written [interesting books](https://mitpress.mit.edu/contributors/wendy-hui-kyong-chun)
+
+[Nishant Shah](https://nishantshah.online/)
 
