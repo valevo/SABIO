@@ -450,3 +450,9 @@ RCMC's webinar's speaker Wendy Hui Kyong Chun has written [interesting books](ht
 
 [Nishant Shah](https://nishantshah.online/)
 
+
+
+### May 24
+
+Angelique (Director of MU Eindhoven) mentioned Documenting complexity ([funded by NOW](https://www.nwo.nl/en/projects/cisckc212), [carried out at RUG](rug.nl/research/icog/research/research-centres/centre-for-journalism-and-mediastudies/research/projects/documenting-complexity/?lang=en), [in collab with B&G](https://www.beeldengeluid.nl/en/knowledge/projects/documenting-complexity))
+
