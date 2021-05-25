@@ -29,13 +29,18 @@ Position paper on the use of computational methods in the library sector by some
  - [We Need to Talk About Random Splits](https://arxiv.org/pdf/2005.00636.pdf)
  - [ Creating a Repository of Objectionable Online Content: Addressing Undesirable Biases and Ethical Considerations](https://ritual.uh.edu/wp-content/uploads/2021/01/W2-Ethics-White-Paper.pdf)
 
+---
+
  - [Rejecting the gender binary: a vector-space operation](http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html#:~:text=So%20here's%20the%20formal%20definition,that%20separates%20male%20from%20female.)
  - [Vector Space Models for the Digital Humanities](http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html#fn1)
  - [When you have a MALLET, everything looks like a nail](http://sappingattention.blogspot.com/2012/11/when-you-have-mallet-everything-looks.html)
 
 
+---
+
  - [A Polyvocal and Contextualised Semantic Web](https://openreview.net/pdf?id=lAgYUG8Lybl)
 
+---
 
  - [No Free Lunch versus Occam’s Razor in Supervised Learning](https://arxiv.org/pdf/1111.3846.pdf)
  - [Mapping languages: the Corpus of Global Language Use](https://link.springer.com/content/pdf/10.1007/s10579-020-09489-2.pdf)
