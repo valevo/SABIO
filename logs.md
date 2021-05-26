@@ -466,3 +466,4 @@ Paul has mentioned crowdtruth.org, a source of papers on how source ground truth
 
 Saskia has mentioned a [presentation about trust and utility in heritage LOD](https://www.slideshare.net/azaroth42/illusions-of-grandeur-trust-and-belief-in-cultural-heritage-linked-open-data)
 
+Marieke hsa mentioned [Google People + Ai Research](https://pair.withgoogle.com/)
