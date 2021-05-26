@@ -454,5 +454,15 @@ RCMC's webinar's speaker Wendy Hui Kyong Chun has written [interesting books](ht
 
 ### May 24
 
-Angelique (Director of MU Eindhoven) mentioned Documenting complexity ([funded by NOW](https://www.nwo.nl/en/projects/cisckc212), [carried out at RUG](rug.nl/research/icog/research/research-centres/centre-for-journalism-and-mediastudies/research/projects/documenting-complexity/?lang=en), [in collab with B&G](https://www.beeldengeluid.nl/en/knowledge/projects/documenting-complexity))
+ARK - MU presentation:
+
+ - Angelique (Director of MU Eindhoven) mentioned Documenting complexity ([funded by NOW](https://www.nwo.nl/en/projects/cisckc212), [carried out at RUG](rug.nl/research/icog/research/research-centres/centre-for-journalism-and-mediastudies/research/projects/documenting-complexity/?lang=en), [in collab with B&G](https://www.beeldengeluid.nl/en/knowledge/projects/documenting-complexity))
+ - Roosje has the Mnemosyne Bilderatlas by Aby Warburg => created a system for visually _-remembering things together_ (=association) AND also a system for organising archives
+
+
+### May 26
+
+Paul has mentioned crowdtruth.org, a source of papers on how source ground truth and deal with inter-annotator disagreement
+
+Saskia has mentioned a [presentation about trust and utility in heritage LOD](https://www.slideshare.net/azaroth42/illusions-of-grandeur-trust-and-belief-in-cultural-heritage-linked-open-data)
 
