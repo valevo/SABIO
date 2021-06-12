@@ -473,3 +473,13 @@ Marieke hsa mentioned [Google People + Ai Research](https://pair.withgoogle.com/
 
 Cindy shared:
  - [Africa Stereotype Scanner](https://astrsc.com/tropes/sun/)
+
+
+
+### June 12
+
+Eyob (neighbour at 32B) has created a [website](https://catchyourcrimeprofile.netlify.app) to connect facial recognition to criminal records
+(uses facial recognition to categorise mughsot, then displays Dutch criminal stats and similar faces in the DB)
+
+[GitHub](https://github.com/EyobDejene/crimeprofile)
+[Database of crimal records](https://opendata.cbs.nl/#/CBS/nl/dataset/81947NED/table?searchKeywords=migratieachtergrond)
