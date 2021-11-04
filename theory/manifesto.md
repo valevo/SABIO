@@ -80,7 +80,8 @@ algorithm should be future proof,
  
  - the [[FAIR principles]](#1) for scientific data management
  - the [[Vienna Manifesto]](#2) on Digital Humanism (and [[a background paper on redefining humanism]](#3) (in German))
- 
+ - the [[ICAI core values]](#4)
+ - [[European Comission Guidelines]](#5) for building "trustworthy AI"
  
  
 
@@ -94,4 +95,10 @@ algorithm should be future proof,
 
   <a id="3">3. </a>
   https://www.medienpaed.com/article/view/1144/955
+  
+  <a id="4">4. </a>
+  https://icai.ai/amsterdam/icai-amsterdam-core-values/
+  
+  <a id="5">5. </a>
+  https://ec.europa.eu/futurium/en/ai-alliance-consultation
   

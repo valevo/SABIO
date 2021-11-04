@@ -329,6 +329,17 @@ Meeting with the bias B.Sc. project:
 ### April 13
 
 Seminar by [TU Wien Digital Humanities](https://dighum.ec.tuwien.ac.at/dighum-lectures/), [recording](https://www.youtube.com/watch?v=LCkFOUrh6yM):
+Hi Ryan, Valentin and Andrea,
+
+The Meertens Institute will have a staff meeting next Monday between 10 am and 11 am. This is a quarterly (casual) meeting in which we catch up with each other. We always introduce new employees in this meeting, and Antal and I would very much like to invite you to come this Monday. It would be great if you could introduce yourself briefly during this gathering and tell something about your work in the HuC. Would you be willing to do this?
+
+
+Best wishes,
+
+Simone
+
+
+
  - [Sally Wyatt](https://www.knaw.nl/nl/leden/experten/8028), at KNAW on feminist history & stances
  - [prof Hinda Haned](https://www.uva.nl/en/profile/h/a/h.haned/h.haned.html) professor on data science, on defining bias
 
@@ -351,3 +362,124 @@ Chat with Senka:
  - same for this person ([instagram](https://www.instagram.com/samu.el/))
  - Senka also has friend ([instagram](https://www.instagram.com/shinkusara/)) who does workshops and art around language and gender might be interested to collaborate
 
+
+### April 29
+
+SABIO meeting:
+
+ - Werner shared [a project of his](https://govdna.sudox.nl/#layout/data/country/WRL/x/9/y/5/z/8/a/0)
+
+
+### April 30
+
+Andrei shared [this Medium post](https://towardsdatascience.com/using-momas-collection-dataset-to-visualize-whose-stories-are-missing-76a8960a33c2) about 'visualising whose stories are missing' 
+
+
+### May 06
+
+Jesse pointed to:
+
+[a tool for inspecting word pairs](https://www.wordij.net/faq.html), very basic
+
+someone who participated in the questionnaire is part of the [LGBTI Heritage Ogranisation (IHLIA)](https://ihlia.nl/en/)
+
+
+### May 09
+
+Julia keeps mentioning:
+
+ - [standpoint theory](https://en.wikipedia.org/wiki/Standpoint_theory) (proposed a.o. by Sandra Harding (who has been affiliated with the UvA), as a formal philosophical basis for definitions of bias   
+
+
+### May 11
+
+Marieke forwarded (Jelle retweeted):
+ - [this tweet about Information Gain](https://twitter.com/todd_gureckis/status/1390653021143580674) and [this primer on information theory](http://todd.gureckislab.org/2021/05/05/negative-information); [this paper](https://onlinelibrary.wiley.com/doi/full/10.1111/cogs.12613) was also mentioned in the thread -> these concepts could be useful for dealing with bias as absence
+ - a [blog post](https://www.sciencemag.org/news/2018/05/ai-researchers-allege-machine-learning-alchemy) about AI experts comparing current ML to alchemy
+
+meeting with Marieke:
+
+ - [Black Archives](https://www.theblackarchives.nl/)
+ - Nijmegen Afrika Museum?
+ - [Imagine IC](https://imagineic.nl/)
+ - [IHLIA](https://ihlia.nl/?lang=en)
+ - perhaps a focussed workshop for non-ninary people/on hetero-normative biases in collections around gay pride in Aug? 
+
+Oskar mentioned:
+ - this [work-in-progress book](https://fairmlbook.org/index.html)
+
+Julia Noordegraaf sent an email about a conference with a speaker from MIT's [Data + Feminism Lab](https://dataplusfeminism.mit.edu/)
+
+
+### May 14
+
+Martijn mentioned:
+
+the National Arcvhies have historical language in their collections and are aware that that might contain undesirable language ([explanation page](https://www.nationaalarchief.nl/taalgebruik-in-onze-archieven))
+
+### May 15
+
+Marieke mentioned:
+
+[The Cultural Life of Machine Learning, An Incursion into Critical AI Studies](https://www.palgrave.com/gp/book/9783030562854)
+
+
+### May 19
+
+
+Saskia pointed to Rijksmuseum's [new exhibition on slavery](https://www.rijksmuseum.nl/nl/zien-en-doen/tentoonstellingen/slavernij), co-curated by Valika Smeulders
+
+
+WORKSHOP:
+
+ - Wayne: 
+   - why 'bias' instead of e.g. 'racism'?
+   - even the word 'human' is biased (indicated anthropocentric bias) -> probably means: bias is everywhere
+
+ - Hodan: 
+   - bias navigation should be disruptive: disrupt the ways we search and find information in collections
+
+
+### May 20
+
+
+Cindy forwarded [Fantastic Futures 21 Call for Abstracts](https://easychair.org/cfp/FantasticFutures21), due June 15th
+
+
+RCMC's webinar's speaker Wendy Hui Kyong Chun has written [interesting books](https://mitpress.mit.edu/contributors/wendy-hui-kyong-chun)
+
+[Nishant Shah](https://nishantshah.online/)
+
+
+
+### May 24
+
+ARK - MU presentation:
+
+ - Angelique (Director of MU Eindhoven) mentioned Documenting complexity ([funded by NOW](https://www.nwo.nl/en/projects/cisckc212), [carried out at RUG](rug.nl/research/icog/research/research-centres/centre-for-journalism-and-mediastudies/research/projects/documenting-complexity/?lang=en), [in collab with B&G](https://www.beeldengeluid.nl/en/knowledge/projects/documenting-complexity))
+ - Roosje has the Mnemosyne Bilderatlas by Aby Warburg => created a system for visually _-remembering things together_ (=association) AND also a system for organising archives
+
+
+### May 26
+
+Paul has mentioned crowdtruth.org, a source of papers on how source ground truth and deal with inter-annotator disagreement
+
+Saskia has mentioned a [presentation about trust and utility in heritage LOD](https://www.slideshare.net/azaroth42/illusions-of-grandeur-trust-and-belief-in-cultural-heritage-linked-open-data)
+
+Marieke hsa mentioned [Google People + Ai Research](https://pair.withgoogle.com/)
+
+
+### May 31
+
+Cindy shared:
+ - [Africa Stereotype Scanner](https://astrsc.com/tropes/sun/)
+
+
+
+### June 12
+
+Eyob (neighbour at 32B) has created a [website](https://catchyourcrimeprofile.netlify.app) to connect facial recognition to criminal records
+(uses facial recognition to categorise mughsot, then displays Dutch criminal stats and similar faces in the DB)
+
+[GitHub](https://github.com/EyobDejene/crimeprofile);
+[Database of crimal records](https://opendata.cbs.nl/#/CBS/nl/dataset/81947NED/table?searchKeywords=migratieachtergrond)
