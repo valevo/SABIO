@@ -7,9 +7,9 @@
 
 |   | **Main**   | **Extracurricular** |
 |---|---|---|
-| **8.**   | <ul><li>PMI & Typicality engines</li><li>GitHub publication of backend: code & installation instructions</li><li>images & ensuring privacy -> Richard</li></ul>| <ol><li value="12.">Europeana Presentation of ConConCor</li></ol> |
-| **15.**  | <ul><li>GitHub documentation + dataset & engine descriptions in API</li><li>front-end final touches</li><li>more engines</li></ul> | <ol><li value="19.">NMvW user test</ol> |
-| **22.**  | <ul><li>processing of user feedback</li><li>integration of front-end on server & repo</li><li>documentation: design motivation & sources</li></ul> | <ol><li value="26.">HackALOD hackathon</li></ol>  |
+| **8.**   | <ul><li>**backend**: PMI & Typicality engines</li><li>**frontend**: Richard: images</li><li>**comms** & **data**: Richard: ensuring privacy</li><li>**docs**: installation instructions -> for publication of GitHub</li></ul>| <ol><li value="12.">Europeana Presentation of ConConCor</li></ol> |
+| **15.**  | <ul><li>**backend** & **data**: improvements on search</li><li>**backend**: more engines</li><li>**docs**: entire GitHub repository</li><li>**docs**: dataset & engine descriptions in API</li></ul> | <ol><li value="19.">NMvW user test</ol> |
+| **22.**  | <ul><li>**comms**: processing of user feedback</li><li>**frontend**: integration on server & in repo</li><li>**frontend**: final touches</li></ul> | <ol><li value="26.">HackALOD hackathon</li></ol>  |
 | **29.**  | <ul><li>mission statement & manifesto</li><li>examples endpoint</li><li></li></ul> | <ol><li value="29."></li></ol>  |
 
 
@@ -21,7 +21,7 @@
 
 |   | **Main**   | **Extracurricular** |
 |---|---|---|
-| **6.**   | <ul><li>backend: improvements on search</li><li></li><li></li></ul>| <ol><li value="6."></li></ol> |
+| **6.**   | <ul><li>**docs**: design motivation & sources</li><li></li><li></li></ul>| <ol><li value="6."></li></ol> |
 | **13.**  | <ul><li></li><li></li><li></li></ul> | <ol><li value="13."></ol> |
 | **20.**  | <ul><li></li><li></li><li></li></ul> | <ol><li value="20."></li></ol>  |
 | **27.**  | <ul><li>cleaning up</li><li>finishing left-over points</li><li></li></ul> | <ol><li value="24.">Christmas</li></ol>  |
