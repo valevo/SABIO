@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <style>
+            {display: block;}
+            div {
+              width: 30%;
+            }
+
+            input {
+                margin: 0 0 10 0;
+            }
+            
+            p, form {background: rgba(179, 209, 226, 0.3) ;
+            }
+            
+            form {margin-left: 15;}
+            
+            hr {
+                width: 100%;
+                display: block;
+                margin-left: 0;
+                margin-bottom: 15; 
+            }
+        </style>
+        <title>SABIO Test Client</title>
+
+    </head>
+    <body>
+    <div>
+    <p> <a href="datasets"> datasets</a></p>
+    <hr>
+    <p> Autocomplete (dataset id: NMvW_v0)
+         <form action="datasets/NMvW_v0/autocomplete" method="get">
+             <select id="param" name="param">
+                <option value="Department">Department</option>
+                <option value="Classification">Classification</option>
+             </select>
+             <input type="text", id="keyword", name="keyword"
+                    onchange="this.form.submit()">
+        </form>
+     </p>
+     <hr>
+     <p> <a href="engines"> Engines </a> </p>
+     <p class="indent"> 
+	<a href="engines/RandE_v0/html"> RandomEngine</a></p>
+    <hr>
+        
+    <p> Search 
+    <form action="objects/NMvW_v0/search" method="get">
+        keywords: <input type="text" id="object_keywords" name="object_keywords" 
+                         value="de">
+        <br>
+        start date: <input type="text" id="object_start_date" name="object_start_date" 
+                           value="0000-01-01">
+        <br>
+        end date: <input type="text" id="object_end_date" name="object_end_date"
+                         value="2021-07-22">
+        <br>
+        object param Department: <input type="text" id="object_param_Department"
+                                   name="object_param_Department" value="Afrika"> 
+        <br>
+        <hr>
+        
+        engine id: <input type="text" id="engine_id" name="engine_id"
+                          value="RandE_v0">
+        <br>
+        min score: <input type="text" id="engine_min_score" name="engine_min_score"
+                          value="0.3">
+        <br>
+        max score: <input type="text" id="engine_max_score" name="engine_max_score"
+                          value="0.7">
+        <br>
+        engine parameter 1: <input type="text" id="engine_param_1"
+                                   name="engine_param_1" value="none">
+        
+        <hr>
+        
+        vocab_terms <input type="text" id="vocabulary_terms"
+                           name="vocabulary_terms" value="none">
+        
+        <hr>
+        
+        <input type="submit" id="submit" value="submit" name="submit">
+      </form>
+      </p>
+    </div>
+    
+
+    <div> 
+       <hr>
+
+        <p> Details of objects (from dataset id:NMvW_v0) </p>
+
+        <a href="objects/NMvW_v0/details/328963"> Detail of object with ID 328963 <br></a>
+    </div>
+         
+    </body>
+</html>

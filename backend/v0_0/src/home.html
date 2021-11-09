@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <style>
+            {display: block;}
+            div {
+              width: 30%;
+            }
+
+            input {
+                margin: 0 0 10 0;
+            }
+            
+            p, form {background: rgba(179, 209, 226, 0.3) ;
+            }
+            
+            form {margin-left: 15;}
+            
+            hr {
+                width: 100%;
+                display: block;
+                margin-left: 0;
+                margin-bottom: 15; 
+            }
+        </style>
+        <title>SABIO Test Client</title>
+
+    </head>
+    <body>
+    <div>
+    <p> <a href="datasets"> datasets</a></p>
+    <hr>
+    <p> Autocomplete (dataset id: 0)
+         <form action="datasets/0/autocomplete" method="get">
+             <select id="attribute" name="attribute">
+                <option value="ObjectName">ObjectName</option>
+                <option value="Location">Location</option>
+             </select>
+             <input type="text", id="keyword", name="keyword"
+                    onchange="this.form.submit()">
+        </form>
+     </p>
+     <hr>
+     <p> <a href="engines"> Engines </a> </p>
+     <p class="indent"> 
+	<a href="engines/0/html"> engine id:0 = RandomEngine</a></p>
+    <hr>
+        
+    <p> Search 
+    <form action="objects/1/search" method="get">
+        keywords: <input type="text" id="object_keywords" name="object_keywords" 
+                         value="none">
+        <br>
+        start date: <input type="text" id="object_start_date" name="object_start_date" 
+                           value="01-01-0000">
+        <br>
+        end date: <input type="text" id="object_end_date" name="object_end_date"
+                         value="10-06-2021">
+        <br>
+        object parameter 1: <input type="text" id="object_param_1"
+                                   name="object_param_1" value="none"> 
+        <br>
+        <hr>
+        
+        engine id: <input type="text" id="engine_id" name="engine_id"
+                          value="0">
+        <br>
+        min score: <input type="text" id="engine_min_score" name="engine_min_score"
+                          value="0">
+        <br>
+        max score: <input type="text" id="engine_max_score" name="engine_max_score"
+                          value="inf">
+        <br>
+        object parameter 1: <input type="text" id="engine_param_1"
+                                   name="engine_param_1" value="none">
+        
+        <hr>
+        
+        vocab_terms <input type="text" id="vocabulary_terms"
+                           name="vocabulary_terms" value="none">
+        
+        <hr>
+        
+        <input type="submit" id="submit" value="submit" name="submit">
+      </form>
+      </p>
+    </div>
+    
+
+    <div> 
+       <hr>
+
+        <p>Details of objects (from dataset id:0) </p>
+
+        <a href="objects/0/details/0"> Detail of random object <br></a>
+    
+        (Python function corresponding to path will pick a random ID)
+    </div>
+         
+    </body>
+</html>

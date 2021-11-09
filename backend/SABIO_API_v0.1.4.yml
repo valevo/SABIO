@@ -1,0 +1,414 @@
+swagger: "2.0"
+info:
+  description: "SABIO API"
+  version: "0.1.4"
+  title: "SABIO API"
+  contact:
+    email: "contact@sudox.nl"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:12345"
+basePath: "/api/v1"
+schemes:
+  - "https"
+
+paths:
+  /datasets:
+    get:
+      tags:
+        - "Datasets"
+      summary: "Get all datasets"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Dataset"
+
+  /datasets/{datasetID}/autocomplete:
+    get:
+      tags:
+        - "Datasets"
+      summary: "Autocomplete endpoint for a specific attribute on dataset"
+      parameters:
+        # Dataset
+        - name: "datasetID"
+          in: "path"
+          description: "ID of Dataset"
+          required: true
+          type: "string"
+        - name: "param"
+          description: "Param ID, e.g. location or object_type (same as on Dataset.params field)"
+          in: "query"
+          type: "string"
+        - name: "keyword"
+          description: "Keyword input for the auto complete"
+          in: "query"
+          type: "string"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation. Limit this to 50 max."
+          schema:
+            type: "array"
+            items:
+              type: string
+
+  /engines/:
+    get:
+      tags:
+        - "Engines"
+      summary: "Get engines"
+      description: ""
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Engine"
+
+  /engines/{engineID}/html:
+    get:
+      tags:
+        - "Engines"
+      summary: "Get engine details as html, to be displayed in info popup"
+      produces:
+        - "text/html"
+      parameters:
+        - name: "engineID"
+          in: "path"
+          description: "ID of engine"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "Successful operation"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Engine not found"
+
+  /objects/{datasetID}/search:
+    get:
+      tags:
+        - "Objects"
+      summary: "Find objects for given query"
+      description: ""
+      parameters:
+        # Dataset
+        - name: "datasetID"
+          in: "path"
+          description: "ID of Dataset"
+          required: true
+          type: "string"
+
+        # Object
+        - name: "object_keywords"
+          in: "query"
+          type: "string"
+        - name: "object_start_date"
+          in: "query"
+          type: "string"
+        - name: "object_end_date"
+          in: "query"
+          type: "string"
+        - name: "object_param_%id%"
+          in: "query"
+          type: "string"
+
+        # Engine
+        - name: "engine_id"
+          in: "query"
+          type: "string"
+        - name: "engine_min_score"
+          in: "query"
+          type: "number"
+        - name: "engine_max_score"
+          in: "query"
+          type: "number"
+        - name: "engine_param_%id%"
+          in: "query"
+          type: "string"
+
+        # Vocabulary
+        - name: "vocabulary_terms"
+          in: "query"
+          type: "string"
+
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Result"
+        "400":
+          description: "Invalid query"
+
+  /objects/{datasetID}/details/{objectID}:
+    get:
+      tags:
+        - "Objects"
+      summary: "Get object details, to be displayed in selected object column"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "datasetID"
+          in: "path"
+          description: "ID of Dataset"
+          required: true
+          type: "string"
+        - name: "objectID"
+          in: "path"
+          description: "ID of Object"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/ObjectDetails"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Object not found"
+
+  /examples:
+    get:
+      tags:
+        - "Examples"
+      summary: "Get API examples"
+      description: ""
+
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Examples"
+        "400":
+          description: "Invalid query"
+
+definitions:
+  Dataset:
+    type: "object"
+    description: "Dataset (collection) of a cultural heritage organisation"
+    properties:
+      id:
+        type: "string"
+        description: "Dataset ID"
+      name:
+        type: "string"
+        description: "Dataset name"
+      source_url:
+        type: "string"
+        description: "Source URL of dataset"
+      object_count:
+        type: "integer"
+        description: "Number of objects in dataset"
+      min_date:
+        type: "string"
+        description: "Lowest object date in collection, YYYY-MM-DD"
+      max_date:
+        type: "string"
+        description: "Highest object date in collection, YYYY-MM-DD"
+      static_field_descriptions:
+        description: "e.g. keywords: my keyword description"
+        type: "object"
+        additionalProperties:
+          type: "string"
+      params:
+        description: "Additional parameters, e.g. location, object type. Keywords and start/end date are created by default so the should be added here"
+        type: "array"
+        items:
+          $ref: "#/definitions/DatasetParam"
+      available_engines:
+        description: "IDs of engines available for the dataset"
+        type: "array"
+        items:
+          type: "string"
+
+  DatasetParam:
+    type: "object"
+    description: "Additional parameter information specific for a dataset"
+    properties:
+      id:
+        type: "string"
+        description: "Parameter id"
+      label:
+        type: "string"
+        description: "Parameter name"
+      description:
+        type: "string"
+        description: "Parameter description (help popup)"
+      control:
+        type: "string"
+        # This could also be a select in the future
+        enum: [autocomplete]
+      # This would only be required for select or other feature control; not for autocomplete
+      options:
+        type: "object"
+        additionalProperties:
+          type: "string"
+
+  Engine:
+    type: "object"
+    description: "SABIO engine"
+    properties:
+      id:
+        type: "string"
+        description: "Engine ID"
+      name:
+        type: "string"
+        description: "Engine name"
+      min_score:
+        type: "number"
+        description: "Default min score, which should be set to a sensible level for this engine"
+      params:
+        type: "array"
+        description: "Additional engine parameters, e.g. scale, granularity. Min/max score are created by default, so they should not be added here"
+        items:
+          $ref: "#/definitions/EngineParam"
+
+  EngineParam:
+    type: "object"
+    description: "Additional parameters for an engine"
+    properties:
+      id:
+        type: "string"
+        description: "Parameter id"
+      label:
+        type: "string"
+        description: "Parameter name"
+      description:
+        type: "string"
+        description: "Parameter description (help popup)"
+      control:
+        type: "string"
+        enum: [select]
+      default:
+        type: "string"
+        description: "Param default value"
+      options:
+        type: "object"
+        additionalProperties:
+          type: "string"
+
+  Result:
+    type: "object"
+    description: "Result from a objects/search query"
+    properties:
+      attributes:
+        type: "array"
+        items:
+          type: "string"
+      results:
+        type: "array"
+        items:
+          $ref: "#/definitions/ResultObject"
+
+  ResultObject:
+    type: "object"
+    description: "Object information and its result data (e.g. scoring, attribute values)"
+    properties:
+      id:
+        type: "string"
+        description: "Object ID"
+      name:
+        type: "string"
+        description: "Object name"
+      thumbnail_url:
+        type: "string"
+        description: "Object image thumbnail url, 256x256px. (https)"
+      values:
+        type: "array"
+        description: "Values of each attribute. Order of the array should be equal to the attribute param of the Result"
+        items:
+          type: "string"
+      x:
+        type: "array"
+        description: "Relative position on the x axis (between 0 and 1)"
+        items:
+          type: number
+      score:
+        type: "number"
+        description: "Indicator score of object, provided by engine"
+      score_details:
+        description: "Score per indicator result, e.g. Slavery: 28. 0-100%"
+        type: "object"
+        additionalProperties:
+          type: "number"
+
+  ObjectDetails:
+    type: "object"
+    description: "Object details. Overlaps with Result Object but has more information that is useful for the object details column"
+    properties:
+      id:
+        type: "string"
+        description: "Object ID"
+      name:
+        type: "string"
+        description: "Object name"
+      description:
+        type: "string"
+        description: "Object description"
+      thumbnail_url:
+        type: "string"
+        description: "Object image thumbnail url, 256x256px (https)"
+      image_url:
+        type: "string"
+        description: "Object image url, 720x720px (https)"
+      source_url:
+        type: "string"
+        description: "Source URL of dataset"
+      attributes:
+        type: "object"
+        additionalProperties:
+          type: "string"
+
+  Examples:
+    type: "object"
+    description: "List of examples"
+    properties:
+      examples:
+        type: "array"
+        items:
+          $ref: "#/definitions/Example"
+
+  Example:
+    type: "object"
+    description: "Example result that can be shown in about/landing page"
+    properties:
+      score:
+        type: "number"
+        default: 0.5
+        description: "Example indicator score"
+      title:
+        type: "string"
+        description: "Example title"
+      engine:
+        type: "string"
+        description: "Engine name"
+      url:
+        type: "string"
+        description: "Relative SABIO browser url for this example, e.g. /browse/..."
+      thumbnail_url:
+        type: "string"
+        description: "Object image thumbnail url, 256x256px (https)"
+
+externalDocs:
+  description: "Find out more about SABIO"
+  url: "https://www.cultural-ai.nl/projects/post-2-4c8dm"
