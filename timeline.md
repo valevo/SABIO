@@ -21,12 +21,15 @@
 
 |   | **Main**   | **Extracurricular** |
 |---|---|---|
-| **6.**   | <ul><li>**docs**: mission statement & manifesto</li><li></li><li></li></ul>| <ol><li value="6."></li></ol> |
-| **13.**  | <ul><li></li><li></li><li></li></ul> | <ol><li value="13."></ol> |
-| **20.**  | <ul><li></li><li></li><li></li></ul> | <ol><li value="20."></li></ol>  |
+| **6.**   | <ul><li>**docs**: mission statement & manifesto</li><li></li><li></li></ul>| |
+| **13.**  | <ul><li></li><li></li><li></li></ul> | |
+| **20.**  | <ul><li></li><li></li><li></li></ul> | |
 | **27.**  | <ul><li>cleaning up</li><li>finishing left-over points</li><li></li></ul> | <ol><li value="24.">Christmas</li></ol>  |
 
 
+</br>
+
+## Tasks by Topic
 
 #### documentation:
 
@@ -35,6 +38,7 @@
  - design descriptions & motivation
  - mission statement & manifesto
  - sources & resources
+ - publication of questionnaire & workshop results
 
 
 #### programming:
@@ -50,12 +54,23 @@
  - final touches API & front-end
 
 
+#### misc. technical stuff
+
+ - testing SABIO on KB servers
+ - integration of frontend and backend on SABIO server
+
+
 #### comms:
 
  - Werner: front-end finishing touches & integration
  - Richard: ensure privacy, get images into front-end, check processed data quality and integrity
- - Cindy: 
-
+ - Cindy: workshop, dissemination
+ - Mirjam: testing SABIO on KB servers
+ - Jesse: datasets from the B&G media suite
+ - others:
+  - follow-ups with participants from questionnaire & workshop?
+  - disseminationt with potential stakeholder groups? e.g. Senka's contacts?
+  - Material Culture research institute?
 
 
 
