@@ -33,32 +33,33 @@
 
 #### documentation:
 
- - installation instructions
- - descriptions in API: dataset & engines
- - design descriptions & motivation
- - mission statement & manifesto
- - sources & resources
- - publication of questionnaire & workshop results
+ - [ ] installation instructions
+ - [ ] descriptions in API: dataset & engines
+ - [ ] design descriptions & motivation
+ - [ ] mission statement & manifesto
+ - [ ] sources & resources
+ - [ ] publication of questionnaire & workshop results
 
 
 #### programming:
 
- - engines:
-   - PMI
-   - typicality
-   - vocabulary
-   - missing info
+ - [ ] engines:
+   - [ ] PMI
+   - [ ] typicality
+   - [ ] vocabulary
+   - [ ] missing info
    - ...
- - improve NMvW dataset preprocessing (incl. unification) 
- - improve search
- - final touches API & front-end
+ - [ ] improve NMvW dataset preprocessing (incl. unification) 
+ - [ ] improve search
+ - [ ] final touches API & front-end
+ - [ ] data limits in backend, API & frontend
 
 
 #### misc. technical stuff
 
- - testing SABIO on KB servers
- - integration of frontend and backend on SABIO server
- - make locally runnable (via http://localhost:PORT)
+ - [ ] testing SABIO on KB servers
+ - [ ] integration of frontend and backend on SABIO server
+ - [ ] make locally runnable (via http://localhost:PORT)
 
 
 #### comms:
