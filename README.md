@@ -2,10 +2,10 @@
 
 ### the [`timeline`](/timeline.md) for Nov & Dec
 
-# guide to [`backend`](/backend)
+## guide to [`backend`](/backend)
 
 
-# guide to [`research`](/research)
+## guide to [`research`](/research)
 
 this folder is where the conceptual and experimental research to build SABIO happens
 
