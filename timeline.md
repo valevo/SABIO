@@ -8,7 +8,7 @@
 |   | **Main**   | **Extracurricular** |
 |---|---|---|
 | **8.**   | <ul><li>**backend**: PMI & Typicality engines</li><li>**frontend**: Richard: images</li><li>**comms** & **data**: Richard: ensuring privacy</li><li>**docs**: installation instructions -> for publication of GitHub</li></ul>| <ol><li value="12.">Europeana Presentation of ConConCor</li></ol> |
-| **15.**  | <ul><li>**backend**: examples endpoint</li><li>**backend** & **data**: improvements on search</li><li>**backend**: more engines</li><li>**docs**: dataset & engine descriptions in API</li></ul> | <ol><li value="19.">NMvW user test</ol> |
+| **15.**  | <ul><li>**backend**: examples endpoint</li><li>**backend** & **data**: improvements on search</li><li>**docs**: dataset & engine descriptions in API</li></ul> | <ol><li value="19.">NMvW user test</ol> |
 | **22.**  | <ul><li>**comms**: processing of user feedback</li><li>**frontend**: integration on server & in repo</li><li>**frontend**: final touches</li><li>**docs**: general GitHub repo documentation</li></ul> | <ol><li value="26.">HackALOD hackathon</li></ol>  |
 | **29.**  | <ul><li>**backend**: more engines</li><li>**docs**: design motivation & sources</li><li></li></ul> | <ol></ol>  |
 
@@ -21,7 +21,7 @@
 
 |   | **Main**   | **Extracurricular** |
 |---|---|---|
-| **6.**   | <ul><li>**docs**: mission statement & manifesto</li><li></li><li></li></ul>| |
+| **6.**   | <ul><li>**docs**: mission statement & manifesto</li><li>**backend**: more engines</li></ul>| |
 | **13.**  | <ul><li></li><li></li><li></li></ul> | |
 | **20.**  | <ul><li></li><li></li><li></li></ul> | |
 | **27.**  | <ul><li>cleaning up</li><li>finishing left-over points</li><li></li></ul> | <ol><li value="24.">Christmas</li></ol>  |
