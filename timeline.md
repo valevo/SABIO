@@ -58,6 +58,7 @@
 
  - testing SABIO on KB servers
  - integration of frontend and backend on SABIO server
+ - make locally runnable (via http://localhost:PORT)
 
 
 #### comms:
