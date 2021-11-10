@@ -77,6 +77,8 @@
 
 #### extracurricular:
 
+ - Europeana presentation
+ - HackaLOD hackathon 
  - website:
    - add projects
    - restructure and polish some pages
