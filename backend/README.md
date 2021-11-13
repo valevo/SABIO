@@ -24,8 +24,15 @@ SABIO webapp code for sharing between server and local machine
 
 # TODO 
  
- - precompute results for presets of parameters
- - 
+ - there are `nan` values in the object's date fields
+ - some objects seem to have start_date > end_date
+ - make sure that date-based search works right (objects with 
+ 
+ - move data to SSD 
+ -  
+ 
+ 
+ - precompute results for presets of parameters?
  - hard cap:
    - for long texts at 1000 characters
    - for long titles at 100 characters
