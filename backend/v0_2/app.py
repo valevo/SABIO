@@ -70,7 +70,7 @@ def get_engines():
 @app.route("/engines/<engineID>/html", methods=["GET"])
 def get_engine_detail(engineID):
     cur_engine = engines[engineID]
-    return cur_engine.summary()
+    return cur_engine.description()
 
 
 
@@ -154,10 +154,7 @@ def get_examples():
               "thumbnail_url": ,
               "engine": eng,
               "url": ,
-    
-              
-"""https://sabio.sudox.nl/browse/openimages/%7B%22objectKeywords%22%3A%22%22%2C%22objectStartDate%22%3A%22%22%2C%22objectEndDate%22%3A%22%22%2C%22objectParams%22%3A[%7B%22id%22%3A%22location%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22subject%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22type%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22publisher%22%2C%22value%22%3A%22%22%7D]%2C%22engineId%22%3A%22word-match%22%2C%22engineMinScore%22%3A0%2C%22engineMaxScore%22%3A0.5650000000000001%2C%22engineParams%22%3A[%7B%22id%22%3A%22score_name%22%2C%22value%22%3A%226%22%7D%2C%7B%22id%22%3A%22score_description%22%2C%22value%22%3A%222%22%7D]%2C%22vocabularyTerms%22%3A%22africa%2Cafrika%2Callada%2Caneho%2Cangola%2Cannobon%2Cantongil%20baai%2Cappa%2Carguin%2Caruba%2Catjeh%2Caxim%2Cbadagri%2Cbali%2Cbanda%2Cbanda%20eilanden%2Cbangladesh%2Cbantam%2Cbantan%2Cbanten%2Cbarbados%2Cbatavia%2Cbengalen%2Cbenin%20city%2Cberbice%2Cbonaire%2Cborneo%2Cbrasil%2Cbrazili%C3%AB%2Ccasteel%20del%20mina%2Cceylon%2Ccolombo%2Ccormant%2Ccormantijn%2Ccormantin%2Ccoromandel%2Ccura%C3%A7ao%2Cdejima%2Cdelagoa%2Cdemerara%2Cdemerary%2Cd%E2%80%99elmina%2Celmina%2Cepe%2Cepk%C3%A9%2Cessequebo%2Cessequibo%2Cformosa%2Cfort%20amsterdam%2Cfort%20cormantijn%2Cfort%20cormantin%2Cfort%20gor%C3%A9e%2Cfort%20kormantijn%2Cfort%20kormantin%2Cfort%20nassau%2Cfort%20nieuw%20amsterdam%2Cfort%20oranje%2Cfort%20zeelandia%2Cfort%20zelandia%2Cghana%2Cgoeree%2Cgor%C3%A9e%2Cgoudkust%2Cgrand-popo%2Cgreijn%2Cgrein%2Cgrijn%2Cguiana%2Cguinea%2Cguinee%2Cguyana%2Ch%C3%B4i%20an%2Cindia%2Cindische%2Cindi%C3%AB%2Cindonesi%C3%AB%2Cjaquim%2Cjava%2Ckaap%2Ckaapkolonie%2Ckongo%2Ckormant%2Ckormantijn%2Ckormantin%2Cloanga%2Cmadagaskar%2Cmakassa%2Cmalabar%2Cmalakka%2Cmalediven%2Cmeidorp%2Fmeiborg%2Cmina%2Cmolukken%2Cmorenland%2Cnederlands%20ceylon%2Cnederlands%20guiana%2Cnederlands%20nieuw%20guinea%2Cnederlands-brazili%C3%AB%2Cnederlands-indi%C3%AB%2Cnederlandse%20antillen%2Cnieuw%20amsterdam%2Cnieuw-nederland%2Coffra%2Couidah%2Cpapoea%2Cpapua%2Cparamaribo%2Cpenghu%20eilanden%2Cpernambuco%2Cpescadorus%2Cprincipe%2Csaba%2Csao%20tom%C3%A9%2Csave%2Csint%20eustatius%2Csint%20jago%2Csint%20maarten%2Csint%20thomas%2Cslavenkust%2Cst.%20eustatius%2Cst.%20jago%2Cst.%20maarten%2Cst.%20thomas%2Cstabroek%2Csumatra%2Csurat%2Csuriname%2Ctandkust%2Ctobago%2Ctogo%2Ctonkin%2Cwest-indische%2Cwest-indi%C3%AB%2Cwillemstad%2Czuid-afrika%22%7D/scatterplot/0/1231179?api=https%3A%2F%2Fsabio.sudox.nl%2Fapi%2Fv1%2F"""
-    
+
     
     
 

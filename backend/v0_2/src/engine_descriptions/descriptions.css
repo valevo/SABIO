@@ -1,0 +1,32 @@
+p, h3 {
+    margin: 20px 500 0 20px;
+}
+
+/* body {
+    background-color: #ffce06;
+} */
+
+body {
+    color: white;
+    background-color: #183748;
+}
+
+
+
+a:link {
+  color: #ffce06;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffce06;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #183748;
+  background-color: #ffce06;
+  text-decoration: none;
+}

@@ -87,7 +87,7 @@ class Dataset:
         prep_kws = "|".join(kws.lower().replace(", ", ",").split(","))
         
         if (not kws.strip()) or (not prep_kws):
-            does_contain = [True]*self.object_count
+            does_contain = pd.Series([True]*self.object_count)
         else:
             print("SUBMITTED KEYWORD: ", prep_kws)
             does_contain = self.search_texts.str.contains(prep_kws, regex=False)

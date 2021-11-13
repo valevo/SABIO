@@ -3,24 +3,26 @@ import numpy as np
 # from src.datasets import NMvW
 
 class Engine:
-    def __init__(self):
-#         self.id  # str
-#         self.name  # str
-#         self.min_score  # float
-#         self.params # list of EngineParam
-        pass
+    def __init__(self, id_, name, dataset, params):
+        self.id = id_ # str
+        self.name = name # str
+        self.dataset = dataset # datasets.Dataset
+        self.params = params # list of EngineParam
     
+
 class RandomEngine(Engine):
-    def __init__(self, id_, name, dataset, params=None):
-        super().__init__()
-        self.name = name
-        self.id = id_
+    def __init__(self, **engine_args):
+        super().__init__(**engine_args)
         self.min_score = 0. # np.random.random()*100
         self.params = params
         
-#         self.scores = 
+#         self.scores = FILL TO MAKE SURE SCORES AREN'T RECOMPUTED
+
+        self.constant_scores = self.score(self.dataset)
     
-    def summary(self):
+        self.constant_score_details = self.score_details(self.dataset)
+    
+    def description(self):
         return f"""
         <div>
             <h1> {self.name} (ID: {self.id}) </h1>
@@ -29,7 +31,7 @@ class RandomEngine(Engine):
         </div>
         """
     
-    def score(self, objects, round_to=3, **param_values):
+    def score(self, objects, round_to=3, **param_values):       
         return np.random.random(len(objects)).round(round_to)
     
     
@@ -88,8 +90,19 @@ nonce_param = EngineParam(id_=0, label="NonceParameter",
                           description="does absolutely nothing",
                           control="select", default="useless1",
                           options=nonce_opts)
+
+redo_param = EngineParam(id_=1, label="random rescore",
+                         description="redo random scoring of dataset",
+                         control="select", default="false",
+                         options={"true": True, "false": False})
+
                           
 # rand_engine = RandomEngine(id_="RandE_v0", 
 #                            name="RandomEngine/v1.0",
 #                            dataset=NMvW,
 #                            params=[nonce_param])
+
+
+
+class TypicalityEngine(Engine):
+    def __init__(self, 
