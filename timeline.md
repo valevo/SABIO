@@ -75,4 +75,13 @@
   - Material Culture research institute?
 
 
+#### extracurricular:
+
+ - Europeana presentation
+ - HackaLOD hackathon 
+ - website:
+   - add projects
+   - restructure and polish some pages
+   - etc, see the [Website Meeting Notes](https://docs.google.com/document/d/1J-lvgI7HEAHLgLqv30QS1foYag4KtFwjLDDc1c3KGX4/edit)
+
 
