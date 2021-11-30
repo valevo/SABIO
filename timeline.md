@@ -85,9 +85,4 @@
    - etc, see the [Website Meeting Notes](https://docs.google.com/document/d/1J-lvgI7HEAHLgLqv30QS1foYag4KtFwjLDDc1c3KGX4/edit)
 
  - LREC paper (due in Jan)
- - AI4MEDIA:  
-   - related work: more references on bias in collections, make shorter
-   - summary
-   - 
-
 
