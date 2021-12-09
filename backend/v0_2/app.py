@@ -4,6 +4,7 @@ from flask import jsonify as flask_jsonify
 
 
 app = flask.Flask(__name__)
+# !!! comment out for production !!!
 app.config["DEBUG"] = True
 
 # from werkzeug.middleware.profiler import ProfilerMiddleware
@@ -14,12 +15,12 @@ import numpy as np
 # from src.datasets import Dataset, Result, df, NMvW_params
 from src.datasets import NMvW
 from src.results import Result
-from src.engines.RandomEngine_v0 import RandomEngine, nonce_param
+from src.engines.RandomEnginev0 import RandomEngine, nonce_param
 
 datasets = {NMvW.id:NMvW}
 
-random_engine = RandomEngine(id_="RandomEngine.v0", 
-                           name="RandomEngine/v1.0",
+random_engine = RandomEngine(id_="RandomEnginev0", 
+                           name="RandomEngine/v0",
                            dataset=NMvW,
                            params=[nonce_param])
 
@@ -157,6 +158,6 @@ def get_examples():
     
 
 
-# # COMMENT OUT FOR PRODUCTION
+# !!! comment out for production !!!
 if __name__ == "__main__":
     app.run()

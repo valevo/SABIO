@@ -11,9 +11,9 @@ class Engine:
         self.params = params # list of EngineParam
     
     def description(self):
-        with open(self.id+".html") as handle:
+        with open(f"src/engines/{self.id}.html") as handle:
             html = handle.read()
-        with open("descriptions.css") as handle:
+        with open("src/engines/descriptions.css") as handle:
             css = handle.read()
         
         html.replace("<style></style>",
