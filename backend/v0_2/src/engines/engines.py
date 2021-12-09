@@ -16,7 +16,7 @@ class Engine:
         with open("src/engines/descriptions.css") as handle:
             css = handle.read()
         
-        html.replace("<style></style>",
+        html = html.replace("<style></style>",
                     "<style>"+css+"</style>")
         return html
     

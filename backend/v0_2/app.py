@@ -27,9 +27,15 @@ random_engine = RandomEngine(id_="RandomEnginev0",
 # Dictionary of engines
 engines = {random_engine.id: random_engine}
 
+print(engines[random_engine.id].description())
+
 for eng_name, eng in engines.items():
     for d_id, d in datasets.items():
         d.add_engine(eng)
+
+
+print(datasets[NMvW.id])
+
 
 
 def jsonify(data):
@@ -37,6 +43,10 @@ def jsonify(data):
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify(["hello world"])
 
 @app.route("/datasets", methods=["GET"])
 def list_datasets():

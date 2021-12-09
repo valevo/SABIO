@@ -8,8 +8,6 @@ class RandomEngine(Engine):
         super().__init__(**engine_args)
         self.min_score = 0. # np.random.random()*100
         
-#         self.scores = FILL TO MAKE SURE SCORES AREN'T RECOMPUTED
-
         self.constant_scores = None
 
         scores = self.score(self.dataset.data)
