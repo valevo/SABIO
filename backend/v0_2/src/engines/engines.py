@@ -13,6 +13,7 @@ class Engine:
     def description(self):
         with open(f"src/engines/{self.id}.html") as handle:
             html = handle.read()
+            
         with open("src/engines/descriptions.css") as handle:
             css = handle.read()
         
