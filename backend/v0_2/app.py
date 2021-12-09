@@ -11,26 +11,24 @@ app.config["DEBUG"] = True
 
 
 import numpy as np
-from src.datasets import Dataset, Result, df, NMvW_params
-from src.engines import RandomEngine, nonce_param
+# from src.datasets import Dataset, Result, df, NMvW_params
+from src.datasets import NMvW
+from src.results import Result
+from src.engines.RandomEngine_v0 import RandomEngine, nonce_param
 
-
-NMvW = Dataset(df, "NMvW_v0", 
-               "Nationaal Museum van Wereldculturen 1M",
-               "https://collectie.wereldculturen.nl/",
-               NMvW_params,
-               available_engines=[])
 datasets = {NMvW.id:NMvW}
 
-
-rand_engine = RandomEngine(id_="RandE_v0", 
+random_engine = RandomEngine(id_="RandomEngine.v0", 
                            name="RandomEngine/v1.0",
                            dataset=NMvW,
                            params=[nonce_param])
-engines = {rand_engine.id: rand_engine}
-NMvW.add_engine(rand_engine)
 
+# Dictionary of engines
+engines = {random_engine.id: random_engine}
 
+for eng_name, eng in engines.items():
+    for d_id, d in datasets.items():
+        d.add_engine(eng)
 
 
 def jsonify(data):
@@ -99,7 +97,6 @@ def search_objects(datasetID):
     eng = engines[engine_id]
 
     #################################################################
-    
     ### COMPUTE RESPONSE ############################################
 
     # search 
@@ -120,8 +117,9 @@ def search_objects(datasetID):
 
     # instantiate Result object 
     # TODO? let result object do filtering of objects above
-    # NOW: Result object is responsible for formatting 
-    results = Result(filtered_data, filtered_scores, filtered_details,
+    # NOW: Result object is responsible for formatting
+    param_names = [p.label for p in d.params]
+    results = Result(param_names, filtered_data, filtered_scores, filtered_details,
                     engine_min, engine_max)
     
     # produces list of Result
@@ -149,11 +147,11 @@ def get_examples():
     examples = subsample.iloc[highest_inds]
     example_scores = scores[highest_inds]
     
-    dicts = [{"title": r.Title,
-              "score": s,
-              "thumbnail_url": ,
-              "engine": eng,
-              "url": ,
+#     dicts = [{"title": r.Title,
+#               "score": s,
+#               "thumbnail_url": ,
+#               "engine": eng,
+#               "url": ,
 
     
     

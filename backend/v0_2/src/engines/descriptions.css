@@ -12,6 +12,10 @@ body {
 }
 
 
+span {
+	color: #ffce06;
+}
+
 
 a:link {
   color: #ffce06;
@@ -29,4 +33,10 @@ a:hover {
   color: #183748;
   background-color: #ffce06;
   text-decoration: none;
+}
+
+hr {
+    color:  #ffce06;
+    background-color:  #ffce06;
+/*     height: 0.0001pt; */
 }

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="descriptions.css">
+    </head>
+    <body style="padding: 40px;">
+        <div style="padding: 40px;font-family: sans; line-height: 2em;">
+<!--                 <img src="https://www.sudox.nl/images/logo-sudox.svg" alt="SUDOX logo" width="200"> -->
+            <h1> RandomEngine v0 </h1>
+            <hr>
+            <p>
+            	As the name suggests: an engine that assigns <span>random</span> scores to objects and
+		<span>random</span> scores to the words that make up an object's meta text. <br>
+                This engine is part of <span>SABIO</span> because it highlights the idea that tools for
+		the navigation of bias also need to be disruptive (in contrast to being focused on a task).
+		Further, any engine also brings its own biases that might shadow or distract from 
+		bias in the collection. The <span>random</span> engine is arguably the least biased and the most disruptive
+		engine possible. We therefore encourage you to play with the <span>random</span> engine as well and
+		to compare what you find to the other engines. 
+            </p>
+            <h3>Functionality</h3>
+		<p>
+			Very simple: for each object produces a <span>random</span> score (between 0 and 1). 
+			Then, as evidence, it picks <span>random</span> words from the object's texts and assigns
+			<span>random</span> scores to these words.
+		</p>		
+
+
+
+	    <h3>Interpretation of Outputs</h3>
+            <p>
+		Because all the scores are completely <span>random</span>, the results from this engine
+		have no real interpretation. There is one interesting phenomenon, however, that emerges
+		from <span>random</span>ness: You might notice, that certain objects and words come up more prominently
+		(often) than others; these are the most frequent objects/words in the collection
+		and the <span>random</span> engine "floats them to the top". This is because if everything is chosen at <span>random</span>, 
+		very frequent elements naturally have a higher chance of being selected. 	
+            </p>
+            <h3>Parameters</h3>
+            <p>
+                This engine only has a nonce parameter because the engine actually needs no parameters
+		at all; the nonce parameter therefore has no function.
+		
+            </p>
+            
+            <h3>If you're interested in the technical details&hellip;</h3>
+            <p><span>Randomness</span> is a beautiful concept that is not yet fully understood -
+            because it evades definition whenever people try to define it (much like trying to 
+            define nothingness) - but nonetheless a concept without which
+            computer science and AI wouldn't be what they are today. 
+            Moreover, <span>randomness</span> is all over the universe and our daily lives,
+            from tossing dice to the arrangement of stars across galaxies.
+            </p>
+            <p style="font-size:0.8em; color: #ccc;">v0-20211110</p>
+        </div>
+    </body>
+</html>
