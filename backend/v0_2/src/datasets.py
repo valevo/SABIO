@@ -104,11 +104,10 @@ class Dataset:
         frmt = "%Y-%m-%d"
         try:
             start_year, end_year = datetime.strptime(start_date, frmt), datetime.strptime(end_date, frmt)
+            start_year, end_year = start_year.year, end_year.year
         except ValueError:
             start_year, end_year = self.min_date, self.max_date
         
-#         start_year = int(start_date.split("-")[-1])
-#         end_year = int(end_date.split("-")[-1])
         
         in_range = (self.data.BeginISODate >= start_year) &\
                     (self.data.EndISODate <= end_year)
