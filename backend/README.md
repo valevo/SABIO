@@ -2,6 +2,15 @@
 SABIO webapp code for sharing between server and local machine
 
 
+# IMPORTANT
+
+### From Dev to Production
+
+ - in app.py: remove `app.config["DEBUG"] = True` and `if __name__ == "__main__":
+    app.run()`
+
+
+
 
 ## Process
 

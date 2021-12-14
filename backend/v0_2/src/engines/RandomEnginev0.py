@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from .engines import Engine, EngineParam
+from src.engines.engines import Engine, EngineParam
 
 class RandomEngine(Engine):
     def __init__(self, **engine_args):
