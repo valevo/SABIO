@@ -5,10 +5,17 @@ from flask import jsonify as flask_jsonify
 
 app = flask.Flask(__name__)
 # !!! comment out for production !!!
-# app.config["DEBUG"] = True
+#app.config["DEBUG"] = True
 
 # from werkzeug.middleware.profiler import ProfilerMiddleware
 # app.wsgi_app = ProfilerMiddleware(app.wsgi_app, profile_dir="./profiles/")
+
+
+import logging
+import os
+
+this_pid = str(os.getpid())
+logging.basicConfig(filename=f'/home/valentin.vogelmann/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
 
 
 import numpy as np
@@ -17,12 +24,21 @@ from src.datasets import NMvW
 from src.results import Result
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param
 
+logging.debug("MODULES LOADED!")
+logging.debug(f"{NMvW}")
+
+
+
 datasets = {NMvW.id:NMvW}
 
-random_engine = RandomEngine(id_="RandomEnginev0", 
+logging.debug(f"{datasets}")
+random_engine = RandomEngine(id_="RandomEnginev0",
                            name="RandomEngine/v0",
                            dataset=NMvW,
                            params=[nonce_param])
+
+logging.debug("RANDOM ENGINE LOADED!")
+
 
 # Dictionary of engines
 engines = {random_engine.id: random_engine}
@@ -169,5 +185,5 @@ def get_examples():
 
 
 # !!! comment out for production !!!
-# if __name__ == "__main__":
-#     app.run()
+#if __name__ == "__main__":
+#    app.run()
