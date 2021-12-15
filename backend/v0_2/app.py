@@ -145,7 +145,7 @@ def search_objects(datasetID):
     # instantiate Result object 
     # TODO? let result object do filtering of objects above
     # NOW: Result object is responsible for formatting
-    param_names = [p.label for p in d.params]
+    param_names = [p for p in d.params.keys()]
     results = Result(param_names, filtered_data, filtered_scores, filtered_details,
                     engine_min, engine_max)
     
