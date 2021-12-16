@@ -71,7 +71,7 @@ class Dataset:
         return self.data.loc[obj_id]
     
     
-    def sample(self, *kwargs):
+    def sample(self, **kwargs):
         return self.data.sample(**kwargs)
     
     

@@ -14,7 +14,7 @@ nonce_param = EngineParam(id_="nonce", label="NonceParameter",
 redo_opts = {"yes": True, "no": False}
 redo_param = EngineParam(id_="redo", label="random rescore",
                          description="redo random scoring of dataset",
-                         control="select", default="false",
+                         control="select", default="no",
                          options=redo_opts)
 
 
