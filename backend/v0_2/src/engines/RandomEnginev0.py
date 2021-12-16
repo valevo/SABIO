@@ -26,7 +26,10 @@ class RandomEngine(Engine):
 #         return html
         
     
-    def score(self, objects, redo=False, round_to=3, **param_values):
+    def score(self, objects, round_to=3, **param_values):
+        nonce_val = param_values["nonce"]
+        redo = param_values.get("redo", False)
+        
         if not redo:
             return self.constant_scores.loc[objects.index]
         
@@ -34,7 +37,10 @@ class RandomEngine(Engine):
                          index=self.dataset.data.index)
     
     
-    def score_details(self, objects, redo=False, round_to=3, **param_values):
+    def score_details(self, objects, round_to=3, **param_values):
+        nonce_val = param_values["nonce"]
+        redo = param_values.get("redo", False)
+        
         if not redo:
             return self.constant_score_details.loc[objects.index]
         
@@ -52,13 +58,13 @@ class RandomEngine(Engine):
 
 
 nonce_opts = {"useless1": "1", "useless2": "2"}        
-nonce_param = EngineParam(id_=0, label="NonceParameter", 
+nonce_param = EngineParam(id_="nonce", label="NonceParameter", 
                           description="does absolutely nothing",
                           control="select", default="useless1",
                           options=nonce_opts)
 
 redo_opts = {"true": True, "false": False}
-redo_param = EngineParam(id_=1, label="random rescore",
+redo_param = EngineParam(id_="redo", label="random rescore",
                          description="redo random scoring of dataset",
                          control="select", default="false",
                          options=redo_opts)

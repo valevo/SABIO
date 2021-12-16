@@ -22,7 +22,7 @@ import numpy as np
 # from src.datasets import Dataset, Result, df, NMvW_params
 from src.datasets import NMvW
 from src.results import Result
-from src.engines.RandomEnginev0 import RandomEngine, nonce_param
+from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
 
 logging.debug("MODULES LOADED!")
 logging.debug(f"{NMvW}")
@@ -35,7 +35,7 @@ logging.debug(f"{datasets}")
 random_engine = RandomEngine(id_="RandomEnginev0",
                            name="RandomEngine/v0",
                            dataset=NMvW,
-                           params=[nonce_param])
+                           params=[nonce_param, redo_param])
 
 logging.debug("RANDOM ENGINE LOADED!")
 
