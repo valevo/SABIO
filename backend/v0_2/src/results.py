@@ -56,7 +56,7 @@ class Result:
                 "id": self.ids[i],
                 "name": self.titles.iloc[i],
                 "thumbnail_url": self.thumbnails.iloc[i],
-                "values": list(map(lambda x: x if isinstance(x, str) else x.item(), 
+                "values": list(map(lambda x: x if isinstance(x, str) else str(x), #x.item(), 
                                    self.values.iloc[i])),
                 "x": list(map(float, self.x.iloc[i])),
                 
