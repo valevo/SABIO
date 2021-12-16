@@ -8,13 +8,12 @@ class RandomEngine(Engine):
         super().__init__(**engine_args)
         self.min_score = 0. # np.random.random()*100
         
-        self.constant_scores = None
-
-        scores = self.score(self.dataset.data)
-        self.constant_scores = pd.Series(scores, index=self.dataset.data.index)
+#         self.constant_scores = None
+        scores = self.score(self.dataset.data, redo=True)
+        self.constant_scores = scores
         
-        self.constant_score_details = None
-        self.constant_score_details = self.score_details(self.dataset.data)
+#         self.constant_score_details = None
+        self.constant_score_details = self.score_details(self.dataset.data, redo=True)
         
 #     def description(self):
 #         with open("RandomEngine.v0.html") as handle:
@@ -27,15 +26,16 @@ class RandomEngine(Engine):
 #         return html
         
     
-    def score(self, objects, round_to=3, **param_values):
-        if self.constant_scores is not None:
+    def score(self, objects, redo=False, round_to=3, **param_values):
+        if not redo:
             return self.constant_scores.loc[objects.index]
         
-        return np.random.random(len(objects)).round(round_to)
+        return pd.Series(np.random.random(len(objects)).round(round_to),
+                         index=self.dataset.data.index)
     
     
-    def score_details(self, objects, round_to=3, **param_values):
-        if self.constant_score_details is not None:
+    def score_details(self, objects, redo=False, round_to=3, **param_values):
+        if not redo:
             return self.constant_score_details.loc[objects.index]
         
         descs = objects.Description.fillna("").str.split()

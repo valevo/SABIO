@@ -86,7 +86,8 @@ class Dataset:
         return self.data[match_kw & match_date & param_matches]
         
 
-    def search_by_keywords(self, kws, return_bool_series=True):      
+    def search_by_keywords(self, kws, return_bool_series=True):     
+        # TODO: split by other separators (such as ";")
         prep_kws = "|".join(kws.lower().replace(", ", ",").split(","))
         
         if (not kws.strip()) or (not prep_kws):
