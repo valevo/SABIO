@@ -11,7 +11,7 @@ nonce_param = EngineParam(id_="nonce", label="NonceParameter",
                           control="select", default="useless1",
                           options=nonce_opts)
 
-redo_opts = {"true": True, "false": False}
+redo_opts = {"yes": True, "no": False}
 redo_param = EngineParam(id_="redo", label="random rescore",
                          description="redo random scoring of dataset",
                          control="select", default="false",
@@ -52,7 +52,7 @@ class RandomEngine(Engine):
             return self.constant_scores.loc[objects.index]
         
         return pd.Series(np.random.random(len(objects)).round(round_to),
-                         index=self.dataset.data.index)
+                         index=objects.index)
     
     
     def score_details(self, objects, round_to=3, **param_values):
