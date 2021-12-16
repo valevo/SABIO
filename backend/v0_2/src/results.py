@@ -60,7 +60,7 @@ class Result:
                                    self.values.iloc[i])),
                 "x": list(map(float, self.x.iloc[i])),
                 
-                "score": self.scores[i].item(),
+                "score": self.scores.iloc[i].item(),
                 "score_details": self.score_details.iloc[i]
             }
             
