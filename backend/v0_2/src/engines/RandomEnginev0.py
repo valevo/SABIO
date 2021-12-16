@@ -3,6 +3,24 @@ import pandas as pd
 
 from src.engines.engines import Engine, EngineParam
 
+
+
+nonce_opts = {"useless1": "1", "useless2": "2"}        
+nonce_param = EngineParam(id_="nonce", label="NonceParameter", 
+                          description="does absolutely nothing",
+                          control="select", default="useless1",
+                          options=nonce_opts)
+
+redo_opts = {"true": True, "false": False}
+redo_param = EngineParam(id_="redo", label="random rescore",
+                         description="redo random scoring of dataset",
+                         control="select", default="false",
+                         options=redo_opts)
+
+
+
+
+
 class RandomEngine(Engine):
     def __init__(self, **engine_args):
         super().__init__(**engine_args)
@@ -27,8 +45,8 @@ class RandomEngine(Engine):
         
     
     def score(self, objects, round_to=3, **param_values):
-        nonce_val = param_values["nonce"]
-        redo = param_values.get("redo", False)
+        nonce_val = param_values.get("nonce", nonce_param.get_default())
+        redo = param_values.get("redo", redo_param.get_default())
         
         if not redo:
             return self.constant_scores.loc[objects.index]
@@ -38,8 +56,8 @@ class RandomEngine(Engine):
     
     
     def score_details(self, objects, round_to=3, **param_values):
-        nonce_val = param_values["nonce"]
-        redo = param_values.get("redo", False)
+        nonce_val = param_values.get("nonce", nonce_param.get_default())
+        redo = param_values.get("redo", redo_param.get_default())
         
         if not redo:
             return self.constant_score_details.loc[objects.index]
@@ -57,16 +75,5 @@ class RandomEngine(Engine):
     
 
 
-nonce_opts = {"useless1": "1", "useless2": "2"}        
-nonce_param = EngineParam(id_="nonce", label="NonceParameter", 
-                          description="does absolutely nothing",
-                          control="select", default="useless1",
-                          options=nonce_opts)
-
-redo_opts = {"true": True, "false": False}
-redo_param = EngineParam(id_="redo", label="random rescore",
-                         description="redo random scoring of dataset",
-                         control="select", default="false",
-                         options=redo_opts)
 
 

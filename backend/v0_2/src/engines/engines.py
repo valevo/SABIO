@@ -44,6 +44,8 @@ class EngineParam:
         self.default = default
         self.options = options
         
+    def get_default(self):
+        return self.options[self.default]
         
     def to_dict(self):
         return {
