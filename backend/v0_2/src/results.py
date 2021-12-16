@@ -13,7 +13,7 @@ class Result:
         
         
         # the actual values
-        self.values = rows[attributes]
+        self.values = rows[self.attributes]
         
         # x-locations as values in [0,1]
         self.x = self.values.apply(self.values_to_x, axis=0)
