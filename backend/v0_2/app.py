@@ -5,7 +5,7 @@ from flask import jsonify as flask_jsonify
 
 app = flask.Flask(__name__)
 # !!! comment out for production !!!
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 # from werkzeug.middleware.profiler import ProfilerMiddleware
 # app.wsgi_app = ProfilerMiddleware(app.wsgi_app, profile_dir="./profiles/")
@@ -16,7 +16,6 @@ import os
 
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann"
-home = "."
 logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
 
 
@@ -188,5 +187,5 @@ def get_examples():
 
 
 # !!! comment out for production !!!
-if __name__ == "__main__":
-   app.run()
+# if __name__ == "__main__":
+#    app.run()
