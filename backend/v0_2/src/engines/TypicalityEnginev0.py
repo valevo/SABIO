@@ -3,9 +3,6 @@ tqdm.pandas()
 import pandas as pd
 import numpy as np
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 from src.engines.engines import Engine
 from src.engines.ngrams import Ngram
 
