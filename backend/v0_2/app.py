@@ -16,7 +16,7 @@ import os
 
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann"
-logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
+# logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
 
 
 import numpy as np
@@ -24,6 +24,8 @@ import numpy as np
 from src.datasets import NMvW
 from src.results import Result
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
+from src.engines.TypicalityEnginev0 import TypicalityEngine
+
 
 logging.debug("MODULES LOADED!")
 logging.debug(f"{NMvW}")
@@ -38,13 +40,20 @@ random_engine = RandomEngine(id_="RandomEnginev0",
                            dataset=NMvW,
                            params=[nonce_param, redo_param])
 
+typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
+                                     name="TypicalityEngine/v0",
+                                     dataset=NMvW,
+                                     params=[])
+
 logging.debug("RANDOM ENGINE LOADED!")
 
 
 # Dictionary of engines
-engines = {random_engine.id: random_engine}
+engines = {random_engine.id: random_engine,
+          typicality_engine.id: typicality_engine}
 
 print(engines[random_engine.id].description())
+print(engines[typicality_engine.id].description())
 
 for eng_name, eng in engines.items():
     for d_id, d in datasets.items():
@@ -134,6 +143,8 @@ def search_objects(datasetID):
     scores = eng.score(relevant_data, **engine_params)
     # score details
     details = eng.score_details(relevant_data, **engine_params)
+    # TODO: replace with Engine.score_and_detail
+#     scores, details = eng.score_and_detail(relevant_data, **engine_params)
 
     
     # filter objects based on score and min_score and max_score parameters
@@ -147,7 +158,6 @@ def search_objects(datasetID):
     # TODO? let result object do filtering of objects above
     # NOW: Result object is responsible for formatting
     param_names = list(d.params.keys())
-    logging.debug(f"SEARCH_OBJECTS {param_names}: {d.params}")
     results = Result(param_names, filtered_data, filtered_scores, filtered_details,
                     engine_min, engine_max)
     

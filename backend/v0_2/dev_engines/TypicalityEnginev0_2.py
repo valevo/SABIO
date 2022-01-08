@@ -6,8 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.engines.engines import Engine
-from src.engines.ngrams import Ngram
+from ngrams import Ngram
 
 
 class Typicality:
@@ -90,37 +89,19 @@ class Typicality:
         H_context = self.entropy(model, n-1)
         H_joint = self.entropy(model, n)
         return H_joint - H_context
-    
-    
-    
-    
-    
-    
-class TypicalityEngine(Engine):
-    def __init__(self, from_scratch=True, cached=True, **engine_params):
-        super().__init__(**engine_params)
-        self.min_score = 0. # np.random.random()*100
 
+
+
+# class TypicalityEngine(Engine):
+#     def __init__(self, **engine_params):
+#         super().__init__(**engine_args)
+#         self.min_score = 0. # np.random.random()*100
+
+#         texts = self.dataset.data.apply(lambda r: 
+#                                         r["Title"] + r["Description"], axis="columns")
+#         self.typicality = Typicality(texts)
         
-        if from_scratch:
-            texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten() #.sum(axis=1)
-
-            self.typicality = Typicality(texts, take_abs=False)
-            
-        else: 
-            raise NotImplementedError("Loading from file not implemented yet! TODO...")
         
-        if cached:
-            self.cached = False
-            self.typs_cached, self.details_cached = self.score_and_detail(
-                            self.dataset.data[["Title", "Description"]].fillna("")
-            )
-            self.cached = True
-        else:
-            self.cached = False
-                                                        
-
-
         
 #         a(o) = |H(P) - [- 1/|o|*log(P(o))]|
 #         a(o) > 0
@@ -132,31 +113,22 @@ class TypicalityEngine(Engine):
 
     
     
-    def score(self, objects, round_to=3, **param_dict):
-        raise NotImplementedError("TypicalityEngine only supports scoring & detailing together!") 
+#     def score(self, objects, round_to=3, **param_dict):
+#         raise NotImplementedError("TypicalityEngine only supports scoring & detailing together!") 
 
+#     def score_details(self, objects, round_to=3, **param_dict):
+#         raise NotImplementedError("TypicalityEngine only supports scoring & detailing together!") 
         
-    def score_details(self, objects, round_to=3, **param_dict):
-        raise NotImplementedError("TypicalityEngine only supports scoring & detailing together!") 
+#     def score_and_detail(self, objects, round_to=3, **param_dict):
+#         param_dict = self.prep_engine_params(param_dict)
         
+#         tuples = objects[["Title", "Description"]].progress_apply(axis='columns', 
+#                                                          func=lambda r: typ_E.process_object(r))
         
-    def score_and_detail(self, objects, round_to=3, **param_dict):
-        param_dict = self.prep_engine_params(param_dict)
+#         obj_typs = tuples.apply(lambda t: t[1])
         
-        if self.cached:
-            ids = objects.index
-            return self.typs_cached.loc[ids], self.details_cached.loc[ids]
-            
+#         only_last = 2
+#         details = tuples.apply(lambda t: dict(t[0]))
         
-        tuples = objects[["Title", "Description"]].progress_apply(
-                                                    axis='columns', 
-                                                    func=lambda r: self.typicality.process_object(r)
-                                                    )
-        
-        obj_typs = tuples.apply(lambda t: t[1])
-        
-        only_last = 2
-        details = tuples.apply(lambda t: dict(t[0]))
-        
-        return obj_typs, details
+#         return obj_typs, details
  
