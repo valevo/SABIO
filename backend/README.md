@@ -38,13 +38,15 @@ SABIO webapp code for sharing between server and local machine
  - make sure that date-based search works right (objects with 
  
  - move data to SSD 
- -  
  
  
  - precompute results for presets of parameters?
  - hard cap:
    - for long texts at 1000 characters
    - for long titles at 100 characters
+
+ - add logging of backend activities
+ - store searches (&results) locally
 
 
 
