@@ -3,6 +3,8 @@ tqdm.pandas()
 import pandas as pd
 import numpy as np
 
+import joblib
+
 from src.engines.engines import Engine
 from src.engines.ngrams import Ngram
 
@@ -20,9 +22,12 @@ class Typicality:
         self.uni_model = Ngram(**default_params)
         self.uni_H = self.entropy(self.uni_model, 1)
         
-        self.abs = (lambda x: abs(x)) if take_abs else (lambda x: x)
-        self.normalise = lambda x: x
+        self.abs = abs if take_abs else self.identity
+        self.normalise = self.identity
                 
+            
+    @staticmethod
+    def identity(x): return x
         
 #         self.dataset_max = None
 #         self.obj_typicalities = None
@@ -94,18 +99,37 @@ class Typicality:
     
     
 class TypicalityEngine(Engine):
-    def __init__(self, from_scratch=True, cached=True, **engine_params):
+    @classmethod
+    def from_saved(cls, fname="TypicalityEnginev0.pkl"):
+        self = joblib.load(fname)
+        return self
+    
+    @classmethod
+    def create_and_save(cls, dataset, cached=True, **engine_params):
+        
+        self = cls(dataset=dataset,
+                   cached=cached,
+                    id_="TypicalityEnginev0",
+                    name="TypicalityEngine/v0",
+                    params=[])
+        
+        joblib.dump(self, self.id+".pkl")
+        return self
+    
+    def __init__(self, cached=True, **engine_params):
         super().__init__(**engine_params)
         self.min_score = 0. # np.random.random()*100
 
         
-        if from_scratch:
-            texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten() #.sum(axis=1)
-
-            self.typicality = Typicality(texts, take_abs=False)
+#         if from_saved:
+#             raise NotImplementedError("Loading from file not implemented yet! TODO...")
             
-        else: 
-            raise NotImplementedError("Loading from file not implemented yet! TODO...")
+            
+#         else: 
+        texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
+
+        self.typicality = Typicality(texts, take_abs=False)
+            
         
         if cached:
             self.cached = False

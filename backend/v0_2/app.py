@@ -7,9 +7,6 @@ app = flask.Flask(__name__)
 # !!! comment out for production !!!
 # app.config["DEBUG"] = True
 
-# from werkzeug.middleware.profiler import ProfilerMiddleware
-# app.wsgi_app = ProfilerMiddleware(app.wsgi_app, profile_dir="./profiles/")
-
 
 import logging
 import os
@@ -40,10 +37,13 @@ random_engine = RandomEngine(id_="RandomEnginev0",
                            dataset=NMvW,
                            params=[nonce_param, redo_param])
 
-typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
-                                     name="TypicalityEngine/v0",
-                                     dataset=NMvW,
-                                     params=[])
+# typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
+#                                      name="TypicalityEngine/v0",
+#                                      dataset=NMvW,
+#                                      params=[])
+
+typicality_engine = TypicalityEngine.from_saved("TypicalityEnginev0.pkl")
+
 
 logging.debug("RANDOM ENGINE LOADED!")
 
