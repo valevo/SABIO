@@ -13,7 +13,7 @@ import os
 
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann"
-# logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
+logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
 
 
 import numpy as np
