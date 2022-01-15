@@ -1,0 +1,18 @@
+[Unit]
+Description=Gunicorn Flask Application
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/var/www/flask/sabio/start.sh
+TimeoutSec=30
+Restart=on-failure
+RestartSec=15
+StartLimitInterval=350
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target
