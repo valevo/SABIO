@@ -24,6 +24,8 @@ class Dataset:
         self.id = id_
         self.name = name
         self.source_url = source_url
+
+        self.date_frmt = "%Y-%m-%d"
         
         self.min_date = dataframe.BeginISODate.min()
         self.max_date = dataframe.EndISODate.max()
@@ -49,8 +51,8 @@ class Dataset:
             "name": self.name,  # Dataset name
             "source_url": self.source_url,
             "object_count": self.object_count,
-            "min_date": int(self.min_date),
-            "max_date": int(self.max_date),
+            "min_date": "0001-01-01", #int(self.min_date),
+            "max_date": "2018-01-01", #int(self.max_date),
             "static_field_descriptions": static_field_descriptions,
             "params": [p.to_dict() for i, p in sorted(self.params.items())],
             "available_engines": [e.id for i, e in sorted(self.available_engines.items())]
@@ -102,9 +104,8 @@ class Dataset:
     
     def search_by_date(self, start_date, end_date, return_bool_series=True):
         from datetime import datetime
-        frmt = "%Y-%m-%d"
         try:
-            start_year, end_year = datetime.strptime(start_date, frmt), datetime.strptime(end_date, frmt)
+            start_year, end_year = datetime.strptime(start_date, self.date_frmt), datetime.strptime(end_date, self.date_frmt)
             start_year, end_year = start_year.year, end_year.year
         except ValueError:
             start_year, end_year = self.min_date, self.max_date

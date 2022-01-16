@@ -1,3 +1,7 @@
+import logging
+logging.debug("inside TypicalityEnginev0.py")
+
+
 from tqdm import tqdm
 tqdm.pandas()
 import pandas as pd
@@ -5,8 +9,14 @@ import numpy as np
 
 import joblib
 
+
+
+
 from src.engines.engines import Engine
+logging.debug("engine loaded")
+
 from src.engines.ngrams import Ngram
+logging.debug("ngram loaded")
 
 
 class Typicality:
@@ -23,8 +33,13 @@ class Typicality:
         self.uni_H = self.entropy(self.uni_model, 1)
         
         self.abs = abs if take_abs else self.identity
-        self.normalise = self.identity
+        self.normalise = self.inverse_x_plus1
                 
+
+
+    @staticmethod
+    def inverse_x_plus1(x): return 1/(x+1)
+
             
     @staticmethod
     def identity(x): return x

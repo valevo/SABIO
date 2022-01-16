@@ -12,17 +12,23 @@ import logging
 import os
 
 this_pid = str(os.getpid())
-home = "/home/valentin.vogelmann"
-logging.basicConfig(filename=f'{home}/gunicorn_app_{this_pid}.log', level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
+home = "/home/valentin.vogelmann/"
+logging.basicConfig(filename=home+f'gunicorn_app_{this_pid}.log', 
+		level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
 
+logging.debug("")
+logging.debug("app.py STARTED!")
 
 import numpy as np
 # from src.datasets import Dataset, Result, df, NMvW_params
 from src.datasets import NMvW
+logging.debug("dataset loaded!")
 from src.results import Result
+logging.debug("result loaded")
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
+logging.debug("random engine loaded")
 from src.engines.TypicalityEnginev0 import TypicalityEngine
-
+logging.debug("typicality engine loaded")
 
 logging.debug("MODULES LOADED!")
 logging.debug(f"{NMvW}")
@@ -42,18 +48,20 @@ random_engine = RandomEngine(id_="RandomEnginev0",
 #                                      dataset=NMvW,
 #                                      params=[])
 
-typicality_engine = TypicalityEngine.from_saved("TypicalityEnginev0.pkl")
+
+data_dir = "/data/"
+
+#typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
 
 
 logging.debug("RANDOM ENGINE LOADED!")
 
 
 # Dictionary of engines
-engines = {random_engine.id: random_engine,
-          typicality_engine.id: typicality_engine}
+engines = {random_engine.id: random_engine} #,          typicality_engine.id: typicality_engine}
 
 print(engines[random_engine.id].description())
-print(engines[typicality_engine.id].description())
+#print(engines[typicality_engine.id].description())
 
 for eng_name, eng in engines.items():
     for d_id, d in datasets.items():
@@ -140,11 +148,11 @@ def search_objects(datasetID):
     relevant_data = d.search(kws, start, end, **obj_params)
 
     # score
-    scores = eng.score(relevant_data, **engine_params)
+    # scores = eng.score(relevant_data, **engine_params)
     # score details
-    details = eng.score_details(relevant_data, **engine_params)
-    # TODO: replace with Engine.score_and_detail
-#     scores, details = eng.score_and_detail(relevant_data, **engine_params)
+    # details = eng.score_details(relevant_data, **engine_params)
+
+    scores, details = eng.score_and_detail(relevant_data, **engine_params)
 
     
     # filter objects based on score and min_score and max_score parameters
@@ -174,17 +182,17 @@ def get_object_details(datasetID, objectID):
     return jsonify(detail)
 
 
-@app.route("/examples", methods=["GET"])
-def get_examples():
-    d = list(datasets.values())[0]
-    eng = list(engines.values())[0]
-    
-    subsample = d.sample(frac=0.1)
-    scores = eng.score(subsample)
-    
-    highest_inds = np.argsort(scores)[-10:]
-    examples = subsample.iloc[highest_inds]
-    example_scores = scores[highest_inds]
+#@app.route("/examples", methods=["GET"])
+#def get_examples():
+#    d = list(datasets.values())[0]
+#    eng = list(engines.values())[0]
+#    
+#    subsample = d.sample(frac=0.1)
+#    scores = eng.score(subsample)
+#    
+#    highest_inds = np.argsort(scores)[-10:]
+#    examples = subsample.iloc[highest_inds]
+#    example_scores = scores[highest_inds]
     
 #     dicts = [{"title": r.Title,
 #               "score": s,
