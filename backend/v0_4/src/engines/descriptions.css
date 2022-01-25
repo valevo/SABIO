@@ -1,0 +1,47 @@
+/* body {
+    background-color: #ffce06;
+} */
+
+body {
+    color: white;
+    background-color: #183748;
+}
+
+
+p, h3 {
+    margin: 3% 30% 0% 3%;
+}
+
+p {
+    text-align: justify;
+}
+
+
+span {
+	color: #ffce06;
+}
+
+
+a:link {
+  color: #ffce06;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffce06;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #183748;
+  background-color: #ffce06;
+  text-decoration: none;
+}
+
+hr {
+    color:  #ffce06;
+    background-color:  #ffce06;
+/*     height: 0.0001pt; */
+}
