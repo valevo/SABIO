@@ -6,32 +6,24 @@ class Result:
     def __init__(self, param_names, rows, scores, 
                  score_details, min_score, max_score):
         self.attributes = attributes + param_names 
-        
-#         self.ids = rows.index.astype("string")
-        titles = rows.Title.fillna("").astype("string")
-        thumbnails = pd.Series([""]*rows.shape[0],
-                                   name="Thumbnail",
-                                   index=rows.index).astype("string")
+
+        self.ids = rows.index.astype("string")
+        self.titles = rows.Title.fillna("").astype("string")
+        self.thumbnails = pd.Series([""]*rows.shape[0]).astype("string")
         
         
         # the actual values
-        values = rows[self.attributes].astype(str)
-        
-#         values = values.apply(lambda x: x if isinstance(x, str) else str(x))
+        self.values = rows[self.attributes]
         
         # x-locations as values in [0,1]
-        xs = self.values.apply(self.values_to_x, axis=0)
-        xs.columns = ["x_"+c for c in xs.columns]
+        self.x = self.values.apply(self.values_to_x, axis=0)
         
-#         scores = scores
-#         score_details = score_details
+        self.scores = scores
+        self.score_details = score_details
         self.min_score = min_score
         self.max_score = max_score
-        
-        self.df = pd.concat([titles, thumbnails, values, xs, scores, score_details], axis=1)
-        
-        
-
+    
+    
     def values_to_x(self, col):
         if col.dtype == "int":
             return self.scale_num_var(col)
@@ -54,30 +46,29 @@ class Result:
         mapping = dict(zip(labels, num_labels))
         if scale: return self.scale_num_var(col.map(mapping), round_to=round_to)
         return col.map(mapping)
-    
-        
-    def iter_objects(self):
-        for i, record in self.df.to_dict("index").items():
+       
+
+    # TODO: solution with `.iloc`, might have bad complexity
+    def iter_objects(self, n=-1):
+        rng = range(self.values.shape[0]) if (n<0) else range(n)
+        for i in rng:
             obj_dict = {
-                "id": str(i),
-                "name": record["Title"],
-                "thumbnail_url": record["Thumbnail"],
+                "id": self.ids[i],
+                "name": self.titles.iloc[i],
+                "thumbnail_url": self.thumbnails.iloc[i],
+                "values": list(map(lambda x: x if isinstance(x, str) else str(x), #x.item(), 
+                                   self.values.iloc[i])),
+                "x": list(map(float, self.x.iloc[i])),
                 
-                "values": [record[attr] for attr in self.attributes],
-                "x": [record["x_"+attr] for attr in self.attributes],
-                
-                "score": float(round(record["score"], 3)),
-                "score_details": record["score_details"]
+                "score": self.scores.iloc[i].item(),
+                "score_details": self.score_details.iloc[i]
             }
             
             yield obj_dict
-            
-            
+        
+        
     def to_dict(self):
         return {
             "attributes": self.attributes,
             "results": list(self.iter_objects())
         }
-        
-    
-    
