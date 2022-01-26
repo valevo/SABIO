@@ -20,7 +20,7 @@ class Result:
 #         values = values.apply(lambda x: x if isinstance(x, str) else str(x))
         
         # x-locations as values in [0,1]
-        xs = self.values.apply(self.values_to_x, axis=0)
+        xs = values.apply(self.values_to_x, axis=0)
         xs.columns = ["x_"+c for c in xs.columns]
         
 #         scores = scores
