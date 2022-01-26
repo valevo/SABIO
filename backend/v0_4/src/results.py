@@ -30,6 +30,10 @@ class Result:
         
         self.df = pd.concat([titles, thumbnails, values, xs, scores, score_details], axis=1)
         
+#         self.df.columns = ["Title", "Thumbnail"] + values.columns + xs.columns + ["score", "score_details"]
+        
+        
+        
         
 
     def values_to_x(self, col):

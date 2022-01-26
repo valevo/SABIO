@@ -41,6 +41,7 @@ class RandomEngine(Engine):
 
         new_scores = pd.Series(np.random.random(len(objects)).round(round_to),
                          index=objects.index)
+        new_scores.name = "score"
         
         self.constant_scores = new_scores
         return new_scores
@@ -64,6 +65,7 @@ class RandomEngine(Engine):
                                    np.random.rand(2).round(round_to)
                                                  ))
                              )
+        new_choices.name = "score_details"
         self.constant_score_details = new_choices
         return new_choices
     

@@ -190,9 +190,11 @@ class TypicalityEngine(Engine):
                                                     )
         
         obj_typs = tuples.apply(lambda t: t[1])
+        obj_typs.name = "score"
         
         only_last = 2
         details = tuples.apply(lambda t: dict(t[0]))
+        details.name = "score_details"
         
         return obj_typs, details
  
