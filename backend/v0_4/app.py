@@ -20,7 +20,6 @@ logging.debug("")
 logging.debug("app.py STARTED!")
 
 import numpy as np
-# from src.datasets import Dataset, Result, df, NMvW_params
 from src.datasets import NMvW
 logging.debug("dataset loaded!")
 from src.results import Result
@@ -42,14 +41,12 @@ random_engine = RandomEngine(id_="RandomEnginev0",
                            name="RandomEngine/v0",
                            dataset=NMvW,
                            params=[nonce_param, redo_param])
-
 logging.debug("RANDOM ENGINE LOADED!")
 
-
-# typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
-#                                      name="TypicalityEngine/v0",
-#                                      dataset=NMvW,
-#                                      params=[])
+typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
+                                      name="TypicalityEngine/v0",
+                                      dataset=NMvW,
+                                      params=[])
 
 
 data_dir = "/data/"
@@ -63,22 +60,28 @@ logging.debug("TYPICALITY ENGINE LOADED!")
 # Dictionary of engines
 engines = {random_engine.id: random_engine, typicality_engine.id: typicality_engine}
 
-print(engines[random_engine.id].description())
-#print(engines[typicality_engine.id].description())
 
 for eng_name, eng in engines.items():
     for d_id, d in datasets.items():
         d.add_engine(eng)
 
 
-print(datasets[NMvW.id])
 
 
+#def jsonify(data):
+#    response = flask_jsonify(data)
+#    response.headers.add('Access-Control-Allow-Origin', '*')
+#    return response
 
+
+import json
+from flask import Response
 def jsonify(data):
-    response = flask_jsonify(data)
+    data_json = json.dumps(data)
+    response = Response(response=data_json, status=200, mimetype="application/json")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
 
 
 @app.route("/", methods=["GET"])
@@ -150,16 +153,13 @@ def search_objects(datasetID):
     # search 
     relevant_data = d.search(kws, start, end, **obj_params)
 
-    # score
-    # scores = eng.score(relevant_data, **engine_params)
-    # score details
-    # details = eng.score_details(relevant_data, **engine_params)
 
     scores, details = eng.score_and_detail(relevant_data, **engine_params)
 
     
     # filter objects based on score and min_score and max_score parameters
     # (i.e. only keep objects whose is between min_score and max_score)
+    # min_score and max_score sent be y the front end are in [0.0, 1.0]
     in_score_rng = (engine_min <= scores) & (scores <= engine_max)
     filtered_scores = scores[in_score_rng]
     filtered_details = details[in_score_rng]
@@ -209,4 +209,4 @@ def get_object_details(datasetID, objectID):
 
 # !!! comment out for production !!!
 # if __name__ == "__main__":
-#    app.run()
+#     app.run()
