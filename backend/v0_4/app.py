@@ -43,11 +43,11 @@ random_engine = RandomEngine(id_="RandomEnginev0",
                            params=[nonce_param, redo_param])
 logging.debug("RANDOM ENGINE LOADED!")
 
-typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
-                                      name="TypicalityEngine/v0",
-                                      dataset=NMvW,
-                                      params=[])
-
+#typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
+#                                      name="TypicalityEngine/v0",
+#                                      dataset=NMvW,
+#                                      params=[])
+#
 
 data_dir = "/data/"
 
