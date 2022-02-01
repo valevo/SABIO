@@ -39,7 +39,6 @@ class Typicality:
 
     @staticmethod
     def inverse_x_plus1(x): return 1/(x+1)
-
             
     @staticmethod
     def identity(x): return x
