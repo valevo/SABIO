@@ -33,36 +33,28 @@ class Typicality:
         self.uni_H = self.entropy(self.uni_model, 1)
         
         self.abs = abs if take_abs else self.identity
-        self.normalise = self.inverse_x_plus1
+        self.normalise = self.percentile_norm
                 
 
+    # q=99.5 (empirically) leads to 1% of the data being outside the range
+    @staticmethod
+    def percentile_norm(v, q=99.5):
+        return (v - np.percentile(v, 100-q))/(np.percentile(v, q) - np.percentile(v, 100-q))
 
     @staticmethod
     def inverse_x_plus1(x): return 1/(x+1)
             
     @staticmethod
     def identity(x): return x
-        
-#         self.dataset_max = None
-#         self.obj_typicalities = None
-#         self.gram_typicalities = None
-
-
-    # EMPIRICALLY FOUND NORMALISATION
-    # -> advantage: can be applied directly, is dataset independent
-#     def normalise(self, x):
-#         return 1/(x + 1)
-        
-
-    def typical(self, entropy, log_prob):
-        return self.normalise(self.abs(entropy - (-log_prob)))
-    
-    
+            
     @staticmethod
     def is_boundary_gram(gram):
         return (gram.find("<s>") >= 0) or (gram.find("</s>") >= 0)
-        
-        
+
+
+    def typical(self, entropy, log_prob):
+        return self.normalise(self.abs(entropy - (-log_prob)))
+
     def _process_object(self, row):
         obj_prob = 0.
         l = 0
@@ -73,21 +65,11 @@ class Typicality:
                 obj_prob += w_prob
                 l += 1
                 
-                
                 if not self.is_boundary_gram(" ".join((*rest, w))):
                     uni_prob = self.uni_model.prob(w, log=True)
                     yield w, self.typical(self.uni_H, uni_prob)
-#                     yield w, self.normalise(self.abs(self.uni_H - (-uni_prob)))
-                
-
-#                 if not self.is_boundary_gram(" ".join((*rest, w))):
-#                     yield (*rest, w), self.normalise(abs(self.H - (-w_prob)))
 
         obj_typ = self.typical(self.H, obj_prob/l)
-#         obj_typ = self.normalise(
-#                         self.abs(self.H - (-obj_prob/l))
-#                   )
-
         yield obj_typ
         
     def process_object(self, row):
@@ -106,12 +88,9 @@ class Typicality:
         H_context = self.entropy(model, n-1)
         H_joint = self.entropy(model, n)
         return H_joint - H_context
+
     
-    
-    
-    
-    
-    
+
 class TypicalityEngine(Engine):
     @classmethod
     def from_saved(cls, fname="TypicalityEnginev0.pkl"):
