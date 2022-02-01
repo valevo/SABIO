@@ -1,6 +1,15 @@
+import logging
+import os
+
+import json
+
 import flask
 from flask import request
 from flask import jsonify as flask_jsonify
+from flask import Response
+
+
+import numpy as np
 
 
 app = flask.Flask(__name__)
@@ -8,8 +17,7 @@ app = flask.Flask(__name__)
 # app.config["DEBUG"] = True
 
 
-import logging
-import os
+
 
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann/"
@@ -19,15 +27,12 @@ logging.basicConfig(filename=home+f'gunicorn_app_{this_pid}.log',
 logging.debug("")
 logging.debug("app.py STARTED!")
 
-import numpy as np
+
 from src.datasets import NMvW
-logging.debug("dataset loaded!")
 from src.results import Result
-logging.debug("result loaded")
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
-logging.debug("random engine loaded")
+from src.engines.ContentLengthEnginev0 import ContentLengthEngine
 from src.engines.TypicalityEnginev0 import TypicalityEngine
-logging.debug("typicality engine loaded")
 
 logging.debug("MODULES LOADED!")
 logging.debug(f"{NMvW}")
@@ -43,6 +48,15 @@ random_engine = RandomEngine(id_="RandomEnginev0",
                            params=[nonce_param, redo_param])
 logging.debug("RANDOM ENGINE LOADED!")
 
+
+cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
+                            name="ContentLengthEngine/v0",
+                            dataset=NMvW,
+                            params=[],
+                            cached=True)
+logging.debug("CONTENT LENGTH ENGINE LOADED!")
+
+
 #typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
 #                                      name="TypicalityEngine/v0",
 #                                      dataset=NMvW,
@@ -50,15 +64,14 @@ logging.debug("RANDOM ENGINE LOADED!")
 #
 
 data_dir = "/data/"
-
 typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
-
-
 logging.debug("TYPICALITY ENGINE LOADED!")
 
 
 # Dictionary of engines
-engines = {random_engine.id: random_engine, typicality_engine.id: typicality_engine}
+engines = {random_engine.id: random_engine, 
+            typicality_engine.id: typicality_engine,
+            cl_engine.id: cl_engine}
 
 
 for eng_name, eng in engines.items():
@@ -74,8 +87,6 @@ for eng_name, eng in engines.items():
 #    return response
 
 
-import json
-from flask import Response
 def jsonify(data):
     data_json = json.dumps(data)
     response = Response(response=data_json, status=200, mimetype="application/json")
@@ -91,7 +102,6 @@ def home():
 @app.route("/datasets", methods=["GET"])
 def list_datasets():
     return jsonify([d.to_dict() for i, d in sorted(datasets.items())])
-
 
 
 @app.route("/datasets/<datasetID>/autocomplete", methods=["GET"])

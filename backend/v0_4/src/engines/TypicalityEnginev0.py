@@ -1,5 +1,4 @@
 import logging
-logging.debug("inside TypicalityEnginev0.py")
 
 
 from tqdm import tqdm
@@ -13,10 +12,7 @@ import joblib
 
 
 from src.engines.engines import Engine
-logging.debug("engine loaded")
-
 from src.engines.ngrams import Ngram
-logging.debug("ngram loaded")
 
 
 class Typicality:
@@ -164,14 +160,14 @@ class TypicalityEngine(Engine):
         
         tuples = objects[["Title", "Description"]].progress_apply(
                                                     axis='columns', 
-                                                    func=lambda r: self.typicality.process_object(r)
+                                                    func=self.typicality.process_object
                                                     )
         
         obj_typs = tuples.apply(lambda t: t[1])
         obj_typs.name = "score"
         
         only_last = 2
-        details = tuples.apply(lambda t: dict(t[0]))
+        details = tuples.apply(lambda t: dict(t[0][:only_last]))
         details.name = "score_details"
         
         return obj_typs, details
