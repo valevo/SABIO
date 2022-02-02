@@ -169,6 +169,16 @@ class TypicalityEngine(Engine):
         
         only_last = 2
         details = tuples.apply(lambda t: dict(t[0][:only_last]))
+        
+        d = {k: v for smalld in score_details for k, v in smalld.items()}      
+#         q = 99.5
+#         lo, hi = np.percentile(d.values(), 100-q), np.percentile(d.values(), q)
+#         f = lambda x: (x-lo)/(hi-lo)
+#         details = details.apply(lambda smalld: {k: f(v) for k, v in smalld.items()})
+
+        values = self.typicality.normalise(np.asarray([d[k] for k in sorted(d)]))
+        d = dict(zip(sorted(d.keys()), values))  
+        details = details.apply(lambda smalld: {k: d[k] for k in smalld})
         details.name = "score_details"
         
         return obj_typs, details
