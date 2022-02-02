@@ -49,7 +49,7 @@ class Typicality:
 
 
     def typical(self, entropy, log_prob):
-        return self.normalise(self.abs(entropy - (-log_prob)))
+        return self.abs(entropy - (-log_prob))
 
     def _process_object(self, row):
         obj_prob = 0.
@@ -164,6 +164,7 @@ class TypicalityEngine(Engine):
                                                     )
         
         obj_typs = tuples.apply(lambda t: t[1])
+        obj_typs = self.typicality.normalise(obj_typs)
         obj_typs.name = "score"
         
         only_last = 2
