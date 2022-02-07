@@ -9,14 +9,12 @@ import numpy as np
 import joblib
 
 
-
-
 from src.engines.engines import Engine
 from src.engines.ngrams import Ngram
 
 
 class Typicality:
-    def __init__(self, texts, take_abs=True, **model_params):
+    def __init__(self, texts, take_abs=False, **model_params):
         default_params = dict(ns=3, documents=texts, precompute_freqs=True)
         default_params.update(model_params)
         self.model = Ngram(**default_params)
@@ -117,7 +115,7 @@ class TypicalityEngine(Engine):
 #         else: 
         texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
 
-        self.typicality = Typicality(texts, take_abs=False)
+        self.typicality = Typicality(texts)
             
         
         if cached:
@@ -170,12 +168,12 @@ class TypicalityEngine(Engine):
         only_last = 2
         details = tuples.apply(lambda t: dict(t[0][:only_last]))
         
-        d = {k: v for smalld in score_details for k, v in smalld.items()}      
-
+        d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
+        
         values = 1 - self.typicality.normalise(np.asarray([d[k] for k in sorted(d)]), q=100)
     
         d = dict(zip(sorted(d.keys()), values))  
-        details = details.apply(lambda smalld: {k: d[k] for k in smalld})
+        details = details.progress_apply(lambda smalld: {k: d[k] for k in smalld})
         details.name = "score_details"
         
         return obj_typs, details

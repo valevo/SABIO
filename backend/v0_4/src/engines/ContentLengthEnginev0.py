@@ -25,8 +25,7 @@ class ContentLengthEngine(Engine):
             return self.scores_cached.loc[ids], self.details_cached.loc[ids]
         
         lengths = objects.fillna("").progress_apply(self.char_text_length, 
-                                                    axis="columns",
-                                                   desc=)
+                                                    axis="columns")
         # this will lead objects with length > self.max_len
         # to have a score > 1.0 and hence be removed from the result set
         lengths = lengths/self.max_len
