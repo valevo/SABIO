@@ -115,7 +115,7 @@ class TypicalityEngine(Engine):
 #         else: 
         texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
 
-        self.typicality = Typicality(texts)
+        self.typicality = Typicality(texts, take_abs=False)
             
         
         if cached:
@@ -162,15 +162,20 @@ class TypicalityEngine(Engine):
                                                     )
         
         obj_typs = tuples.apply(lambda t: t[1])
-        obj_typs = 1 - self.typicality.normalise(obj_typs)
+        obj_typs = self.typicality.normalise(obj_typs)
         obj_typs.name = "score"
         
         only_last = 2
-        details = tuples.apply(lambda t: dict(t[0][:only_last]))
+        details = tuples.apply(lambda t: dict(t[0])) #[:only_last]))
         
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
-        values = 1 - self.typicality.normalise(np.asarray([d[k] for k in sorted(d)]), q=100)
+        values = 1 - self.typicality.normalise(
+                                               abs(
+                                                   np.asarray([d[k] for k in sorted(d.keys())] )
+                                               ), 
+                                               q=100
+                                               )
     
         d = dict(zip(sorted(d.keys()), values))  
         details = details.progress_apply(lambda smalld: {k: d[k] for k in smalld})
