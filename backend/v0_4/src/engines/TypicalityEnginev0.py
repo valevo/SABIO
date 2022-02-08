@@ -60,12 +60,10 @@ class Typicality:
         return (v - np.percentile(v, 100-q))/(np.percentile(v, q) - np.percentile(v, 100-q))
 
     # a3
-    @staticmethod
-    def normed_abs(x, q=100): return self.percentile_norm(self.absolute_value(x), q=q)
+    def normed_abs(self, x, q=100): return self.percentile_norm(self.absolute_value(x), q=q)
     
     # 1 - a3
-    @staticmethod
-    def inv_normed_abs(x, q=100):
+    def inv_normed_abs(self, x, q=100):
         return 1 - self.normed_abs(x, q=q)
     
 
@@ -97,14 +95,14 @@ class Typicality:
     
     
     def process_objects(self, rows):
-        tuples = rows.cccprogress_apply(
+        tuples = rows.progress_apply(
                         axis='columns', 
                         func=self.process_object
                 )
         
         typs = tuples.apply(lambda t: t[1])
         typs = self.percentile_norm(typs, q=99.5)
-        obj_typs.name = "score"
+        typs.name = "score"
 
         
         
@@ -121,7 +119,7 @@ class Typicality:
         details = details.progress_apply(swap_values)
         details.name = "score_details"
 
-        return obj_typs, details
+        return typs, details
 
     
 
