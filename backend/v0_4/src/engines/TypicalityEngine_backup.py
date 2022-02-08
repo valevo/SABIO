@@ -28,50 +28,26 @@ class Typicality:
         
         self.abs = abs if take_abs else self.identity
         self.normalise = self.percentile_norm
-  
-    @staticmethod
-    def is_boundary_gram(gram):
-        return (gram.find("<s>") >= 0) or (gram.find("</s>") >= 0)
-        
-        
-    def entropy(self, model, n):
-        probs = [model.prob(*gram.split(" ")) for gram in tqdm(model.vocab(n))]
-        arr = np.asarray(probs)
-        return -np.sum(arr*np.log2(arr))
-    
-    
-    def cond_entropy(self, model, n):
-        H_context = self.entropy(model, n-1)
-        H_joint = self.entropy(model, n)
-        return H_joint - H_context
-
                 
-    @staticmethod
-    def identity(x): return x
 
-    # a1
-    @staticmethod
-    def absolute_value(x): return abs(x)
-    
-    # a2
     # q=99.5 (empirically) leads to 1% of the data being outside the range
     @staticmethod
     def percentile_norm(v, q=99.5):
         return (v - np.percentile(v, 100-q))/(np.percentile(v, q) - np.percentile(v, 100-q))
 
-    # a3
     @staticmethod
-    def normed_abs(x, q=100): return self.percentile_norm(self.absolute_value(x), q=q)
-    
-    # 1 - a3
+    def inverse_x_plus1(x): return 1/(x+1)
+            
     @staticmethod
-    def inv_normed_abs(x, q=100):
-        return 1 - self.normed_abs(x, q=q)
-    
+    def identity(x): return x
+            
+    @staticmethod
+    def is_boundary_gram(gram):
+        return (gram.find("<s>") >= 0) or (gram.find("</s>") >= 0)
 
-    @staticmethod
-    def typical(entropy, log_prob):
-        return entropy - (-log_prob)
+
+    def typical(self, entropy, log_prob):
+        return self.abs(entropy - (-log_prob))
 
     def _process_object(self, row):
         obj_prob = 0.
@@ -94,36 +70,18 @@ class Typicality:
         *gram_typicalities, obj_typicality = self._process_object(row)
         gram_typicalities = sorted(gram_typicalities, key=lambda t: t[1])
         return gram_typicalities, obj_typicality
+        
+        
+    def entropy(self, model, n):
+        probs = [model.prob(*gram.split(" ")) for gram in tqdm(model.vocab(n))]
+        arr = np.asarray(probs)
+        return -np.sum(arr*np.log2(arr))
     
     
-    def process_objects(self, rows):
-        tuples = rows.cccprogress_apply(
-                        axis='columns', 
-                        func=self.process_object
-                )
-        
-        typs = tuples.apply(lambda t: t[1])
-        typs = self.percentile_norm(typs, q=99.5)
-        obj_typs.name = "score"
-
-        
-        
-        details = tuples.apply(lambda t: dict(t[0]))
-        d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
-        
-        values = np.asarray([d[k] for k in sorted(d.keys())])
-        values = self.inv_normed_abs(values, q=100)
-
-        d = dict(zip(sorted(d.keys()), values))
-        def swap_values(smalld):
-            new_vals = sorted(((k, d[k]) for k in smalld), key=lambda t:t[1])
-            return dict(new_vals[-2:])
-        details = details.progress_apply(swap_values)
-        details.name = "score_details"
-
-        return obj_typs, details
-
-    
+    def cond_entropy(self, model, n):
+        H_context = self.entropy(model, n-1)
+        H_joint = self.entropy(model, n)
+        return H_joint - H_context
 
     
 
@@ -147,9 +105,14 @@ class TypicalityEngine(Engine):
     
     def __init__(self, cached=True, **engine_params):
         super().__init__(**engine_params)
-        self.min_score = 0.
+        self.min_score = 0. # np.random.random()*100
 
         
+#         if from_saved:
+#             raise NotImplementedError("Loading from file not implemented yet! TODO...")
+            
+            
+#         else: 
         texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
 
         self.typicality = Typicality(texts, take_abs=False)
@@ -163,6 +126,17 @@ class TypicalityEngine(Engine):
             self.cached = True
         else:
             self.cached = False
+                                                        
+
+
+        
+#         a(o) = |H(P) - [- 1/|o|*log(P(o))]|
+#         a(o) > 0
+        
+#         a(o) < inf 
+#         -> practically: a(o) < a(o') w. o' minimises P(o') 
+#         => could use to change a: O -> [0, inf) into a': O -> [0, 1]
+
 
     
     
@@ -181,35 +155,30 @@ class TypicalityEngine(Engine):
             ids = objects.index
             return self.typs_cached.loc[ids], self.details_cached.loc[ids]
             
-            
-        object_typicalities, details = self.typicality.process_objects(
-                                                        objects[["Title", "Description"]])
         
-        return object_typicalities, details
+        tuples = objects[["Title", "Description"]].progress_apply(
+                                                    axis='columns', 
+                                                    func=self.typicality.process_object
+                                                    )
         
-#         tuples = objects[["Title", "Description"]].progress_apply(
-#                                                     axis='columns', 
-#                                                     func=self.typicality.process_object
-#                                                     )
+        obj_typs = tuples.apply(lambda t: t[1])
+        obj_typs = self.typicality.normalise(obj_typs)
+        obj_typs.name = "score"
         
-#         obj_typs = tuples.apply(lambda t: t[1])
-#         obj_typs = self.typicality.normalise(obj_typs)
-#         obj_typs.name = "score"
+        only_last = 2
+        details = tuples.apply(lambda t: dict(t[0])) #[:only_last]))
         
-#         only_last = 2
-#         details = tuples.apply(lambda t: dict(t[0])) #[:only_last]))
+        d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
-#         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
-        
-#         values = 1 - self.typicality.normalise(
-#                                                abs(
-#                                                    np.asarray([d[k] for k in sorted(d.keys())] )
-#                                                ), 
-#                                                q=100
-#                                                )
+        values = 1 - self.typicality.normalise(
+                                               abs(
+                                                   np.asarray([d[k] for k in sorted(d.keys())] )
+                                               ), 
+                                               q=100
+                                               )
     
-#         d = dict(zip(sorted(d.keys()), values))  
-#         details = details.progress_apply(lambda smalld: {k: d[k] for k in smalld})
-#         details.name = "score_details"
+        d = dict(zip(sorted(d.keys()), values))  
+        details = details.progress_apply(lambda smalld: {k: d[k] for k in smalld})
+        details.name = "score_details"
         
-#         return obj_typs, details
+        return obj_typs, details
