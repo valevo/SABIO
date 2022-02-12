@@ -2,18 +2,19 @@
 
 The SABIO backend server has been developed on `Ubuntu 20.04.3 LTS`.
 
-It is a `Python Flask` application that uses `NGINX` as reverse-proxy and `Gunicorn` as WSGI HTTP server.
+SABIO's backend a `Python Flask` application that uses `NGINX` as reverse-proxy and `Gunicorn` as WSGI HTTP server.
 
 Requirements, installation instructions and configuration files can be found in this directory.
 
 
 # Installation
 
-OS install (self-standing applications, used Ubuntu's `apt` package managing tool):
+OS install (self-standing applications, used Ubuntu's `apt` package manager):
 
- - nginx
+ - `nginx`
+ - `certbot` (sets up certificates for HTTPS, incl redirect in the NGINX config; followed the [`certbot` installation instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntuxenial) for NGINX+Ubuntu) -- NB: certbot requires the HTTP server to be already installed and configured (as it needs to change that configuration)
 
-Python install (used Python `pip`):
+Python install (used Python's `pip3`):
 
  - `gunicorn`
  - `flask`
@@ -21,8 +22,8 @@ Python install (used Python `pip`):
 
 
 
-Need to create a viratual environment in the directory `/var/www/flask/sabio/` 
-(with `python -m venv `/var/www/flask/sabio/`)
+Need to create a virtual environment in the directory `/var/www/flask/sabio/` 
+(with `python -m venv /var/www/flask/sabio/`)
 
 
 # Files in this directory
