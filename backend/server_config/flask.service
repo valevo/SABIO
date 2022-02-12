@@ -1,3 +1,4 @@
+# copied from 
 [Unit]
 Description=Gunicorn Flask Application
 After=network.target
@@ -7,7 +8,12 @@ After=network-online.target
 [Service]
 User=root
 Type=simple
+
+# the start.sh bash script is the core of the service, as it contains the 
+# Gunicorn command the runs the Flask apps
+# exact location of this script isn't important but the path needs to be provided here
 ExecStart=/var/www/flask/sabio/start.sh
+
 TimeoutSec=30
 Restart=on-failure
 RestartSec=15
