@@ -1,4 +1,4 @@
-# copied from 
+# adapted from https://dev.to/brandonwallace/deploy-flask-the-easy-way-with-gunicorn-and-nginx-jgc 
 [Unit]
 Description=Gunicorn Flask Application
 After=network.target
@@ -11,7 +11,7 @@ Type=simple
 
 # the start.sh bash script is the core of the service, as it contains the 
 # Gunicorn command the runs the Flask apps
-# exact location of this script isn't important but the path needs to be provided here
+# exact location of this script isn't important but the correct path needs to be provided here
 ExecStart=/var/www/flask/sabio/start.sh
 
 TimeoutSec=30

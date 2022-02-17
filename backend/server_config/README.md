@@ -16,6 +16,7 @@ Python install (used Python's `pip3`):
 
  - `gunicorn`
  - `flask`
+ - `pipenv`
  - other required Python packages -> see requirements.txt
 
 
@@ -44,7 +45,7 @@ Need to create a virtual environment in the directory `/var/www/flask/sabio/`
 
 
 
-# Relevant Tutorials
+# Useful Tutorials
 
 list of Flask/Gunicorn/Nginx setup tutorials that were followed to create the SABIO backend; needed to diverge from their instructions a number of times but they might still be helpful references (and explain some configurations in more detail):
 
@@ -55,4 +56,12 @@ list of Flask/Gunicorn/Nginx setup tutorials that were followed to create the SA
 
  - [DigitalOcean: how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04)
  
- - 
+ - [Nginx tutorial](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy) that could help figure out how to set an internal redirect from / to /api/v0
+ 
+  - [NGINX Config Pitfalls](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/) -- a list of problems and bad practices
+  
+ - [instructions how to do NGINX with Certbot](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
+ 
+<!--   - [Example NGINX config for Gunicorn](https://docs.gunicorn.org/en/stable/deploy.html) -> could be more efficient & more stable & more secure
+ - [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/index.html0) -> alternative to Gunicorn? -->
+
