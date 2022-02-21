@@ -247,6 +247,7 @@ NMvW = Dataset(df, "NMvW_v0",
                "Nationaal Museum van Wereldculturen 1M",
                "https://collectie.wereldculturen.nl/",
                NMvW_params,
+               images,
                available_engines=[])
 
 
