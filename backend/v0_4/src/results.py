@@ -12,7 +12,8 @@ class Result:
 #         thumbnails = pd.Series([""]*rows.shape[0],
 #                                    name="Thumbnail",
 #                                    index=rows.index).astype("string")
-        
+        thumbnails = thumbnails.rename("Thumbnail")
+    
         
         # the actual values
         values = rows[self.attributes].astype(str)
