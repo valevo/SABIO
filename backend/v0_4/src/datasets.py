@@ -196,6 +196,20 @@ class DatasetParam:
         return hash((self.__class__, self.id, self.label, self.control)) # self.options
             
 
+        
+        
+class ImageSource:
+    def __init__(self, csv_path):
+        self.df = pd.read_csv(csv_path).set_index("ObjectID")
+        
+    def get_img(self, object_ids):
+        r = self.df.loc[object_ids]
+        return r["img_URL"]
+    
+    def get_thumb(self, object_ids):
+        r = self.df.loc[object_ids]
+        return r["thumbnail_URL"]
+    
 
 # NMvW
       
@@ -238,17 +252,7 @@ NMvW = Dataset(df, "NMvW_v0",
 
 
 
-class ImageSource:
-    def __init__(self, csv_path):
-        self.df = pd.read_csv(csv_path).set_index("ObjectID")
-        
-    def get_img(self, object_ids):
-        r = self.df.loc[object_ids]
-        return r["img_URL"]
-    
-    def get_thumb(self, object_ids):
-        r = self.df.loc[object_ids]
-        return r["thumbnail_URL"]
+
 
 # Datasets dictionary -> imported by app.py
 
