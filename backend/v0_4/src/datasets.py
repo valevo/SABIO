@@ -200,7 +200,7 @@ class DatasetParam:
         
 class ImageSource:
     def __init__(self, csv_path):
-        self.df = pd.read_csv(csv_path).set_index("ObjectID")
+        self.df = pd.read_csv(csv_path).set_index("ObjectID").fillna("")
         
     def get_img(self, object_ids):
         r = self.df.loc[object_ids]
