@@ -212,37 +212,37 @@ def _get_example():
     return d, e, o, s
 
 
-@app.route("/examples", methods=["GET"])
-def get_examples():
-    n = 4
-    examples = []
-    for i in range(n):
-        cur_d, cur_e, cur_o, cur_s = _get_example()
-        examples.append({
-            "score": cur_s,
-            "title": rcur_o.Title,
-            "engine": cur_e.name,
-            "url": ,
-            "thumbnail_url": "",
-        })
+# @app.route("/examples", methods=["GET"])
+# def get_examples():
+#     n = 4
+#     examples = []
+#     for i in range(n):
+#         cur_d, cur_e, cur_o, cur_s = _get_example()
+#         examples.append({
+#             "score": cur_s,
+#             "title": rcur_o.Title,
+#             "engine": cur_e.name,
+#             "url": ,
+#             "thumbnail_url": "",
+#         })
     
-    return examples 
+#     return examples 
         
         
     
     
     
-    d = list(datasets.values())[0]
-   eng = list(engines.values())[0]
+#     d = list(datasets.values())[0]
+#    eng = list(engines.values())[0]
    
-   subsample = d.sample(frac=0.1)
-   scores = eng.score(subsample)
+#    subsample = d.sample(frac=0.1)
+#    scores = eng.score(subsample)
    
-   highest_inds = np.argsort(scores)[-10:]
-   examples = subsample.iloc[highest_inds]
-   example_scores = scores[highest_inds]
+#    highest_inds = np.argsort(scores)[-10:]
+#    examples = subsample.iloc[highest_inds]
+#    example_scores = scores[highest_inds]
     
-    dicts = [
+#     dicts = [
     
 
 
