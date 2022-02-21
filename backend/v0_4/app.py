@@ -259,28 +259,28 @@ def get_examples():
         
         
         
-/browse/{cur_d}/
+# /browse/{cur_d}/
  
-+ 
-        urlencode(
-    json(
+# + 
+#         urlencode(
+#     json(
         
-{
-    'objectKeywords': "", 
-    'objectStartDate': "", 
-    'objectEndDate': "", 
-    'objectParams': , 
-    'engineId': , 
-    'engineMinScore': , 
-    'engineMaxScore': , 
-    'engineParams': , 
-    'vocabularyTerms':
-}
-    )
-)
+# {
+#     'objectKeywords': "", 
+#     'objectStartDate': "", 
+#     'objectEndDate': "", 
+#     'objectParams': , 
+#     'engineId': , 
+#     'engineMinScore': , 
+#     'engineMaxScore': , 
+#     'engineParams': , 
+#     'vocabularyTerms':
+# }
+#     )
+# )
         
-+
+# +
         
-        scatterplot/0/1186768?api=https%3A%2F%2Fsabio.sudox.nl%2Fapi%2Fv1%2F
+#         scatterplot/0/1186768?api=https%3A%2F%2Fsabio.sudox.nl%2Fapi%2Fv1%2F
         
-https://sabio.sudox.nl/browse/openimages/%7B%22objectKeywords%22%3A%22politionele%22%2C%22objectStartDate%22%3A%22%22%2C%22objectEndDate%22%3A%221960-04-09%22%2C%22objectParams%22%3A[%7B%22id%22%3A%22location%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22subject%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22type%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22publisher%22%2C%22value%22%3A%22%22%7D]%2C%22engineId%22%3A%22word-match%22%2C%22engineMinScore%22%3A0.075%2C%22engineMaxScore%22%3A0.5650000000000001%2C%22engineParams%22%3A[%7B%22id%22%3A%22score_name%22%2C%22value%22%3A%226%22%7D%2C%7B%22id%22%3A%22score_description%22%2C%22value%22%3A%222%22%7D]%2C%22vocabularyTerms%22%3A%22bewindhebber%2Cbewindvoerder%2Cbomba%2Cbombay%2Ccimarron%2Cderde%20wereld%2Cdwerg%2Cexpeditie%2Cgouverneur%2Chalfbloed%2Chottentot%2Cinboorling%2Cindiaan%2Cindisch%2Cindo%2Cinheems%2Cinlander%2Cjap%2Cjappen%2Cjappenkampen%2Ckaffer%2Ckaffir%2Ckafir%2Ckoelie%2Ckolonie%2Clagelonenland%2Clandhuis%2Cmarron%2Cmarronage%2Cmissie%2Cmissionaris%2Cmoor%2Cmoors%2Cmoren%2Cmulat%2Coctroon%2Contdekken%2Contdekking%2Contdekkingsreis%2Contwikkelingsland%2Coorspronkelijk%2Coosters%2Copperhoofd%2Cori%C3%ABntaals%2Cpinda%2Cpolitionele%20actie%2Cprimitief%2Cprimitieven%2Cpygmee%2Cras%2Crasch%2Cslaaf%2Cstam%2Cstamhoofd%2Ctraditioneel%2Ctropisch%2Cwesters%2Cwilden%2Czendeling%2Czendelingen%2Czending%22%7D/scatterplot/0/1186768?api=https%3A%2F%2Fsabio.sudox.nl%2Fapi%2Fv1%2F
+# https://sabio.sudox.nl/browse/openimages/%7B%22objectKeywords%22%3A%22politionele%22%2C%22objectStartDate%22%3A%22%22%2C%22objectEndDate%22%3A%221960-04-09%22%2C%22objectParams%22%3A[%7B%22id%22%3A%22location%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22subject%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22type%22%2C%22value%22%3A%22%22%7D%2C%7B%22id%22%3A%22publisher%22%2C%22value%22%3A%22%22%7D]%2C%22engineId%22%3A%22word-match%22%2C%22engineMinScore%22%3A0.075%2C%22engineMaxScore%22%3A0.5650000000000001%2C%22engineParams%22%3A[%7B%22id%22%3A%22score_name%22%2C%22value%22%3A%226%22%7D%2C%7B%22id%22%3A%22score_description%22%2C%22value%22%3A%222%22%7D]%2C%22vocabularyTerms%22%3A%22bewindhebber%2Cbewindvoerder%2Cbomba%2Cbombay%2Ccimarron%2Cderde%20wereld%2Cdwerg%2Cexpeditie%2Cgouverneur%2Chalfbloed%2Chottentot%2Cinboorling%2Cindiaan%2Cindisch%2Cindo%2Cinheems%2Cinlander%2Cjap%2Cjappen%2Cjappenkampen%2Ckaffer%2Ckaffir%2Ckafir%2Ckoelie%2Ckolonie%2Clagelonenland%2Clandhuis%2Cmarron%2Cmarronage%2Cmissie%2Cmissionaris%2Cmoor%2Cmoors%2Cmoren%2Cmulat%2Coctroon%2Contdekken%2Contdekking%2Contdekkingsreis%2Contwikkelingsland%2Coorspronkelijk%2Coosters%2Copperhoofd%2Cori%C3%ABntaals%2Cpinda%2Cpolitionele%20actie%2Cprimitief%2Cprimitieven%2Cpygmee%2Cras%2Crasch%2Cslaaf%2Cstam%2Cstamhoofd%2Ctraditioneel%2Ctropisch%2Cwesters%2Cwilden%2Czendeling%2Czendelingen%2Czending%22%7D/scatterplot/0/1186768?api=https%3A%2F%2Fsabio.sudox.nl%2Fapi%2Fv1%2F
