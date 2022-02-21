@@ -173,12 +173,14 @@ def search_objects(datasetID):
     filtered_details = details[in_score_rng]
     filtered_data = relevant_data[in_score_rng]
 
+    thumbnails = d.image_source.get_thumb(filtered_data.index)
+    
     # instantiate Result object 
     # TODO? let result object do filtering of objects above
     # NOW: Result object is responsible for formatting
     param_names = list(d.params.keys())
     results = Result(param_names, filtered_data, filtered_scores, filtered_details,
-                    engine_min, engine_max)
+                    engine_min, engine_max, thumbnails)
     
     # produces list of Result
     return jsonify(results.to_dict())

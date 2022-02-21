@@ -21,10 +21,12 @@ static_field_descriptions = {
 
 class Dataset:
     date_frmt = "%Y-%m-%d"
-    def __init__(self, dataframe, id_, name, source_url, params, available_engines=[]):
+    def __init__(self, dataframe, id_, name, source_url, params, image_source,
+                 available_engines=[]):
         self.id = id_
         self.name = name
         self.source_url = source_url
+        self.image_source = image_source
 
         # self.date_frmt = "%Y-%m-%d"
         self.min_date = dataframe.BeginISODate.min()
@@ -129,8 +131,8 @@ class Dataset:
             "id": str(obj_id),
             "name": obj.Title if isinstance(obj.Title, str) else "",
             "description": obj.Description if isinstance(obj.Description, str) else "",
-            "thumbnail_url": "",
-            "image_url": "",
+            "thumbnail_url": self.image_source.get_thumb(obj_id),
+            "image_url": self.image_source.get_img(obj_id),
             "source_url": f"https://hdl.handle.net/20.500.11840/{obj_id}",
             "attributes": {
                 "dated": str(obj.Dated)
@@ -211,6 +213,12 @@ df["BeginISODate"] = df.BeginISODate.apply(lambda s: dt.strptime(s, Dataset.date
 df["EndISODate"] = df.EndISODate.apply(lambda s: dt.strptime(s, Dataset.date_frmt).date())
 
 
+
+# get Image Source
+images = ImageSource("NMvW_data/image_URLs.csv")
+
+
+
 ### Define Parameters
 NMvW_params = [
     DatasetParam("Department", label=None,
@@ -227,6 +235,20 @@ NMvW = Dataset(df, "NMvW_v0",
                NMvW_params,
                available_engines=[])
 
+
+
+
+class ImageSource:
+    def __init__(self, csv_path):
+        self.df = pd.read_csv(csv_path).set_index("ObjectID")
+        
+    def get_img(self, object_ids):
+        r = self.df.loc[object_ids]
+        return r["img_URL"]
+    
+    def get_thumb(self, object_ids):
+        r = self.df.loc[object_ids]
+        return r["thumbnail_URL"]
 
 # Datasets dictionary -> imported by app.py
 

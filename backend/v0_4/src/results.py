@@ -4,14 +4,14 @@ attributes = ["BeginISODate", "EndISODate"] # + [p.label for p in NMvW_params]
 
 class Result:
     def __init__(self, param_names, rows, scores, 
-                 score_details, min_score, max_score):
+                 score_details, min_score, max_score, thumbnails):
         self.attributes = attributes + param_names 
         
 #         self.ids = rows.index.astype("string")
         titles = rows.Title.fillna("").astype("string")
-        thumbnails = pd.Series([""]*rows.shape[0],
-                                   name="Thumbnail",
-                                   index=rows.index).astype("string")
+#         thumbnails = pd.Series([""]*rows.shape[0],
+#                                    name="Thumbnail",
+#                                    index=rows.index).astype("string")
         
         
         # the actual values
