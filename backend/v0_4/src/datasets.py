@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import pandas as pd
 import numpy as np
 
@@ -54,8 +56,8 @@ class Dataset:
             "name": self.name,  # Dataset name
             "source_url": self.source_url,
             "object_count": self.object_count,
-            "min_date": self.min_date, # "0001-01-01", #int(self.min_date),
-            "max_date": self.max_date, # "2018-01-01", #int(self.max_date),
+            "min_date": self.min_date.strftime(date_frmt), # "0001-01-01", #int(self.min_date),
+            "max_date": self.max_date.strftime(date_frmt), # "2018-01-01", #int(self.max_date),
             "static_field_descriptions": static_field_descriptions,
             "params": [p.to_dict() for i, p in sorted(self.params.items())],
             "available_engines": [e.id for i, e in sorted(self.available_engines.items())]
@@ -107,7 +109,6 @@ class Dataset:
     
     
     def search_by_date(self, start_date, end_date, return_bool_series=True):
-        from datetime import datetime
         try:
             start_year = datetime.strptime(start_date, self.date_frmt).date()
             end_year = datetime.strptime(end_date, self.date_frmt).date()
