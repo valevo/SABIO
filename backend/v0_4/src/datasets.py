@@ -56,8 +56,8 @@ class Dataset:
             "name": self.name,  # Dataset name
             "source_url": self.source_url,
             "object_count": self.object_count,
-            "min_date": self.min_date.strftime(date_frmt), # "0001-01-01", #int(self.min_date),
-            "max_date": self.max_date.strftime(date_frmt), # "2018-01-01", #int(self.max_date),
+            "min_date": self.min_date.strftime(self.date_frmt), # "0001-01-01", #int(self.min_date),
+            "max_date": self.max_date.strftime(self.date_frmt), # "2018-01-01", #int(self.max_date),
             "static_field_descriptions": static_field_descriptions,
             "params": [p.to_dict() for i, p in sorted(self.params.items())],
             "available_engines": [e.id for i, e in sorted(self.available_engines.items())]
