@@ -54,8 +54,8 @@ class Dataset:
             "name": self.name,  # Dataset name
             "source_url": self.source_url,
             "object_count": self.object_count,
-            "min_date": "0001-01-01", #int(self.min_date),
-            "max_date": "2018-01-01", #int(self.max_date),
+            "min_date": self.min_date, # "0001-01-01", #int(self.min_date),
+            "max_date": self.max_date, # "2018-01-01", #int(self.max_date),
             "static_field_descriptions": static_field_descriptions,
             "params": [p.to_dict() for i, p in sorted(self.params.items())],
             "available_engines": [e.id for i, e in sorted(self.available_engines.items())]
@@ -140,8 +140,6 @@ class Dataset:
         }
                 
         
-
-        
 class DatasetParam:
     def __init__(self, id_, label=None, description="", control="autocomplete", options=None):
         if control == "select" and options is None:
@@ -200,7 +198,9 @@ class DatasetParam:
         
 class ImageSource:
     def __init__(self, csv_path):
-        self.df = pd.read_csv(csv_path).set_index("ObjectID").fillna("")
+        self.df = pd.read_csv(csv_path).fillna("")
+        self.df["ObjectID"] = df.ObjectID.astype("int")
+        self.df = self.df.set_index("ObjectID")
         
     def get_img(self, object_ids):
         r = self.df.loc[object_ids]
