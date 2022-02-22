@@ -132,9 +132,9 @@ class Dataset:
             "id": str(obj_id),
             "name": obj.Title if isinstance(obj.Title, str) else "",
             "description": obj.Description if isinstance(obj.Description, str) else "",
-            "thumbnail_url": self.image_source.get_thumb(obj_id),
-            "image_url": self.image_source.get_img(obj_id),
-            "source_url": f"https://hdl.handle.net/20.500.11840/{obj_id}",
+            "thumbnail_url": self.image_source.get_thumb(obj.name),
+            "image_url": self.image_source.get_img(obj.name),
+            "source_url": f"https://hdl.handle.net/20.500.11840/{obj.name}",
             "attributes": {
                 "dated": str(obj.Dated)
             }
