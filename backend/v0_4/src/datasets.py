@@ -199,7 +199,7 @@ class DatasetParam:
 class ImageSource:
     def __init__(self, csv_path):
         self.df = pd.read_csv(csv_path).fillna("")
-        self.df["ObjectID"] = df.ObjectID.astype("int")
+        self.df["ObjectID"] = self.df.ObjectID.astype("int")
         self.df = self.df.set_index("ObjectID")
         
     def get_img(self, object_ids):
