@@ -22,7 +22,7 @@ static_field_descriptions = {
 
 
 class Dataset:
-    date_frmt = "%Y-%m-%d"
+    date_frmt = "%04Y-%m-%d"
     def __init__(self, dataframe, id_, name, source_url, params, image_source,
                  available_engines=[]):
         self.id = id_
