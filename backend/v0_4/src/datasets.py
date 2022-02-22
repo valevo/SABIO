@@ -22,7 +22,9 @@ static_field_descriptions = {
 
 
 class Dataset:
-    date_frmt = "%04Y-%m-%d"
+    
+    parse_date = "%Y-%m-%d"
+    format_date = "%04Y-%m-%d"
     def __init__(self, dataframe, id_, name, source_url, params, image_source,
                  available_engines=[]):
         self.id = id_
@@ -30,7 +32,6 @@ class Dataset:
         self.source_url = source_url
         self.image_source = image_source
 
-        # self.date_frmt = "%Y-%m-%d"
         self.min_date = dataframe.BeginISODate.min()
         self.max_date = dataframe.EndISODate.max()
         
@@ -56,8 +57,8 @@ class Dataset:
             "name": self.name,  # Dataset name
             "source_url": self.source_url,
             "object_count": self.object_count,
-            "min_date": self.min_date.strftime(self.date_frmt), # "0001-01-01", #int(self.min_date),
-            "max_date": self.max_date.strftime(self.date_frmt), # "2018-01-01", #int(self.max_date),
+            "min_date": self.min_date.strftime(self.format_date), # "0001-01-01",
+            "max_date": self.max_date.strftime(self.format_date), # "2018-01-01",
             "static_field_descriptions": static_field_descriptions,
             "params": [p.to_dict() for i, p in sorted(self.params.items())],
             "available_engines": [e.id for i, e in sorted(self.available_engines.items())]
@@ -110,8 +111,8 @@ class Dataset:
     
     def search_by_date(self, start_date, end_date, return_bool_series=True):
         try:
-            start_year = datetime.strptime(start_date, self.date_frmt).date()
-            end_year = datetime.strptime(end_date, self.date_frmt).date()
+            start_year = datetime.strptime(start_date, self.parse_date).date()
+            end_year = datetime.strptime(end_date, self.parse_date).date()
             #start_year, end_year = start_year.year, end_year.year
         except ValueError:
             start_year, end_year = self.min_date, self.max_date
@@ -224,8 +225,8 @@ df = df.set_index("ObjectID")
 
 
 from datetime import datetime as dt
-df["BeginISODate"] = df.BeginISODate.apply(lambda s: dt.strptime(s, Dataset.date_frmt).date())
-df["EndISODate"] = df.EndISODate.apply(lambda s: dt.strptime(s, Dataset.date_frmt).date())
+df["BeginISODate"] = df.BeginISODate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+df["EndISODate"] = df.EndISODate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 
 
 
