@@ -1,19 +1,18 @@
 # Questions/Remarks
 
  - if a certain object parameter is used for search (e.g. Department=Afrika), should that parameter (=Department) 
- temporarily be removed as an x-axis sorting variable? (since all points will have the same position)
-  -> can be done backend
-  -> removing might cause confusion 
-  -> take no action
+ temporarily be removed as an x-axis sorting variable? (since all points will have the same position)  
+  => can be done backend  
+  => removing might cause confusion, not taking action
   
 
  - should the /examples route be /examples/{datasetID}?
-   -> no
+   => no, so that examples from different datasets can be shown
 
- - is selection of multiple items useful? if so, what would that do/imply?  
+ - is selection of multiple items useful? if so, what would that do/imply?  ]
    -> might be good for (min, avg, max) and bias score indicators  
-   -> more of a point for discussion & for future work
-   => skip
+   -> more of a point for discussion & for future work  
+   => skip for now
 
  - normalisation: what normalising function does the frontend apply?  
    -> especially on the indicator scores  
@@ -22,7 +21,7 @@
       outside of range (this could also be done by the backend); reason I say this is because normalisation turned
       out even more intricate than I expected  
    => add median, but not now
-   => front-end shouldn't do normalisation -> toss out, let Werner know
+   => front-end shouldn't do normalisation -> let Werner know if this is the case    
    => front-end takes indicator scores literally -> shouldn't do anything to those 
 
 # Improvements
@@ -39,7 +38,7 @@
       -> could think about other descriptive stats to put there, like standard deviation or something
          about the indicator values 
     => order will be changed  
-    => min and max are still useful for zooming in and out   
+    => min and max really are still useful for zooming in and out   
 
 
 
