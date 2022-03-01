@@ -6,7 +6,7 @@
   => removing might cause confusion, not taking action
   
 
- - should the /examples route be /examples/{datasetID}?
+ - should the /examples route be /examples/{datasetID}?  
    => no, so that examples from different datasets can be shown
 
  - is selection of multiple items useful? if so, what would that do/imply?  ]
@@ -20,7 +20,7 @@
       front-end assumes that values are always in the range [0, 1] (or [0, 100] equivalently) and cuts off anything
       outside of range (this could also be done by the backend); reason I say this is because normalisation turned
       out even more intricate than I expected  
-   => add median, but not now
+   => add median, but not now  
    => front-end shouldn't do normalisation -> let Werner know if this is the case    
    => front-end takes indicator scores literally -> shouldn't do anything to those 
 
@@ -36,7 +36,7 @@
       -> data also doesn't have many "gaps" wrt the scores, so even if min_score and max_score params are used  
          the reported min and max values be almost exactly be the params' values  
       -> could think about other descriptive stats to put there, like standard deviation or something
-         about the indicator values 
+         about the indicator values  
     => order will be changed  
     => min and max really are still useful for zooming in and out   
 
