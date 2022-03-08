@@ -226,8 +226,7 @@ def _get_url(cur_d, cur_e, cur_o):
     # construct Engine param dicts with default values
     engine_params = [dict(id=ep.id, value=ep.default) for ep in cur_e.params]
     
-    param_dict = 
-        {
+    param_dict = {
             'objectKeywords': "", # empty
             'objectStartDate': "", # empty
             'objectEndDate': "", # empty
