@@ -222,7 +222,7 @@ import json
 
 def _get_url(cur_d, cur_e, cur_o):
     # construct Object param dicts with empty values 
-    object_params = [dict(id=p.id, value="") for p in cur_d.params]
+    object_params = [dict(id=p_id, value="") for p_id, p in cur_d.params.items()]
     # construct Engine param dicts with default values
     engine_params = [dict(id=ep.id, value=ep.default) for ep in cur_e.params]
     
