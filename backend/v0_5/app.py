@@ -209,10 +209,18 @@ def _get_example():
     # score all o \in D with E
     scores, details = e.score_and_detail(d.data)
 
+    # filter out scores not in value range given by engine (!: need to be >=0 for andom choice below)
+    # <= e.max_score technically not necessary, BUT ADD BACK IN
+    in_score_rng = (e.min_score <= scores) # & (scores <= e.max_score)
+    filtered_scores = scores[in_score_rng]
+    filtered_data = d.data[in_score_rng]
+
+
+
     # random draw one o from D (based on scores)
-    rand_i = rand.choice(d.object_count, p=scores/scores.sum())
-    o = d.data.iloc[rand_i]
-    s = scores.iloc[rand_i]
+    rand_i = rand.choice(len(filtered_data.index), p=filtered_scores/filtered_scores.sum())
+    o = filtered_data.iloc[rand_i]
+    s = filtered_scores.iloc[rand_i]
     return d, e, o, s
 
 
@@ -233,16 +241,17 @@ def _get_url(cur_d, cur_e, cur_o):
             'objectParams': object_params, # empty = default?
             'engineId': cur_e.id, 
             'engineMinScore': cur_e.min_score, 
-            'engineMaxScore': cur_e.max_score, # doesn't exist
+            'engineMaxScore': 1., # cur_e.max_score, # doesn't exist
             'engineParams': engine_params, # defaults
             'vocabularyTerms': "" # not sure - empty?
         }
     
-    param_dict = quote(json.dumps(param_dict))
-    api = quote("https://sabio.diginfra.net/api/v1/")
+    param_dict = quote(json.dumps(param_dict), safe="")
+    api = quote("https://sabio.diginfra.net/api/v1/", safe="")
     view, attribute = "scatterplot", "0"
     
-    return f"/browse/{cur_d.id}/{param_dict}/{view}/{attribute}/{cur_o.ObjectID}?api={api}"
+    cur_ObjectID = cur_o.name
+    return f"/browse/{cur_d.id}/{param_dict}/{view}/{attribute}/{cur_ObjectID}?api={api}"
 
 
 
@@ -260,7 +269,7 @@ def get_examples():
             "thumbnail_url": cur_d.image_source.get_thumb(cur_o.name),
         })
     
-    return examples
+    return jsonify({"examples": examples})
 
     
    
