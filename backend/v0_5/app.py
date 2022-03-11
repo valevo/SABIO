@@ -240,8 +240,8 @@ def _get_url(cur_d, cur_e, cur_o):
             'objectEndDate': "", # empty
             'objectParams': object_params, # empty = default?
             'engineId': cur_e.id, 
-            'engineMinScore': cur_e.min_score, 
-            'engineMaxScore': 1., # cur_e.max_score, # doesn't exist
+            'engineMinScore': cur_e.min_score,
+            'engineMaxScore': cur_e.max_score,
             'engineParams': engine_params, # defaults
             'vocabularyTerms': "" # not sure - empty?
         }
