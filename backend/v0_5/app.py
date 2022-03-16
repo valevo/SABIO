@@ -33,6 +33,8 @@ from src.results import Result
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
 from src.engines.ContentLengthEnginev0 import ContentLengthEngine
 from src.engines.TypicalityEnginev0 import TypicalityEngine
+from src.engines.VocabularyEnginev0 import VocabularyEngine
+
 
 logging.debug("MODULES LOADED!")
 logging.debug(f"{NMvW}")
@@ -57,6 +59,14 @@ cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
 logging.debug("CONTENT LENGTH ENGINE LOADED!")
 
 
+vocab_engine = VocabularyEngine(id_="VocabularyEnginev0",
+                            name="VocabularyEngine/v0",
+                            dataset=NMvW,
+                            params=[],
+                            cached=False)
+logging.debug("VOCABULARY ENGINE LOADED!")
+
+
 #typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
 #                                      name="TypicalityEngine/v0",
 #                                      dataset=NMvW,
@@ -69,7 +79,8 @@ logging.debug("TYPICALITY ENGINE LOADED!")
 # Dictionary of engines
 engines = {random_engine.id: random_engine, 
             typicality_engine.id: typicality_engine,
-            cl_engine.id: cl_engine}
+            cl_engine.id: cl_engine,
+            vocab_engine.id: vocab_engine}
 
 
 for eng_name, eng in engines.items():
@@ -150,6 +161,7 @@ def search_objects(datasetID):
     
     # vocabulary
     vocab = request.args["vocabulary_terms"]
+    engine_params.update(dict(vocabulary=vocab))
 
     
     d = datasets[datasetID]

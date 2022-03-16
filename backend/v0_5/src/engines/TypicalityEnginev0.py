@@ -105,7 +105,6 @@ class Typicality:
         typs.name = "score"
 
         
-        
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
@@ -115,7 +114,8 @@ class Typicality:
         d = dict(zip(sorted(d.keys()), values))
         def swap_values(smalld):
             new_vals = sorted(((k, d[k]) for k in smalld), key=lambda t:t[1])
-            return dict(new_vals[-2:])
+            top_unigrams = 5
+            return dict(new_vals[-top_unigrams:])
         details = details.progress_apply(swap_values)
         details.name = "score_details"
 
