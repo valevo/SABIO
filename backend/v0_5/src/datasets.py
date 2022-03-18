@@ -44,6 +44,7 @@ class Dataset:
         
         text_search_fields = ["Title", "ObjectName", "Description"]
         self.search_texts = self.data[text_search_fields].fillna("").apply(lambda row: " ".join(row).lower(), axis=1)
+        self.kw_parser = re.compile("\s*,\s*")
         
         
     def add_engine(self, engine):
@@ -95,15 +96,15 @@ class Dataset:
         
 
     def search_by_keywords(self, kws, return_bool_series=True):     
-        # TODO: split by other separators (such as ";")
-        prep_kws = "|".join(kws.lower().replace(", ", ",").split(","))
+#         prep_kws = "|".join(kws.lower().replace(", ", ",").split(","))
+        prep_kws = "|".join(self.kw_parser.split(kws.lower()))
         
         if (not kws.strip()) or (not prep_kws):
             # does_contain = pd.Series([True]*self.object_count)
             does_contain = self.search_texts.str.contains("", regex=False)
         else:
-            print("SUBMITTED KEYWORD: ", prep_kws)
-            does_contain = self.search_texts.str.contains(prep_kws, regex=False)
+            print("SUBMITTED KEYWORDS: ", prep_kws)
+            does_contain = self.search_texts.str.contains(prep_kws, case=False, regex=True)
         
         if return_bool_series: return does_contain
         return self.data[does_contain]
