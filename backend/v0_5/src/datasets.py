@@ -8,6 +8,7 @@ from functools import reduce
 
 # from src.engines import rand_engine
 
+import re
 
 static_field_descriptions = {
     "keywords": 'enter keyword',
@@ -22,7 +23,6 @@ static_field_descriptions = {
 
 
 class Dataset:
-    
     parse_date = "%Y-%m-%d"
     format_date = "%04Y-%m-%d"
     def __init__(self, dataframe, id_, name, source_url, params, image_source,
@@ -43,7 +43,8 @@ class Dataset:
         self.data = dataframe
         
         text_search_fields = ["Title", "ObjectName", "Description"]
-        self.search_texts = self.data[text_search_fields].fillna("").apply(lambda row: " ".join(row).lower(), axis=1)
+        self.data[text_search_fields] = self.data[text_search_fields].fillna("")
+        self.search_texts = self.data[text_search_fields].apply(lambda row: " ".join(row).lower(), axis=1)
         self.kw_parser = re.compile("\s*,\s*")
         
         
@@ -97,6 +98,7 @@ class Dataset:
 
     def search_by_keywords(self, kws, return_bool_series=True):     
 #         prep_kws = "|".join(kws.lower().replace(", ", ",").split(","))
+        #TODO: make more robust against whitespaces & other errors
         prep_kws = "|".join(self.kw_parser.split(kws.lower()))
         
         if (not kws.strip()) or (not prep_kws):

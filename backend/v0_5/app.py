@@ -254,7 +254,7 @@ def _get_url(cur_d, cur_e, cur_o):
             'engineMinScore': cur_e.min_score,
             'engineMaxScore': cur_e.max_score,
             'engineParams': engine_params, # defaults
-            'vocabularyTerms': "" # not sure - empty?
+            'vocabularyTerms': vocab_engine.all_examples.pattern.replace("|", ",") # not sure - empty?
         }
     
     param_dict = quote(json.dumps(param_dict), safe="")
