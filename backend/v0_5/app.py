@@ -62,8 +62,7 @@ logging.debug("CONTENT LENGTH ENGINE LOADED!")
 vocab_engine = VocabularyEngine(id_="VocabularyEnginev0",
                             name="VocabularyEngine/v0",
                             dataset=NMvW,
-                            params=[],
-                            cached=False)
+                            params=[])
 logging.debug("VOCABULARY ENGINE LOADED!")
 
 
