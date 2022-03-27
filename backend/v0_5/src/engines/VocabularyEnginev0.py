@@ -86,15 +86,15 @@ class VocabularyEngine(Engine):
     
     
     
-    def score_and_detail(self, objects, round_to=3, **param_dict):
-        if "vocabulary" in param_dict and param_dict["vocabulary"].strip():
-             vocab_re = self.vocab2re(param_dict["vocabulary"])
-        else:
-             vocab_re = self.all_examples
+#     def score_and_detail(self, objects, round_to=3, **param_dict):
+#         if "vocabulary" in param_dict and param_dict["vocabulary"].strip():
+#              vocab_re = self.vocab2re(param_dict["vocabulary"])
+#         else:
+#              vocab_re = self.all_examples
 
                 
         
-        text_fields = ["Title", "Description"]
+#         text_fields = ["Title", "Description"]
         
-        relevant = objects[].fillna("")
+#         relevant = objects[].fillna("")
 
