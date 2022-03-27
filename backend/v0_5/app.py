@@ -246,6 +246,8 @@ def _get_url(cur_d, cur_e, cur_o):
     # construct Engine param dicts with default values
     engine_params = [dict(id=ep.id, value=ep.default) for ep in cur_e.params]
     
+    
+    vocab = cur_e.re2vocab(cur_e.all_examples.pattern) if isinstance(cur_e, VocabularyEngine) else ""
     param_dict = {
             'objectKeywords': "", # empty
             'objectStartDate': "", # empty
@@ -255,7 +257,7 @@ def _get_url(cur_d, cur_e, cur_o):
             'engineMinScore': cur_e.min_score,
             'engineMaxScore': cur_e.max_score,
             'engineParams': engine_params, # defaults
-            'vocabularyTerms': vocab_engine.all_examples.pattern.replace("|", ",").replace(r"\b", "")
+            'vocabularyTerms': vocab  # vocab_engine.all_examples.pattern.replace("|", ",").replace(r"\b", "")
         }
     
     param_dict = quote(json.dumps(param_dict), safe="")
@@ -284,7 +286,10 @@ def get_examples():
     return jsonify({"examples": examples})
 
     
-   
+
+def static_examples():
+    with open("examples.txt") as handle:
+        return [l.strip() for l in handle.readlines() if l.strip()]
 
 
 
