@@ -19,35 +19,40 @@ class VocabularyEngine(Engine):
             self.vocab_examples = {list_name: self.vocab2re(word_list)
                                    for list_name, word_list in self.vocab_examples.items()}
 
-
         # constanct scores and details make no sense for this engine!
         # yes they do - these are the scores for the example list
-        self.constant_scores, self.constant_details = self.score_and_detail
-        self.constant_scores  = self.score(self.dataset.data)
-#         self.constant_score_details = self.score_details(self.dataset.data)
+        # -> this will allow the /examples route to compute faster
+        self.constant_scores, self.constant_details = self.score_and_detail(self.dataset.data)
         
 
     # assumes that `raw_vocab` is a string of comma-separated terms
     def vocab2re(self, raw_vocab):
         v_ls = self.vocab_parser.split(raw_vocab.strip())
         return re.compile("|".join(rf"\b{w}\b" for w in v_ls))
+    
+    # assumes that vocab_re = "\bword1\b|\bword2\b|..."
+    def re2vocab(self, vocab_re):
+        return vocab_re.pattern.replace("|", ",").replace(r"\b", "")
         
         
-    def score(self, objects, round_to=3, **param_dict):
-        if "vocabulary" in param_dict:
-             vocab_re = self.vocab2re(param_dict["vocabulary"])
-        else:
-             vocab_re = self.all_examples
+#     def score(self, objects, round_to=3, **param_dict):
+#         if "vocabulary" in param_dict:
+#              vocab_re = self.vocab2re(param_dict["vocabulary"])
+#         else:
+#              vocab_re = self.all_examples
 
-        scores = objects[["Title", "Description"]].fillna("").apply(
-                         lambda r: len([w for txt in row
-                                        for w in vocab_re.findall(txt)]),
-                         axis=1
-             )
+#         scores = objects[["Title", "Description"]].fillna("").apply(
+#                          lambda r: len([w for txt in row
+#                                         for w in vocab_re.findall(txt)]),
+#                          axis=1
+#              )
         
-        scores.name = "score"
+#         scores.name = "score"
         
-        return scores
+#         return scores
+
+    def score(self, objects, round_to=3, **param_dict):
+        raise NotImplementedError("VocabularyEngine doesn't support scoring without details!")
     
     
     def score_details(self, objects, round_to=3, **param_dict):
