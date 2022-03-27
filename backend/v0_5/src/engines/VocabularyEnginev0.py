@@ -6,6 +6,8 @@ from src.engines.engines import Engine, EngineParam
 import re
 import json
 
+from collections import Counter
+
 class VocabularyEngine(Engine):
     def __init__(self, **engine_args):
         super().__init__(**engine_args)
