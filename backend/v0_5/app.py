@@ -269,24 +269,24 @@ def _get_url(cur_d, cur_e, cur_o):
 
 
 
+# @app.route("/examples", methods=["GET"])
+# def get_examples():
+#     n = 4
+#     examples = []
+#     for i in range(n):
+#         cur_d, cur_e, cur_o, cur_s = _get_example()
+#         examples.append({
+#             "score": cur_s,
+#             "title": cur_o.Title,
+#             "engine": cur_e.name,
+#             "url": _get_url(cur_d, cur_e, cur_o),
+#             "thumbnail_url": cur_d.image_source.get_thumb(cur_o.name),
+#         })
+    
+#     return jsonify({"examples": examples})
+
+    
 @app.route("/examples", methods=["GET"])
-def get_examples():
-    n = 4
-    examples = []
-    for i in range(n):
-        cur_d, cur_e, cur_o, cur_s = _get_example()
-        examples.append({
-            "score": cur_s,
-            "title": cur_o.Title,
-            "engine": cur_e.name,
-            "url": _get_url(cur_d, cur_e, cur_o),
-            "thumbnail_url": cur_d.image_source.get_thumb(cur_o.name),
-        })
-    
-    return jsonify({"examples": examples})
-
-    
-
 def static_examples():
     with open("examples.txt") as handle:
         return [l.strip() for l in handle.readlines() if l.strip()]
