@@ -286,8 +286,8 @@ def _get_url(cur_d, cur_e, cur_o):
 @app.route("/examples", methods=["GET"])
 def static_examples():
     with open("examples.txt") as handle:
-        return [l.strip() for l in handle.readlines() if l.strip()]
-
+        examples = [l.strip() for l in handle.readlines() if l.strip()]
+        return jsonify({"examples": examples})
 
 
 
