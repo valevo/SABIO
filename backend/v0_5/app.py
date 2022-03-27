@@ -237,9 +237,6 @@ def _get_example():
     return d, e, o, s
 
 
-
-
-
 def _get_url(cur_d, cur_e, cur_o):
     # construct Object param dicts with empty values 
     object_params = [dict(id=p_id, value="") for p_id, p in cur_d.params.items()]
@@ -247,7 +244,7 @@ def _get_url(cur_d, cur_e, cur_o):
     engine_params = [dict(id=ep.id, value=ep.default) for ep in cur_e.params]
     
     
-    vocab = cur_e.re2vocab(cur_e.all_examples.pattern) if isinstance(cur_e, VocabularyEngine) else ""
+    vocab = cur_e.re2vocab(cur_e.all_examples) if isinstance(cur_e, VocabularyEngine) else ""
     param_dict = {
             'objectKeywords': "", # empty
             'objectStartDate': "", # empty
