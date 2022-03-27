@@ -21,7 +21,9 @@ class VocabularyEngine(Engine):
 
 
         # constanct scores and details make no sense for this engine!
-#         self.constant_scores  = self.score(self.dataset.data)
+        # yes they do - these are the scores for the example list
+        self.constant_scores, self.constant_details = self.score_and_detail
+        self.constant_scores  = self.score(self.dataset.data)
 #         self.constant_score_details = self.score_details(self.dataset.data)
         
 
@@ -53,26 +55,12 @@ class VocabularyEngine(Engine):
         
         
     def score_and_detail(self, objects, round_to=3, **param_dict):
-#        empty_input = False
         if "vocabulary" in param_dict and param_dict["vocabulary"].strip():
              vocab_re = self.vocab2re(param_dict["vocabulary"])
         else:
              vocab_re = self.all_examples
-#             empty_input = True
 
-        # vocab_re = self.vocab2re(param_dict["vocabulary"])
-#        with open("src/engines/VocabularyEnginev0_inputs", "a") as handle:
-#            handle.write("\n\n\n")
-#            handle.write("no_input\t" if empty_input else "")
-#            handle.write(str(vocab_re.pattern))
-           
-
-
-
-
-        from collections import Counter
         def process_obj(o):
-#            raise ValueError(f"{[(txt, type(txt)) for txt in o]}")
             counts = Counter([w for txt in o for w in vocab_re.findall(txt)])
             score = sum(counts.values())
             percents = {w: (c/score) for w, c in counts.items()}
@@ -89,4 +77,19 @@ class VocabularyEngine(Engine):
         details.name = "score_details"
         
         return scores, details
+    
+    
+    
+    
+    def score_and_detail(self, objects, round_to=3, **param_dict):
+        if "vocabulary" in param_dict and param_dict["vocabulary"].strip():
+             vocab_re = self.vocab2re(param_dict["vocabulary"])
+        else:
+             vocab_re = self.all_examples
+
+                
+        
+        text_fields = ["Title", "Description"]
+        
+        relevant = objects[].fillna("")
 

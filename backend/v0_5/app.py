@@ -2,6 +2,7 @@ import logging
 import os
 
 import json
+from urllib.parse import quote
 
 import flask
 from flask import request
@@ -236,8 +237,7 @@ def _get_example():
 
 
 
-from urllib.parse import quote
-import json
+
 
 def _get_url(cur_d, cur_e, cur_o):
     # construct Object param dicts with empty values 
@@ -254,7 +254,7 @@ def _get_url(cur_d, cur_e, cur_o):
             'engineMinScore': cur_e.min_score,
             'engineMaxScore': cur_e.max_score,
             'engineParams': engine_params, # defaults
-            'vocabularyTerms': vocab_engine.all_examples.pattern.replace("|", ",") # not sure - empty?
+            'vocabularyTerms': vocab_engine.all_examples.pattern.replace("|", ",").replace(r"\b", "")
         }
     
     param_dict = quote(json.dumps(param_dict), safe="")
