@@ -219,7 +219,8 @@ def _get_example():
     e = rand.choice(list(engines.values()))
 
     # score all o \in D with E
-    scores, details = e.score_and_detail(d.data)
+    param_dict = dict(constant_scores=True)
+    scores, details = e.score_and_detail(d.data, **param_dict)
 
     # filter out scores not in value range given by engine (!: need to be >=0 for andom choice below)
     # <= e.max_score technically not necessary, BUT ADD BACK IN
