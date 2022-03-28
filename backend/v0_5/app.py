@@ -293,7 +293,7 @@ def static_examples():
                     "score": 0.,
                     "title": "SOME TITLE",
                     "engine": "SOME ENGINE",
-                    "url": quote(l.strip()),
+                    "url": quote(l.strip().replace("https://dev-sabio.sudox.nl/", "")),
                     "thumbnail_url": "",
                 })
 #         examples = [quote(l.strip()) for l in handle.readlines() if l.strip()]
