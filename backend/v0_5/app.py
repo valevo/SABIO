@@ -286,7 +286,17 @@ def _get_url(cur_d, cur_e, cur_o):
 @app.route("/examples", methods=["GET"])
 def static_examples():
     with open("examples.txt") as handle:
-        examples = [quote(l.strip()) for l in handle.readlines() if l.strip()]
+        examples = []
+        for l in handle:
+            if l.strip():
+                examples.append({
+                    "score": 0.,
+                    "title": "SOME TITLE",
+                    "engine": "SOME ENGINE",
+                    "url": quote(l.strip()),
+                    "thumbnail_url": "",
+                })
+#         examples = [quote(l.strip()) for l in handle.readlines() if l.strip()]
         return jsonify({"examples": examples})
 
 
