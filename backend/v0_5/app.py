@@ -18,8 +18,6 @@ app = flask.Flask(__name__)
 # app.config["DEBUG"] = True
 
 
-
-
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann/"
 logging.basicConfig(filename=home+f'gunicorn_app_{this_pid}.log', 
@@ -227,8 +225,6 @@ def _get_example():
     in_score_rng = (e.min_score <= scores) # & (scores <= e.max_score)
     filtered_scores = scores[in_score_rng]
     filtered_data = d.data[in_score_rng]
-
-
 
     # random draw one o from D (based on scores)
     rand_i = rand.choice(len(filtered_data.index), p=filtered_scores/filtered_scores.sum())

@@ -35,41 +35,78 @@ class RandomEngine(Engine):
         self.constant_score_details = self.score_details(self.dataset.data, redo=True)
         
 
+#     def score(self, objects, round_to=3, **param_dict):
+#         param_dict = self.prep_engine_params(param_dict)
+#         if param_dict["redo"] is False:
+#             return self.constant_scores.loc[objects.index]
+
+#         new_scores = pd.Series(np.random.random(len(objects)).round(round_to),
+#                          index=objects.index)
+#         new_scores.name = "score"
+        
+#         self.constant_scores = new_scores
+#         return new_scores
+    
     def score(self, objects, round_to=3, **param_dict):
         param_dict = self.prep_engine_params(param_dict)
         if param_dict["redo"] is False:
             return self.constant_scores.loc[objects.index]
-
-        new_scores = pd.Series(np.random.random(len(objects)).round(round_to),
-                         index=objects.index)
-        new_scores.name = "score"
+        
+        new_scores = np.random.random(len(self.dataset.data)).round(round_to)
+        new_scores = pd.Series(new_scores, index=self.dataset.data.index, name="score")
         
         self.constant_scores = new_scores
-        return new_scores
+        return new_scores.loc[objects.index]
 
 
     
+#     def score_details(self, objects, round_to=3, **param_dict):
+#         param_dict = self.prep_engine_params(param_dict)        
+#         if param_dict["redo"] is False:
+#             return self.constant_score_details.loc[objects.index]
+        
+        
+#         # TODO: move this to Dataset -> make this the variable
+#         # all engines & search algos work on
+#         descs = objects.Description.fillna("").str.split()
+        
+#         new_choices = descs.apply(lambda ls: 
+#                               dict(zip(
+#                                   (np.random.choice(ls, size=2) 
+#                                    if (len(ls) > 2) else ls),
+#                                    np.random.rand(2).round(round_to)
+#                                                  ))
+#                              )
+#         new_choices.name = "score_details"
+#         self.constant_score_details = new_choices
+#         return new_choices
+    
+    
+
     def score_details(self, objects, round_to=3, **param_dict):
         param_dict = self.prep_engine_params(param_dict)        
         if param_dict["redo"] is False:
             return self.constant_score_details.loc[objects.index]
-        
-        
+
         # TODO: move this to Dataset -> make this the variable
         # all engines & search algos work on
-        descs = objects.Description.fillna("").str.split()
+        # ----
+        # TODO: include words in Title -> again, make this part of Dataset
+        descs = self.dataset.data.Description.fillna("").str.split()
         
-        new_choices = descs.apply(lambda ls: 
-                              dict(zip(
-                                  (np.random.choice(ls, size=2) 
-                                   if (len(ls) > 2) else ls),
-                                   np.random.rand(2).round(round_to)
-                                                 ))
-                             )
+        
+        def rand_choices(ls, n=2):
+            words = np.random.choice(ls, size=min(2, len(ls)), replace=False)
+            word_scores = np.random.random(len(words)).round(round_to)
+            return dict(zip(words, word_scores))
+        
+        new_choices = descs.apply(rand_choices)
         new_choices.name = "score_details"
-        self.constant_score_details = new_choices
-        return new_choices
-    
+        
+        self.constant_score_details = new_scores
+        return new_choices.loc[objects.index]
+        
+
     
     def score_and_detail(self, objects, round_to=3, **param_dict):
         scores = self.score(objects, round_to=round_to, **param_dict) 
