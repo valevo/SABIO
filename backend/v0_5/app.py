@@ -226,8 +226,13 @@ def _get_example():
     filtered_scores = scores[in_score_rng]
     filtered_data = d.data[in_score_rng]
 
+    def norm(ls):
+        a = np.asarray(ls)
+        return a/a.sum()
+    
     # random draw one o from D (based on scores)
-    rand_i = rand.choice(len(filtered_data.index), p=filtered_scores/filtered_scores.sum())
+    rand_i = rand.choice(len(filtered_data.index), 
+                         p=norm(norm(filtered_scores)**2))
     o = filtered_data.iloc[rand_i]
     s = filtered_scores.iloc[rand_i]
     return d, e, o, s

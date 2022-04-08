@@ -101,14 +101,14 @@ class Typicality:
                 )
         
         typs = tuples.apply(lambda t: t[1])
-        typs = self.percentile_norm(typs, q=99.5)
+        typs = self.percentile_norm(typs, q=99.5).round(round_to)
         typs.name = "score"
 
         
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
-        values = np.asarray([d[k] for k in sorted(d.keys())])
+        values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
         values = self.inv_normed_abs(values, q=100)
 
         d = dict(zip(sorted(d.keys()), values))

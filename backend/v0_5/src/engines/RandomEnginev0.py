@@ -103,7 +103,7 @@ class RandomEngine(Engine):
         new_choices = descs.apply(rand_choices)
         new_choices.name = "score_details"
         
-        self.constant_score_details = new_scores
+        self.constant_score_details = new_choices
         return new_choices.loc[objects.index]
         
 

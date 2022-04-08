@@ -73,14 +73,14 @@ class VocabularyEngine(Engine):
         def process_obj(o):
             counts = Counter([w for txt in o for w in vocab_re.findall(txt)])
             score = sum(counts.values())
-            percents = {w: (c/score) for w, c in counts.items()}
+            percents = {w: (c/score).round(round_to) for w, c in counts.items()}
 
             return percents, score
 
         tups = objects[["Title", "Description"]].fillna("").apply(process_obj, axis=1)
         
         scores = tups.apply(lambda t: t[1])
-        scores = scores/scores.max()
+        scores = (scores/scores.max()).round(round_to)
         scores.name = "score"
         
         details = tups.apply(lambda t: t[0])
