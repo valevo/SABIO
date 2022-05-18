@@ -4,10 +4,7 @@ import pandas as pd
 import numpy as np
 
 from functools import reduce
-
-
-# from src.engines import rand_engine
-
+import json
 import re
 
 static_field_descriptions = {
@@ -25,33 +22,65 @@ static_field_descriptions = {
 class Dataset:
     parse_date = "%Y-%m-%d"
     format_date = "%04Y-%m-%d"
-    def __init__(self, dataframe, id_, name, source_url, params, image_source,
+    
+    @staticmethod
+    def parse_dataset_meta(filename):
+        with open(filename) as handle:
+            meta = json.load(handle)
+            
+        params = [DatasetParam(p_id, **p_arg_dict) 
+                  for p_id, p_arg_dict in meta["dataset_params"].items()]
+        
+        return meta, params
+#         return meta["text_fields"], meta["base_source_url"], params
+    
+    @classmethod
+    def with_dataset_meta(cls, dataframe, meta_filename, image_source, available_engines=[]):
+        meta_dict, dataset_params = cls.parse_dataset_meta(meta_filename)
+        instance = cls(dataframe, 
+                       id_=meta_dict["id"], 
+                       name=meta_dict["name"], 
+                       source_url=meta_dict["source_url"], 
+                       object_base_url=meta_dict["object_base_url"],
+                       text_columns=meta_dict["text_columns"],
+                       params=dataset_params,
+                       image_source=image_source,
+                       available_engines=available_engines
+                      )
+        
+        return instance
+
+    def __init__(self, dataframe, id_, name, 
+                 source_url, object_base_url,
+                 text_columns,
+                 params, image_source,
                  available_engines=[]):
+        
         self.id = id_
         self.name = name
         self.source_url = source_url
-        self.image_source = image_source
+        self.object_base_url = object_base_url
 
-        self.min_date = dataframe.BeginISODate.min()
-        self.max_date = dataframe.EndISODate.max()
+        self.min_date = dataframe.StartDate.min()
+        self.max_date = dataframe.EndDate.max()
         
         self.object_count = dataframe.shape[0]
         
         self.params = {p.id: p for p in params}
+        self.image_source = image_source
         self.available_engines = {e.id: e for e in available_engines}
         
         self.data = dataframe
         
-        text_search_fields = ["Title", "ObjectName", "Description"]
-        self.data[text_search_fields] = self.data[text_search_fields].fillna("")
-        self.search_texts = self.data[text_search_fields].apply(lambda row: " ".join(row).lower(), axis=1)
+#         text_search_fields = ["Title", "ObjectName", "Description"]
+        self.data[text_columns] = self.data[text_columns].fillna("")
+        self.search_texts = self.data[text_columns].apply(lambda row: " ".join(row).lower(), axis=1)
+
         self.kw_parser = re.compile("\s*,\s*")
         
         
     def add_engine(self, engine):
-        self.available_engines.update(
-            {engine.id: engine}
-        )
+        self.available_engines.update({engine.id: engine})
                       
     def to_dict(self):
         return {
@@ -137,9 +166,9 @@ class Dataset:
             "description": obj.Description if isinstance(obj.Description, str) else "",
             "thumbnail_url": self.image_source.get_thumb(obj.name),
             "image_url": self.image_source.get_img(obj.name),
-            "source_url": f"https://hdl.handle.net/20.500.11840/{obj.name}",
+            "source_url": f"https://hdl.handle.net/20.500.11840/{obj.ObjectURLSuffix}",
             "attributes": {
-                "dated": str(obj.Dated)
+                "dated": str(obj.DateString)
             }
         }
                 
@@ -222,17 +251,17 @@ class ImageSource:
 # NMvW
       
 ### Load DataFrame
-df = pd.read_csv("NMvW_data/v0_2.csv.gz", 
+df = pd.read_csv("NMvW_data/v0_2_renamed.csv.gz", 
                  dtype=dict(Provenance="string", RelatedWorks="string"))
 # TODO: save & load DF s.t. these lines are not necessary here                
-df["ObjectID"] = df.ObjectID.astype("int")
-df = df.set_index("ObjectID")
+df["ID"] = df.ID.astype("int")
+df = df.set_index("ID")
 
 
 
 from datetime import datetime as dt
-df["BeginISODate"] = df.BeginISODate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
-df["EndISODate"] = df.EndISODate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+df["BeginISODate"] = df.StartDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+df["EndISODate"] = df.EndDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 
 
 
@@ -250,13 +279,17 @@ NMvW_params = [
                  description="Type of object, e.g. 'Audiovisuele collectie'")
 ]
 
+NMvW = Dataset.with_dataset_meta(
+                df, "NMvW_data/NMvW_CSV_META.json", images, available_engines=[])
+
+
 ### Instantiate Dataset object
-NMvW = Dataset(df, "NMvW_v0", 
-               "Nationaal Museum van Wereldculturen 1M",
-               "https://collectie.wereldculturen.nl/",
-               NMvW_params,
-               images,
-               available_engines=[])
+# NMvW = Dataset(df, "NMvW_v0", 
+#                "Nationaal Museum van Wereldculturen 1M",
+#                "https://collectie.wereldculturen.nl/",
+#                NMvW_params,
+#                images,
+#                available_engines=[])
 
 
 
