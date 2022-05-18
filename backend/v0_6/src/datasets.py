@@ -74,7 +74,8 @@ class Dataset:
         
 #         text_search_fields = ["Title", "ObjectName", "Description"]
         self.data[text_columns] = self.data[text_columns].fillna("")
-        self.search_texts = self.data[text_columns].apply(lambda row: " ".join(row).lower(), axis=1)
+        self.data["Texts"] = self.data[text_columns].apply(lambda row: "\n".join(row).lower(), axis=1)
+#         self.texts = self.data[text_columns].apply(lambda row: " ".join(row).lower(), axis=1)
 
         self.kw_parser = re.compile("\s*,\s*")
         
@@ -131,10 +132,10 @@ class Dataset:
         
         if (not kws.strip()) or (not prep_kws):
             # does_contain = pd.Series([True]*self.object_count)
-            does_contain = self.search_texts.str.contains("", regex=False)
+            does_contain = self.data.Texts.str.contains("", regex=False)
         else:
             print("SUBMITTED KEYWORDS: ", prep_kws)
-            does_contain = self.search_texts.str.contains(prep_kws, case=False, regex=True)
+            does_contain = self.data.Texts.str.contains(prep_kws, case=False, regex=True)
         
         if return_bool_series: return does_contain
         return self.data[does_contain]
@@ -251,7 +252,7 @@ class ImageSource:
 # NMvW
       
 ### Load DataFrame
-df = pd.read_csv("NMvW_data/v0_2_renamed.csv.gz", 
+df = pd.read_csv("NMvW_data/v0_3.csv.gz", 
                  dtype=dict(Provenance="string", RelatedWorks="string"))
 # TODO: save & load DF s.t. these lines are not necessary here                
 df["ID"] = df.ID.astype("int")
