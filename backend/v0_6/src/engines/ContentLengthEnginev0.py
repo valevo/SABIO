@@ -17,16 +17,19 @@ class ContentLengthEngine(Engine):
             self.cached = False
                                                         
     def char_text_length(self, obj):
-        return len(obj.Title) + len(obj.Description)
+        return len(obj.Texts)
+#         return len(obj.Title) + len(obj.Description)
     
     def word_text_length(self, obj):
-        return len(obj.Title.split()) + len(obj.Description.split())
+        return len(obj.Texts.split())
+#         return len(obj.Title.split()) + len(obj.Description.split())
       
     def get_longest_words(self, obj):
-        words = obj.Title.split() + obj.Description.split()
+        words = obj.Texts.split()
+#         words = obj.Title.split() + obj.Description.split()
         len_sorted = sorted(set(words), key=lambda w: len(w), reverse=True)
         
-        total_len = len(obj.Title)+len(obj.Description)
+        total_len = self.char_text_length(obj)
         return {w: round(len(w)/total_len, 3) for w in len_sorted[:5]}
         
     def score_and_detail(self, objects, **param_dict):

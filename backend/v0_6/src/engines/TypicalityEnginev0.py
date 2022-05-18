@@ -149,7 +149,8 @@ class TypicalityEngine(Engine):
         self.max_score = 1.
 
         
-        texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
+#         texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
+        texts = self.dataset.data.Texts.fillna("").values.flatten()
 
         self.typicality = Typicality(texts, take_abs=False)
             
@@ -179,8 +180,7 @@ class TypicalityEngine(Engine):
         if self.cached:
             ids = objects.index
             return self.typs_cached.loc[ids], self.details_cached.loc[ids]
-            
-            
+                    
         object_typicalities, details = self.typicality.process_objects(
                                                         objects[["Title", "Description"]])
         
