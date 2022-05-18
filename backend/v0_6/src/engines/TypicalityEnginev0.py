@@ -71,11 +71,11 @@ class Typicality:
     def typical(entropy, log_prob):
         return entropy - (-log_prob)
 
-    def _process_object(self, row):
+    def _process_object(self, text):
         obj_prob = 0.
         l = 0
-        for text in row:
-            grams = self.model.iter_ngrams(text, as_tuples=True)
+        for paragraph in text.split("\n"):
+            grams = self.model.iter_ngrams(paragraph, as_tuples=True)
             for *rest, w in grams:
                 w_prob = self.model.cond_prob(w, *rest, log=True)
                 obj_prob += w_prob
@@ -88,14 +88,14 @@ class Typicality:
         obj_typ = self.typical(self.H, obj_prob/l)
         yield obj_typ
         
-    def process_object(self, row):
-        *gram_typicalities, obj_typicality = self._process_object(row)
+    def process_object(self, text):
+        *gram_typicalities, obj_typicality = self._process_object(text)
         gram_typicalities = sorted(gram_typicalities, key=lambda t: t[1])
         return gram_typicalities, obj_typicality
     
     
-    def process_objects(self, rows):
-        tuples = rows.progress_apply(
+    def process_objects(self, texts):
+        tuples = texts.progress_apply(
                         axis='columns', 
                         func=self.process_object
                 )
@@ -180,9 +180,9 @@ class TypicalityEngine(Engine):
         if self.cached:
             ids = objects.index
             return self.typs_cached.loc[ids], self.details_cached.loc[ids]
-                    
+        
         object_typicalities, details = self.typicality.process_objects(
-                                                        objects[["Title", "Description"]])
+                                                        objects.Texts)
         
         return object_typicalities, details
         
