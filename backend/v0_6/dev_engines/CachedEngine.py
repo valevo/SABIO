@@ -39,9 +39,6 @@ class TypicalityEngine(CachedEngine):
     def __init__(self, cls_params, cached=True, **engine_params):
         super().__init__(Typicality, cls_params, cached=cached, **engine_params)
 
-
-
-
 class CachedEngine(Engine):
     @classmethod
     def from_saved(cls, fname):

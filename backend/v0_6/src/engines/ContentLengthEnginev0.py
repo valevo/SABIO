@@ -22,13 +22,16 @@ class ContentLengthEngine(Engine):
     def word_text_length(self, txt):
         return len(txt.split())
       
-    def get_longest_words(self, txt):
+    def get_longest_words(self, txt, normalise_len=False):
         words = txt.split()
 #         words = obj.Title.split() + obj.Description.split()
         len_sorted = sorted(set(words), key=lambda w: len(w), reverse=True)
         
         total_len = self.char_text_length(txt)
-        return {w: round(len(w)/total_len, 3) for w in len_sorted[:5]}
+        if normalise_len:
+            return {w: round(len(w)/total_len, 3) for w in len_sorted[:5]}
+        else:
+            return {w: len(w) for w in len_sorted[:5]}
         
         
     def score_and_detail(self, objects, **param_dict):

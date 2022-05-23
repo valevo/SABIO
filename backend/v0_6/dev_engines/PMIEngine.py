@@ -38,8 +38,6 @@ class PMI:
         normed = self.percentile_norm(v, q)
         return normed**0.5 if do_sqrt else normed
         
-        
-    
     def process_objects(self, rows):
         tuples = rows.progress_apply(
                     axis='columns', 
