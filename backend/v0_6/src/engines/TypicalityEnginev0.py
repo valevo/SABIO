@@ -94,9 +94,9 @@ class Typicality:
         return gram_typicalities, obj_typicality
     
     
-    def process_objects(self, texts):
+    def process_objects(self, texts, round_to=2):
         tuples = texts.progress_apply(
-                        axis='columns', 
+#                        axis='columns', 
                         func=self.process_object
                 )
         
@@ -150,16 +150,14 @@ class TypicalityEngine(Engine):
 
         
 #         texts = self.dataset.data[["Title", "Description"]].fillna("").values.flatten()
-        texts = self.dataset.data.Texts.fillna("").values.flatten()
-
+#        texts = self.dataset.data.Texts.values.flatten()
+        texts = [p for t in self.dataset.data.Texts for p in t.split("\n")]
         self.typicality = Typicality(texts, take_abs=False)
             
         
         if cached:
             self.cached = False
-            self.typs_cached, self.details_cached = self.score_and_detail(
-                            self.dataset.data[["Title", "Description"]].fillna("")
-            )
+            self.typs_cached, self.details_cached = self.score_and_detail(self.dataset.data)
             self.cached = True
         else:
             self.cached = False
@@ -181,8 +179,7 @@ class TypicalityEngine(Engine):
             ids = objects.index
             return self.typs_cached.loc[ids], self.details_cached.loc[ids]
         
-        object_typicalities, details = self.typicality.process_objects(
-                                                        objects.Texts)
+        object_typicalities, details = self.typicality.process_objects(objects.Texts)
         
         return object_typicalities, details
         

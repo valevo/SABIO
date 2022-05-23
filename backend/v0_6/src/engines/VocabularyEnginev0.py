@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
 
+from tqdm import tqdm
+tqdm.pandas()
+
 from src.engines.engines import Engine, EngineParam
 
 import re
@@ -73,11 +76,11 @@ class VocabularyEngine(Engine):
         def process_obj(txt):
             counts = Counter([w for w in vocab_re.findall(txt)])
             score = sum(counts.values())
-            percents = {w: (c/score).round(round_to) for w, c in counts.items()}
+            percents = {w: round(c/score, round_to) for w, c in counts.items()}
 
             return percents, score
 
-        tups = objects.Texts.fillna("").apply(process_obj, axis=1)
+        tups = objects.Texts.progress_apply(process_obj)
         
         scores = tups.apply(lambda t: t[1])
         scores = (scores/scores.max()).round(round_to)

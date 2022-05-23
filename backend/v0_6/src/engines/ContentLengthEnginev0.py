@@ -27,7 +27,7 @@ class ContentLengthEngine(Engine):
 #         words = obj.Title.split() + obj.Description.split()
         len_sorted = sorted(set(words), key=lambda w: len(w), reverse=True)
         
-        total_len = self.char_text_length(obj)
+        total_len = self.char_text_length(txt)
         return {w: round(len(w)/total_len, 3) for w in len_sorted[:5]}
         
         
@@ -36,8 +36,7 @@ class ContentLengthEngine(Engine):
             ids = objects.index
             return self.scores_cached.loc[ids], self.details_cached.loc[ids]
         
-        lengths = objects.Texts.fillna("").progress_apply(self.char_text_length, 
-                                                    axis="columns")
+        lengths = objects.Texts.progress_apply(self.char_text_length)
         
         # this will lead objects with length > self.max_len\
         # to have a score > 1.0 and hence be removed from the result set
@@ -45,8 +44,7 @@ class ContentLengthEngine(Engine):
         lengths.name = "score"
         
 #         details = objects.Title.apply(lambda x: dict())
-        details = objects.Texts.fillna("").progress_apply(self.get_longest_words, 
-                                                          axis="columns")
+        details = objects.Texts.progress_apply(self.get_longest_words)
         details.name = "score_details"
         
         return lengths, details

@@ -74,7 +74,7 @@ class Dataset:
         
 #         text_search_fields = ["Title", "ObjectName", "Description"]
         self.data[text_columns] = self.data[text_columns].fillna("")
-        self.data["Texts"] = self.data[text_columns].apply(lambda row: "\n".join(row).lower(), axis=1)
+        self.data["Texts"] = self.data[text_columns].apply(lambda row: "\n".join(row).lower().strip(), axis=1)
 #         self.texts = self.data[text_columns].apply(lambda row: " ".join(row).lower(), axis=1)
 
         self.kw_parser = re.compile("\s*,\s*")
@@ -150,8 +150,8 @@ class Dataset:
             start_year, end_year = self.min_date, self.max_date
         
         
-        in_range = (self.data.BeginISODate >= start_year) &\
-                    (self.data.EndISODate <= end_year)
+        in_range = (self.data.StartDate >= start_year) &\
+                    (self.data.EndDate <= end_year)
         
         if return_bool_series: return in_range
         
@@ -201,7 +201,7 @@ class DatasetParam:
             is_option = pd.Series([True]*data.shape[0])
             is_option.index = data.index
         else:
-            is_option = data[self.id] == option
+            is_option = (data[self.id] == option)
         
         if return_bool_series:
             return is_option
@@ -261,8 +261,8 @@ df = df.set_index("ID")
 
 
 from datetime import datetime as dt
-df["BeginISODate"] = df.StartDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
-df["EndISODate"] = df.EndDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+df["StartDate"] = df.StartDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+df["EndDate"] = df.EndDate.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 
 
 

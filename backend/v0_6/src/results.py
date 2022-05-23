@@ -1,6 +1,6 @@
 import pandas as pd
 
-attributes = ["BeginISODate", "EndISODate"] # + [p.label for p in NMvW_params]
+attributes = ["StartDate", "EndDate"] # + [p.label for p in NMvW_params]
 
 class Result:
     def __init__(self, param_names, rows, scores, 
