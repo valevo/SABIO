@@ -236,7 +236,7 @@ class PMI(CachedEngine):
                )
         
     def process_object(self, text):
-        pairs, pmis = []
+        pairs, pmis = [], []
         for paragraph in text.split("\n"):
             cur_pairs = list(self.model.iter_ngrams(paragraph, padding=False))
                 
@@ -252,6 +252,7 @@ class PMI(CachedEngine):
         tuples = texts.progress_apply(self.process_object)
         
         aggr_pmis = tuples.apply(lambda t: t[1])
+        aggr_pmis = aggr_pmis.fillna(0.0)
         aggr_pmis = self.normalise(aggr_pmis, q=99.5).round(round_to)
         aggr_pmis.name = "score"
 

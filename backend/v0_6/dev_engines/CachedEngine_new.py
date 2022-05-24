@@ -80,8 +80,6 @@ class CachedEngine(Engine):
         return object_scores, details
 
     
-    
-    
 class Typicality(CachedEngine):
     def __init__(self, take_abs=False, model_params={}, **engine_params):
         super().__init__(**engine_params)
