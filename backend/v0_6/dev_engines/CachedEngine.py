@@ -47,12 +47,11 @@ class CachedEngine(Engine):
     
     @classmethod
     def create_and_save(cls, dataset, id_, name, cached=True, **engine_params):
-        
         self = cls(dataset=dataset,
                    cached=cached,
-                    id_=id_,
-                    name=name,
-                    params=[]) #### <- change
+                   id_=id_,
+                   name=name,
+                   params=[]) #### <- change
         
         joblib.dump(self, self.id+".pkl")
         return self
@@ -62,21 +61,22 @@ class CachedEngine(Engine):
         super().__init__(**engine_params)
         self.min_score = 0. #### change
         
-        text_data = self.dataset.data[["Title", "Description"]].fillna("")
+#         text_data = self.dataset.data.Texts
+        texts = [p for t in self.dataset.data.Texts for p in t.split("\n")]
+
                 
-        self.engine = cls(text_data.values.flatten(), **cls_params) #### class & params
+        self.engine = cls(texts, **cls_params) #### class & params
         
         if cached:
-            cached = False
-            self.scores_cached, self.details_cached = self.score_and_detail(text_data)
-            
+            self.cached = False
+            self.scores_cached, self.details_cached = self.score_and_detail(texts)
             self.cached = True
         else:
             self.cached = False
             
             
     def score(self, objects, round_to=3, **param_dict):
-        raise NotImplementedError("CachedEngine only supports scoring & detailing together!") 
+        raise NotImplementedError(f"{self.id} only supports scoring & detailing together!") 
 
         
     def score_details(self, objects, round_to=3, **param_dict):
@@ -91,8 +91,6 @@ class CachedEngine(Engine):
             ids = objects.index
             return self.typs_cached.loc[ids], self.details_cached.loc[ids]
         
-        object_scores, details = self.engine.process_ojects(
-                            objects[["Title", "Description"]]
-        )
+        object_scores, details = self.engine.process_ojects(objects.Texts)
         
         return object_scores, details

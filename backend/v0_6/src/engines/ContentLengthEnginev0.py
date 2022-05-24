@@ -22,7 +22,7 @@ class ContentLengthEngine(Engine):
     def word_text_length(self, txt):
         return len(txt.split())
       
-    def get_longest_words(self, txt, normalise_len=False):
+    def get_longest_words(self, txt, normalise_len=True):
         words = txt.split()
 #         words = obj.Title.split() + obj.Description.split()
         len_sorted = sorted(set(words), key=lambda w: len(w), reverse=True)
@@ -51,4 +51,3 @@ class ContentLengthEngine(Engine):
         details.name = "score_details"
         
         return lengths, details
-        
