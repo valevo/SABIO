@@ -1,6 +1,6 @@
 import pandas as pd
 
-attributes = ["StartDate", "EndDate"] # + [p.label for p in NMvW_params]
+attributes = ["start_date", "end_date"] # + [p.label for p in NMvW_params]
 
 class Result:
     def __init__(self, param_names, rows, scores, 
@@ -8,7 +8,7 @@ class Result:
         self.attributes = attributes + param_names 
         
 #         self.ids = rows.index.astype("string")
-        titles = rows.Title.fillna("").astype("string")
+        names = rows.name #.fillna("").astype("string")
 #         thumbnails = pd.Series([""]*rows.shape[0],
 #                                    name="Thumbnail",
 #                                    index=rows.index).astype("string")
@@ -29,7 +29,7 @@ class Result:
         self.min_score = min_score
         self.max_score = max_score
         
-        self.df = pd.concat([titles, thumbnails, values, xs, scores, score_details], axis=1)
+        self.df = pd.concat([names, thumbnails, values, xs, scores, score_details], axis=1)
         
 #         self.df.columns = ["Title", "Thumbnail"] + values.columns + xs.columns + ["score", "score_details"]
         
@@ -65,7 +65,7 @@ class Result:
         for i, record in self.df.to_dict("index").items():
             obj_dict = {
                 "id": str(i),
-                "name": record["Title"],
+                "name": record["name"],
                 "thumbnail_url": record["Thumbnail"],
                 
                 "values": [record[attr] for attr in self.attributes],

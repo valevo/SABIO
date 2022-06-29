@@ -75,8 +75,10 @@ class Dataset:
         self.data = dataframe
         
 #         text_search_fields = ["Title", "ObjectName", "Description"]
-        self.data[text_columns] = self.data[text_columns].fillna("")
-        self.data["Texts"] = self.data[text_columns].apply(lambda row: "\n".join(row).lower().strip(), axis=1)
+
+        self.text_columns = ["name", "description"] + text_columns
+        self.data[self.text_columns] = self.data[self.text_columns].fillna("")
+        self.data["Texts"] = self.data[self.text_columns].apply(lambda row: "\n".join(row).lower().strip(), axis=1)
 #         self.texts = self.data[text_columns].apply(lambda row: " ".join(row).lower(), axis=1)
 
         self.kw_parser = re.compile("\s*,\s*")
@@ -165,13 +167,13 @@ class Dataset:
         
         return {
             "id": str(obj_id),
-            "name": obj.Title if isinstance(obj.Title, str) else "",
-            "description": obj.Description if isinstance(obj.Description, str) else "",
+            "name": obj["name"], # if isinstance(obj.name, str) else "",
+            "description": obj.description, #if isinstance(obj.description, str) else "",
             "thumbnail_url": self.image_source.get_thumb(obj.name),
             "image_url": self.image_source.get_img(obj.name),
             "source_url": obj.source_url,
             "attributes": {
-                "dated": str(obj.DateString)
+                "dated": str(obj.date_string)
             }
         }
                 
@@ -236,8 +238,8 @@ class DatasetParam:
 class ImageSource:
     def __init__(self, csv_path):
         self.df = pd.read_csv(csv_path).fillna("")
-        self.df["ObjectID"] = self.df.ObjectID.astype("int")
-        self.df = self.df.set_index("ObjectID")
+        self.df["ID"] = self.df.ID.astype("int")
+        self.df = self.df.set_index("ID")
 
         
     def get_img(self, object_ids):
@@ -259,6 +261,7 @@ df = pd.read_csv("data/NMvW.v0_4.csv.gz",
 ## TODO: save & load DF s.t. these lines are not necessary here                
 # df["ID"] = df.ID.astype("int")
 df = df.set_index("ID")
+df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 ## get Image Source
@@ -271,6 +274,7 @@ NMvW = Dataset.with_dataset_meta(
 # OpenBeelden
 
 df = pd.read_csv("data/OpenBeelden.v0_0.csv.gz").set_index("ID")
+df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 

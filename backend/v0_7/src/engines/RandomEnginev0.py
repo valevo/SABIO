@@ -92,7 +92,7 @@ class RandomEngine(Engine):
         # all engines & search algos work on
         # ----
         # TODO: include words in Title -> again, make this part of Dataset
-        descs = self.dataset.data.Description.fillna("").str.split()
+        descs = self.dataset.data.Texts.str.split()
         
         
         def rand_choices(ls, n=2):
