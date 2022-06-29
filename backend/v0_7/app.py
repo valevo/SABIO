@@ -27,7 +27,7 @@ logging.debug("")
 logging.debug("app.py STARTED!")
 
 
-from src.datasets import NMvW
+from src.datasets import NMvW, OpenBeelden
 from src.results import Result
 from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
 from src.engines.ContentLengthEnginev0 import ContentLengthEngine
@@ -36,11 +36,11 @@ from src.engines.VocabularyEnginev0 import VocabularyEngine
 
 
 logging.debug("MODULES LOADED!")
-logging.debug(f"{NMvW}")
+logging.debug(f"{NMvW}\n{OpenBeelden}")
 
 
 
-datasets = {NMvW.id:NMvW}
+datasets = {NMvW.ID: NMvW, OpenBeelden.ID: OpenBeelden}
 
 logging.debug(f"{datasets}")
 random_engine = RandomEngine(id_="RandomEnginev0",
@@ -50,12 +50,12 @@ random_engine = RandomEngine(id_="RandomEnginev0",
 logging.debug("RANDOM ENGINE LOADED!")
 
 
-cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
-                            name="ContentLengthEngine/v0",
-                            dataset=NMvW,
-                            params=[],
-                            cached=True)
-logging.debug("CONTENT LENGTH ENGINE LOADED!")
+#cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
+#                            name="ContentLengthEngine/v0",
+#                            dataset=NMvW,
+#                            params=[],
+#                            cached=True)
+#logging.debug("CONTENT LENGTH ENGINE LOADED!")
 
 
 vocab_engine = VocabularyEngine(id_="VocabularyEnginev0",
@@ -69,15 +69,15 @@ logging.debug("VOCABULARY ENGINE LOADED!")
 #                                      name="TypicalityEngine/v0",
 #                                      dataset=NMvW,
 #                                      params=[])
-data_dir = "/data/"
-typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
-logging.debug("TYPICALITY ENGINE LOADED!")
+#data_dir = "/data/"
+#typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
+#logging.debug("TYPICALITY ENGINE LOADED!")
 
 
 # Dictionary of engines
 engines = {random_engine.id: random_engine, 
-            typicality_engine.id: typicality_engine,
-            cl_engine.id: cl_engine,
+#            typicality_engine.id: typicality_engine,
+#            cl_engine.id: cl_engine,
             vocab_engine.id: vocab_engine}
 
 
@@ -164,6 +164,7 @@ def search_objects(datasetID):
 
     
     d = datasets[datasetID]
+    logging.debug(f"received: {datasetID}\nretrieved: {d}\n params: {obj_params}")
     eng = engines[engine_id]
 
     #################################################################
@@ -264,7 +265,7 @@ def _get_url(cur_d, cur_e, cur_o):
     view, attribute = "scatterplot", "0"
     
     cur_ObjectID = cur_o.name
-    return f"/browse/{cur_d.id}/{param_dict}/{view}/{attribute}/{cur_ObjectID}?api={api}"
+    return f"/browse/{cur_d.ID}/{param_dict}/{view}/{attribute}/{cur_ObjectID}?api={api}"
 
 
 
@@ -276,7 +277,7 @@ def get_examples():
         cur_d, cur_e, cur_o, cur_s = _get_example()
         examples.append({
             "score": cur_s,
-            "title": cur_o.Title,
+            "title": cur_o["name"],
             "engine": cur_e.name,
             "url": _get_url(cur_d, cur_e, cur_o),
             "thumbnail_url": cur_d.image_source.get_thumb(cur_o.name),
