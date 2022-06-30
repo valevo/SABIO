@@ -17,10 +17,12 @@ app = flask.Flask(__name__)
 # !!! comment out for production !!!
 # app.config["DEBUG"] = True
 
+
 this_pid = str(os.getpid())
 home = "/home/valentin.vogelmann/"
 logging.basicConfig(filename=home+f'gunicorn_app_{this_pid}.log', 
 		level=logging.DEBUG, format=f'%(process)d %(asctime)s | %(message)s')
+
 logging.debug("")
 logging.debug("app.py STARTED!")
 
@@ -39,47 +41,48 @@ logging.debug(f"{NMvW}\n{OpenBeelden}")
 
 
 datasets = {NMvW.ID: NMvW, OpenBeelden.ID: OpenBeelden}
+
 logging.debug(f"{datasets}")
+random_engine = RandomEngine(id_="RandomEnginev0",
+                           name="RandomEngine/v0",
+                           dataset=NMvW,
+                           params=[nonce_param, redo_param])
+logging.debug("RANDOM ENGINE LOADED!")
 
 
-engines = {}
-
-for d in datasets:
-    random_engine = RandomEngine(id_="RandomEnginev0",
-                               name="RandomEngine/v0",
-                               dataset=d,
-                               params=[nonce_param, redo_param])
-    logging.debug(f"RANDOM ENGINE WITH {d}!")
-
-    cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
-                               name="ContentLengthEngine/v0",
-                               dataset=d,
-                               params=[],
-                               cached=True)
-    logging.debug("CONTENT LENGTH ENGINE LOADED!")
-
-    vocab_engine = VocabularyEngine(id_="VocabularyEnginev0",
-                                name="VocabularyEngine/v0",
-                                dataset=d,
-                                params=[])
-    logging.debug("VOCABULARY ENGINE LOADED!")
+#cl_engine = ContentLengthEngine(id_="ContentLengthEnginev0",
+#                            name="ContentLengthEngine/v0",
+#                            dataset=NMvW,
+#                            params=[],
+#                            cached=True)
+#logging.debug("CONTENT LENGTH ENGINE LOADED!")
 
 
-    #typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
-    #                                      name="TypicalityEngine/v0",
-    #                                      dataset=NMvW,
-    #                                      params=[])
-    #data_dir = "/data/"
-    #typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
-    #logging.debug("TYPICALITY ENGINE LOADED!")
-
-    engines[d.ID] = {random_engine.id: random_engine, 
-        #            typicality_engine.id: typicality_engine,
-                    cl_engine.id: cl_engine,
-                    vocab_engine.id: vocab_engine}
+vocab_engine = VocabularyEngine(id_="VocabularyEnginev0",
+                            name="VocabularyEngine/v0",
+                            dataset=NMvW,
+                            params=[])
+logging.debug("VOCABULARY ENGINE LOADED!")
 
 
-    for eng_name, eng in engines.items():
+#typicality_engine = TypicalityEngine(id_="TypicalityEnginev0",
+#                                      name="TypicalityEngine/v0",
+#                                      dataset=NMvW,
+#                                      params=[])
+#data_dir = "/data/"
+#typicality_engine = TypicalityEngine.from_saved(data_dir+"TypicalityEnginev0.pkl")
+#logging.debug("TYPICALITY ENGINE LOADED!")
+
+
+# Dictionary of engines
+engines = {random_engine.id: random_engine, 
+#            typicality_engine.id: typicality_engine,
+#            cl_engine.id: cl_engine,
+            vocab_engine.id: vocab_engine}
+
+
+for eng_name, eng in engines.items():
+    for d_id, d in datasets.items():
         d.add_engine(eng)
 
 
