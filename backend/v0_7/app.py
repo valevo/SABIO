@@ -127,12 +127,15 @@ def autocomplete(datasetID):
 
 @app.route("/engines", methods=["GET"])
 def get_engines():
-    return jsonify([e.to_dict() for e_id, e in sorted(engines.items())])
+    return jsonify([e.to_dict() 
+                    for dataset_engine_dict in engines
+                    for e_id, e in sorted(dataset_engine_dict.items())]) ### CHANGED
 
 
 
 @app.route("/engines/<engineID>/html", methods=["GET"])
 def get_engine_detail(engineID):
+    cur_engine = 
     cur_engine = engines[engineID]
     return cur_engine.description()
 
