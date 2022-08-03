@@ -12,13 +12,23 @@
 |               |                                  |                    |                                                         |                                                                                                                    |                           |                                     |                                                                              |     |                                                                              |
 
 
+# Image CSV
+
+|               | ID                               | thumbnail_URL                                 | img_URL                                                |
+|---------------|----------------------------------|-----------------------------------------------|--------------------------------------------------------|
+| dtype         | int                              | URI                                           | URI                                                    |
+| unique values | True                             | False                                         | False                                                  |
+| description   | will be used as index into table | passed as-is to the front-end; shown on hover | passed as-is to the front-end; shown in object details |
+|               |                                  |                                               |                                                        |
+
+
 
 
 
 
 # Meta JSON
 
-dict with items:
+JSON dict with items:
 
  - id: the dataset's ID, will be used in the backend as a key for index (i.e. should be hashable & unique)
  

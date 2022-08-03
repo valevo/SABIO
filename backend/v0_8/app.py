@@ -13,7 +13,7 @@ from flask import Response
 
 app = flask.Flask(__name__)
 # !!! comment out for production !!!
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 from src.datasets import NMvW, OpenBeelden
 from src.results import Result
@@ -260,8 +260,8 @@ def get_examples():
     return jsonify({"examples": examples})
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
     
     
