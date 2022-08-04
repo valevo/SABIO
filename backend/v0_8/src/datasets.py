@@ -285,10 +285,10 @@ df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 ## get Image Source
-images = ImageSource("data/NMvW.image_URLs.csv")
+images_NMvW = ImageSource("data/NMvW.image_URLs.csv")
 ## Instantiate Dataset object
 NMvW = Dataset.with_dataset_meta(
-                df, "data/NMvW.META.json", images, available_engines=[])
+                df, "data/NMvW.META.json", images_NMvW, available_engines=[])
 
 
 # OpenBeelden
@@ -298,9 +298,9 @@ df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 
-images = ImageSource("data/OpenBeelden.image_URLs.csv")
+images_OB = ImageSource("data/OpenBeelden.image_URLs.csv")
 OpenBeelden = Dataset.with_dataset_meta(
-                df, "data/OpenBeelden.META.json", images, available_engines=[])
+                df, "data/OpenBeelden.META.json", images_OB, available_engines=[])
 
 
 

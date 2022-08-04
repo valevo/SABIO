@@ -49,7 +49,7 @@ class CachedEngine(Engine):
     def load_scores_for(self, dataset, **params):
         loaded = pd.read_csv(self.get_cached_filename(dataset))
         loaded = loaded.set_index("ID")
-        return loaded.score, loaded.score_details
+        return loaded.score, loaded.score_details.apply(eval)
     
     
     def save_scores_for(self, scores, details, dataset, **params):
@@ -61,7 +61,7 @@ class CachedEngine(Engine):
         df.to_csv(filename, compression={'method': 'gzip', 'compresslevel': 1, 'mtime': 1})
         
     
-    def _score_and_details(self, dataset, **params):
+    def _score_and_detail(self, dataset, **params):
         raise NotImplementedError("To be implemented by an actual engine!")
     
     
@@ -77,9 +77,6 @@ class CachedEngine(Engine):
         
         return scores.loc[indices], details.loc[indices]
         
-    
-    
-
 
 class EngineParam:
     def __init__(self, ID, label, description, control, default, options, option2value):
