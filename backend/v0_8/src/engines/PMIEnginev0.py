@@ -48,7 +48,35 @@ class PMI:
             pmis.extend(map(self.pmi, cur_pairs))
             
         return sorted(zip(pairs, pmis), key=lambda t:t[1]), self.aggregate_func(pmis)
-    
+
+
+    def process_objects(self, texts, round_to=3):
+        tuples = texts.progress_apply(
+#                        axis='columns', 
+                        func=self.process_object
+                )
+        
+        typs = tuples.apply(lambda t: t[1])
+        typs = self.norm(typs).round(round_to)
+        typs.name = "score"
+        
+        
+
+        details = tuples.apply(lambda t: dict(t[0]))
+        d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
+        values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
+        values = self.norm(values, q=100)
+
+        d = dict(zip(sorted(d.keys()), values))
+        def swap_values(smalld):
+            new_vals = sorted(((k, d[k]) for k in smalld), key=lambda t:t[1])
+            top_pairs = 5
+            return dict(new_vals[-top_pairs:])
+        details = details.progress_apply(swap_values)
+        details.name = "score_details"
+
+        return typs, details
+
     
     def norm(self, v, map_to_positive=True):
         if map_to_positive:
