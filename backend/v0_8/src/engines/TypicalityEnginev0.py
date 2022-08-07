@@ -108,8 +108,8 @@ class Typicality(Model):
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
-        values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
-        values = self.inv_normed_abs(values, q=100)
+        values = np.asarray([d[k] for k in sorted(d.keys())])
+        values = self.inv_normed_abs(values, q=100).round(round_to)
 
         d = dict(zip(sorted(d.keys()), values))
         def swap_values(smalld):

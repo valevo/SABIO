@@ -44,14 +44,16 @@ class PMI(Model):
     
     
     def process_object(self, obj):
-        if not obj or (sum(map(len, obj)) < 2):
-            return tuple(), 0.
-            
+#         if not obj or (sum(map(len, obj)) < 2):
+#             return tuple(), 0.
         pairs, pmis = [], []
         for text in obj:
             cur_pairs = list(self.model.iter_ngrams(text, padding=False))
             pairs.extend(cur_pairs)
             pmis.extend(map(self.pmi, cur_pairs))
+                    
+        if len(pmis) == 0:
+            return tuple(), 0.
             
         return sorted(zip(pairs, pmis), key=lambda t:t[1]), self.aggregate_func(pmis)
 
@@ -63,15 +65,13 @@ class PMI(Model):
                 )
         
         pmis = tuples.apply(lambda t: t[1])
-        pmis = self.percentile_norm(pmis).round(round_to)
+        pmis = self.norm(pmis, percentile=True).round(round_to)
         pmis.name = "score"
-        
-        
 
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
-        values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
-        values = self.percentile_norm(values)
+        values = np.asarray([d[k] for k in sorted(d.keys())])
+        values = self.norm(values, percentile=True).round(round_to)
 
         d = dict(zip(sorted(d.keys()), values))
         def swap_values(smalld):
@@ -84,9 +84,12 @@ class PMI(Model):
         return pmis, details
 
     
-    def norm(self, v, map_to_positive=True):
+    def norm(self, v, map_to_positive=True, percentile=True):
         if map_to_positive:
             v = v-np.min(v)
+            
+        if percentile:
+            return self.percentile_norm(v)
         return v/np.max(v)
     
     
