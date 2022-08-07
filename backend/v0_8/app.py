@@ -3,6 +3,9 @@ tqdm.pandas()
 import json
 from urllib.parse import quote
 
+import numpy as np
+import numpy.random as rand
+
 import flask
 from flask import request
 from flask import jsonify as flask_jsonify

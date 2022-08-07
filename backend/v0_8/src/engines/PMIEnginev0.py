@@ -40,12 +40,12 @@ class PMI:
                )
     
     
-    def process_object(self, row):
-        if not row or (sum(map(len, row)) < 2):
+    def process_object(self, obj):
+        if not obj or (sum(map(len, obj)) < 2):
             return tuple(), 0.
             
         pairs, pmis = [], []
-        for text in row:
+        for text in obj:
             cur_pairs = list(self.model.iter_ngrams(text, padding=False))
             pairs.extend(cur_pairs)
             pmis.extend(map(self.pmi, cur_pairs))
@@ -53,14 +53,14 @@ class PMI:
         return sorted(zip(pairs, pmis), key=lambda t:t[1]), self.aggregate_func(pmis)
 
 
-    def process_objects(self, texts, round_to=3):
-        tuples = texts.progress_apply(
+    def process_objects(self, objs, round_to=3):
+        tuples = objs.progress_apply(
 #                        axis='columns', 
                         func=self.process_object
                 )
         
         pmis = tuples.apply(lambda t: t[1])
-        pmis = self.norm(pmis).round(round_to)
+        pmis = self.percentile_norm(pmis).round(round_to)
         pmis.name = "score"
         
         
@@ -68,7 +68,7 @@ class PMI:
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
-        values = self.norm(values)
+        values = self.percentile_norm(values)
 
         d = dict(zip(sorted(d.keys()), values))
         def swap_values(smalld):
