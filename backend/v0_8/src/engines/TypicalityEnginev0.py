@@ -9,6 +9,8 @@ import joblib
 from src.engines.Engine import CachedEngine
 from src.engines.ngrams import Ngram
 
+from src.engines.models import Model
+
 class TypicalityEngine(CachedEngine):
     def __init__(self, ID, name, params, cache_dir):
         super().__init__(ID, name, params, cache_dir)
@@ -23,8 +25,9 @@ class TypicalityEngine(CachedEngine):
         scores, details = self.typicality.process_objects(texts)
         return scores, details
 
-class Typicality:
+class Typicality(Model):
     def __init__(self, texts, take_abs=False, **model_params):
+        super().__init__()
         default_params = dict(ns=3, documents=texts, precompute_freqs=True)
         default_params.update(model_params)
         self.model = Ngram(**default_params)

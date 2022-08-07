@@ -9,6 +9,9 @@ import joblib
 from src.engines.Engine import CachedEngine
 from src.engines.ngrams import Ngram
 
+from src.engines.models import Model
+
+
 class PMIEngine(CachedEngine):
     def __init__(self, ID, name, params, cache_dir):
         super().__init__(ID, name, params, cache_dir)
@@ -26,6 +29,7 @@ class PMIEngine(CachedEngine):
     
 class PMI:
     def __init__(self, texts, **model_params):
+        super().__init__()
         default_params = dict(ns=2, documents=texts, precompute_freqs=True)
         default_params.update(model_params)
         self.model = Ngram(**default_params)
