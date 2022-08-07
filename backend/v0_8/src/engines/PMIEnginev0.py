@@ -18,9 +18,9 @@ class PMIEngine(CachedEngine):
         
     def _score_and_detail(self, dataset, round_to=3, **params):
         texts = dataset.segment(level="paragraph")
-        self.pmi = PMI(texts)
+        self.pmi = PMI([t for ls in texts for t in ls])
         
-        scores, details = self.typicality.process_objects(dataset.data.Texts)
+        scores, details = self.pmi.process_objects(texts)
         return scores, details
 
     
@@ -41,6 +41,9 @@ class PMI:
     
     
     def process_object(self, row):
+        if not row or (sum(map(len, row)) < 2):
+            return tuple(), 0.
+            
         pairs, pmis = [], []
         for text in row:
             cur_pairs = list(self.model.iter_ngrams(text, padding=False))
@@ -56,16 +59,16 @@ class PMI:
                         func=self.process_object
                 )
         
-        typs = tuples.apply(lambda t: t[1])
-        typs = self.norm(typs).round(round_to)
-        typs.name = "score"
+        pmis = tuples.apply(lambda t: t[1])
+        pmis = self.norm(pmis).round(round_to)
+        pmis.name = "score"
         
         
 
         details = tuples.apply(lambda t: dict(t[0]))
         d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         values = np.asarray([d[k] for k in sorted(d.keys())]).round(round_to)
-        values = self.norm(values, q=100)
+        values = self.norm(values)
 
         d = dict(zip(sorted(d.keys()), values))
         def swap_values(smalld):
@@ -75,13 +78,13 @@ class PMI:
         details = details.progress_apply(swap_values)
         details.name = "score_details"
 
-        return typs, details
+        return pmis, details
 
     
     def norm(self, v, map_to_positive=True):
         if map_to_positive:
-            v = v+np.min(v)
-        return v/np.sum(v)
+            v = v-np.min(v)
+        return v/np.max(v)
     
     
 

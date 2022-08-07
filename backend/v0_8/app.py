@@ -21,6 +21,7 @@ from src.engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
 from src.engines.ContentLengthEnginev0 import ContentLengthEngine
 from src.engines.VocabularyEnginev0 import VocabularyEngine
 from src.engines.TypicalityEnginev0 import TypicalityEngine
+from src.engines.PMIEnginev0 import PMIEngine
 
 
 
@@ -53,10 +54,17 @@ typ_engine = TypicalityEngine(ID="TypicalityEnginev0",
                                 params=[],
                                 cache_dir=cache_dir)
 
+pmi_engine = PMIEngine(ID="PMIEnginev0",
+                                name="PMIEngine/v0",
+                                params=[],
+                                cache_dir=cache_dir)
+
+
 engines = [random_engine, 
            CL_engine, 
            vocab_engine, 
-           typ_engine]
+           typ_engine,
+            pmi_engine]
 engines = {e.ID: e for e in engines}
 
 # CACHE SCORES FOR ALL DATASETS

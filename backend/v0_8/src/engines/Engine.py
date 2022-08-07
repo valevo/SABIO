@@ -32,6 +32,12 @@ class Engine:
             "min_score": self.min_score,
             "params": [p.to_dict() for p in self.params]
         }
+    
+    
+    @staticmethod
+    def percentile_norm(v, q=99.5):
+        return (v - np.percentile(v, 100-q))/(np.percentile(v, q) - np.percentile(v, 100-q))
+
 
     
 class CachedEngine(Engine):

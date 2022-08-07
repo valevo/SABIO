@@ -18,9 +18,9 @@ class TypicalityEngine(CachedEngine):
         
     def _score_and_detail(self, dataset, round_to=3, **params):
         texts = dataset.segment(level="paragraph")
-        self.typicality = Typicality([t for ls in texts for t in ls])
+        self.typicality = Typicality(texts)
         
-        scores, details = self.typicality.process_objects(texts)
+        scores, details = self.typicality.process_objects(dataset.data.Texts)
         return scores, details
 
 class Typicality:
@@ -87,12 +87,10 @@ class Typicality:
     def typical(entropy, log_prob):
         return entropy - (-log_prob)
 
-    
-    
-    def _process_object(self, obj):
+    def _process_object(self, text):
         obj_prob = 0.
         l = 0
-        for paragraph in obj:
+        for paragraph in text.split("\n"):
             grams = self.model.iter_ngrams(paragraph, as_tuples=True)
             for *rest, w in grams:
                 w_prob = self.model.cond_prob(w, *rest, log=True)
@@ -106,14 +104,14 @@ class Typicality:
         obj_typ = self.typical(self.H, obj_prob/l)
         yield obj_typ
         
-    def process_object(self, obj):
-        *gram_typicalities, obj_typicality = self._process_object(obj)
+    def process_object(self, text):
+        *gram_typicalities, obj_typicality = self._process_object(text)
         gram_typicalities = sorted(gram_typicalities, key=lambda t: t[1])
         return gram_typicalities, obj_typicality
     
     
-    def process_objects(self, objs, round_to=2):
-        tuples = objs.progress_apply(
+    def process_objects(self, texts, round_to=2):
+        tuples = texts.progress_apply(
 #                        axis='columns', 
                         func=self.process_object
                 )
