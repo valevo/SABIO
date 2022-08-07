@@ -26,7 +26,7 @@ class PMIEngine(CachedEngine):
         return scores, details
 
     
-class PMI:
+class PMI(Model):
     def __init__(self, texts, **model_params):
         super().__init__()
         default_params = dict(ns=2, documents=texts, precompute_freqs=True)
