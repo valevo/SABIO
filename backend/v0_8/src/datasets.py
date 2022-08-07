@@ -128,8 +128,11 @@ class Dataset:
     
     def segment(self, level):
         if level == "paragraph":
-            return pd.Series([t.split("\n") for t in self.data.Texts], name="Texts")
-            return pd.Series([p for t in self.data.Texts for p in t.split("\n")], name="Texts")
+            return self.data.Texts.apply(lambda txt: txt.split("\n"))
+#             return pd.Series([t.split("\n") for t in self.data.Texts], 
+#                              name="Texts",
+#                             index=self.index)
+#             return pd.Series([p for t in self.data.Texts for p in t.split("\n")], name="Texts")
         else:
             raise NotImplementedError("Only paragraph segmentation (i.e. by \\n) implemented.")
     
