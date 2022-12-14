@@ -4,12 +4,11 @@
 The SABIO backend requires the following input data structure, separated into 3 files:
 
 
-
-
 # Meta JSON
 
-The meta file declaring meta-properties of the dataset, such as its name and own URL, as well as (part of the) semantics, on one hand of the textual properties of the objects and of properties that can be search by on the other hand.  
-It is a JSON dict with the following items:
+The meta file declaring meta-properties of the dataset, such as its name and own URL, as well as (part of the) semantics: (1) properties of objects used for filtering and sorting them and (2) textual properties of objects that will be used for keyword search and scoring by the SABIO algorithms.
+
+The meta file is a JSON dict with the following items:
 
  - id: the dataset's ID, will be used in the backend as a key for index (i.e. should be hashable & unique)
  
@@ -17,9 +16,10 @@ It is a JSON dict with the following items:
  
  - dataset_url: the URL of the dataset's website; e.g. the landing page for the public search interface in the case of the NMvW dataset
   
- - text_columns: names of columns in the dataset CSV to be used in the backend for search and scoring; object's Titles and Descriptions are used by default (i.e. if text_columns is an empty list, Titles and Descriptions will be used); in the backend, the columns' values will be joined by "\n" for searching and scoring
 
- - dataset_params: a dict with the names of columns in the CSV which are to be used as search parameters as keys and, as values, the information on such parameters required to instantiate datasets.DatasetParameter objects (as a dict); see the class definition for possible values and how they are used in the backend
+ - dataset_params: a dict where the keys are the names of columns in the dataset CSV which are to be used as search and sort parameters; the dict's values are themselves dicts which contain the information required to instantiate datasets.DatasetParameter Python objects (see the class definition for possible values and how they are used in the backend)
+
+- text_columns: names of columns in the dataset CSV to be used in the backend for search and scoring; objects' `name` and `description` fields are used by default (text_columns may be an empty list); in the backend, the columns' values will be joined by "\n" for searching and scoring (which affects neither search results nor scores)
 
 
 
