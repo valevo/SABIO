@@ -10,22 +10,22 @@ The meta file declaring meta-properties of the dataset, such as its name and own
 
 The meta file is a JSON dict with the following items:
 
- - id: the dataset's ID, will be used in the backend as a key for index (i.e. should be hashable & unique)
+ - `id`: the dataset's ID, will be used in the backend as a key for index (i.e. should be hashable & unique)
  
- - name: the dataset's display name, that is displayed in the frontend (doesn't need to be unique)
+ - `name`: the dataset's display name, that is displayed in the frontend (doesn't need to be unique)
  
- - dataset_url: the URL of the dataset's website; e.g. the landing page for the public search interface in the case of the NMvW dataset
+ - `dataset_url`: the URL of the dataset's website; e.g. the landing page for the public search interface in the case of the NMvW dataset
   
 
- - dataset_params: a dict where the keys are the names of columns in the dataset CSV which are to be used as search and sort parameters; the dict's values are themselves dicts which contain the information required to instantiate [datasets.DatasetParameter](https://github.com/valevo/SABIO/blob/b572559343fd259aa374eecf03156bd974fff449/backend/v0_8/src/datasets.py#L205) Python objects (see the class definition for possible values and how they are used in the backend)
+ - `dataset_params`: a dict where the keys are the names of columns in the dataset CSV which are to be used as search and sort parameters; the dict's values are themselves dicts which contain the information required to instantiate [datasets.DatasetParameter](https://github.com/valevo/SABIO/blob/b572559343fd259aa374eecf03156bd974fff449/backend/v0_8/src/datasets.py#L205) Python objects (see the class definition for possible values and how they are used in the backend)
 
-- text_columns: names of columns in the dataset CSV to be used in the backend for search and scoring; objects' `name` and `description` fields are used by default (text_columns may be an empty list); in the backend, the columns' values will be joined by "\n" for searching and scoring (which affects neither search results nor scores)
+- `text_columns`: names of columns in the dataset CSV to be used in the backend for search and scoring; objects' `name` and `description` fields are used by default (text_columns may be an empty list); in the backend, the columns' values will be joined by "\n" for searching and scoring (which affects neither search results nor scores)
 
 
 
 # Dataset CSV
 
-This is the main data table and needs to contain at least the following fields. Additional fields (that are not declared as textual or search properties in the meta JSON (see above)) are simply ignored. 
+This is the main data table and needs to contain at least the following fields. Additional fields that are not declared as `dataset_params` or `text_colums` in the meta JSON (see above) are simply ignored. 
 
 
 |               | ID                               | start_date         | end_date                                                | date_string                                                                                                        | name                      | description                         | <object_parameter_1>                                                         | ... | <object_parameter_n>                                                         |
