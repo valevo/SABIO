@@ -38,11 +38,11 @@ This is the main data table and needs to contain at least the following fields. 
 
 # Image CSV
 
-The CSV holding URLs of images for objects. These URLs are simply passed to the front-end, where they are inserted into the user interface when hovering or clicking on objects. The SABIO interface therefore also works without images. This CSV is however still required, so if no images are available, simply fill this CSV with placeholders (such as "").
+The CSV holding URLs of images for objects. These URLs are simply passed to the front-end, where they are inserted into the user interface when hovering or clicking on objects. The SABIO backend therefore also works without images but this CSV is still required. So if no images are available, simply fill this CSV with placeholders (such as "").
 
 |               | ID                               | thumbnail_URL                                 | img_URL                                                |
 |---------------|----------------------------------|-----------------------------------------------|--------------------------------------------------------|
 | dtype         | int                              | URL                                           | URL                                                    |
 | unique values | True                             | False                                         | False                                                  |
-| description   | will be used as index into table | passed as-is to the front-end; shown on hover | passed as-is to the front-end; shown in object details |
+| description   | will be used as index into the dataset CSV | passed as-is to the front-end; shown on hover | passed as-is to the front-end; shown in object details |
 |               |                                  |                                               |                                                        |
