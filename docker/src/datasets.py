@@ -281,7 +281,7 @@ class ImageSource:
 # NMvW
       
 ## Load DataFrame
-df = pd.read_csv("data/NMvW.v0_4.csv.gz", 
+df = pd.read_csv("../data/NMvW.v0_4.csv.gz", 
                  dtype=dict(Provenance="string", RelatedWorks="string"))
 ## TODO: save & load DF s.t. these lines are not necessary here                
 # df["ID"] = df.ID.astype("int")
@@ -290,22 +290,22 @@ df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 ## get Image Source
-images_NMvW = ImageSource("data/NMvW.image_URLs.csv")
+images_NMvW = ImageSource("../data/NMvW.image_URLs.csv")
 ## Instantiate Dataset object
 NMvW = Dataset.with_dataset_meta(
-                df, "data/NMvW.META.json", images_NMvW, available_engines=[])
+                df, "../data/NMvW.META.json", images_NMvW, available_engines=[])
 
 
 # OpenBeelden
 
-df = pd.read_csv("data/OpenBeelden.v0_0.csv.gz").set_index("ID")
+df = pd.read_csv("../data/OpenBeelden.v0_0.csv.gz").set_index("ID")
 df["name"] = df["name"].fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 
-images_OB = ImageSource("data/OpenBeelden.image_URLs.csv")
+images_OB = ImageSource("../data/OpenBeelden.image_URLs.csv")
 OpenBeelden = Dataset.with_dataset_meta(
-                df, "data/OpenBeelden.META.json", images_OB, available_engines=[])
+                df, "../data/OpenBeelden.META.json", images_OB, available_engines=[])
 
 
 

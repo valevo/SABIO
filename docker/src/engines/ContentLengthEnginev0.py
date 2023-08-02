@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from src.engines.Engine import Engine, EngineParam, CachedEngine
+from engines.Engine import Engine, EngineParam, CachedEngine
 
 
 
@@ -32,13 +32,13 @@ class ContentLengthEngine(CachedEngine):
         return np.quantile(lens, q)
         
         
-    def _score_and_detail(self, dataset, round_to=3, **params):
+    def _score_and_detail(self, dataset, indices=None, round_to=3, **params):
         max_len = self.max_len or self.eighty_percent_max_len(dataset)
         
         lengths = dataset.data.Texts.progress_apply(self.char_text_length)
         # this will lead objects with length > self.max_len\
         # to have a score > 1.0 and hence be removed from the result set
-        lengths = (lengths/max_len).round_to(round_to)
+        lengths = (lengths/max_len).round(round_to)
         lengths.name = "score"
         
         get_longest_words = lambda words: self.get_longest_words(words, round_to=round_to)
