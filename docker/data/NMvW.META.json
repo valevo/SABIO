@@ -1,0 +1,15 @@
+{
+	"id": "NMvW_v0",
+	"name": "Nationaal Museum van Wereldculturen 146k",
+	"dataset_url": "https://collectie.wereldculturen.nl/",
+	"text_columns": ["ObjectName", "Provenance", "Notes"],
+	"dataset_params":
+		{
+			"Department": {
+					"label": "Department", "description": "Global region, e.g. 'Circumpolare Gebieden'", "control": "autocomplete", "options": []
+					},
+			"Classification": {
+					"label": "Classification", "description": "Type of object, e.g. 'Audiovisuele collectie'", "control": "autocomplete", "options": []
+					}
+		}
+}

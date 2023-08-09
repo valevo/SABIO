@@ -1,0 +1,23 @@
+
+{
+        "id": "OpenBeelden_v0",
+        "name": "OpenBeelden First Try",
+        "dataset_url": "https://www.openbeelden.nl/",
+        "text_columns": ["subject"],
+        "dataset_params":
+                {
+                        "subject": {
+                                        "label": "Subject", "description": "Subject", "control": "autocomplete", "options": []
+                                        },
+                        "location": {
+                                        "label": "Location", "description": "Location", "control": "autocomplete", "options": []
+                                        },
+                        "type": {
+                                        "label": "Type", "description": "Type", "control": "autocomplete", "options": []
+                                        },
+                        "publisher": {
+                                        "label": "Publisher", "description": "Publisher", "control": "autocomplete", "options": []
+                                        }
+
+                }
+}
