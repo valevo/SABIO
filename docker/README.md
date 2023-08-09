@@ -3,9 +3,9 @@
 ## contents
 
  
- - [`data/`](./data/):
- - [`src/`](./src/):
- - [`cache/`](./cache/):
+ - [`data/`](./data/): Data for SABIO, specifically, a subset of the NMVW collection and the OpenBeelde dataset by Beeld & Geluid. Pre-processed to be parseable by the SABIO backend and engines. For SABIO, each dataset consists of 3 files: a table of objects and their metadata, a table listing URLs for images and thumbnails and a JSON file which specifies for the SABIO engines how the fields in the main table are to be interpreted. 
+ - [`src/`](./src/): The SABIO backend, including the Flask app in `app.py`, helper functionaolities in `datasets.py` and `results.py` and the SABIO engine definitions in `engines/`.
+ - [`cache/`](./cache/): Pre-computed and cached versions of the SABIO engines. The Flask app checks automatically if engines are pre-computed (i.e. present in `./cache/`) and if not compute them on start-up and save them there. 
  
  - [`start.sh`](./start.sh): see [running](#running) below
 
