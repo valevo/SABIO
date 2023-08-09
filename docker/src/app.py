@@ -1,10 +1,3 @@
-# import sys
-# print(sys.path)
-# sys.path.insert(0, "/home/valentin/Desktop/SABIO_docker/src/")
-# print(sys.path)
-
-
-
 from tqdm import tqdm
 tqdm.pandas()
 import json
@@ -23,7 +16,7 @@ from flask import Response
 
 app = flask.Flask(__name__)
 # !!! comment out for production !!!
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 from datasets import NMvW, OpenBeelden
 from results import Result
@@ -283,8 +276,8 @@ def get_examples():
     return jsonify({"examples": examples})
 
 
-if __name__ == "__main__":
-	app.run(debug=True)
+# if __name__ == "__main__":
+# 	app.run(debug=True)
 
     
     
