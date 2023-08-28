@@ -26,6 +26,7 @@ some notes:
 
  - each spawned worker (e.g. by `gunicorn`) occupies the same amount of RAM, there is no sharing of resources (due to the Python GIL) 
  
- - 
- 
-    - 
+## docker
+
+- build the container: `docker build . -t sabio-backend:1.0`
+- run the container: `docker run -p 8080:8080 sabio-backend:1.0`
