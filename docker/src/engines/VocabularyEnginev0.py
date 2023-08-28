@@ -8,6 +8,7 @@ from engines.Engine import Engine, CachedEngine
 
 import re
 import json
+import os.path
 
 from collections import Counter
 
@@ -19,12 +20,14 @@ class VocabularyEngine(CachedEngine):
         self.max_score = 1.
         self.vocab_parser = re.compile("\s*,\s*")
         
-        # was src/engines/vocabulary_presets.json
-        with open("./engines/vocabulary_presets.json") as handle:
-            self.vocab_examples = json.load(handle)
-            self.all_examples = self.vocab2re(",".join(self.vocab_examples.values()))
-            self.vocab_examples = {list_name: self.vocab2re(word_list)
-                                   for list_name, word_list in self.vocab_examples.items()}
+         # load presets if the presets file exists
+        presets_file = "./engines/vocabulary_presets.json" 
+        if os.path.isfile(presets_file):
+            with open(presets_file) as handle:
+                self.vocab_examples = json.load(handle)
+                self.all_examples = self.vocab2re(",".join(self.vocab_examples.values()))
+                self.vocab_examples = {list_name: self.vocab2re(word_list)
+                                    for list_name, word_list in self.vocab_examples.items()}
 
         
     # assumes that `raw_vocab` is a string of comma-separated terms
