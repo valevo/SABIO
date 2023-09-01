@@ -10,11 +10,18 @@ import flask
 from flask import request
 from flask import jsonify as flask_jsonify
 from flask import Response
+from flask_compress import Compress
 
 # import numpy as np
 # import numpy.random as rand
 
 app = flask.Flask(__name__)
+
+# compress all server responses with gzip, deflate or brotli
+# for large responses this results in ±90% reduction (62.5MB -> 5.5MB) 
+# at a cost of ±15% response time (4.5s -> 5.2s)
+Compress(app)
+
 # !!! comment out for production !!!
 # app.config["DEBUG"] = True
 
