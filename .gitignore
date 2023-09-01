@@ -6,4 +6,4 @@ __pycache__
 *.pkl
 
 # Include the vocabulary_presets json file
-!/docker/engines/vocabulary_presets.json
+!/docker/src/engines/vocabulary_presets.json
