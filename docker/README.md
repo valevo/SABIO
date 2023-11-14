@@ -3,9 +3,9 @@
 ## contents
 
  
- - [`data/`](./data/): Data for SABIO, specifically, a subset of the NMVW collection and the OpenBeelde dataset by Beeld & Geluid. Pre-processed to be parseable by the SABIO backend and engines. For SABIO, each dataset consists of 3 files: a table of objects and their metadata, a table listing URLs for images and thumbnails and a JSON file which specifies for the SABIO engines how the fields in the main table are to be interpreted. 
+ - [`data/`](./data/): Data for SABIO, specifically, a subset of the [NMVW collection](https://collectie.wereldculturen.nl/) and the [OpenBeelden](https://www.openbeelden.nl/) dataset by Beeld & Geluid. Pre-processed to be parseable by the SABIO backend and engines. For SABIO, each dataset consists of 3 files: a table of objects and their metadata, a table listing URLs for images and thumbnails and a JSON file which specifies for the SABIO engines how the fields in the main table are to be interpreted. 
  - [`src/`](./src/): The SABIO backend, including the Flask app in `app.py`, helper functionaolities in `datasets.py` and `results.py` and the SABIO engine definitions in `engines/`.
- - [`cache/`](./cache/): Pre-computed and cached versions of the SABIO engines. The Flask app checks automatically if engines are pre-computed (i.e. present in `./cache/`) and if not compute them on start-up and save them there. 
+ - [`cache/`](./cache/): Pre-computed and cached versions of the SABIO engines for the NMVW and OpenBeelden datasets. 
  
  - [`start.sh`](./start.sh): see [running](#running) below
 
@@ -22,9 +22,11 @@ some notes:
 
  - running the SABIO backend Flask app has been tested with `gunicorn` as a load balancer and WSGI apps, see [`start.sh`](./start.sh) but it's not necessary to use `gunicorn`; the parameters used in [`start.sh`](./start.sh) are:  
 
- - imports in the Python scripts & modules are relative and paths to files in `./cache` and `./data` hard-coded. This implies that `./src/app.py` ca only be run from `./src`.
+ - imports in the Python scripts & modules are relative and paths to files in `./cache` and `./data` hard-coded. This implies that `./src/app.py` ca only be run from `./src`
 
- - each spawned worker (e.g. by `gunicorn`) occupies the same amount of RAM, there is no sharing of resources (due to the Python GIL) 
+ - each spawned worker (e.g. by `gunicorn`) occupies the same amount of RAM, there is no sharing of resources (due to the Python GIL)
+ 
+ - on start-up the Flask app checks if the engines defined in [`src/engines/`](./src/engines/) are pre-computed (i.e. present in `./cache/`), if not it computes them on the fly and saves them there; note that some of the engines require significant RAM and time to be computed in their first instance
  
 ## docker
 
