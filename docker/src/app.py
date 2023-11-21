@@ -26,8 +26,10 @@ Compress(app)
 # app.config["DEBUG"] = True
 
 from datasets import NMvW, OpenBeelden
+print("datasets loaded", flush=True)
 from results import Result
 from engines.RandomEnginev0 import RandomEngine, nonce_param, redo_param
+
 from engines.ContentLengthEnginev0 import ContentLengthEngine
 from engines.VocabularyEnginev0 import VocabularyEngine
 from engines.TypicalityEnginev0 import TypicalityEngine
@@ -60,15 +62,23 @@ vocab_engine = VocabularyEngine(ID="VocabularyEnginev0",
                                 params=[],
                                 cache_dir=cache_dir)
 
+print("random, content-length & vocab engine innitialised", flush=True)
+
 typ_engine = TypicalityEngine(ID="TypicalityEnginev0",
                                 name="TypicalityEngine/v0",
                                 params=[],
                                 cache_dir=cache_dir)
 
+print("typicality engine initialised", flush=True)
+
+
 pmi_engine = PMIEngine(ID="PMIEnginev0",
                                 name="PMIEngine/v0",
                                 params=[],
                                 cache_dir=cache_dir)
+
+print("pmi engine initialised", flush=True)
+
 
 
 engines = [random_engine, 
@@ -293,3 +303,4 @@ def get_examples():
     
     
     
+print("ready! app running", flush=True)
