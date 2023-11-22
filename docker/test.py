@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 prefix="http://"
 host = "0.0.0.0"
-port = args.port
+port = f"{args.port}/api/v1"
 
 if not args.app_running:
     import subprocess
