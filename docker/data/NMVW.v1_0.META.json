@@ -1,0 +1,27 @@
+{
+	"id": "NMVW_v1",
+	"name": "Nationaal Museum van Wereldculturen",
+	"dataset_url": "https://collectie.wereldculturen.nl/",
+	"text_columns": ["Provenance", "Notes", "CuratorialRemarks"],
+	"dataset_params":
+		{
+            "ObjectName": {
+					"label": "Object Name", "description": "Name or type of object, e.g. 'foto' or 'munt'", "control": "autocomplete", "options": []
+					},
+            "Culture": {
+					"label": "Culture", "description": "Broad cultural classification", "control": "autocomplete", "options": []
+					},
+    		"Function and Context": {
+					"label": "Function and Context", "description": "Broad category of function and/or context in the source culture", "control": "autocomplete", "options": []
+					},
+            "Material": {
+					"label": "Material", "description": "Broad category of main physical material used", "control": "autocomplete", "options": []
+					},
+            "Geography": {
+					"label": "Geography", "description": "Geographical origin in terms of continent", "control": "autocomplete", "options": []
+					},
+            "Geography: Subcontinents": {
+					"label": "Geography: Subcontinents", "description": "More fine-grained Geographical origin in terms of subcontinents", "control": "autocomplete", "options": []
+					}
+		}
+}
