@@ -23,7 +23,7 @@ app = flask.Flask(__name__)
 Compress(app)
 
 # !!! comment out for production !!!
-# app.config["DEBUG"] = True
+app.config["DEBUG"] = True
 
 from datasets import NMvW, OpenBeelden
 print("datasets loaded", flush=True)
@@ -292,9 +292,8 @@ def get_examples():
     
     return jsonify({"examples": examples})
 
-
-# if __name__ == "__main__":
-# 	app.run(debug=True)
+if __name__ == "__main__":
+	app.run(debug=True)
 
     
     

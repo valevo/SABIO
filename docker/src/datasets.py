@@ -275,26 +275,48 @@ class ImageSource:
     
     def get(self, object_ids, column):
         r = self.df.loc[object_ids]
-        return r["img_URL"]
+        return r[column]
 
     
-# NMvW
+# # NMvW
+      
+# ## Load DataFrame
+# df = pd.read_csv("../data/NMvW.v0_4.csv.gz", 
+#                  dtype=dict(Provenance="string", RelatedWorks="string"))
+# ## TODO: save & load DF s.t. these lines are not necessary here                
+# # df["ID"] = df.ID.astype("int")
+# df = df.set_index("ID")
+# df["name"] = df["name"].fillna("")
+# df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+# df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
+# ## get Image Source
+# images_NMvW = ImageSource("../data/NMvW.image_URLs.csv.gz")
+# ## Instantiate Dataset object
+# NMvW = Dataset.with_dataset_meta(
+#                 df, "../data/NMvW.META.json", images_NMvW, available_engines=[])
+
+
+
+# NMvW - V1
       
 ## Load DataFrame
-df = pd.read_csv("../data/NMvW.v0_4.csv.gz", 
-                 dtype=dict(Provenance="string", RelatedWorks="string"))
+df = pd.read_csv("../data/NMVW.v1_0.csv.gz", 
+                 dtype=dict(Provenance="string",
+                            Notes="string",
+                            CuratorialRemarks="string"))
 ## TODO: save & load DF s.t. these lines are not necessary here                
 # df["ID"] = df.ID.astype("int")
 df = df.set_index("ID")
-df["name"] = df["name"].fillna("")
+# df["name"] = df["name"].fillna("")
+df = df.fillna("")
 df["start_date"] = df.start_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 df["end_date"] = df.end_date.apply(lambda s: dt.strptime(s, Dataset.parse_date).date())
 ## get Image Source
-images_NMvW = ImageSource("../data/NMvW.image_URLs.csv.gz")
+images_NMvW = ImageSource("../data/NMVW.v1_0.image_URLs.csv.gz")
 ## Instantiate Dataset object
 NMvW = Dataset.with_dataset_meta(
-                df, "../data/NMvW.META.json", images_NMvW, available_engines=[])
-
+                df, "../data/NMVW.v1_0.META.json", 
+                images_NMvW, available_engines=[])
 
 # OpenBeelden
 

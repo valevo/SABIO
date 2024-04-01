@@ -107,7 +107,7 @@ class Typicality(Model):
         
         details = tuples.apply(lambda t: dict(t[0]))
         print("in TypicalityEgine, constructing big d", flush=True)
-        d = {k: v for smalld in tqdm(details, desc="constructing big d", flush=True) for k, v in smalld.items()}
+        d = {k: v for smalld in tqdm(details, desc="constructing big d") for k, v in smalld.items()}
         
         values = np.asarray([d[k] for k in sorted(d.keys())])
         values = self.inv_normed_abs(values, q=100).round(round_to)
