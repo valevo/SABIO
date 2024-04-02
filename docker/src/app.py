@@ -23,7 +23,7 @@ app = flask.Flask(__name__)
 Compress(app)
 
 # !!! comment out for production !!!
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 from datasets import NMvW, OpenBeelden
 print("datasets loaded", flush=True)
@@ -265,7 +265,9 @@ def _get_url(cur_d, cur_e, cur_o):
         }
     
     param_dict = quote(json.dumps(param_dict), safe="")
-    api = quote("https://sabio.diginfra.net/api/v1/", safe="")
+    # api = quote("https://sabio.diginfra.net/api/v1/", safe="")
+    api = quote("https://sabio.netwerkdigitaalerfgoed.nl/api/v1/", safe="")
+
     view, attribute = "scatterplot", "0"
     
     cur_ObjectID = cur_o.name
@@ -292,8 +294,9 @@ def get_examples():
     
     return jsonify({"examples": examples})
 
-if __name__ == "__main__":
-	app.run(debug=True)
+
+# if __name__ == "__main__":
+# 	app.run(debug=True)
 
     
     
